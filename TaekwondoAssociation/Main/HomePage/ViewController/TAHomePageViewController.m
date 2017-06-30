@@ -25,7 +25,7 @@ static NSString *identifier = @"CellID";
 
 @end
 
-
+//zhushi
 @implementation TAHomePageViewController
 #pragma mark - lifeCircle
 - (void)viewDidLoad {
