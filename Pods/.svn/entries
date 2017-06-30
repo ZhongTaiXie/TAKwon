@@ -1,0 +1,92 @@
+10
+
+dir
+4465
+svn://wangwk@101.201.208.124/ZhongTaiXie/iOS.27/TaekwondoAssociation/Pods
+svn://wangwk@101.201.208.124
+
+
+
+2017-06-30T01:47:20.434104Z
+4450
+lirp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ad5f4247-c254-4c93-91be-870d235d7b24
+
+Pods.xcodeproj
+dir
+
+MJExtension
+dir
+
+MBProgressHUD
+dir
+
+MJRefresh
+dir
+
+Target Support Files
+dir
+
+SDWebImage
+dir
+
+Masonry
+dir
+
+Headers
+dir
+
+Local Podspecs
+dir
+
+Manifest.lock
+file
+
+
+
+
+2017-06-30T02:20:41.000000Z
+aaef5fe8c67f1751df6ef1065c39c06f
+2017-06-30T01:47:20.434104Z
+4450
+lirp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1251
+
+AFNetworking
+dir
+
