@@ -1338,7 +1338,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = GZD44TPUDX;
+						DevelopmentTeam = 47PHKU5ELU;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -1696,7 +1696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = 47PHKU5ELU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
@@ -1727,7 +1727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = 47PHKU5ELU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
