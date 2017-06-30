@@ -12,10 +12,13 @@
 
 +(void)TARequestCompletedWithPath:(NSString *)url Parameters:(NSDictionary *)parameters sucee:(successBlock)success fail:(failureBlock)failure{
     
-    [[TAHttpClient defaultClient]requestWithPath:url method:HttpRequestGet paramenters:parameters prepareExecute:nil success:success failure:failure];
+    [[TAHttpClient defaultClient]requestWithPath:url method:HttpRequestPost paramenters:parameters prepareExecute:nil success:success failure:failure];
     
    
 
 }
+
+
+
 
 @end

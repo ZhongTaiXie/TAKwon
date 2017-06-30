@@ -48,7 +48,7 @@ static NSString *identifier = @"CellID";
     [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据
         NSLog(@"----------%@",dic);
-        
+
     } fail:^(NSError *error) {
         
     }];
