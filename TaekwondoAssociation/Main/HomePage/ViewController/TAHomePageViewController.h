@@ -7,6 +7,7 @@
 //
 
 #import "TABaseViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface TAHomePageViewController : TABaseViewController
 
