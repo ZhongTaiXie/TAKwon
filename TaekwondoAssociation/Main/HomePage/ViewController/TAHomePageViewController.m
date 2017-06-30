@@ -27,6 +27,7 @@ static NSString *identifier = @"CellID";
     
     [super viewDidLoad];
     
+    NSLog(@"ddfdsfsdfdfdff");
     
     self.dataSource = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
     [self.view addSubview:self.tableView];

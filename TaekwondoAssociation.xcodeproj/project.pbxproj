@@ -86,6 +86,7 @@
 		EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CDB1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m */; };
 		EF3E0CE31F0256F100729CF9 /* ConstColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CE21F0256F100729CF9 /* ConstColor.m */; };
 		EF6613231F054AB500857B09 /* AppDelegate+TAlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6613221F054AB500857B09 /* AppDelegate+TAlogin.m */; };
+		EFE68D931F05F6C000F567D8 /* BottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE68D921F05F6C000F567D8 /* BottomCommentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,6 +255,8 @@
 		EF3E0CE21F0256F100729CF9 /* ConstColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstColor.m; sourceTree = "<group>"; };
 		EF6613211F054AB500857B09 /* AppDelegate+TAlogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+TAlogin.h"; sourceTree = "<group>"; };
 		EF6613221F054AB500857B09 /* AppDelegate+TAlogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+TAlogin.m"; sourceTree = "<group>"; };
+		EFE68D911F05F6C000F567D8 /* BottomCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCommentView.h; sourceTree = "<group>"; };
+		EFE68D921F05F6C000F567D8 /* BottomCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCommentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -764,6 +767,8 @@
 		EF3E0C7C1F01F20000729CF9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFE68D911F05F6C000F567D8 /* BottomCommentView.h */,
+				EFE68D921F05F6C000F567D8 /* BottomCommentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1241,6 +1246,7 @@
 				4EFE54AF1F032955001E7A05 /* TAMemberInfoView.m in Sources */,
 				EF3E0CA01F01F37C00729CF9 /* main.m in Sources */,
 				4EFE54B31F033317001E7A05 /* TAPersonalCell.m in Sources */,
+				EFE68D931F05F6C000F567D8 /* BottomCommentView.m in Sources */,
 				4EFE54AC1F0319D3001E7A05 /* WQTools.m in Sources */,
 				4EFE54971F02D445001E7A05 /* WQNetWorkManager.m in Sources */,
 				EF0047211F04970200CD42C6 /* TARequestManager.m in Sources */,
