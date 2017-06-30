@@ -41,6 +41,9 @@
 		4E000BCA1F06BA8E00DB0035 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BB01F06BA8E00DB0035 /* TZVideoPlayerController.m */; };
 		4E000BCB1F06BA8E00DB0035 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BB21F06BA8E00DB0035 /* UIView+Layout.m */; };
 		4E000BCE1F06BAB500DB0035 /* TACustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BCD1F06BAB500DB0035 /* TACustomTextField.m */; };
+		4E000BE01F06F7F300DB0035 /* TAOnePicCollcetionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */; };
+		4E000BE11F06F7F300DB0035 /* TAOnePicCollcetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */; };
+		4E000BE41F06F80500DB0035 /* TAMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BE31F06F80500DB0035 /* TAMyCollectionViewController.m */; };
 		4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */; };
 		4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548C1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m */; };
 		4EFE54911F02D200001E7A05 /* TAPersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE54901F02D200001E7A05 /* TAPersonalModel.m */; };
@@ -200,6 +203,11 @@
 		4E000BB21F06BA8E00DB0035 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		4E000BCC1F06BAB500DB0035 /* TACustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACustomTextField.h; sourceTree = "<group>"; };
 		4E000BCD1F06BAB500DB0035 /* TACustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACustomTextField.m; sourceTree = "<group>"; };
+		4E000BDD1F06F7F300DB0035 /* TAOnePicCollcetionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAOnePicCollcetionCell.h; sourceTree = "<group>"; };
+		4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAOnePicCollcetionCell.m; sourceTree = "<group>"; };
+		4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAOnePicCollcetionCell.xib; sourceTree = "<group>"; };
+		4E000BE21F06F80500DB0035 /* TAMyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAMyCollectionViewController.h; sourceTree = "<group>"; };
+		4E000BE31F06F80500DB0035 /* TAMyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAMyCollectionViewController.m; sourceTree = "<group>"; };
 		4EFE54891F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPersonalMemberCenterViewController.h; sourceTree = "<group>"; };
 		4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPersonalMemberCenterViewController.m; sourceTree = "<group>"; };
 		4EFE548B1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaekwondoMemberCenterViewController.h; sourceTree = "<group>"; };
@@ -551,6 +559,8 @@
 		4EFE55201F048C20001E7A05 /* MyCollectionVC */ = {
 			isa = PBXGroup;
 			children = (
+				4E000BE21F06F80500DB0035 /* TAMyCollectionViewController.h */,
+				4E000BE31F06F80500DB0035 /* TAMyCollectionViewController.m */,
 			);
 			path = MyCollectionVC;
 			sourceTree = "<group>";
@@ -579,6 +589,9 @@
 		4EFE55241F048C2C001E7A05 /* MyCollectionViews */ = {
 			isa = PBXGroup;
 			children = (
+				4E000BDD1F06F7F300DB0035 /* TAOnePicCollcetionCell.h */,
+				4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */,
+				4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */,
 			);
 			path = MyCollectionViews;
 			sourceTree = "<group>";
@@ -1269,7 +1282,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 27947QZDGW;
+						DevelopmentTeam = GZD44TPUDX;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -1333,6 +1346,7 @@
 				EFF9DA311F05FF820056F9F7 /* ShareSDKUI.bundle in Resources */,
 				4E000BB71F06BA8E00DB0035 /* photo_def_previewVc@2x.png in Resources */,
 				4E000BB81F06BA8E00DB0035 /* photo_number_icon@2x.png in Resources */,
+				4E000BE11F06F7F300DB0035 /* TAOnePicCollcetionCell.xib in Resources */,
 				4E000BBF1F06BA8E00DB0035 /* TableViewArrow@2x.png in Resources */,
 				4E000BC11F06BA8E00DB0035 /* TZAssetCell.xib in Resources */,
 				B699B8F21F0624A100D8CB95 /* MingRenTangTableViewCell.xib in Resources */,
@@ -1459,6 +1473,7 @@
 				B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */,
 				B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */,
 				B6F9B1A81F03B5D600EBCD68 /* AgreementViewController.m in Sources */,
+				4E000BE01F06F7F300DB0035 /* TAOnePicCollcetionCell.m in Sources */,
 				4E000B801F06BA4A00DB0035 /* TAEditMemberInfoViewController.m in Sources */,
 				4EFE54941F02D206001E7A05 /* TAPersonalHeaderView.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
@@ -1478,6 +1493,7 @@
 				EFF9DA4A1F060E430056F9F7 /* AppDelegate+TAlogin.m in Sources */,
 				B6F9B1B71F050B8E00EBCD68 /* HotGalleryTableViewCell.m in Sources */,
 				4EFE54B31F033317001E7A05 /* TAPersonalCell.m in Sources */,
+				4E000BE41F06F80500DB0035 /* TAMyCollectionViewController.m in Sources */,
 				4EFE54AC1F0319D3001E7A05 /* WQTools.m in Sources */,
 				4E000B8D1F06BA5F00DB0035 /* TAMemberInfoCell.m in Sources */,
 				4EFE54971F02D445001E7A05 /* WQNetWorkManager.m in Sources */,
@@ -1616,7 +1632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 27947QZDGW;
+				DEVELOPMENT_TEAM = GZD44TPUDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
@@ -1647,7 +1663,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 27947QZDGW;
+				DEVELOPMENT_TEAM = GZD44TPUDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",

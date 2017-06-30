@@ -45,7 +45,7 @@ static NSString *identifier = @"CellID";
     
     NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
     
-    [TARequestManager TARequestCompletedWithParameters:dic sucee:^(NSDictionary *dic) {
+    [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:dic sucee:^(NSDictionary *dic) {
         // 解析数据
         
         
