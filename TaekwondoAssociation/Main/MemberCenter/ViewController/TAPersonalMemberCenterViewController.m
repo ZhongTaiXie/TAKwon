@@ -12,6 +12,7 @@
 #import "TAPersonalCell.h"
 #import "TASeetingViewController.h"
 #import "TAMemberInfoViewController.h"
+#import "TAMyCollectionViewController.h"
 
 @interface TAPersonalMemberCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -129,20 +130,37 @@
         if(indexPath.row == 0){  //会员信息
             TAMemberInfoViewController *infoVC = [TAMemberInfoViewController new];
             [self.navigationController pushViewController:infoVC animated:YES];
+        }else{  //活动记录
+            
         }
         
     }else if (indexPath.section == 2){
         
+        if(indexPath.row == 0){  //会员荣誉
+            
+        }else{  //简历
+            
+        }
     }else if (indexPath.section == 3){
-        
+        if(indexPath.row == 0){  //个人风采
+            
+        }else{  //比赛经历
+            
+        }
     }else if (indexPath.section == 4){
+        if(indexPath.row == 0){  //我的消息
+            
+        }else{  //我的收藏
+            TAMyCollectionViewController *collectionVC = [TAMyCollectionViewController new];
+            [self.navigationController pushViewController:collectionVC animated:YES];
+        }
+    }else if (indexPath.section == 5){  //我的关注
         
-    }else if (indexPath.section == 5){
-        
-    }else{
+    }else{   //设置
         TASeetingViewController *settingVC = [TASeetingViewController new];
         [self.navigationController pushViewController:settingVC animated:YES];
     }
+
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
