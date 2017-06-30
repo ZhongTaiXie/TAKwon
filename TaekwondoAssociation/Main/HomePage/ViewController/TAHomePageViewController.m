@@ -43,7 +43,7 @@ static NSString *identifier = @"CellID";
 }
 - (void)viewWillAppear:(BOOL)animated {
     
-    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
+//    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
     
     [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据
