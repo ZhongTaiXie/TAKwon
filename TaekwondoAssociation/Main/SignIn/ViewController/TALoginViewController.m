@@ -11,6 +11,7 @@
 #import "TARegistViewController.h"
 #import "ConstColor.h"
 #import <ShareSDK/ShareSDK.h>
+#import "TARequestManager.h"
 
 
 @interface TALoginViewController ()<UITextFieldDelegate>
@@ -357,8 +358,19 @@
 //        
 //        [self loadData];
 //    }
+    NSMutableDictionary* params = [[NSMutableDictionary alloc]init];
+    [params setValue:_accuntTextFiled.text forKey:@"NickName"];
+    [params setValue:_passTextFiled.text forKey:@"Pwd"];
+    [params setValue:[NSNumber numberWithInteger:1] forKey:@"UserType"];
+    [TARequestManager TARequestCompletedWithPath:@"/SignIn/SignIn" Parameters:nil sucee:^(NSDictionary *dic) {
+        
+        NSLog(@"%@",dic);
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
     //  进入主程序
-    [[UIApplication sharedAppDelegate] goToHome];
+//    [[UIApplication sharedAppDelegate] goToHome];
     
 }
 #pragma mark - 游客登录点击事件
