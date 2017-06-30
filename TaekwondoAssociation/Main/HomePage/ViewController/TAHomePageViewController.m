@@ -12,6 +12,8 @@
 #import "AutoScrollView.h"
 #import "TAPersonalHeaderView.h"
 #import "HotGalleryTableViewCell.h"
+#import "MingRenTangTableViewCell.h"
+#import "NewsListViewController.h"
 
 static NSString *identifier = @"CellID";
 
@@ -34,16 +36,19 @@ static NSString *identifier = @"CellID";
     
     titleArray = [NSArray arrayWithObjects:@"认证",@"中国跆协",@"新闻",@"公告",@"赛事",@"培训",@"公益",@"排名",@"名人堂",@"教学",@"国家队",@"跆拳百科", nil];
 //    self.dataSource = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor clearColor];
+    [_tableView setTableFooterView:view];
     [self.view addSubview:self.tableView];
 }
 - (void)viewWillAppear:(BOOL)animated {
     
     NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
     
-    [TARequestManager TARequestCompletedWithParameters:dic sucee:^(NSDictionary *dic) {
+    [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据
         
-        
+        NSLog(@"%@",dic);
     } fail:^(NSError *error) {
         
     }];
@@ -107,7 +112,7 @@ static NSString *identifier = @"CellID";
             upBtn.frame = CGRectMake((i-6)*(KTA_Screen_Width/4), KTA_Screen_Width/4, KTA_Screen_Width/4, KTA_Screen_Width/4);
         }
         upBtn.tag = i;
-
+        [upBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         //12个图片
         UIImageView *topImageView = [[UIImageView alloc]init];
         topImageView.frame = CGRectMake(((upBtn.frame.size.width)-30)/2, 20, 30, 30);
@@ -164,15 +169,19 @@ static NSString *identifier = @"CellID";
     [scanningBtn addTarget:self action:@selector(scanningBtnBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:scanningBtn];
 }
-
+#pragma mark - UITableViewDelegateDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 2;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         HotGalleryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifer1"];
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"HotGalleryTableViewCell" owner:self options:nil] lastObject];
@@ -183,19 +192,29 @@ static NSString *identifier = @"CellID";
     }
     else
     {
-        HotGalleryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifer1"];
+        MingRenTangTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifer2"];
         if (cell == nil) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"HotGalleryTableViewCell" owner:self options:nil] lastObject];
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"MingRenTangTableViewCell" owner:self options:nil] lastObject];
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
-        cell.myImageviewOne.backgroundColor = [UIColor greenColor];
+        cell.myImageView.backgroundColor = [UIColor redColor];
         return cell;
     }
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 104;
+    if (indexPath.section == 0) {
+        return 104;
+    }
+    else
+    {
+        return 123;
+    }
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 5;
 }
 - (void)loadData {
     
@@ -223,5 +242,57 @@ static NSString *identifier = @"CellID";
 - (void)scanningBtnBtnClick
 {
     
+}
+- (void)menuBtnClick:(id)sender
+{
+    NSInteger tag = [sender tag];
+    if (tag == 0) {//认证
+        
+    }
+    else if(tag == 1)//中国跆协
+    {
+        
+    }
+    else if(tag == 2)//新闻
+    {
+        NewsListViewController *newListVC = [[NewsListViewController alloc]init];
+        [self.navigationController pushViewController:newListVC animated:YES];
+    }
+    else if(tag == 3)//公告
+    {
+        
+    }
+    else if(tag == 4)//赛事
+    {
+        
+    }
+    else if(tag == 5)//培训
+    {
+        
+    }
+    else if(tag == 6)//公益
+    {
+        
+    }
+    else if(tag == 7)//排名
+    {
+        
+    }
+    else if(tag == 8)//名人堂
+    {
+        
+    }
+    else if(tag == 9)//教学
+    {
+        
+    }
+    else if(tag == 10)//国家队
+    {
+        
+    }
+    else//跆拳百科
+    {
+        
+    }
 }
 @end

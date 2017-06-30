@@ -12,6 +12,8 @@
 @interface TARequestManager : NSObject
 
 // 测试接口    
-+(void)TARequestCompletedWithParameters:(NSDictionary *)parameters sucee:(successBlock)success fail:(failureBlock)failure;
++(void)TARequestCompletedWithPath:(NSString *)url Parameters:(NSDictionary *)parameters sucee:(successBlock)success fail:(failureBlock)failure;
+
+
 
 @end

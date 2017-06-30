@@ -12,7 +12,7 @@
 #import "ConstColor.h"
 #import <ShareSDK/ShareSDK.h>
 
-//   dfjdkdf
+
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
 @property (nonatomic ,copy)NSString *loginway;

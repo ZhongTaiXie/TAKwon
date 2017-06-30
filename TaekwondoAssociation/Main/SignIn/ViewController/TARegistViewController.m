@@ -9,6 +9,8 @@
 #import "TARegistViewController.h"
 #import "ConstColor.h"
 #import "AgreementViewController.h"
+#import "TARequestManager.h"
+
 @interface TARegistViewController ()<UITextFieldDelegate>
 {
     UIButton *personalBtn;//个人注册按钮
@@ -206,6 +208,9 @@
     personalBtn.backgroundColor = [UIColor whiteColor];
     lineRightLab.hidden = YES;
     lineLeftLab.hidden = NO;
+    
+    
+    
 }
 
 #pragma mark - 道馆注册点击事件
@@ -230,6 +235,22 @@
 {
     if ([_isRegister isEqualToString:@"1"]) {
         //注册
+        // 确认密码 和  密码一直
+        if ([passwordTF.text isEqualToString:confirmPasswordTF.text]) {
+            NSDictionary *dic = @{};
+            
+            [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:dic sucee:^(NSDictionary *dic) {
+                
+                NSLog(@"%@",dic);
+                
+            } fail:^(NSError *error) {
+                
+            }];
+            
+        }else {
+            
+        }
+        
     }
     else
     {
