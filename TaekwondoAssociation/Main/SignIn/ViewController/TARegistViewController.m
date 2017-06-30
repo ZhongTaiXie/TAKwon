@@ -206,6 +206,9 @@
     personalBtn.backgroundColor = [UIColor whiteColor];
     lineRightLab.hidden = YES;
     lineLeftLab.hidden = NO;
+    
+    
+    
 }
 
 #pragma mark - 道馆注册点击事件
@@ -230,6 +233,14 @@
 {
     if ([_isRegister isEqualToString:@"1"]) {
         //注册
+        // 确认密码 和  密码一直
+        if ([passwordTF.text isEqualToString:confirmPasswordTF.text]) {
+            
+            
+        }else {
+            
+        }
+        
     }
     else
     {

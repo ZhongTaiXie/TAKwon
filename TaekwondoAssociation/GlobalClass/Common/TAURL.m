@@ -15,6 +15,8 @@ NSString *const URL_BASE = @"http://learning.zzmetro.cn:8080";
 // 主页
 NSString *const URL_HOME =@"/interfaceapi/indexintmgt/index!index.action?";
 
+NSString * const URL_LONGIN = @"";
+
 
 
 @end
