@@ -23,19 +23,14 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
-//    _headViewHeight = 50;
-    
     [self creatHeadView];
     [self creatWebView];
-    
-//    [self loadWebUrl:@"http://www.baidu.com"];
     
 }
 
 - (void)creatHeadView
 {
-    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kDeviceWidth, _headViewHeight)];
+    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kDeviceWidth, _headViewHeight)];
     _headView.backgroundColor = [UIColor redColor];
     
     [self.view addSubview:_headView];
@@ -45,7 +40,9 @@
 {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, _headViewHeight, kDeviceWidth, kDeviceHeight - _headViewHeight) configuration:config];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, _headViewHeight+64, kDeviceWidth, kDeviceHeight - _headViewHeight) configuration:config];
+    
+    _webView.scrollView.showsVerticalScrollIndicator = NO;
     _webView.navigationDelegate = self;
     _webView.UIDelegate =self;
     
@@ -55,8 +52,28 @@
 // 加载(重载)webview页面
 - (void)loadWebUrl:(NSString *)urlStr
 {
+    [MBProgressHUD showHUDAddedTo:_webView animated:YES];
     NSURL* url = [NSURL URLWithString:urlStr];
     [_webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+// 更改headview高度
+- (void)changeHeadViewHeight:(CGFloat)height
+{
+    _headViewHeight = height;
+    
+    [self setHeadviewFrame];
+    [self setWebViewFrame];
+}
+
+- (void)setHeadviewFrame
+{
+    _headView.frame = CGRectMake(0, 64, kDeviceWidth, _headViewHeight);
+}
+
+- (void)setWebViewFrame
+{
+    _webView.frame = CGRectMake(0, 64 + _headViewHeight, kDeviceWidth, kDeviceHeight - 64);
 }
 
 
@@ -81,9 +98,22 @@
     if ([urlComps count]) {
         // 获取协议头
         NSString *protocolHead = [urlComps objectAtIndex:0];
+        NSString* segueParams = [urlComps lastObject];
         NSLog(@"protocolHead=%@",protocolHead);
+        if ([protocolHead isEqualToString:@"http"] || [protocolHead isEqualToString:@"https"]) {
+            decisionHandler(WKNavigationActionPolicyAllow);
+        }
+        else if ([protocolHead isEqualToString:@"test"]){
+            self.segueB(segueParams);
+            decisionHandler(WKNavigationActionPolicyCancel);
+
+        }
+        else{
+            decisionHandler(WKNavigationActionPolicyCancel);
+        }
+    }else{
+        decisionHandler(WKNavigationActionPolicyCancel);
     }
-    decisionHandler(WKNavigationActionPolicyAllow);
 }
 // 2 页面开始加载
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
@@ -111,10 +141,12 @@
     //    preferences.minimumFontSize = 40.0;
     //    config.preferences = preferences;
     //    [[KuyouUtils kuyouTips] removeHUD];
+    
+    [MBProgressHUD hideHUDForView:_webView animated:YES];
 }
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
-    
+    [MBProgressHUD hideHUDForView:_webView animated:YES];
 }
 
 
