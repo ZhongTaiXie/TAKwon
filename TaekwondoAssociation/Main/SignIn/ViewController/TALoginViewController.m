@@ -50,7 +50,7 @@
     
     [self createUI];
 }
-
+//  注册
 - (void)itemAction {
     
     TARegistViewController *registVC = [[TARegistViewController alloc]init];
