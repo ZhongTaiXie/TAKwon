@@ -366,7 +366,7 @@
         NSLog(@"%@",dic);
         // 登录成功
         NSDictionary* dataDic = [dic objectForKey:@"Data"];
-        if ([[dataDic objectForKey:@"success"] isEqualToString:@"ture"]) {
+        if ([[dataDic objectForKey:@"Success"]boolValue]) {
 //            [LCProgressHUD showTextOntarget:self.view string:[dataDic objectForKey:@"Msg"]];
 
             [[UIApplication sharedAppDelegate] goToHome];
@@ -385,7 +385,8 @@
 #pragma mark - 游客登录点击事件
 - (void)touristLoginBtnClick
 {
-    
+    [[UIApplication sharedAppDelegate] goToHome];
+
 }
 #pragma mark - 忘记密码点击事件
 - (void)forgotPasswordBtnClick
