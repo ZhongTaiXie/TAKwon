@@ -12,7 +12,7 @@
 #import "ConstColor.h"
 #import <ShareSDK/ShareSDK.h>
 #import "TARequestManager.h"
-
+#import "LCProgressHUD.h"
 
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
@@ -358,13 +358,22 @@
 //        
 //        [self loadData];
 //    }
-    NSMutableDictionary* params = [[NSMutableDictionary alloc]init];
+    NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setValue:_accuntTextFiled.text forKey:@"NickName"];
     [params setValue:_passTextFiled.text forKey:@"Pwd"];
-    [params setValue:[NSNumber numberWithInteger:1] forKey:@"UserType"];
-    [TARequestManager TARequestCompletedWithPath:@"/SignIn/SignIn" Parameters:nil sucee:^(NSDictionary *dic) {
+    [TARequestManager TARequestCompletedWithPath:@"/SignIn/SignIn" Parameters:params sucee:^(NSDictionary *dic) {
         
         NSLog(@"%@",dic);
+        // 登录成功
+        NSDictionary* dataDic = [dic objectForKey:@"Data"];
+        if ([[dataDic objectForKey:@"success"] isEqualToString:@"ture"]) {
+//            [LCProgressHUD showTextOntarget:self.view string:[dataDic objectForKey:@"Msg"]];
+
+            [[UIApplication sharedAppDelegate] goToHome];
+        }else{
+            //登录失败
+            [LCProgressHUD showTextOntarget:self.view string:[dataDic objectForKey:@"Msg"]];
+        }
     } fail:^(NSError *error) {
         NSLog(@"%@",error);
     }];

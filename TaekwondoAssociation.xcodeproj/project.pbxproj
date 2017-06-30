@@ -62,6 +62,7 @@
 		4EFE552B1F048C7E001E7A05 /* TATaekwondoAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE552A1F048C7E001E7A05 /* TATaekwondoAuthViewController.m */; };
 		AF22AF7E1F04AA9C003582EF /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AF7D1F04AA9C003582EF /* BaseWebViewController.m */; };
 		AF22AFA41F05ED66003582EF /* BottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA31F05ED66003582EF /* BottomCommentView.m */; };
+		AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA61F064964003582EF /* LCProgressHUD.m */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -242,6 +243,8 @@
 		AF22AF7D1F04AA9C003582EF /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
 		AF22AFA21F05ED66003582EF /* BottomCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCommentView.h; sourceTree = "<group>"; };
 		AF22AFA31F05ED66003582EF /* BottomCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCommentView.m; sourceTree = "<group>"; };
+		AF22AFA51F064964003582EF /* LCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCProgressHUD.h; sourceTree = "<group>"; };
+		AF22AFA61F064964003582EF /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -1066,6 +1069,8 @@
 				4EFE54AB1F0319D3001E7A05 /* WQTools.m */,
 				4EFE54981F02D451001E7A05 /* WQFactoryUI.h */,
 				4EFE54991F02D451001E7A05 /* WQFactoryUI.m */,
+				AF22AFA51F064964003582EF /* LCProgressHUD.h */,
+				AF22AFA61F064964003582EF /* LCProgressHUD.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1500,6 +1505,7 @@
 				4E000BC91F06BA8E00DB0035 /* TZPhotoPreviewController.m in Sources */,
 				EF0047211F04970200CD42C6 /* TARequestManager.m in Sources */,
 				EF3E0CB21F01F60A00729CF9 /* TAHomePageViewController.m in Sources */,
+				AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
