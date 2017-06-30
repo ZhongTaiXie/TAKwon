@@ -10,12 +10,14 @@
 
 @implementation TAURL
 
-NSString *const URL_BASE = @"http://learning.zzmetro.cn:8080";
+NSString *const URL_BASE = @"http://192.168.1.6:8080";
 
 // 主页
-NSString *const URL_HOME =@"/interfaceapi/indexintmgt/index!index.action?";
+//NSString *const URL_HOME =@"/interfaceapi/indexintmgt/index!index.action?";
 
-NSString * const URL_LONGIN = @"";
+NSString *const URL_HOME =@"/Home/Index";
+
+NSString * const URL_LONGIN = @"/Register/Register";
 
 
 

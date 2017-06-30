@@ -11,7 +11,7 @@
 @interface TAURL : NSObject
 
 
-FOUNDATION_EXPORT NSString * const URL_BASE ;
+FOUNDATION_EXPORT NSString * const URL_BASE;
 
 // 主页
 FOUNDATION_EXPORT NSString * const URL_HOME;
