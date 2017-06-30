@@ -45,9 +45,11 @@ static NSString *identifier = @"CellID";
 - (void)viewWillAppear:(BOOL)animated {
     
 //    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
+
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.tabBarController.tabBar.hidden = NO;
+
     [MBProgressHUD showHUDAddedTo:_tableView animated:YES];
     [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据

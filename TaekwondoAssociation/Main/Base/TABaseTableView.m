@@ -94,6 +94,7 @@
 - (void)beginRefreshing {
     
     [self.mj_header beginRefreshing];
+    
 }
 
 
