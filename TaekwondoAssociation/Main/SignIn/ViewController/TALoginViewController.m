@@ -10,6 +10,8 @@
 #import "UIApplication+TAAppDelegate.h"
 #import "TARegistViewController.h"
 #import "ConstColor.h"
+#import <ShareSDK/ShareSDK.h>
+
 
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
@@ -376,17 +378,104 @@
 - (void)qqBtnClick
 {
     
+    [ShareSDK getUserInfo:SSDKPlatformTypeQQ
+           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+     {
+         if (state == SSDKResponseStateSuccess)
+         {
+             
+             NSLog(@"uid=%@",user.uid);
+             NSLog(@"%@",user.credential);
+             NSLog(@"token=%@",user.credential.token);
+             NSLog(@"nickname=%@",user.nickname);
+             
+             [[UIApplication sharedAppDelegate] goToHome];
+         }
+         
+         else
+         {
+             NSLog(@"%@",error);
+         }
+         
+     }];
+    
+    
+    
 }
 #pragma mark - 微信登录点击事件
 - (void)chatBtnClick
 {
-    
+    [ ShareSDK getUserInfo : SSDKPlatformTypeWechat
+     
+            onStateChanged :^( SSDKResponseState state, SSDKUser *user, NSError *error)
+     
+     {
+         
+         if (state == SSDKResponseStateSuccess )
+             
+         {
+             
+             NSLog ( @"uid=%@" ,user. uid );
+             
+             NSLog ( @"%@" ,user. credential );
+             
+             NSLog ( @"token=%@" ,user. credential . token );
+             
+             NSLog ( @"nickname=%@" ,user. nickname );
+             
+             [[UIApplication sharedAppDelegate] goToHome];
+             
+         }
+         
+         else
+             
+         {
+             
+             NSLog ( @"%@" ,error);
+             
+         }
+         
+     }];
 }
 #pragma mark - 新浪登录点击事件
 - (void)sinaBtnClick
 {
     
+    [ ShareSDK getUserInfo : SSDKPlatformTypeSinaWeibo
+     
+            onStateChanged :^( SSDKResponseState state, SSDKUser *user, NSError *error)
+     
+     {
+         
+         if (state == SSDKResponseStateSuccess )
+             
+         {
+             
+             NSLog ( @"uid=%@" ,user. uid );
+             
+             NSLog ( @"%@" ,user. credential );
+             
+             NSLog ( @"token=%@" ,user. credential . token );
+             
+             NSLog ( @"nickname=%@" ,user. nickname );
+             [[UIApplication sharedAppDelegate] goToHome];
+             
+         }
+         
+         else
+             
+         {
+             
+             NSLog ( @"%@" ,error);
+             
+         }
+         
+     }];
+    
+    
+    
 }
+
 // 加载数据
 - (void)loadData {
     

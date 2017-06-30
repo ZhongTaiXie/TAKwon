@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TabBarController.h"
 #import "TALoginViewController.h"
+#import "AppDelegate+TAlogin.h"
 
 
 @interface AppDelegate ()
@@ -19,6 +20,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
+    // 第三方登录
+    [self thirdLogin];
+    
     // 1.创建窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     // 2.设置窗口的根控制器
