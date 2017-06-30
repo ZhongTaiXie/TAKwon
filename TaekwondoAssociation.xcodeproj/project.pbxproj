@@ -44,6 +44,8 @@
 		4E000BE01F06F7F300DB0035 /* TAOnePicCollcetionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */; };
 		4E000BE11F06F7F300DB0035 /* TAOnePicCollcetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */; };
 		4E000BE41F06F80500DB0035 /* TAMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BE31F06F80500DB0035 /* TAMyCollectionViewController.m */; };
+		4E000BEB1F0705FA00DB0035 /* TANoPicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BE91F0705FA00DB0035 /* TANoPicCollectionCell.m */; };
+		4E000BEC1F0705FA00DB0035 /* TANoPicCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BEA1F0705FA00DB0035 /* TANoPicCollectionCell.xib */; };
 		4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */; };
 		4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548C1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m */; };
 		4EFE54911F02D200001E7A05 /* TAPersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE54901F02D200001E7A05 /* TAPersonalModel.m */; };
@@ -208,6 +210,9 @@
 		4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAOnePicCollcetionCell.xib; sourceTree = "<group>"; };
 		4E000BE21F06F80500DB0035 /* TAMyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAMyCollectionViewController.h; sourceTree = "<group>"; };
 		4E000BE31F06F80500DB0035 /* TAMyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAMyCollectionViewController.m; sourceTree = "<group>"; };
+		4E000BE81F0705FA00DB0035 /* TANoPicCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TANoPicCollectionCell.h; sourceTree = "<group>"; };
+		4E000BE91F0705FA00DB0035 /* TANoPicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TANoPicCollectionCell.m; sourceTree = "<group>"; };
+		4E000BEA1F0705FA00DB0035 /* TANoPicCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TANoPicCollectionCell.xib; sourceTree = "<group>"; };
 		4EFE54891F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPersonalMemberCenterViewController.h; sourceTree = "<group>"; };
 		4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPersonalMemberCenterViewController.m; sourceTree = "<group>"; };
 		4EFE548B1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaekwondoMemberCenterViewController.h; sourceTree = "<group>"; };
@@ -592,6 +597,9 @@
 				4E000BDD1F06F7F300DB0035 /* TAOnePicCollcetionCell.h */,
 				4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */,
 				4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */,
+				4E000BE81F0705FA00DB0035 /* TANoPicCollectionCell.h */,
+				4E000BE91F0705FA00DB0035 /* TANoPicCollectionCell.m */,
+				4E000BEA1F0705FA00DB0035 /* TANoPicCollectionCell.xib */,
 			);
 			path = MyCollectionViews;
 			sourceTree = "<group>";
@@ -1334,6 +1342,7 @@
 				B69F07541F020454009AE263 /* CodeScan.bundle in Resources */,
 				4E000BB91F06BA8E00DB0035 /* photo_original_def@2x.png in Resources */,
 				EF3E0C611F01EDA400729CF9 /* Info.plist in Resources */,
+				4E000BEC1F0705FA00DB0035 /* TANoPicCollectionCell.xib in Resources */,
 				EF3E0CA31F01F40B00729CF9 /* Main.storyboard in Resources */,
 				EFF9DA381F05FF820056F9F7 /* read_me.txt in Resources */,
 				4E000B8E1F06BA5F00DB0035 /* TAMemberInfoCell.xib in Resources */,
@@ -1489,6 +1498,7 @@
 				4EFE54AF1F032955001E7A05 /* TAMemberInfoView.m in Sources */,
 				EF3E0CA01F01F37C00729CF9 /* main.m in Sources */,
 				4E000B811F06BA4A00DB0035 /* TAMemberInfoViewController.m in Sources */,
+				4E000BEB1F0705FA00DB0035 /* TANoPicCollectionCell.m in Sources */,
 				4E000B831F06BA4A00DB0035 /* TAZhiYeRenZhengViewController.m in Sources */,
 				EFF9DA4A1F060E430056F9F7 /* AppDelegate+TAlogin.m in Sources */,
 				B6F9B1B71F050B8E00EBCD68 /* HotGalleryTableViewCell.m in Sources */,
