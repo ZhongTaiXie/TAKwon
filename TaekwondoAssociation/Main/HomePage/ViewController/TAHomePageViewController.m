@@ -9,25 +9,26 @@
 #import "TAHomePageViewController.h"
 #import "TABaseTableView.h"
 #import "TARequestManager.h"
-#import "AutoScrollView.h"
+#import "SDCycleScrollView.h"
 #import "TAPersonalHeaderView.h"
 #import "HotGalleryTableViewCell.h"
 #import "MingRenTangTableViewCell.h"
 #import "NewsListViewController.h"
+#import "UIImageView+WebCache.h"
+//#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
 
-@interface TAHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface TAHomePageViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 {
     NSArray *titleArray;//中部功能名称数组
-    AutoScrollView *autoScrollView;//顶部轮播图
+    SDCycleScrollView *autoScrollView;//顶部轮播图
+    NSMutableDictionary *dataDic;//数据字典
 }
 @property (nonatomic ,strong)TABaseTableView *tableView;
-//@property (nonatomic ,strong)NSMutableArray *dataSource;
-
+//@property (nonatomic,strong)XRCarouselView *autoScrollView;
 @end
 
-//zhushi
 @implementation TAHomePageViewController
 #pragma mark - lifeCircle
 - (void)viewDidLoad {
@@ -36,25 +37,27 @@ static NSString *identifier = @"CellID";
     
     titleArray = [NSArray arrayWithObjects:@"认证",@"中国跆协",@"新闻",@"公告",@"赛事",@"培训",@"公益",@"排名",@"名人堂",@"教学",@"国家队",@"跆拳百科", nil];
 //    self.dataSource = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor clearColor];
-    [_tableView setTableFooterView:view];
-    [self.view addSubview:self.tableView];
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     
-    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
-    
-    [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
-        // 解析数据
-        
-        NSLog(@"%@",dic);
-    } fail:^(NSError *error) {
-        
-    }];
+//    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.tabBarController.tabBar.hidden = NO;
+    [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
+        // 解析数据
+        NSLog(@"----------%@",dic);
+        dataDic = [dic[@"Data"] mutableCopy];
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor clearColor];
+        [_tableView setTableFooterView:view];
+        [self.view addSubview:self.tableView];
+
+    } fail:^(NSError *error) {
+        
+    }];
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -137,17 +140,22 @@ static NSString *identifier = @"CellID";
 //顶部轮播
 - (void)lunBoScrollView:(UIView *)view
 {
-    NSArray *array = @[[UIImage imageNamed:@"header_bg"],
-                       [UIImage imageNamed:@"header_bg"],
-                       [UIImage imageNamed:@"header_bg"],
-                       [UIImage imageNamed:@"header_bg"],
-                       [UIImage imageNamed:@"header_bg"]];
-    
-    autoScrollView = [[AutoScrollView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Width/16 * 9) imageArray:array];
+    NSMutableArray *imageArr = [[NSMutableArray alloc]init];
+    for (NSDictionary *dic in dataDic[@"Data"][@"Banner"]) {
+        [imageArr addObject:[NSString stringWithFormat:@"%@%@",URL_BASE,dic[@"imageUrl"]]];
+    }
+    // 网络加载 --- 创建不带标题的图片轮播器
+    autoScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Width/16 * 9) imageURLStringsGroup:imageArr];
+    autoScrollView.delegate = self;
+    autoScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+//    autoScrollView.titlesGroup = self.titleArray;
+    autoScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
+    autoScrollView.dotColor = RGB(71, 117, 196);
+    autoScrollView.autoScrollTimeInterval = 6.0;
+//    self.tableview.tableHeaderView = cycleScrollView;
     [view addSubview:autoScrollView];
     
     UIView *topView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, KTA_Screen_Width, 40)];
-//    topView.backgroundColor = [UIColor greenColor];
     [autoScrollView addSubview:topView];
     //消息按钮
     UIButton *massageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -168,6 +176,20 @@ static NSString *identifier = @"CellID";
     [scanningBtn setImage:[UIImage imageNamed:@"home_saoYiSao"] forState:UIControlStateNormal];
     [scanningBtn addTarget:self action:@selector(scanningBtnBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:scanningBtn];
+}
+#pragma mark 图片轮播 delegate
+-(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+//    TopData *data = self.topArray[index];
+//    
+//    NSString *url1 = [data.url substringFromIndex:4];
+//    url1 = [url1 substringToIndex:4];
+//    NSString *url2 = [data.url substringFromIndex:9];
+//    
+//    url2 = [NSString stringWithFormat:@"http://c.3g.163.com/photo/api/set/%@/%@.json",url1,url2];
+//    TopViewController *topVC = [[TopViewController alloc]init];
+//    topVC.url = url2;
+//    [self.navigationController pushViewController:topVC animated:YES];
 }
 #pragma mark - UITableViewDelegateDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
