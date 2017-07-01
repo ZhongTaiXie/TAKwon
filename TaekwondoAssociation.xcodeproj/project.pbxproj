@@ -68,6 +68,7 @@
 		4EFE552B1F048C7E001E7A05 /* TATaekwondoAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE552A1F048C7E001E7A05 /* TATaekwondoAuthViewController.m */; };
 		AF22AF7E1F04AA9C003582EF /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AF7D1F04AA9C003582EF /* BaseWebViewController.m */; };
 		AF22AFA41F05ED66003582EF /* BottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA31F05ED66003582EF /* BottomCommentView.m */; };
+		AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA61F064964003582EF /* LCProgressHUD.m */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -77,6 +78,14 @@
 		B699B8ED1F0623A200D8CB95 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8EC1F0623A200D8CB95 /* NewsListViewController.m */; };
 		B699B8F11F0624A100D8CB95 /* MingRenTangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8EF1F0624A100D8CB95 /* MingRenTangTableViewCell.m */; };
 		B699B8F21F0624A100D8CB95 /* MingRenTangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B699B8F01F0624A100D8CB95 /* MingRenTangTableViewCell.xib */; };
+		B699B9081F0648BB00D8CB95 /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8F81F0648BB00D8CB95 /* NSData+SDDataCache.m */; };
+		B699B9091F0648BB00D8CB95 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FB1F0648BB00D8CB95 /* TAAbstractDotView.m */; };
+		B699B90A1F0648BB00D8CB95 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FD1F0648BB00D8CB95 /* TAAnimatedDotView.m */; };
+		B699B90B1F0648BB00D8CB95 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FF1F0648BB00D8CB95 /* TADotView.m */; };
+		B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B9011F0648BB00D8CB95 /* TAPageControl.m */; };
+		B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B9031F0648BB00D8CB95 /* SDCollectionViewCell.m */; };
+		B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B9051F0648BB00D8CB95 /* SDCycleScrollView.m */; };
+		B699B90F1F0648BB00D8CB95 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B9071F0648BB00D8CB95 /* UIView+SDExtension.m */; };
 		B69F07501F020454009AE263 /* LBXScanNative.m in Sources */ = {isa = PBXBuildFile; fileRef = B69F073D1F020454009AE263 /* LBXScanNative.m */; };
 		B69F07511F020454009AE263 /* LBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69F073F1F020454009AE263 /* LBXScanViewController.m */; };
 		B69F07521F020454009AE263 /* ScanCodeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B69F07411F020454009AE263 /* ScanCodeUtil.m */; };
@@ -90,7 +99,6 @@
 		B6AA33DB1F00E9E400DAA5E7 /* TaekwondoAssociationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AA33DA1F00E9E400DAA5E7 /* TaekwondoAssociationTests.m */; };
 		B6AA33E61F00E9E400DAA5E7 /* TaekwondoAssociationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AA33E51F00E9E400DAA5E7 /* TaekwondoAssociationUITests.m */; };
 		B6F9B1A81F03B5D600EBCD68 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F9B1A71F03B5D600EBCD68 /* AgreementViewController.m */; };
-		B6F9B1B31F04FA1A00EBCD68 /* AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F9B1B21F04FA1A00EBCD68 /* AutoScrollView.m */; };
 		B6F9B1B71F050B8E00EBCD68 /* HotGalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F9B1B51F050B8E00EBCD68 /* HotGalleryTableViewCell.m */; };
 		B6F9B1B81F050B8E00EBCD68 /* HotGalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F9B1B61F050B8E00EBCD68 /* HotGalleryTableViewCell.xib */; };
 		E76B8936978F91C4D71DB2D0 /* libPods-TaekwondoAssociation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A9D6CE8D17F1B4B284A5FA /* libPods-TaekwondoAssociation.a */; };
@@ -257,6 +265,8 @@
 		AF22AF7D1F04AA9C003582EF /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
 		AF22AFA21F05ED66003582EF /* BottomCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCommentView.h; sourceTree = "<group>"; };
 		AF22AFA31F05ED66003582EF /* BottomCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCommentView.m; sourceTree = "<group>"; };
+		AF22AFA51F064964003582EF /* LCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCProgressHUD.h; sourceTree = "<group>"; };
+		AF22AFA61F064964003582EF /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -274,6 +284,22 @@
 		B699B8EE1F0624A100D8CB95 /* MingRenTangTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingRenTangTableViewCell.h; sourceTree = "<group>"; };
 		B699B8EF1F0624A100D8CB95 /* MingRenTangTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingRenTangTableViewCell.m; sourceTree = "<group>"; };
 		B699B8F01F0624A100D8CB95 /* MingRenTangTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingRenTangTableViewCell.xib; sourceTree = "<group>"; };
+		B699B8F71F0648BB00D8CB95 /* NSData+SDDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDDataCache.h"; sourceTree = "<group>"; };
+		B699B8F81F0648BB00D8CB95 /* NSData+SDDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDDataCache.m"; sourceTree = "<group>"; };
+		B699B8FA1F0648BB00D8CB95 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		B699B8FB1F0648BB00D8CB95 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		B699B8FC1F0648BB00D8CB95 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		B699B8FD1F0648BB00D8CB95 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		B699B8FE1F0648BB00D8CB95 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		B699B8FF1F0648BB00D8CB95 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		B699B9001F0648BB00D8CB95 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		B699B9011F0648BB00D8CB95 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		B699B9021F0648BB00D8CB95 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		B699B9031F0648BB00D8CB95 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		B699B9041F0648BB00D8CB95 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		B699B9051F0648BB00D8CB95 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		B699B9061F0648BB00D8CB95 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		B699B9071F0648BB00D8CB95 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		B69F073C1F020454009AE263 /* LBXScanNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNative.h; sourceTree = "<group>"; };
 		B69F073D1F020454009AE263 /* LBXScanNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNative.m; sourceTree = "<group>"; };
 		B69F073E1F020454009AE263 /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewController.h; sourceTree = "<group>"; };
@@ -302,8 +328,6 @@
 		B6AA33E71F00E9E400DAA5E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F9B1A61F03B5D600EBCD68 /* AgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
 		B6F9B1A71F03B5D600EBCD68 /* AgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
-		B6F9B1B11F04FA1A00EBCD68 /* AutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoScrollView.h; sourceTree = "<group>"; };
-		B6F9B1B21F04FA1A00EBCD68 /* AutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScrollView.m; sourceTree = "<group>"; };
 		B6F9B1B41F050B8E00EBCD68 /* HotGalleryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotGalleryTableViewCell.h; sourceTree = "<group>"; };
 		B6F9B1B51F050B8E00EBCD68 /* HotGalleryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotGalleryTableViewCell.m; sourceTree = "<group>"; };
 		B6F9B1B61F050B8E00EBCD68 /* HotGalleryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotGalleryTableViewCell.xib; sourceTree = "<group>"; };
@@ -650,6 +674,37 @@
 			path = TaekwondoAuthVC;
 			sourceTree = "<group>";
 		};
+		B699B8F61F0648BB00D8CB95 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B699B8F71F0648BB00D8CB95 /* NSData+SDDataCache.h */,
+				B699B8F81F0648BB00D8CB95 /* NSData+SDDataCache.m */,
+				B699B8F91F0648BB00D8CB95 /* PageControl */,
+				B699B9021F0648BB00D8CB95 /* SDCollectionViewCell.h */,
+				B699B9031F0648BB00D8CB95 /* SDCollectionViewCell.m */,
+				B699B9041F0648BB00D8CB95 /* SDCycleScrollView.h */,
+				B699B9051F0648BB00D8CB95 /* SDCycleScrollView.m */,
+				B699B9061F0648BB00D8CB95 /* UIView+SDExtension.h */,
+				B699B9071F0648BB00D8CB95 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		B699B8F91F0648BB00D8CB95 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				B699B8FA1F0648BB00D8CB95 /* TAAbstractDotView.h */,
+				B699B8FB1F0648BB00D8CB95 /* TAAbstractDotView.m */,
+				B699B8FC1F0648BB00D8CB95 /* TAAnimatedDotView.h */,
+				B699B8FD1F0648BB00D8CB95 /* TAAnimatedDotView.m */,
+				B699B8FE1F0648BB00D8CB95 /* TADotView.h */,
+				B699B8FF1F0648BB00D8CB95 /* TADotView.m */,
+				B699B9001F0648BB00D8CB95 /* TAPageControl.h */,
+				B699B9011F0648BB00D8CB95 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		B69F073A1F020454009AE263 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -852,6 +907,7 @@
 		EF3E0C621F01EDAC00729CF9 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				B699B8F61F0648BB00D8CB95 /* SDCycleScrollView */,
 				EFF9DA0B1F05FF820056F9F7 /* ShareSDK */,
 				B69F073A1F020454009AE263 /* QRCode */,
 			);
@@ -892,8 +948,6 @@
 			children = (
 				AF22AFA21F05ED66003582EF /* BottomCommentView.h */,
 				AF22AFA31F05ED66003582EF /* BottomCommentView.m */,
-				B6F9B1B11F04FA1A00EBCD68 /* AutoScrollView.h */,
-				B6F9B1B21F04FA1A00EBCD68 /* AutoScrollView.m */,
 				B6F9B1B41F050B8E00EBCD68 /* HotGalleryTableViewCell.h */,
 				B6F9B1B51F050B8E00EBCD68 /* HotGalleryTableViewCell.m */,
 				B6F9B1B61F050B8E00EBCD68 /* HotGalleryTableViewCell.xib */,
@@ -1090,6 +1144,8 @@
 				4EFE54AB1F0319D3001E7A05 /* WQTools.m */,
 				4EFE54981F02D451001E7A05 /* WQFactoryUI.h */,
 				4EFE54991F02D451001E7A05 /* WQFactoryUI.m */,
+				AF22AFA51F064964003582EF /* LCProgressHUD.h */,
+				AF22AFA61F064964003582EF /* LCProgressHUD.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1306,7 +1362,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = GZD44TPUDX;
+						DevelopmentTeam = 47PHKU5ELU;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -1463,6 +1519,8 @@
 				B699B8F11F0624A100D8CB95 /* MingRenTangTableViewCell.m in Sources */,
 				EF3E0CAF1F01F56000729CF9 /* TABaseViewController.m in Sources */,
 				4EFE54B81F0416A8001E7A05 /* TASeetingViewController.m in Sources */,
+				B699B90F1F0648BB00D8CB95 /* UIView+SDExtension.m in Sources */,
+				B699B9081F0648BB00D8CB95 /* NSData+SDDataCache.m in Sources */,
 				AF22AF7E1F04AA9C003582EF /* BaseWebViewController.m in Sources */,
 				4EFE55151F0481B2001E7A05 /* TAuploadPicView.m in Sources */,
 				B69F07581F020454009AE263 /* LBXScanView.m in Sources */,
@@ -1476,7 +1534,6 @@
 				4E000BC51F06BA8E00DB0035 /* TZImageManager.m in Sources */,
 				4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */,
 				B629A8921F0239500013528A /* TaekwondoBaiKeViewController.m in Sources */,
-				B6F9B1B31F04FA1A00EBCD68 /* AutoScrollView.m in Sources */,
 				4EFE55121F0479AF001E7A05 /* TATaekwondoAuthCell.m in Sources */,
 				EF3E0C5F1F01EDA400729CF9 /* AppDelegate.m in Sources */,
 				B69F07561F020454009AE263 /* LBXScanNetAnimation.m in Sources */,
@@ -1485,6 +1542,7 @@
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
 				EF0047201F04970200CD42C6 /* TAHttpClient.m in Sources */,
 				4E000BC81F06BA8E00DB0035 /* TZPhotoPreviewCell.m in Sources */,
+				B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */,
 				4E000BC31F06BA8E00DB0035 /* TZAssetCell.m in Sources */,
 				EF3E0CE31F0256F100729CF9 /* ConstColor.m in Sources */,
 				B69F07521F020454009AE263 /* ScanCodeUtil.m in Sources */,
@@ -1504,12 +1562,19 @@
 				4E000BF51F07112D00DB0035 /* TAGongGaoCollectionCell.m in Sources */,
 				4E000B801F06BA4A00DB0035 /* TAEditMemberInfoViewController.m in Sources */,
 				4EFE54941F02D206001E7A05 /* TAPersonalHeaderView.m in Sources */,
+				B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */,
+				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
 				EF37E5691F034AD6005F8F8B /* TABaseTableView.m in Sources */,
+
 				4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */,
+
+				B699B9091F0648BB00D8CB95 /* TAAbstractDotView.m in Sources */,
+
 				EF3E0CA11F01F37C00729CF9 /* TaekwondoAssociation.xcdatamodeld in Sources */,
 				B69F07531F020454009AE263 /* StyleDIY.m in Sources */,
 				EF0047221F04970200CD42C6 /* TAURL.m in Sources */,
+				B699B90A1F0648BB00D8CB95 /* TAAnimatedDotView.m in Sources */,
 				4E000BCE1F06BAB500DB0035 /* TACustomTextField.m in Sources */,
 				B69F07591F020454009AE263 /* LBXScanViewStyle.m in Sources */,
 				B629A88F1F0238E60013528A /* NationalTeamViewController.m in Sources */,
@@ -1526,10 +1591,12 @@
 				4E000BE41F06F80500DB0035 /* TAMyCollectionViewController.m in Sources */,
 				4EFE54AC1F0319D3001E7A05 /* WQTools.m in Sources */,
 				4E000B8D1F06BA5F00DB0035 /* TAMemberInfoCell.m in Sources */,
+				B699B90B1F0648BB00D8CB95 /* TADotView.m in Sources */,
 				4EFE54971F02D445001E7A05 /* WQNetWorkManager.m in Sources */,
 				4E000BC91F06BA8E00DB0035 /* TZPhotoPreviewController.m in Sources */,
 				EF0047211F04970200CD42C6 /* TARequestManager.m in Sources */,
 				EF3E0CB21F01F60A00729CF9 /* TAHomePageViewController.m in Sources */,
+				AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1662,7 +1729,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = 47PHKU5ELU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
@@ -1693,7 +1760,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = 47PHKU5ELU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",

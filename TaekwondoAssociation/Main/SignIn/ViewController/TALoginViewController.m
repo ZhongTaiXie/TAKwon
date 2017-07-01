@@ -11,7 +11,8 @@
 #import "TARegistViewController.h"
 #import "ConstColor.h"
 #import <ShareSDK/ShareSDK.h>
-
+#import "TARequestManager.h"
+#import "LCProgressHUD.h"
 
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
@@ -357,14 +358,35 @@
 //        
 //        [self loadData];
 //    }
+    NSMutableDictionary* params = [NSMutableDictionary dictionary];
+    [params setValue:_accuntTextFiled.text forKey:@"NickName"];
+    [params setValue:_passTextFiled.text forKey:@"Pwd"];
+    [TARequestManager TARequestCompletedWithPath:@"/SignIn/SignIn" Parameters:params sucee:^(NSDictionary *dic) {
+        
+        NSLog(@"%@",dic);
+        // 登录成功
+        NSDictionary* dataDic = [dic objectForKey:@"Data"];
+        if ([[dataDic objectForKey:@"Success"]boolValue]) {
+//            [LCProgressHUD showTextOntarget:self.view string:[dataDic objectForKey:@"Msg"]];
+
+            [[UIApplication sharedAppDelegate] goToHome];
+        }else{
+            //登录失败
+            [LCProgressHUD showTextOntarget:self.view string:[dataDic objectForKey:@"Msg"]];
+        }
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
     //  进入主程序
-    [[UIApplication sharedAppDelegate] goToHome];
+//    [[UIApplication sharedAppDelegate] goToHome];
     
 }
 #pragma mark - 游客登录点击事件
 - (void)touristLoginBtnClick
 {
-    
+    [[UIApplication sharedAppDelegate] goToHome];
+
 }
 #pragma mark - 忘记密码点击事件
 - (void)forgotPasswordBtnClick
@@ -478,6 +500,8 @@
 
 // 加载数据
 - (void)loadData {
+    
+    
     
     
 }

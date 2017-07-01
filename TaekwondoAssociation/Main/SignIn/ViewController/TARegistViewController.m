@@ -10,9 +10,11 @@
 #import "ConstColor.h"
 #import "AgreementViewController.h"
 #import "TARequestManager.h"
+#import "MBProgressHUD.h"
 
 @interface TARegistViewController ()<UITextFieldDelegate>
 {
+    NSNumber *loginway;
     UIButton *personalBtn;//个人注册按钮
     UIButton *taekwondoBtn;//道馆注册按钮
     UILabel *lineLeftLab;//按钮下线
@@ -36,6 +38,7 @@
 #pragma mark - 初始化头部切换按钮
 - (void)initWithTopBtn
 {
+    loginway = [NSNumber numberWithInt:1];
     // 个人
     personalBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     personalBtn.frame = CGRectMake(0, 64, KTA_Screen_Width/2, 40);
@@ -204,6 +207,8 @@
 #pragma mark - 个人注册点击事件
 - (void)personalBtnClick
 {
+    
+    loginway = [NSNumber numberWithInt:1];
     taekwondoBtn.backgroundColor = RGB(233, 233, 233);
     personalBtn.backgroundColor = [UIColor whiteColor];
     lineRightLab.hidden = YES;
@@ -216,6 +221,8 @@
 #pragma mark - 道馆注册点击事件
 - (void)taekwondoBtnClick
 {
+    
+    loginway = [NSNumber numberWithInt:2];;
     personalBtn.backgroundColor = RGB(233, 233, 233);
     taekwondoBtn.backgroundColor = [UIColor whiteColor];
     lineLeftLab.hidden = YES;
@@ -232,17 +239,35 @@
 }
 #pragma mark - 注册或改密码
 - (void)registerBtnClick
+
+
 {
+    
+   
+    
+
     if ([_isRegister isEqualToString:@"1"]) {
         //注册
         // 确认密码 和  密码一直
         if ([passwordTF.text isEqualToString:confirmPasswordTF.text]) {
-            NSDictionary *dic = @{};
+            NSDictionary *diy = @{@"NickName":accountNumberTF.text,@"Pwd":passwordTF.text,@"UserType":loginway};
             
-            [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:dic sucee:^(NSDictionary *dic) {
+            [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:diy sucee:^(NSDictionary *dic) {
                 
-                NSLog(@"%@",dic);
+                NSDictionary *dataa = [dic objectForKey:@"Data"];
                 
+                NSString *strr = [dataa objectForKey:@"Msg"];
+                
+                NSLog(@"%@",strr);
+                MBProgressHUD *progressView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                progressView.mode = MBProgressHUDModeText;
+                
+                [progressView hideAnimated:YES afterDelay:0.5];
+                progressView.mode = MBProgressHUDModeText;
+                progressView.label.text  = strr;
+//                progressView.minShowTime = 0.5;
+               
+                [progressView hideAnimated:YES afterDelay:0.5];
             } fail:^(NSError *error) {
                 
             }];
