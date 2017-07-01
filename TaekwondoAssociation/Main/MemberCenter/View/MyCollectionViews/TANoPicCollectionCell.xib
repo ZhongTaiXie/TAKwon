@@ -23,7 +23,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Ihy-bK-7Ye"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -33,14 +33,13 @@
                             <constraint firstAttribute="height" constant="20" id="9bQ-Jc-4Yk"/>
                             <constraint firstAttribute="width" constant="70" id="Lc5-yi-uUY"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="Button">
                             <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLE-tU-4tF">
-                        <rect key="frame" x="17" y="22" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLE-tU-4tF">
+                        <rect key="frame" x="10" y="10" width="334" height="54.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -49,12 +48,21 @@
                 <constraints>
                     <constraint firstItem="Yss-WT-cpb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0qC-Ao-Qgk"/>
                     <constraint firstItem="Fsy-dX-FuF" firstAttribute="leading" secondItem="Yss-WT-cpb" secondAttribute="trailing" constant="5" id="CBd-kd-TJr"/>
+                    <constraint firstItem="YLE-tU-4tF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Dpc-Ok-m9u"/>
                     <constraint firstAttribute="bottom" secondItem="Yss-WT-cpb" secondAttribute="bottom" constant="5" id="HRf-5Q-lRy"/>
+                    <constraint firstItem="YLE-tU-4tF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="RDc-CN-Bdz"/>
+                    <constraint firstAttribute="trailing" secondItem="YLE-tU-4tF" secondAttribute="trailing" constant="10" id="apS-7N-vRX"/>
                     <constraint firstAttribute="bottom" secondItem="Fsy-dX-FuF" secondAttribute="bottom" constant="5" id="cGG-7I-LDI"/>
                     <constraint firstAttribute="trailing" secondItem="Fsy-dX-FuF" secondAttribute="trailing" constant="10" id="dhc-Tb-5qI"/>
+                    <constraint firstItem="Yss-WT-cpb" firstAttribute="top" secondItem="YLE-tU-4tF" secondAttribute="bottom" constant="5" id="sNF-EG-ONg"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="89" y="30"/>
+            <connections>
+                <outlet property="lookNumBtn" destination="Fsy-dX-FuF" id="9dq-Yq-U5j"/>
+                <outlet property="timeAndFromLabel" destination="Yss-WT-cpb" id="ayD-ZU-oG4"/>
+                <outlet property="titleLabel" destination="YLE-tU-4tF" id="TEo-Tz-Hf8"/>
+            </connections>
+            <point key="canvasLocation" x="-127" y="26"/>
         </tableViewCell>
     </objects>
 </document>

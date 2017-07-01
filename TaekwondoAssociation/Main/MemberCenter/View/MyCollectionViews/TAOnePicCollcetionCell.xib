@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ZeS-3h-B8e">
-                        <rect key="frame" x="10" y="10" width="100" height="81.5"/>
+                        <rect key="frame" x="10" y="10" width="110" height="81.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="Duo-A0-NMF"/>
+                            <constraint firstAttribute="width" constant="110" id="Duo-A0-NMF"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelrtg " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-mx-XcP">
-                        <rect key="frame" x="120" y="10" width="296" height="50"/>
+                        <rect key="frame" x="130" y="10" width="286" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="Pku-Zh-Q4n"/>
                         </constraints>
@@ -34,11 +34,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wz-5p-5Jz">
-                        <rect key="frame" x="120" y="75.5" width="221" height="21"/>
+                        <rect key="frame" x="130" y="75.5" width="211" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="DRD-M7-xt9"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -48,7 +48,7 @@
                             <constraint firstAttribute="width" constant="70" id="9QW-Dc-jLl"/>
                             <constraint firstAttribute="height" constant="20" id="iN9-Cv-ILL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="Button">
                             <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
@@ -74,7 +74,7 @@
                 <outlet property="timeAndFromLabel" destination="1wz-5p-5Jz" id="gMx-G4-J32"/>
                 <outlet property="titleLabel" destination="gRk-mx-XcP" id="sa3-sj-ggd"/>
             </connections>
-            <point key="canvasLocation" x="-116" y="-94"/>
+            <point key="canvasLocation" x="-279" y="-29"/>
         </tableViewCell>
     </objects>
     <resources>

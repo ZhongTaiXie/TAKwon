@@ -41,11 +41,15 @@
 		4E000BCA1F06BA8E00DB0035 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BB01F06BA8E00DB0035 /* TZVideoPlayerController.m */; };
 		4E000BCB1F06BA8E00DB0035 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BB21F06BA8E00DB0035 /* UIView+Layout.m */; };
 		4E000BCE1F06BAB500DB0035 /* TACustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BCD1F06BAB500DB0035 /* TACustomTextField.m */; };
-		4E000BE01F06F7F300DB0035 /* TAOnePicCollcetionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */; };
-		4E000BE11F06F7F300DB0035 /* TAOnePicCollcetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */; };
 		4E000BE41F06F80500DB0035 /* TAMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BE31F06F80500DB0035 /* TAMyCollectionViewController.m */; };
 		4E000BEB1F0705FA00DB0035 /* TANoPicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BE91F0705FA00DB0035 /* TANoPicCollectionCell.m */; };
 		4E000BEC1F0705FA00DB0035 /* TANoPicCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BEA1F0705FA00DB0035 /* TANoPicCollectionCell.xib */; };
+		4E000BF01F070D5100DB0035 /* TAThreePicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BEE1F070D5100DB0035 /* TAThreePicCollectionCell.m */; };
+		4E000BF11F070D5100DB0035 /* TAThreePicCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BEF1F070D5100DB0035 /* TAThreePicCollectionCell.xib */; };
+		4E000BF51F07112D00DB0035 /* TAGongGaoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BF31F07112D00DB0035 /* TAGongGaoCollectionCell.m */; };
+		4E000BF61F07112D00DB0035 /* TAGongGaoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BF41F07112D00DB0035 /* TAGongGaoCollectionCell.xib */; };
+		4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BFD1F07136600DB0035 /* TAOnePicCollcetionCell.m */; };
+		4E000C001F07136600DB0035 /* TAOnePicCollcetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BFE1F07136600DB0035 /* TAOnePicCollcetionCell.xib */; };
 		4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */; };
 		4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548C1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m */; };
 		4EFE54911F02D200001E7A05 /* TAPersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE54901F02D200001E7A05 /* TAPersonalModel.m */; };
@@ -205,14 +209,20 @@
 		4E000BB21F06BA8E00DB0035 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		4E000BCC1F06BAB500DB0035 /* TACustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACustomTextField.h; sourceTree = "<group>"; };
 		4E000BCD1F06BAB500DB0035 /* TACustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACustomTextField.m; sourceTree = "<group>"; };
-		4E000BDD1F06F7F300DB0035 /* TAOnePicCollcetionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAOnePicCollcetionCell.h; sourceTree = "<group>"; };
-		4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAOnePicCollcetionCell.m; sourceTree = "<group>"; };
-		4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAOnePicCollcetionCell.xib; sourceTree = "<group>"; };
 		4E000BE21F06F80500DB0035 /* TAMyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAMyCollectionViewController.h; sourceTree = "<group>"; };
 		4E000BE31F06F80500DB0035 /* TAMyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAMyCollectionViewController.m; sourceTree = "<group>"; };
 		4E000BE81F0705FA00DB0035 /* TANoPicCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TANoPicCollectionCell.h; sourceTree = "<group>"; };
 		4E000BE91F0705FA00DB0035 /* TANoPicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TANoPicCollectionCell.m; sourceTree = "<group>"; };
 		4E000BEA1F0705FA00DB0035 /* TANoPicCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TANoPicCollectionCell.xib; sourceTree = "<group>"; };
+		4E000BED1F070D5100DB0035 /* TAThreePicCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAThreePicCollectionCell.h; sourceTree = "<group>"; };
+		4E000BEE1F070D5100DB0035 /* TAThreePicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAThreePicCollectionCell.m; sourceTree = "<group>"; };
+		4E000BEF1F070D5100DB0035 /* TAThreePicCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAThreePicCollectionCell.xib; sourceTree = "<group>"; };
+		4E000BF21F07112D00DB0035 /* TAGongGaoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGongGaoCollectionCell.h; sourceTree = "<group>"; };
+		4E000BF31F07112D00DB0035 /* TAGongGaoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAGongGaoCollectionCell.m; sourceTree = "<group>"; };
+		4E000BF41F07112D00DB0035 /* TAGongGaoCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAGongGaoCollectionCell.xib; sourceTree = "<group>"; };
+		4E000BFC1F07136600DB0035 /* TAOnePicCollcetionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAOnePicCollcetionCell.h; sourceTree = "<group>"; };
+		4E000BFD1F07136600DB0035 /* TAOnePicCollcetionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAOnePicCollcetionCell.m; sourceTree = "<group>"; };
+		4E000BFE1F07136600DB0035 /* TAOnePicCollcetionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAOnePicCollcetionCell.xib; sourceTree = "<group>"; };
 		4EFE54891F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPersonalMemberCenterViewController.h; sourceTree = "<group>"; };
 		4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPersonalMemberCenterViewController.m; sourceTree = "<group>"; };
 		4EFE548B1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaekwondoMemberCenterViewController.h; sourceTree = "<group>"; };
@@ -594,12 +604,18 @@
 		4EFE55241F048C2C001E7A05 /* MyCollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				4E000BDD1F06F7F300DB0035 /* TAOnePicCollcetionCell.h */,
-				4E000BDE1F06F7F300DB0035 /* TAOnePicCollcetionCell.m */,
-				4E000BDF1F06F7F300DB0035 /* TAOnePicCollcetionCell.xib */,
+				4E000BFC1F07136600DB0035 /* TAOnePicCollcetionCell.h */,
+				4E000BFD1F07136600DB0035 /* TAOnePicCollcetionCell.m */,
+				4E000BFE1F07136600DB0035 /* TAOnePicCollcetionCell.xib */,
 				4E000BE81F0705FA00DB0035 /* TANoPicCollectionCell.h */,
 				4E000BE91F0705FA00DB0035 /* TANoPicCollectionCell.m */,
 				4E000BEA1F0705FA00DB0035 /* TANoPicCollectionCell.xib */,
+				4E000BED1F070D5100DB0035 /* TAThreePicCollectionCell.h */,
+				4E000BEE1F070D5100DB0035 /* TAThreePicCollectionCell.m */,
+				4E000BEF1F070D5100DB0035 /* TAThreePicCollectionCell.xib */,
+				4E000BF21F07112D00DB0035 /* TAGongGaoCollectionCell.h */,
+				4E000BF31F07112D00DB0035 /* TAGongGaoCollectionCell.m */,
+				4E000BF41F07112D00DB0035 /* TAGongGaoCollectionCell.xib */,
 			);
 			path = MyCollectionViews;
 			sourceTree = "<group>";
@@ -1334,6 +1350,7 @@
 				4E000BB41F06BA8E00DB0035 /* MMVideoPreviewPlayHL@2x.png in Resources */,
 				4E000BBE1F06BA8E00DB0035 /* preview_original_def@2x.png in Resources */,
 				4EFE550A1F046D19001E7A05 /* TAReciveMessageCell.xib in Resources */,
+				4E000C001F07136600DB0035 /* TAOnePicCollcetionCell.xib in Resources */,
 				EFF9DA3B1F05FF820056F9F7 /* ShareSDK.bundle in Resources */,
 				4E000BC21F06BA8E00DB0035 /* VideoSendIcon@2x.png in Resources */,
 				4E000BBC1F06BA8E00DB0035 /* photo_sel_previewVc@2x.png in Resources */,
@@ -1346,6 +1363,7 @@
 				EF3E0CA31F01F40B00729CF9 /* Main.storyboard in Resources */,
 				EFF9DA381F05FF820056F9F7 /* read_me.txt in Resources */,
 				4E000B8E1F06BA5F00DB0035 /* TAMemberInfoCell.xib in Resources */,
+				4E000BF11F070D5100DB0035 /* TAThreePicCollectionCell.xib in Resources */,
 				4E000BB51F06BA8E00DB0035 /* navi_back@2x.png in Resources */,
 				4E000BBD1F06BA8E00DB0035 /* preview_number_icon@2x.png in Resources */,
 				EF3E0CAC1F01F51A00729CF9 /* TabBarController.xib in Resources */,
@@ -1355,13 +1373,13 @@
 				EFF9DA311F05FF820056F9F7 /* ShareSDKUI.bundle in Resources */,
 				4E000BB71F06BA8E00DB0035 /* photo_def_previewVc@2x.png in Resources */,
 				4E000BB81F06BA8E00DB0035 /* photo_number_icon@2x.png in Resources */,
-				4E000BE11F06F7F300DB0035 /* TAOnePicCollcetionCell.xib in Resources */,
 				4E000BBF1F06BA8E00DB0035 /* TableViewArrow@2x.png in Resources */,
 				4E000BC11F06BA8E00DB0035 /* TZAssetCell.xib in Resources */,
 				B699B8F21F0624A100D8CB95 /* MingRenTangTableViewCell.xib in Resources */,
 				B6F9B1B81F050B8E00EBCD68 /* HotGalleryTableViewCell.xib in Resources */,
 				4EFE54B41F033317001E7A05 /* TAPersonalCell.xib in Resources */,
 				4E000BBA1F06BA8E00DB0035 /* photo_original_sel@2x.png in Resources */,
+				4E000BF61F07112D00DB0035 /* TAGongGaoCollectionCell.xib in Resources */,
 				EF3E0C601F01EDA400729CF9 /* Assets.xcassets in Resources */,
 				4E000BB61F06BA8E00DB0035 /* photo_def_photoPickerVc@2x.png in Resources */,
 				4E000B8C1F06BA5F00DB0035 /* TAMemberIconCell.xib in Resources */,
@@ -1480,13 +1498,15 @@
 				EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */,
 				4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */,
 				B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */,
+				4E000BF01F070D5100DB0035 /* TAThreePicCollectionCell.m in Sources */,
 				B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */,
 				B6F9B1A81F03B5D600EBCD68 /* AgreementViewController.m in Sources */,
-				4E000BE01F06F7F300DB0035 /* TAOnePicCollcetionCell.m in Sources */,
+				4E000BF51F07112D00DB0035 /* TAGongGaoCollectionCell.m in Sources */,
 				4E000B801F06BA4A00DB0035 /* TAEditMemberInfoViewController.m in Sources */,
 				4EFE54941F02D206001E7A05 /* TAPersonalHeaderView.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
 				EF37E5691F034AD6005F8F8B /* TABaseTableView.m in Sources */,
+				4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */,
 				EF3E0CA11F01F37C00729CF9 /* TaekwondoAssociation.xcdatamodeld in Sources */,
 				B69F07531F020454009AE263 /* StyleDIY.m in Sources */,
 				EF0047221F04970200CD42C6 /* TAURL.m in Sources */,
