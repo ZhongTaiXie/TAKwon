@@ -37,7 +37,10 @@ static NSString *identifier = @"CellID";
     
     titleArray = [NSArray arrayWithObjects:@"认证",@"中国跆协",@"新闻",@"公告",@"赛事",@"培训",@"公益",@"排名",@"名人堂",@"教学",@"国家队",@"跆拳百科", nil];
 //    self.dataSource = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
-    
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor clearColor];
+    [_tableView setTableFooterView:view];
+    [self.view addSubview:self.tableView];
 }
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -47,17 +50,17 @@ static NSString *identifier = @"CellID";
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.tabBarController.tabBar.hidden = NO;
 
+    [MBProgressHUD showHUDAddedTo:_tableView animated:YES];
     [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据
         NSLog(@"----------%@",dic);
+        [MBProgressHUD hideHUDForView:_tableView animated:YES];
         dataDic = [dic[@"Data"] mutableCopy];
-        UIView *view = [[UIView alloc] init];
-        view.backgroundColor = [UIColor clearColor];
-        [_tableView setTableFooterView:view];
-        [self.view addSubview:self.tableView];
+        UIView *bigView = [self topView];
+        _tableView.tableHeaderView = bigView;
 
     } fail:^(NSError *error) {
-        
+        [MBProgressHUD hideHUDForView:_tableView animated:YES];
     }];
     
 }
@@ -73,8 +76,9 @@ static NSString *identifier = @"CellID";
         _tableView = [[TABaseTableView alloc]initWithFrame:CGRectMake(0, -20, KTA_Screen_Width, KTA_Screen_Height) style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        UIView *bigView = [self topView];
+        UIView *bigView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 300)];
         _tableView.tableHeaderView = bigView;
+
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
         
         TAWeakSelf(weakSelf)
@@ -87,9 +91,7 @@ static NSString *identifier = @"CellID";
         }];
         
     }
-    
     return _tableView;
-    
 }
 #pragma mark - 顶部轮播和功能按钮
 -(UIView *)topView
