@@ -20,5 +20,8 @@ FOUNDATION_EXPORT NSString * const URL_HOME;
 
 FOUNDATION_EXPORT NSString * const URL_LONGIN;
 
+// 登录
+
+FOUNDATION_EXPORT NSString * const URL_REGIST;
 
 @end

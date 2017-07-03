@@ -270,7 +270,7 @@
                 
                 NSDictionary *diy = @{@"NickName":accountNumberTF.text,@"Pwd":passwordTF.text,@"UserType":loginway};
                 
-                [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:diy sucee:^(NSDictionary *dic) {
+                [TARequestManager TARequestCompletedWithPath:URL_REGIST Parameters:diy sucee:^(NSDictionary *dic) {
                     
                     NSDictionary *dataa = [dic objectForKey:@"Data"];
                     
