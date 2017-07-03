@@ -37,7 +37,7 @@
     [self setupChildVc:[TATaekwondoHallViewController new] title:@"道馆" image:@"tabbar_taekwondo_noSelect" selectedImage:@"tabbar_taekwondo_select"];
     
     int a = 1; //用于测试
-    if(a == 1){  //个人
+    if(a == 10){  //个人
         [self setupChildVc:[TAPersonalMemberCenterViewController new] title:@"会员中心" image:@"tabbar_memberCenter_noSelect" selectedImage:@"tabbar_memberCenter_select"];
     }else{
         [self setupChildVc:[TATaekwondoMemberCenterViewController new] title:@"会员中心" image:@"tabbar_memberCenter_noSelect" selectedImage:@"tabbar_memberCenter_select"];
