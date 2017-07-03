@@ -247,7 +247,25 @@ static NSString *identifier = @"CellID";
         cell.myImageView.backgroundColor = [UIColor redColor];
         cell.topLineLabel.frame = CGRectMake(10, 14, 2, 18);
         cell.topLineLabel.backgroundColor = RGB(0, 120, 245);
-        cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
+        cell.titleLabel.frame = CGRectMake(14, 13, 70, 20);
+        cell.rightLineLabel.frame = CGRectMake(10, 46, 3, 60);
+        cell.rightLineLabel.backgroundColor = RGB(0, 120, 245);
+        NSString *imageStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Fame"][0][@"FamePic"]];
+        [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:imageStr] placeholderImage:[UIImage imageNamed:@""]];
+        cell.myImageView.frame = CGRectMake(35, 53.5, 30, 30);
+        cell.biaoqianLabel.frame = CGRectMake(23, 83.5, 54, 15);
+        cell.biaoqianLabel.backgroundColor = RGB(228, 85, 74);
+        cell.biaoqianLabel.layer.cornerRadius = 2;
+        cell.biaoqianLabel.clipsToBounds = YES;
+        cell.textLebl.frame = CGRectMake(87, 53.5, 150, 20);
+        cell.textLebl.numberOfLines = 2;
+        cell.textLebl.backgroundColor = [UIColor redColor];
+        NSDictionary *dic = dataDic[@"Fame"][0];
+        NSMutableAttributedString *textString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@ | 性别: %@",dic[@"FameName"],dic[@"FameSex"]]];
+        //标题加粗
+        [textString addAttribute:NSForegroundColorAttributeName value:RGB(119, 126, 145) range:NSMakeRange([dic[@"FameName"] length] + 3, [dic[@"FameName"] length]+4)];
+        [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 3, [dic[@"FameName"] length]+4)];
+        cell.textLebl.attributedText = textString;
         return cell;
     }
     
