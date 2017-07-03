@@ -146,7 +146,7 @@ static NSString *identifier = @"CellID";
 - (void)lunBoScrollView:(UIView *)view
 {
     NSMutableArray *imageArr = [[NSMutableArray alloc]init];
-    for (NSDictionary *dic in dataDic[@"Data"][@"Banner"]) {
+    for (NSDictionary *dic in dataDic[@"Banner"]) {
         [imageArr addObject:[NSString stringWithFormat:@"%@%@",URL_BASE,dic[@"imageUrl"]]];
     }
     // 网络加载 --- 创建不带标题的图片轮播器
@@ -215,10 +215,18 @@ static NSString *identifier = @"CellID";
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
         //热门图库
-        NSString *imageOneStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Data"][@"HotPic"][0][@"pic"]];
-        NSLog(@"=========%@",imageOneStr);
-//        NSURL *imageOneURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Data"][@"HotPic"][0][@"pic"]]];
+        NSString *imageOneStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][0][@"pic"]];
         [cell.myImageviewOne  sd_setImageWithURL:[NSURL URLWithString:imageOneStr] placeholderImage:[UIImage imageNamed:@""]];
+        NSString *imageTwoStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][1][@"pic"]];
+        [cell.myImageviewTwo  sd_setImageWithURL:[NSURL URLWithString:imageTwoStr] placeholderImage:[UIImage imageNamed:@""]];
+        NSString *imageThreeStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][2][@"pic"]];
+        [cell.myImageviewThree  sd_setImageWithURL:[NSURL URLWithString:imageThreeStr] placeholderImage:[UIImage imageNamed:@""]];
+        cell.myImageviewThree.backgroundColor = [UIColor redColor];
+        cell.myImageviewTwo.backgroundColor = [UIColor yellowColor];
+        cell.myImageviewOne.backgroundColor = [UIColor greenColor];
+        cell.myImageviewOne.frame = CGRectMake((KTA_Screen_Width-308)/2, 46, 100, 60);
+        cell.myImageviewTwo.frame = CGRectMake((KTA_Screen_Width-308)/2+104, 46, 100, 60);
+        cell.myImageviewThree.frame = CGRectMake((KTA_Screen_Width-308)/2+208, 46, 100, 60);
         cell.lineLabel.frame = CGRectMake(10, 14, 2, 18);
         cell.lineLabel.backgroundColor = RGB(0, 120, 245);
         cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
