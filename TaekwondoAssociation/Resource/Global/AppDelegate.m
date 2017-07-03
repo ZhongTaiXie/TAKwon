@@ -10,6 +10,7 @@
 #import "TabBarController.h"
 #import "TALoginViewController.h"
 #import "AppDelegate+TAlogin.h"
+#import "IQKeyboardManager.h"
 
 
 @interface AppDelegate ()
@@ -34,6 +35,14 @@
     self.window.rootViewController = nav;
     // 3.显示窗口
     [self.window makeKeyAndVisible];
+  // 设置第三方键盘
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = NO;
+    
+    
     return YES;
 }
 
