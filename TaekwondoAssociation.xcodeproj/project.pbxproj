@@ -106,6 +106,9 @@
 		EF0047211F04970200CD42C6 /* TARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00471B1F04970200CD42C6 /* TARequestManager.m */; };
 		EF0047221F04970200CD42C6 /* TAURL.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00471D1F04970200CD42C6 /* TAURL.m */; };
 		EF0047231F04970200CD42C6 /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00471F1F04970200CD42C6 /* UIImageView+SDWebImage.m */; };
+		EF04B6481F09D52F00C81C65 /* TANotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04B6471F09D52F00C81C65 /* TANotsViewController.m */; };
+		EF04B64C1F09DCC800C81C65 /* TANotsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04B64A1F09DCC800C81C65 /* TANotsTableViewCell.m */; };
+		EF04B64D1F09DCC800C81C65 /* TANotsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */; };
 		EF37E5691F034AD6005F8F8B /* TABaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF37E5681F034AD6005F8F8B /* TABaseTableView.m */; };
 		EF3E0C5F1F01EDA400729CF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0C591F01EDA400729CF9 /* AppDelegate.m */; };
 		EF3E0C601F01EDA400729CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3E0C5C1F01EDA400729CF9 /* Assets.xcassets */; };
@@ -355,6 +358,11 @@
 		EF00471D1F04970200CD42C6 /* TAURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAURL.m; sourceTree = "<group>"; };
 		EF00471E1F04970200CD42C6 /* UIImageView+SDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImage.h"; sourceTree = "<group>"; };
 		EF00471F1F04970200CD42C6 /* UIImageView+SDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImage.m"; sourceTree = "<group>"; };
+		EF04B6461F09D52F00C81C65 /* TANotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TANotsViewController.h; sourceTree = "<group>"; };
+		EF04B6471F09D52F00C81C65 /* TANotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TANotsViewController.m; sourceTree = "<group>"; };
+		EF04B6491F09DCC800C81C65 /* TANotsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TANotsTableViewCell.h; sourceTree = "<group>"; };
+		EF04B64A1F09DCC800C81C65 /* TANotsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TANotsTableViewCell.m; sourceTree = "<group>"; };
+		EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TANotsTableViewCell.xib; sourceTree = "<group>"; };
 		EF37E5671F034AD6005F8F8B /* TABaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABaseTableView.h; sourceTree = "<group>"; };
 		EF37E5681F034AD6005F8F8B /* TABaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABaseTableView.m; sourceTree = "<group>"; };
 		EF3E0C581F01EDA400729CF9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1005,6 +1013,9 @@
 				B699B8EE1F0624A100D8CB95 /* MingRenTangTableViewCell.h */,
 				B699B8EF1F0624A100D8CB95 /* MingRenTangTableViewCell.m */,
 				B699B8F01F0624A100D8CB95 /* MingRenTangTableViewCell.xib */,
+				EF04B6491F09DCC800C81C65 /* TANotsTableViewCell.h */,
+				EF04B64A1F09DCC800C81C65 /* TANotsTableViewCell.m */,
+				EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1028,6 +1039,8 @@
 				B629A88E1F0238E60013528A /* NationalTeamViewController.m */,
 				B629A8901F0239500013528A /* TaekwondoBaiKeViewController.h */,
 				B629A8911F0239500013528A /* TaekwondoBaiKeViewController.m */,
+				EF04B6461F09D52F00C81C65 /* TANotsViewController.h */,
+				EF04B6471F09D52F00C81C65 /* TANotsViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1568,6 +1581,7 @@
 				4E000BB71F06BA8E00DB0035 /* photo_def_previewVc@2x.png in Resources */,
 				4E000BB81F06BA8E00DB0035 /* photo_number_icon@2x.png in Resources */,
 				4E000BBF1F06BA8E00DB0035 /* TableViewArrow@2x.png in Resources */,
+				EF04B64D1F09DCC800C81C65 /* TANotsTableViewCell.xib in Resources */,
 				4E000BC11F06BA8E00DB0035 /* TZAssetCell.xib in Resources */,
 				B699B8F21F0624A100D8CB95 /* MingRenTangTableViewCell.xib in Resources */,
 				B6F9B1B81F050B8E00EBCD68 /* HotGalleryTableViewCell.xib in Resources */,
@@ -1670,6 +1684,7 @@
 				4E000BCA1F06BA8E00DB0035 /* TZVideoPlayerController.m in Sources */,
 				4EFE55091F046D19001E7A05 /* TAReciveMessageCell.m in Sources */,
 				4E000B8B1F06BA5F00DB0035 /* TAMemberIconCell.m in Sources */,
+				EF04B6481F09D52F00C81C65 /* TANotsViewController.m in Sources */,
 				EF0047231F04970200CD42C6 /* UIImageView+SDWebImage.m in Sources */,
 				4E000BCB1F06BA8E00DB0035 /* UIView+Layout.m in Sources */,
 				B629A88C1F0238AA0013528A /* TeachingViewController.m in Sources */,
@@ -1688,6 +1703,7 @@
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
 				EF0047201F04970200CD42C6 /* TAHttpClient.m in Sources */,
 				EFD232A61F06B5EC005559D8 /* IQUIScrollView+Additions.m in Sources */,
+				EF04B64C1F09DCC800C81C65 /* TANotsTableViewCell.m in Sources */,
 				4E000BC81F06BA8E00DB0035 /* TZPhotoPreviewCell.m in Sources */,
 				B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */,
 				4E000BC31F06BA8E00DB0035 /* TZAssetCell.m in Sources */,
