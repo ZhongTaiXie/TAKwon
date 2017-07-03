@@ -18,6 +18,8 @@
 #import "CertificationViewController.h"
 #import "TANotsViewController.h"
 #import "TASearchViewController.h"
+#import "PublicNoticeViewController.h"
+#import "MatchViewController.h"
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -331,11 +333,13 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 3)//公告
     {
-        
+        PublicNoticeViewController *pulicVC = [[PublicNoticeViewController alloc]init];
+        [self.navigationController pushViewController:pulicVC animated:YES];
     }
     else if(tag == 4)//赛事
     {
-        
+        MatchViewController *matchVC = [[MatchViewController alloc]init];
+        [self.navigationController pushViewController:matchVC animated:YES];
     }
     else if(tag == 5)//培训
     {
