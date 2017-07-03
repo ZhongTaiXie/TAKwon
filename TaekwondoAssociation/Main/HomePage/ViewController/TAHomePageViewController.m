@@ -234,8 +234,12 @@ static NSString *identifier = @"CellID";
         cell.lineLabel.frame = CGRectMake(10, 14, 2, 18);
         cell.lineLabel.backgroundColor = RGB(0, 120, 245);
         cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
-        
-    
+        cell.moreLabel.frame = CGRectMake(KTA_Screen_Width-45, 13, 25, 10);
+        cell.moreLabel.textColor = RGB(135, 135, 135);
+        cell.moreBtn.frame = CGRectMake(KTA_Screen_Width-50, 13, 40, 10);
+        cell.moreImage.frame = CGRectMake(KTA_Screen_Width-17, 13, 7, 10);
+        cell.moreImage.image = [UIImage imageNamed:@"home_more"];
+        [cell.moreBtn addTarget:self action:@selector(tuKuMoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
     else
@@ -259,16 +263,33 @@ static NSString *identifier = @"CellID";
         cell.biaoqianLabel.backgroundColor = RGB(228, 85, 74);
         cell.biaoqianLabel.layer.cornerRadius = 2;
         cell.biaoqianLabel.clipsToBounds = YES;
-        cell.textLebl.frame = CGRectMake(87, 53.5, 150, 20);
+        cell.textLebl.frame = CGRectMake(87, 56, 140, 20);
         cell.textLebl.numberOfLines = 2;
-        cell.textLebl.backgroundColor = [UIColor redColor];
+//        cell.textLebl.backgroundColor = [UIColor redColor];
         NSDictionary *dic = dataDic[@"Fame"][0];
         NSMutableAttributedString *textString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@ | 性别: %@",dic[@"FameName"],dic[@"FameSex"]]];
         [textString addAttribute:NSForegroundColorAttributeName value:RGB(119, 126, 145) range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
         [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
         cell.textLebl.attributedText = textString;
-        cell.addressLab.frame = CGRectMake(87, 83.5, 150, 20);
-//        cell.addressLab.text = [NSString stringWithFormat:<#(nonnull NSString *), ...#>]
+        cell.addressLab.frame = CGRectMake(87, 76, 140, 20);
+        cell.addressLab.textColor = RGB(119, 126, 145);
+        cell.addressLab.text = [NSString stringWithFormat:@"地区: %@",dic[@"FameAreas"]];
+        cell.leftLineLabel.frame = CGRectMake(KTA_Screen_Width-80, 51, 1, 50);
+        cell.leftLineLabel.backgroundColor = RGB(48, 65, 85);
+        cell.rightTextLeble.frame = CGRectMake(cell.leftLineLabel.frame.origin.x + 5, 51, 70, 30);
+//        cell.rightTextLeble.backgroundColor = [UIColor redColor];
+        cell.rightTextLeble.textColor = RGB(248, 74, 0);
+        cell.rightTextLeble.text = dic[@"FameHonor"][0];
+        cell.rightTextLeble.textAlignment = NSTextAlignmentCenter;
+        cell.rongyuLabel.frame = CGRectMake(cell.leftLineLabel.frame.origin.x + 5, 81, 70, 20);
+        cell.rongyuLabel.textColor = RGB(218, 218, 218);
+        
+        cell.moreLabel.frame = CGRectMake(KTA_Screen_Width-45, 13, 25, 10);
+        cell.moreLabel.textColor = RGB(135, 135, 135);
+        cell.moreBtn.frame = CGRectMake(KTA_Screen_Width-50, 13, 40, 10);
+        cell.moreImage.frame = CGRectMake(KTA_Screen_Width-17, 13, 7, 10);
+        cell.moreImage.image = [UIImage imageNamed:@"home_more"];
+        [cell.moreBtn addTarget:self action:@selector(mingRenTangMoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
     
@@ -370,5 +391,15 @@ static NSString *identifier = @"CellID";
     {
         
     }
+}
+#pragma mark - 图库更多点击事件
+- (void)tuKuMoreBtnClick
+{
+    
+}
+#pragma mark - 名人堂更多点击事件
+- (void)mingRenTangMoreBtnClick
+{
+    
 }
 @end
