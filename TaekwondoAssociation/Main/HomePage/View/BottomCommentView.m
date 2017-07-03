@@ -11,6 +11,10 @@
 #define kDeviceWidth [UIScreen mainScreen].bounds.size.width
 #define kDeviceHeight [UIScreen mainScreen].bounds.size.height
 
+@interface BottomCommentView ()<UITextFieldDelegate>
+
+@end
+
 @implementation BottomCommentView
 
 
@@ -104,9 +108,22 @@
     _tfView.layer.masksToBounds = YES;
     _tfView.contentMode = UIViewContentModeScaleAspectFill;
     
-    _tfImageV = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 20, 20)];
+    _tfImageV = [[UIImageView alloc] initWithFrame:CGRectMake(7, 7, 15, 15)];
     _tfImageV.image = [UIImage imageNamed:@"Write-reviews"];
     [_tfView addSubview:_tfImageV];
+    _tfLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 5, 40, 20)];
+    _tfLabel.text = @"写评论";
+    _tfLabel.font = [UIFont systemFontOfSize:13];
+    _tfLabel.textColor = [UIColor darkGrayColor];
+    [_tfView addSubview:_tfLabel];
+    
+    UILabel* leftLb = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, 10, 20)];
+    leftLb.backgroundColor = [UIColor clearColor];
+    _tfView.leftView = leftLb;
+    _tfView.leftViewMode = UITextFieldViewModeAlways;
+    _tfView.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    
+    _tfView.delegate = self;
     
     // 虚线
     UIView* lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kDeviceWidth, 0.5)];
@@ -134,8 +151,31 @@
 
 - (void)tagsBtnClick:(UIButton*)btn
 {
-    
+    btn.selected = !btn.selected;
 }
+
+#pragma -marl UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    _tfLabel.hidden = YES;
+    _tfImageV.hidden = YES;
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    if (_tfView.text.length) {
+        _tfLabel.hidden = YES;
+        _tfImageV.hidden = YES;
+    }else{
+        _tfImageV.hidden = NO;
+        _tfLabel.hidden= NO;
+    }
+    
+    return YES;
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

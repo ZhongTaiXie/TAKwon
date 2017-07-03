@@ -22,6 +22,7 @@ typedef enum: NSUInteger{
 @property (nonatomic, strong) UIButton* shareBtn;
 @property (nonatomic, strong) UIButton* tagsBtn;
 @property (nonatomic, strong) UIImageView* tfImageV;
+@property (nonatomic, strong) UILabel* tfLabel;
 
 @property (nonatomic, assign) NSInteger type;
 
