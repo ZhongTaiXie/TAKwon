@@ -15,6 +15,11 @@
 #import "MingRenTangTableViewCell.h"
 #import "NewsListViewController.h"
 #import "UIImageView+WebCache.h"
+#import "CertificationViewController.h"
+#import "TANotsViewController.h"
+#import "TASearchViewController.h"
+#import "PublicNoticeViewController.h"
+#import "MatchViewController.h"
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -58,7 +63,7 @@ static NSString *identifier = @"CellID";
         dataDic = [dic[@"Data"] mutableCopy];
         UIView *bigView = [self topView];
         _tableView.tableHeaderView = bigView;
-
+        [_tableView reloadData];
     } fail:^(NSError *error) {
         [MBProgressHUD hideHUDForView:_tableView animated:YES];
     }];
@@ -145,7 +150,7 @@ static NSString *identifier = @"CellID";
 - (void)lunBoScrollView:(UIView *)view
 {
     NSMutableArray *imageArr = [[NSMutableArray alloc]init];
-    for (NSDictionary *dic in dataDic[@"Data"][@"Banner"]) {
+    for (NSDictionary *dic in dataDic[@"Banner"]) {
         [imageArr addObject:[NSString stringWithFormat:@"%@%@",URL_BASE,dic[@"imageUrl"]]];
     }
     // 网络加载 --- 创建不带标题的图片轮播器
@@ -213,7 +218,24 @@ static NSString *identifier = @"CellID";
             cell = [[[NSBundle mainBundle] loadNibNamed:@"HotGalleryTableViewCell" owner:self options:nil] lastObject];
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
+        //热门图库
+        NSString *imageOneStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][0][@"pic"]];
+        [cell.myImageviewOne  sd_setImageWithURL:[NSURL URLWithString:imageOneStr] placeholderImage:[UIImage imageNamed:@""]];
+        NSString *imageTwoStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][1][@"pic"]];
+        [cell.myImageviewTwo  sd_setImageWithURL:[NSURL URLWithString:imageTwoStr] placeholderImage:[UIImage imageNamed:@""]];
+        NSString *imageThreeStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][2][@"pic"]];
+        [cell.myImageviewThree  sd_setImageWithURL:[NSURL URLWithString:imageThreeStr] placeholderImage:[UIImage imageNamed:@""]];
+        cell.myImageviewThree.backgroundColor = [UIColor redColor];
+        cell.myImageviewTwo.backgroundColor = [UIColor yellowColor];
         cell.myImageviewOne.backgroundColor = [UIColor greenColor];
+        cell.myImageviewOne.frame = CGRectMake((KTA_Screen_Width-308)/2, 46, 100, 60);
+        cell.myImageviewTwo.frame = CGRectMake((KTA_Screen_Width-308)/2+104, 46, 100, 60);
+        cell.myImageviewThree.frame = CGRectMake((KTA_Screen_Width-308)/2+208, 46, 100, 60);
+        cell.lineLabel.frame = CGRectMake(10, 14, 2, 18);
+        cell.lineLabel.backgroundColor = RGB(0, 120, 245);
+        cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
+        
+    
         return cell;
     }
     else
@@ -223,7 +245,30 @@ static NSString *identifier = @"CellID";
             cell = [[[NSBundle mainBundle] loadNibNamed:@"MingRenTangTableViewCell" owner:self options:nil] lastObject];
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
+        //名人堂
         cell.myImageView.backgroundColor = [UIColor redColor];
+        cell.topLineLabel.frame = CGRectMake(10, 14, 2, 18);
+        cell.topLineLabel.backgroundColor = RGB(0, 120, 245);
+        cell.titleLabel.frame = CGRectMake(14, 13, 70, 20);
+        cell.rightLineLabel.frame = CGRectMake(10, 46, 3, 60);
+        cell.rightLineLabel.backgroundColor = RGB(0, 120, 245);
+        NSString *imageStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Fame"][0][@"FamePic"]];
+        [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:imageStr] placeholderImage:[UIImage imageNamed:@""]];
+        cell.myImageView.frame = CGRectMake(35, 53.5, 30, 30);
+        cell.biaoqianLabel.frame = CGRectMake(23, 83.5, 54, 15);
+        cell.biaoqianLabel.backgroundColor = RGB(228, 85, 74);
+        cell.biaoqianLabel.layer.cornerRadius = 2;
+        cell.biaoqianLabel.clipsToBounds = YES;
+        cell.textLebl.frame = CGRectMake(87, 53.5, 150, 20);
+        cell.textLebl.numberOfLines = 2;
+        cell.textLebl.backgroundColor = [UIColor redColor];
+        NSDictionary *dic = dataDic[@"Fame"][0];
+        NSMutableAttributedString *textString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@ | 性别: %@",dic[@"FameName"],dic[@"FameSex"]]];
+        [textString addAttribute:NSForegroundColorAttributeName value:RGB(119, 126, 145) range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
+        [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
+        cell.textLebl.attributedText = textString;
+        cell.addressLab.frame = CGRectMake(87, 83.5, 150, 20);
+//        cell.addressLab.text = [NSString stringWithFormat:<#(nonnull NSString *), ...#>]
         return cell;
     }
     
@@ -257,12 +302,14 @@ static NSString *identifier = @"CellID";
 #pragma mark - 消息按钮点击事件
 - (void)massageBtnClick
 {
-    
+    TANotsViewController *notsVC = [[TANotsViewController alloc]init];
+    [self.navigationController pushViewController:notsVC animated:YES];
 }
 #pragma mark - 搜索点击事件
 - (void)searchBtnClick
 {
-    
+    TASearchViewController *searchVC = [[TASearchViewController alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 #pragma mark - 扫一扫按钮点击事件
 - (void)scanningBtnBtnClick
@@ -273,7 +320,8 @@ static NSString *identifier = @"CellID";
 {
     NSInteger tag = [sender tag];
     if (tag == 0) {//认证
-        
+        CertificationViewController *certificationVC = [[CertificationViewController alloc]init];
+        [self.navigationController pushViewController:certificationVC animated:YES];
     }
     else if(tag == 1)//中国跆协
     {
@@ -286,11 +334,13 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 3)//公告
     {
-        
+        PublicNoticeViewController *pulicVC = [[PublicNoticeViewController alloc]init];
+        [self.navigationController pushViewController:pulicVC animated:YES];
     }
     else if(tag == 4)//赛事
     {
-        
+        MatchViewController *matchVC = [[MatchViewController alloc]init];
+        [self.navigationController pushViewController:matchVC animated:YES];
     }
     else if(tag == 5)//培训
     {

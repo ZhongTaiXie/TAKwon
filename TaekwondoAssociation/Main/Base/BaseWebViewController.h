@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "TABaseViewController.h"
 
 typedef void (^segueBlock)(NSString* segueParams);
 
 
-@interface BaseWebViewController : UIViewController
+@interface BaseWebViewController : TABaseViewController
 
 @property (nonatomic, strong) WKWebView* webView;
 

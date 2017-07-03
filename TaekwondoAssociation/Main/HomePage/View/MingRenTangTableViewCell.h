@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *textLebl;
 @property (weak, nonatomic) IBOutlet UILabel *rightLineLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightTextLeble;
+@property (weak, nonatomic) IBOutlet UILabel *addressLab;
 
 @end
