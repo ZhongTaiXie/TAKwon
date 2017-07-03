@@ -387,8 +387,8 @@
 - (void)touristLoginBtnClick
 
 {
-    [self.navigationController pushViewController:[TASearchViewController new] animated:YES];
-//    [[UIApplication sharedAppDelegate] goToHome];
+//    [self.navigationController pushViewController:[TASearchViewController new] animated:YES];
+    [[UIApplication sharedAppDelegate] goToHome];
 
 }
 #pragma mark - 忘记密码点击事件
