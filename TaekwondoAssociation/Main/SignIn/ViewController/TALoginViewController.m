@@ -13,7 +13,10 @@
 #import <ShareSDK/ShareSDK.h>
 #import "TARequestManager.h"
 #import "LCProgressHUD.h"
+#pragma mark   测试接口
 #import "TASearchViewController.h"
+#import "NewsListViewController.h"
+
 
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
@@ -387,7 +390,7 @@
 - (void)touristLoginBtnClick
 
 {
-//    [self.navigationController pushViewController:[TASearchViewController new] animated:YES];
+//    [self.navigationController pushViewController:[NewsListViewController new] animated:YES];
     [[UIApplication sharedAppDelegate] goToHome];
 
 }
