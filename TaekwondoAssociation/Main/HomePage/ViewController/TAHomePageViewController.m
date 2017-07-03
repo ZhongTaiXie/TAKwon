@@ -213,7 +213,14 @@ static NSString *identifier = @"CellID";
             cell = [[[NSBundle mainBundle] loadNibNamed:@"HotGalleryTableViewCell" owner:self options:nil] lastObject];
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
-        cell.myImageviewOne.backgroundColor = [UIColor greenColor];
+        //热门图库
+        NSURL *imageOneURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Data"][@"HotPic"][0][@"pic"]]];
+        [cell.myImageviewOne  sd_setImageWithURL:imageOneURL placeholderImage:[UIImage imageNamed:@""]];
+        cell.lineLabel.frame = CGRectMake(10, 14, 2, 18);
+        cell.lineLabel.backgroundColor = RGB(0, 120, 245);
+        cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
+        
+    
         return cell;
     }
     else
@@ -223,7 +230,11 @@ static NSString *identifier = @"CellID";
             cell = [[[NSBundle mainBundle] loadNibNamed:@"MingRenTangTableViewCell" owner:self options:nil] lastObject];
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
+        //名人堂
         cell.myImageView.backgroundColor = [UIColor redColor];
+        cell.topLineLabel.frame = CGRectMake(10, 14, 2, 18);
+        cell.topLineLabel.backgroundColor = RGB(0, 120, 245);
+        cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
         return cell;
     }
     
