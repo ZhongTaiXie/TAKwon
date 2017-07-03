@@ -15,6 +15,7 @@
 #import "MingRenTangTableViewCell.h"
 #import "NewsListViewController.h"
 #import "UIImageView+WebCache.h"
+#import "CertificationViewController.h"
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -286,7 +287,8 @@ static NSString *identifier = @"CellID";
 {
     NSInteger tag = [sender tag];
     if (tag == 0) {//认证
-        
+        CertificationViewController *certificationVC = [[CertificationViewController alloc]init];
+        [self.navigationController pushViewController:certificationVC animated:YES];
     }
     else if(tag == 1)//中国跆协
     {
