@@ -1,36 +1,25 @@
 //
-//  AgreementViewController.m
+//  MatchViewController.m
 //  TaekwondoAssociation
 //
-//  Created by 李瑞平 on 2017/6/28.
+//  Created by 王尉坤 on 2017/7/3.
 //  Copyright © 2017年 Miss 李. All rights reserved.
 //
 
-#import "AgreementViewController.h"
+#import "MatchViewController.h"
 
-@interface AgreementViewController ()
+@interface MatchViewController ()
 
 @end
 
-@implementation AgreementViewController
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = @"协议";
-    }
-    return self;
-}
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-}
+@implementation MatchViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self loadWebUrl:@"http://g3msy5.natappfree.cc/h5/protocol.html"];
+    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/training/training_list.html"];
+
 }
 
 - (void)didReceiveMemoryWarning {

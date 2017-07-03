@@ -1,5 +1,5 @@
 //
-//  CertificationViewController.h
+//  PublicNoticeViewController.h
 //  TaekwondoAssociation
 //
 //  Created by 王尉坤 on 2017/7/3.
@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BaseWebViewController.h"
 
-@interface CertificationViewController :BaseWebViewController
-
+@interface PublicNoticeViewController : BaseWebViewController
 
 @end

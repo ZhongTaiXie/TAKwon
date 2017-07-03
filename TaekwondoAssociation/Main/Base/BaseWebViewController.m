@@ -17,6 +17,13 @@
 
 @implementation BaseWebViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -30,7 +37,7 @@
 
 - (void)creatHeadView
 {
-    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kDeviceWidth, _headViewHeight)];
+    _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kDeviceWidth, _headViewHeight)];
     _headView.backgroundColor = [UIColor redColor];
     
     [self.view addSubview:_headView];
@@ -40,7 +47,7 @@
 {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, _headViewHeight+64, kDeviceWidth, kDeviceHeight - _headViewHeight) configuration:config];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, _headViewHeight, kDeviceWidth, kDeviceHeight - _headViewHeight) configuration:config];
     
     _webView.scrollView.showsVerticalScrollIndicator = NO;
     _webView.navigationDelegate = self;

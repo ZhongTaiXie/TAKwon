@@ -70,7 +70,8 @@
 		AF22AFA41F05ED66003582EF /* BottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA31F05ED66003582EF /* BottomCommentView.m */; };
 		AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA61F064964003582EF /* LCProgressHUD.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
-		AFE4C11D1F09DDB300AA2C0E /* CertificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE4C11B1F09DDB300AA2C0E /* CertificationViewController.xib */; };
+		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
+		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -291,7 +292,10 @@
 		AF22AFA61F064964003582EF /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
-		AFE4C11B1F09DDB300AA2C0E /* CertificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CertificationViewController.xib; sourceTree = "<group>"; };
+		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
+		AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicNoticeViewController.m; sourceTree = "<group>"; };
+		AFE4C1211F0A1C6600AA2C0E /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
+		AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -1049,9 +1053,12 @@
 				B629A8911F0239500013528A /* TaekwondoBaiKeViewController.m */,
 				AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */,
 				AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */,
-				AFE4C11B1F09DDB300AA2C0E /* CertificationViewController.xib */,
 				EF04B6461F09D52F00C81C65 /* TANotsViewController.h */,
 				EF04B6471F09D52F00C81C65 /* TANotsViewController.m */,
+				AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */,
+				AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */,
+				AFE4C1211F0A1C6600AA2C0E /* MatchViewController.h */,
+				AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */,
 				EF04B64E1F09EC8200C81C65 /* TASearchViewController.h */,
 				EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */,
 			);
@@ -1593,7 +1600,6 @@
 				EFF9DA311F05FF820056F9F7 /* ShareSDKUI.bundle in Resources */,
 				4E000BB71F06BA8E00DB0035 /* photo_def_previewVc@2x.png in Resources */,
 				4E000BB81F06BA8E00DB0035 /* photo_number_icon@2x.png in Resources */,
-				AFE4C11D1F09DDB300AA2C0E /* CertificationViewController.xib in Resources */,
 				4E000BBF1F06BA8E00DB0035 /* TableViewArrow@2x.png in Resources */,
 				EF04B64D1F09DCC800C81C65 /* TANotsTableViewCell.xib in Resources */,
 				4E000BC11F06BA8E00DB0035 /* TZAssetCell.xib in Resources */,
@@ -1735,6 +1741,7 @@
 				EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */,
 				4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */,
 				EFD232AE1F06B5EC005559D8 /* IQBarButtonItem.m in Sources */,
+				AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */,
 				B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */,
 				4E000BF01F070D5100DB0035 /* TAThreePicCollectionCell.m in Sources */,
 				B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */,
@@ -1754,6 +1761,7 @@
 				EFD232AD1F06B5EC005559D8 /* IQTextView.m in Sources */,
 				EF0047221F04970200CD42C6 /* TAURL.m in Sources */,
 				B699B90A1F0648BB00D8CB95 /* TAAnimatedDotView.m in Sources */,
+				AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */,
 				4E000BCE1F06BAB500DB0035 /* TACustomTextField.m in Sources */,
 				B69F07591F020454009AE263 /* LBXScanViewStyle.m in Sources */,
 				B629A88F1F0238E60013528A /* NationalTeamViewController.m in Sources */,

@@ -17,13 +17,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.title = @"认证查询";
+    
+    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/attestation/attestation.html"];
+    
+    // 扫一扫按钮
+    UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:@"saoyisao_white"] forState:UIControlStateNormal];
+    btn.frame = CGRectMake(0, 0,40, 40);
+//    btn.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+    [btn addTarget:self action:@selector(saoyisaoBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    
+    self.navigationItem.rightBarButtonItem = item;
 }
 
-- (IBAction)inquireBtnCLick:(id)sender {
+- (void)saoyisaoBtnClick:(UIButton*)btn
+{
+    
 }
 
-- (IBAction)helpBtnClick:(id)sender {
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
