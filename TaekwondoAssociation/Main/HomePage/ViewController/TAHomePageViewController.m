@@ -264,10 +264,11 @@ static NSString *identifier = @"CellID";
         cell.textLebl.backgroundColor = [UIColor redColor];
         NSDictionary *dic = dataDic[@"Fame"][0];
         NSMutableAttributedString *textString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@ | 性别: %@",dic[@"FameName"],dic[@"FameSex"]]];
-        //标题加粗
-        [textString addAttribute:NSForegroundColorAttributeName value:RGB(119, 126, 145) range:NSMakeRange([dic[@"FameName"] length] + 3, [dic[@"FameName"] length]+4)];
-        [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 3, [dic[@"FameName"] length]+4)];
+        [textString addAttribute:NSForegroundColorAttributeName value:RGB(119, 126, 145) range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
+        [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
         cell.textLebl.attributedText = textString;
+        cell.addressLab.frame = CGRectMake(87, 83.5, 150, 20);
+//        cell.addressLab.text = [NSString stringWithFormat:<#(nonnull NSString *), ...#>]
         return cell;
     }
     
