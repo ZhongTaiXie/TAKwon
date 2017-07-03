@@ -174,11 +174,11 @@ static NSString *identifier = @"CellID";
     [topView addSubview:massageBtn];
     //搜索框
     UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    searchBtn.backgroundColor = [UIColor clearColor];
-    searchBtn.frame = CGRectMake(60, 5, KTA_Screen_Width-120, 30);
+//    searchBtn.backgroundColor = [UIColor redColor];
+    searchBtn.frame = CGRectMake(50, 5, KTA_Screen_Width-100, 30);
     [searchBtn setImage:[UIImage imageNamed:@"home_bigSearch"] forState:UIControlStateNormal];
     [searchBtn addTarget:self action:@selector(searchBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    searchBtn.backgroundColor = [UIColor whiteColor];
+//    searchBtn.backgroundColor = [UIColor whiteColor];
     [topView addSubview:searchBtn];
     //扫一扫
     UIButton *scanningBtn = [UIButton buttonWithType:UIButtonTypeCustom];
