@@ -16,6 +16,8 @@
 #import "NewsListViewController.h"
 #import "UIImageView+WebCache.h"
 #import "CertificationViewController.h"
+#import "TANotsViewController.h"
+#import "TASearchViewController.h"
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -279,12 +281,14 @@ static NSString *identifier = @"CellID";
 #pragma mark - 消息按钮点击事件
 - (void)massageBtnClick
 {
-    
+    TANotsViewController *notsVC = [[TANotsViewController alloc]init];
+    [self.navigationController pushViewController:notsVC animated:YES];
 }
 #pragma mark - 搜索点击事件
 - (void)searchBtnClick
 {
-    
+    TASearchViewController *searchVC = [[TASearchViewController alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 #pragma mark - 扫一扫按钮点击事件
 - (void)scanningBtnBtnClick
