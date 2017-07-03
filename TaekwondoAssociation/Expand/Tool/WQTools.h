@@ -24,4 +24,8 @@
 //判断手机号码格式是否正确
 + (BOOL)isValidateMobile:(NSString *)mobile;
 
+//判断一个字符串是否为空
++ (BOOL)isBlankString:(NSString *)string;
+
+
 @end

@@ -12,6 +12,10 @@
 #import "TAPersonalCell.h"
 #import "TASeetingViewController.h"
 #import "TATaekwondoAuthViewController.h"
+#import "TATaekwondoInfoViewController.h"
+#import "TAMyCollectionViewController.h"
+#import "TATaekHonorViewController.h"
+#import "TAMyReleaseViewController.h"
 
 @interface TATaekwondoMemberCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -126,19 +130,32 @@
     if (indexPath.section == 0) {
         
     }else if (indexPath.section == 1){
-        if (indexPath.row == 0) {
-            
+        if (indexPath.row == 0) { //道馆信息
+            TATaekwondoInfoViewController *infoVC = [TATaekwondoInfoViewController new];
+            [self.navigationController pushViewController:infoVC animated:YES];
         }else{//道馆认证
             TATaekwondoAuthViewController *authVC = [TATaekwondoAuthViewController new];
             [self.navigationController pushViewController:authVC animated:YES];
         }
     }else if (indexPath.section == 2){
-        
-    }else if (indexPath.section == 3){
-        
+        if (indexPath.row == 0) {  //我的发布
+            TAMyReleaseViewController *releaseVC = [TAMyReleaseViewController new];
+            [self.navigationController pushViewController:releaseVC animated:YES];
+
+        }else{ //活动记录
+            
+        }
+    }else if (indexPath.section == 3){   //道馆荣誉
+        TATaekHonorViewController *honorVC = [TATaekHonorViewController new];
+        [self.navigationController pushViewController:honorVC animated:YES];
     }else if (indexPath.section == 4){
-        
-    }else if (indexPath.section == 5){
+        if (indexPath.row == 0) {   //我的消息
+            
+        }else{ //我的收藏
+            TAMyCollectionViewController *collectionVC = [TAMyCollectionViewController new];
+            [self.navigationController pushViewController:collectionVC animated:YES];
+        }
+    }else if (indexPath.section == 5){  //我的关注
         
     }else{//设置
         TASeetingViewController *settingVC = [TASeetingViewController new];
