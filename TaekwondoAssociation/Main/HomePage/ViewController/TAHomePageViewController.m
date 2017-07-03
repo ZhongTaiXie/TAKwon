@@ -20,6 +20,7 @@
 #import "TASearchViewController.h"
 #import "PublicNoticeViewController.h"
 #import "MatchViewController.h"
+#import "HomeLoBoWebViewController.h"
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -190,16 +191,11 @@ static NSString *identifier = @"CellID";
 #pragma mark 图片轮播 delegate
 -(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-//    TopData *data = self.topArray[index];
-//    
-//    NSString *url1 = [data.url substringFromIndex:4];
-//    url1 = [url1 substringToIndex:4];
-//    NSString *url2 = [data.url substringFromIndex:9];
-//    
-//    url2 = [NSString stringWithFormat:@"http://c.3g.163.com/photo/api/set/%@/%@.json",url1,url2];
-//    TopViewController *topVC = [[TopViewController alloc]init];
-//    topVC.url = url2;
-//    [self.navigationController pushViewController:topVC animated:YES];
+    NSArray *picArr = dataDic[@"Banner"];
+    
+    HomeLoBoWebViewController *loboVC = [[HomeLoBoWebViewController alloc]init];
+    loboVC.urlStr = picArr[index][@"toUrl"];
+    [self.navigationController pushViewController:loboVC animated:YES];
 }
 #pragma mark - UITableViewDelegateDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -226,9 +222,9 @@ static NSString *identifier = @"CellID";
         [cell.myImageviewTwo  sd_setImageWithURL:[NSURL URLWithString:imageTwoStr] placeholderImage:[UIImage imageNamed:@""]];
         NSString *imageThreeStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][2][@"pic"]];
         [cell.myImageviewThree  sd_setImageWithURL:[NSURL URLWithString:imageThreeStr] placeholderImage:[UIImage imageNamed:@""]];
-        cell.myImageviewThree.backgroundColor = [UIColor redColor];
-        cell.myImageviewTwo.backgroundColor = [UIColor yellowColor];
-        cell.myImageviewOne.backgroundColor = [UIColor greenColor];
+//        cell.myImageviewThree.backgroundColor = [UIColor redColor];
+//        cell.myImageviewTwo.backgroundColor = [UIColor yellowColor];
+//        cell.myImageviewOne.backgroundColor = [UIColor greenColor];
         cell.myImageviewOne.frame = CGRectMake((KTA_Screen_Width-308)/2, 46, 100, 60);
         cell.myImageviewTwo.frame = CGRectMake((KTA_Screen_Width-308)/2+104, 46, 100, 60);
         cell.myImageviewThree.frame = CGRectMake((KTA_Screen_Width-308)/2+208, 46, 100, 60);
@@ -251,7 +247,7 @@ static NSString *identifier = @"CellID";
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
         //名人堂
-        cell.myImageView.backgroundColor = [UIColor redColor];
+//        cell.myImageView.backgroundColor = [UIColor redColor];
         cell.topLineLabel.frame = CGRectMake(10, 14, 2, 18);
         cell.topLineLabel.backgroundColor = RGB(0, 120, 245);
         cell.titleLabel.frame = CGRectMake(14, 13, 70, 20);

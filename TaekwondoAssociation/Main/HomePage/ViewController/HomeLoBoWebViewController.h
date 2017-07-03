@@ -9,5 +9,5 @@
 #import "BaseWebViewController.h"
 
 @interface HomeLoBoWebViewController : BaseWebViewController
-
+@property (nonatomic,strong)NSString *urlStr;
 @end
