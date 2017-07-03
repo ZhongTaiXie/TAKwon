@@ -362,7 +362,7 @@
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setValue:_accuntTextFiled.text forKey:@"NickName"];
     [params setValue:_passTextFiled.text forKey:@"Pwd"];
-    [TARequestManager TARequestCompletedWithPath:@"/SignIn/SignIn" Parameters:params sucee:^(NSDictionary *dic) {
+    [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:params sucee:^(NSDictionary *dic) {
         
         NSLog(@"%@",dic);
         // 登录成功

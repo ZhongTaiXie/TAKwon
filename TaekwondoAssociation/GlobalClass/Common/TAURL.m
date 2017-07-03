@@ -17,8 +17,9 @@ NSString *const URL_BASE = @"http://192.168.1.7";
 
 NSString *const URL_HOME =@"/Home/Index";
 
-NSString * const URL_LONGIN = @"/Register/Register";
+NSString * const URL_LONGIN = @"/SignIn/SignIn";
 
+NSString * const URL_REGIST = @"/Register/Register";
 
 
 @end
