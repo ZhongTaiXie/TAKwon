@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *myImageviewOne;
 @property (weak, nonatomic) IBOutlet UIImageView *myImageviewTwo;
 @property (weak, nonatomic) IBOutlet UIImageView *myImageviewThree;
+@property (weak, nonatomic) IBOutlet UILabel *moreLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *moreImage;
 
 @end

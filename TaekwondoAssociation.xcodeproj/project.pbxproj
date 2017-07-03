@@ -90,6 +90,9 @@
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
 		AFE4C12A1F0A2E7F00AA2C0E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */; };
+		B613436A1F0A392E0089FBA4 /* HotPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */; };
+		B613436D1F0A39680089FBA4 /* MingRenTangWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */; };
+		B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613436F1F0A46460089FBA4 /* HomeLoBoWebViewController.m */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -346,6 +349,12 @@
 		AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
 		AFE4C1251F0A2C1700AA2C0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B61343681F0A392E0089FBA4 /* HotPicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPicturesViewController.h; sourceTree = "<group>"; };
+		B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPicturesViewController.m; sourceTree = "<group>"; };
+		B613436B1F0A39680089FBA4 /* MingRenTangWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingRenTangWebViewController.h; sourceTree = "<group>"; };
+		B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingRenTangWebViewController.m; sourceTree = "<group>"; };
+		B613436E1F0A46460089FBA4 /* HomeLoBoWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLoBoWebViewController.h; sourceTree = "<group>"; };
+		B613436F1F0A46460089FBA4 /* HomeLoBoWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLoBoWebViewController.m; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -1134,8 +1143,14 @@
 			children = (
 				EF3E0CB01F01F60A00729CF9 /* TAHomePageViewController.h */,
 				EF3E0CB11F01F60A00729CF9 /* TAHomePageViewController.m */,
-				B699B8EB1F0623A200D8CB95 /* NewsListViewController.h */,
+				B613436E1F0A46460089FBA4 /* HomeLoBoWebViewController.h */,
+				B613436F1F0A46460089FBA4 /* HomeLoBoWebViewController.m */,
 				B699B8EC1F0623A200D8CB95 /* NewsListViewController.m */,
+				B699B8EB1F0623A200D8CB95 /* NewsListViewController.h */,
+				B61343681F0A392E0089FBA4 /* HotPicturesViewController.h */,
+				B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */,
+				B613436B1F0A39680089FBA4 /* MingRenTangWebViewController.h */,
+				B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */,
 				B629A8811F02381E0013528A /* PublicWelfareViewController.h */,
 				B629A8821F02381E0013528A /* PublicWelfareViewController.m */,
 				B629A8841F0238480013528A /* RankingViewController.h */,
@@ -1854,12 +1869,14 @@
 				4E000BF51F07112D00DB0035 /* TAGongGaoCollectionCell.m in Sources */,
 				4E000B801F06BA4A00DB0035 /* TAEditMemberInfoViewController.m in Sources */,
 				EF04B6501F09EC8200C81C65 /* TASearchViewController.m in Sources */,
+				B613436A1F0A392E0089FBA4 /* HotPicturesViewController.m in Sources */,
 				4EFE54941F02D206001E7A05 /* TAPersonalHeaderView.m in Sources */,
 				4E1301AE1F0AB558000B0ED7 /* TAMyReleaseViewController.m in Sources */,
 				B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */,
 				4E13019B1F084038000B0ED7 /* TATaekAddressCell.m in Sources */,
 				4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */,
 				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
+				B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
 				EF37E5691F034AD6005F8F8B /* TABaseTableView.m in Sources */,
 				4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */,
@@ -1903,6 +1920,7 @@
 				4E1301AA1F08776D000B0ED7 /* TAMemberHonorViewController.m in Sources */,
 				4E1301A61F087576000B0ED7 /* TATaekHonorCell.m in Sources */,
 				EF3E0CB21F01F60A00729CF9 /* TAHomePageViewController.m in Sources */,
+				B613436D1F0A39680089FBA4 /* MingRenTangWebViewController.m in Sources */,
 				AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,36 +1,22 @@
 //
-//  AgreementViewController.m
+//  HotPicturesViewController.m
 //  TaekwondoAssociation
 //
-//  Created by 李瑞平 on 2017/6/28.
+//  Created by 李瑞平 on 2017/7/3.
 //  Copyright © 2017年 Miss 李. All rights reserved.
 //
 
-#import "AgreementViewController.h"
+#import "HotPicturesViewController.h"
 
-@interface AgreementViewController ()
+@interface HotPicturesViewController ()
 
 @end
 
-@implementation AgreementViewController
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = @"协议";
-    }
-    return self;
-}
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-}
+@implementation HotPicturesViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/protocol.html"];
 }
 
 - (void)didReceiveMemoryWarning {

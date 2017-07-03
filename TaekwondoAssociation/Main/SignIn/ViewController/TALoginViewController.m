@@ -13,6 +13,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import "TARequestManager.h"
 #import "LCProgressHUD.h"
+#import "TASearchViewController.h"
 
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
@@ -361,7 +362,7 @@
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setValue:_accuntTextFiled.text forKey:@"NickName"];
     [params setValue:_passTextFiled.text forKey:@"Pwd"];
-    [TARequestManager TARequestCompletedWithPath:@"/SignIn/SignIn" Parameters:params sucee:^(NSDictionary *dic) {
+    [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:params sucee:^(NSDictionary *dic) {
         
         NSLog(@"%@",dic);
         // 登录成功
@@ -384,7 +385,9 @@
 }
 #pragma mark - 游客登录点击事件
 - (void)touristLoginBtnClick
+
 {
+//    [self.navigationController pushViewController:[TASearchViewController new] animated:YES];
     [[UIApplication sharedAppDelegate] goToHome];
 
 }

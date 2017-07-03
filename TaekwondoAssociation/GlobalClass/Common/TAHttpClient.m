@@ -114,15 +114,9 @@ static TAHttpClient * instance = nil;
                 NSData *data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
                 NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                 NSLog(@"请求返回的是：%@", jsonString);
-                NSDictionary *dic = (NSDictionary *)responseObject[@"Data"];
-                NSString *str = (NSString *)responseObject[@"Success"];
-                if ([str isEqualToString:@"true"]) {
-                    NSLog(@"数据返回正常");
-                    success(dic);
-                }else {
-                    NSLog(@"数据非正常！");
-                    success(dic);
-                }
+                
+                success(responseObject);
+                
                 
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

@@ -19,5 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *rightLineLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightTextLeble;
 @property (weak, nonatomic) IBOutlet UILabel *addressLab;
+@property (weak, nonatomic) IBOutlet UILabel *rongyuLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moreLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *moreImage;
 
 @end
