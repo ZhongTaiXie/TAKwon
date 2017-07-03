@@ -58,7 +58,7 @@ static NSString *identifier = @"CellID";
         dataDic = [dic[@"Data"] mutableCopy];
         UIView *bigView = [self topView];
         _tableView.tableHeaderView = bigView;
-
+        [_tableView reloadData];
     } fail:^(NSError *error) {
         [MBProgressHUD hideHUDForView:_tableView animated:YES];
     }];
@@ -214,8 +214,10 @@ static NSString *identifier = @"CellID";
             cell.selectionStyle = UITableViewCellAccessoryNone;
         }
         //热门图库
-        NSURL *imageOneURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Data"][@"HotPic"][0][@"pic"]]];
-        [cell.myImageviewOne  sd_setImageWithURL:imageOneURL placeholderImage:[UIImage imageNamed:@""]];
+        NSString *imageOneStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Data"][@"HotPic"][0][@"pic"]];
+        NSLog(@"=========%@",imageOneStr);
+//        NSURL *imageOneURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Data"][@"HotPic"][0][@"pic"]]];
+        [cell.myImageviewOne  sd_setImageWithURL:[NSURL URLWithString:imageOneStr] placeholderImage:[UIImage imageNamed:@""]];
         cell.lineLabel.frame = CGRectMake(10, 14, 2, 18);
         cell.lineLabel.backgroundColor = RGB(0, 120, 245);
         cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
