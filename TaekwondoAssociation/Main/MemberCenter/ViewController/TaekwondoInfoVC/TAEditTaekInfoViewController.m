@@ -1,21 +1,20 @@
 //
-//  TAEditMemberInfoViewController.m
+//  TAEditTaekInfoViewController.m
 //  TaekwondoAssociation
 //
-//  Created by 伟宏 on 2017/6/29.
+//  Created by 伟宏 on 2017/7/1.
 //  Copyright © 2017年 Miss 李. All rights reserved.
 //
 
-#import "TAEditMemberInfoViewController.h"
+#import "TAEditTaekInfoViewController.h"
 #import "TACustomTextField.h"
 
-@interface TAEditMemberInfoViewController ()<UITextFieldDelegate>
+@interface TAEditTaekInfoViewController ()<UITextFieldDelegate>
 @property (nonatomic, strong) TACustomTextField *textField;
 
 @end
 
-@implementation TAEditMemberInfoViewController
-
+@implementation TAEditTaekInfoViewController
 -(instancetype)initWithNavTitle:(NSString *)navTitle text:(NSString *)text index:(NSInteger)index{
     if (self = [super init]) {
         _navTitle = navTitle;
@@ -50,12 +49,17 @@
     self.textField.font = [UIFont systemFontOfSize:14];
     self.textField.text = self.text;
     self.textField.backgroundColor = [UIColor whiteColor];
-    if (self.index == 2) {  //身份证是1手机号是2
+    if (self.index == 2 || self.index == 5) {  //1道馆名称  1手机号  3邮箱   4营业时间 5道馆电话
         //设置键盘样式
         self.textField.keyboardType = UIKeyboardTypeNumberPad;
     }
     self.textField.delegate = self;
-    self.textField.placeholder = [NSString stringWithFormat:@"请输入%@",self.navTitle];
+    if(self.index == 4){
+        self.textField.placeholder = [NSString stringWithFormat:@"请输入%@  格式为03:03-19:45",self.navTitle];
+    }else{
+        self.textField.placeholder = [NSString stringWithFormat:@"请输入%@",self.navTitle];
+    }
+    
     [self.view addSubview:self.textField];
 }
 
@@ -64,12 +68,13 @@
 }
 
 -(void)ok{
-    if(self.index == 1){  //身份证
-        if ([WQTools isValidateIDNumber:self.textField.text]) {
-            //是正确的身份证格式
-            NSLog(@"是正确的身份证格式");
+    
+    if(self.index == 1){  //道馆名称
+        if ([WQTools isBlankString:self.textField.text]) {
+            //是正确道馆名称
+            NSLog(@"是正确的道馆名称");
         }else{
-            NSLog(@"bu是正确的身份证格式");
+            NSLog(@"bu是正确的道馆名称");
         }
     }else if (self.index == 2){   //手机号
         if ([WQTools isValidateMobile:self.textField.text]) {
@@ -96,22 +101,9 @@
         }else{
             return YES;
         }
-    }else if (self.index == 1){  // 身份证号
-        if (range.location >= 19){
-            return NO;
-        }
-        
-        NSCharacterSet *cs;
-        cs = [[NSCharacterSet characterSetWithCharactersInString:@"1234567890X"] invertedSet];
-        NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
-        BOOL basicTest = [string isEqualToString:filtered];
-        if(!basicTest) {
-            return NO;
-        }else{
-            return YES;
-        }
-    } else{
+    }else{
         return YES;
     }
 }
+
 @end
