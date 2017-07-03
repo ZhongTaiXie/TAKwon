@@ -16,8 +16,6 @@
 #import "NewsListViewController.h"
 #import "UIImageView+WebCache.h"
 //#import "XRCarouselView.h"
-// 消息
-#import "TAHomeNontsViewController.h"
 
 static NSString *identifier = @"CellID";
 
@@ -259,8 +257,6 @@ static NSString *identifier = @"CellID";
 #pragma mark - 消息按钮点击事件
 - (void)massageBtnClick
 {
-    
-    [self.navigationController pushViewController:[TAHomeNontsViewController new] animated:YES];
     
 }
 #pragma mark - 搜索点击事件
