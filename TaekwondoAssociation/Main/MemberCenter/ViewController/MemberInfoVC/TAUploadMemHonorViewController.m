@@ -13,7 +13,7 @@
 #define Start_Y 50.0f           // 第一个按钮的Y坐标
 #define Width_Space 10.0f        // 2个按钮之间的横间距
 #define Height_Space 10.0f      // 竖间距
-#define Button_Height (self.view.bounds.size.width - 40) / 3   // 高
+#define Button_Height Button_Width * 68 / 110   // 高
 #define Button_Width (self.view.bounds.size.width - 40) / 3      // 宽
 
 @interface TAUploadMemHonorViewController (){
@@ -60,7 +60,7 @@
     [self.view addSubview:label];
     
     UIButton *addPicBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, Start_Y, Button_Width, Button_Height)];
-    [addPicBtn setImage:[UIImage imageNamed:@"addPic"] forState:UIControlStateNormal];
+    [addPicBtn setImage:[UIImage imageNamed:@"add-big"] forState:UIControlStateNormal];
     [addPicBtn addTarget:self action:@selector(selectPics) forControlEvents:UIControlEventTouchUpInside];
     addPicBtn.tag = 2000;
     self.addBtn = addPicBtn;

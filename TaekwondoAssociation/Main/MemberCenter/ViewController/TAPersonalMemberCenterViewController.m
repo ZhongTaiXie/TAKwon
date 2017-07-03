@@ -13,6 +13,7 @@
 #import "TASeetingViewController.h"
 #import "TAMemberInfoViewController.h"
 #import "TAMyCollectionViewController.h"
+#import "TAMemberHonorViewController.h"
 
 @interface TAPersonalMemberCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -137,7 +138,8 @@
     }else if (indexPath.section == 2){
         
         if(indexPath.row == 0){  //会员荣誉
-            
+            TAMemberHonorViewController *honorVC = [TAMemberHonorViewController new];
+            [self.navigationController pushViewController:honorVC animated:YES];
         }else{  //简历
             
         }

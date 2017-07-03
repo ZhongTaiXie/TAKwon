@@ -29,8 +29,11 @@
     titleLabel = [WQFactoryUI createLabelWithtextFont:13 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(15, 0, 200, 30) text:title];
     [self addSubview:titleLabel];
     
-    addBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 40, 50, 50)];
-    [addBtn setImage:[UIImage imageNamed:@"addPic"] forState:UIControlStateNormal];
+    CGFloat width = (KTA_Screen_Width - 40) / 3;
+    CGFloat height = width * 68 / 100;
+    
+    addBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 30, width, height)];
+    [addBtn setImage:[UIImage imageNamed:@"add-big"] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addPic) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:addBtn];
 }

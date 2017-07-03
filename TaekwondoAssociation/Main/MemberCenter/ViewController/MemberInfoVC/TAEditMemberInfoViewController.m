@@ -55,6 +55,7 @@
         self.textField.keyboardType = UIKeyboardTypeNumberPad;
     }
     self.textField.delegate = self;
+    self.textField.placeholder = [NSString stringWithFormat:@"请输入%@",self.navTitle];
     [self.view addSubview:self.textField];
 }
 

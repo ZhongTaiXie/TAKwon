@@ -14,16 +14,16 @@
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) UITextField *memberNumTextfield;//会员编号输入框
 @property (nonatomic,strong) UITextField *validateCodeTextfield;//验证码输入框
-@property (nonatomic,strong) NSArray *IDCardImageArray;
+@property (nonatomic,strong) NSMutableArray *IDCardImageArray;
 @property (nonatomic,strong) NSArray *zhizhaoImageArray;
 
 @end
 
 @implementation TATaekwondoAuthViewController
 
--(NSArray *)IDCardImageArray{
+-(NSMutableArray *)IDCardImageArray{
     if (!_IDCardImageArray) {
-        _IDCardImageArray = [NSArray array];
+        _IDCardImageArray = [NSMutableArray array];
     }
     return _IDCardImageArray;
 }
@@ -89,7 +89,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        
         TATaekwondoAuthCell *cell = [[TATaekwondoAuthCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"authCell" title:@"团体会员编号" placeholder:@"请输入团体会员编号"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         self.memberNumTextfield = cell.textField;
@@ -101,9 +100,6 @@
         return cell;
     }else if (indexPath.row == 2) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         TAuploadPicView *uploadView = [[TAuploadPicView alloc] initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 100) title:@"上传身份证反正面" imageArray:self.IDCardImageArray];
@@ -114,11 +110,8 @@
         
         [cell.contentView addSubview:uploadView];
         return cell;
-    } else{
+    }else{
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         TAuploadPicView *uploadView = [[TAuploadPicView alloc] initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 100) title:@"上传营业执照" imageArray:self.zhizhaoImageArray];
         [cell.contentView addSubview:uploadView];
@@ -133,7 +126,11 @@
     if(indexPath.row == 0 || indexPath.row == 1){
         return 45;
     }
-    return 100;
+    
+    CGFloat width = (KTA_Screen_Width - 40) / 3;
+    CGFloat height = width * 68 / 100;
+    
+    return height + 40;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{

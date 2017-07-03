@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseWebViewController.h"
 
-@interface CertificationViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *tfView;
-@property (weak, nonatomic) IBOutlet UIButton *inquireBtn;
-@property (weak, nonatomic) IBOutlet UIButton *helpBtn;
+@interface CertificationViewController :BaseWebViewController
+
 
 @end
