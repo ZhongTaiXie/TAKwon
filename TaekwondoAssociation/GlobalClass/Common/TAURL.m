@@ -10,7 +10,7 @@
 
 @implementation TAURL
 
-NSString *const URL_BASE = @"http://192.168.1.6";
+NSString *const URL_BASE = @"http://192.168.1.7";
 
 // 主页
 //NSString *const URL_HOME =@"/interfaceapi/indexintmgt/index!index.action?";
