@@ -13,6 +13,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import "TARequestManager.h"
 #import "LCProgressHUD.h"
+#import "TASearchViewController.h"
 
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
@@ -384,8 +385,10 @@
 }
 #pragma mark - 游客登录点击事件
 - (void)touristLoginBtnClick
+
 {
-    [[UIApplication sharedAppDelegate] goToHome];
+    [self.navigationController pushViewController:[TASearchViewController new] animated:YES];
+//    [[UIApplication sharedAppDelegate] goToHome];
 
 }
 #pragma mark - 忘记密码点击事件
