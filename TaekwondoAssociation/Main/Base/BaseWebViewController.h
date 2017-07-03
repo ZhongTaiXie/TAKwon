@@ -34,6 +34,9 @@ typedef void (^segueBlock)(NSString* segueParams);
 // 更改头视图高度(头视图高度改变时调用传入高度,初始为0)
 - (void)changeHeadViewHeight:(CGFloat)height;
 
+// 添加底部工具栏
+- (void)AddBottomView;
+
 
 
 @end

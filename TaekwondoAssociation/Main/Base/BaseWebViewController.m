@@ -47,7 +47,7 @@
 {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, _headViewHeight, kDeviceWidth, kDeviceHeight - _headViewHeight) configuration:config];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, _headViewHeight, kDeviceWidth, kDeviceHeight - _headViewHeight - 64) configuration:config];
     
     _webView.scrollView.showsVerticalScrollIndicator = NO;
     _webView.navigationDelegate = self;
@@ -71,6 +71,11 @@
     
     [self setHeadviewFrame];
     [self setWebViewFrame];
+}
+
+- (void)AddBottomView
+{
+    self.webView.frame = CGRectMake(0, _headViewHeight, kDeviceWidth, kDeviceHeight - _headViewHeight - 50 -64);
 }
 
 - (void)setHeadviewFrame

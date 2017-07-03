@@ -72,6 +72,7 @@
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
+		AFE4C12A1F0A2E7F00AA2C0E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -146,11 +147,11 @@
 		EFD232B11F06B5EC005559D8 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232A01F06B5EC005559D8 /* IQToolbar.m */; };
 		EFD232B21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232A21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m */; };
 		EFD232B31F06B5EC005559D8 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFD232A41F06B5EC005559D8 /* IQKeyboardManager.bundle */; };
-		EFF9DA2F1F05FF820056F9F7 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0C1F05FF820056F9F7 /* ShareSDK.framework */; };
+		EFF9DA2F1F05FF820056F9F7 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0C1F05FF820056F9F7 /* ShareSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EFF9DA301F05FF820056F9F7 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0F1F05FF820056F9F7 /* ShareSDKExtension.framework */; };
 		EFF9DA311F05FF820056F9F7 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF9DA101F05FF820056F9F7 /* ShareSDKUI.bundle */; };
 		EFF9DA321F05FF820056F9F7 /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA111F05FF820056F9F7 /* ShareSDKUI.framework */; };
-		EFF9DA331F05FF820056F9F7 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA141F05FF820056F9F7 /* TencentOpenAPI.framework */; };
+		EFF9DA331F05FF820056F9F7 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA141F05FF820056F9F7 /* TencentOpenAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EFF9DA341F05FF820056F9F7 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF9DA151F05FF820056F9F7 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		EFF9DA351F05FF820056F9F7 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA171F05FF820056F9F7 /* libWeiboSDK.a */; };
 		EFF9DA361F05FF820056F9F7 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF9DA211F05FF820056F9F7 /* WeiboSDK.bundle */; };
@@ -296,6 +297,8 @@
 		AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicNoticeViewController.m; sourceTree = "<group>"; };
 		AFE4C1211F0A1C6600AA2C0E /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
 		AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
+		AFE4C1251F0A2C1700AA2C0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -480,6 +483,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE4C12A1F0A2E7F00AA2C0E /* libstdc++.tbd in Frameworks */,
 				EFF9DA4C1F060F640056F9F7 /* libc++.tbd in Frameworks */,
 				EFF9DA461F060DF40056F9F7 /* libicucore.tbd in Frameworks */,
 				EFF9DA441F060DDC0056F9F7 /* libz.tbd in Frameworks */,
@@ -518,6 +522,8 @@
 		17F3BDA02EBC797D576AA08D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */,
+				AFE4C1251F0A2C1700AA2C0E /* QuartzCore.framework */,
 				EFF9DA4B1F060F640056F9F7 /* libc++.tbd */,
 				EFF9DA451F060DF40056F9F7 /* libicucore.tbd */,
 				EFF9DA431F060DDC0056F9F7 /* libz.tbd */,
@@ -1937,6 +1943,32 @@
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1967,6 +1999,32 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/WeChatSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -18,7 +18,8 @@
 {
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(0, kDeviceHeight - 50, kDeviceWidth, 50);
+        self.frame = CGRectMake(0, kDeviceHeight - 50-64, kDeviceWidth, 50);
+        self.backgroundColor = [UIColor whiteColor];
         _type = type;
         [self createUI];
     }
@@ -43,9 +44,9 @@
             [_collectBtn setImage:[UIImage imageNamed:@"solid-star"] forState:UIControlStateSelected];
             [_shareBtn setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
             
-            _commentBtn.backgroundColor = [UIColor blueColor];
-            _collectBtn.backgroundColor = [UIColor blueColor];
-            _shareBtn.backgroundColor = [UIColor blueColor];
+//            _commentBtn.backgroundColor = [UIColor blueColor];
+//            _collectBtn.backgroundColor = [UIColor blueColor];
+//            _shareBtn.backgroundColor = [UIColor blueColor];
             
             [_commentBtn addTarget:self action:@selector(commentBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             [_collectBtn addTarget:self action:@selector(collectBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -81,8 +82,8 @@
             [_shareBtn setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
             [_tagsBtn setImage:[UIImage imageNamed:@"Write-reviews"] forState:UIControlStateNormal];
             
-            _tagsBtn.backgroundColor = [UIColor redColor];
-            _shareBtn.backgroundColor = [UIColor redColor];
+//            _tagsBtn.backgroundColor = [UIColor redColor];
+//            _shareBtn.backgroundColor = [UIColor redColor];
             
             [_tagsBtn addTarget:self action:@selector(tagsBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             [_shareBtn addTarget:self action:@selector(shareBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -98,7 +99,7 @@
     }
     
     // 设置图片圆角
-    _tfView.backgroundColor = [UIColor lightGrayColor];
+    _tfView.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
     _tfView.layer.cornerRadius = 14;
     _tfView.layer.masksToBounds = YES;
     _tfView.contentMode = UIViewContentModeScaleAspectFill;

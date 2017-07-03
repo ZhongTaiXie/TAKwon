@@ -18,7 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/training/training_list.html"];
+    self.navigationItem.title = @"赛事";
+    
+    [self AddBottomView];
+    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/news/newsDetailPage.html"];
+    
+    _bottomView = [[BottomCommentView alloc] initWithType:BottomCommentViewComment];
+    [self.view addSubview:_bottomView];
 
 }
 
