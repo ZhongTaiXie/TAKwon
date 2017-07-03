@@ -109,6 +109,7 @@
 		EF04B6481F09D52F00C81C65 /* TANotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04B6471F09D52F00C81C65 /* TANotsViewController.m */; };
 		EF04B64C1F09DCC800C81C65 /* TANotsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04B64A1F09DCC800C81C65 /* TANotsTableViewCell.m */; };
 		EF04B64D1F09DCC800C81C65 /* TANotsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */; };
+		EF04B6501F09EC8200C81C65 /* TASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */; };
 		EF37E5691F034AD6005F8F8B /* TABaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF37E5681F034AD6005F8F8B /* TABaseTableView.m */; };
 		EF3E0C5F1F01EDA400729CF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0C591F01EDA400729CF9 /* AppDelegate.m */; };
 		EF3E0C601F01EDA400729CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3E0C5C1F01EDA400729CF9 /* Assets.xcassets */; };
@@ -363,6 +364,8 @@
 		EF04B6491F09DCC800C81C65 /* TANotsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TANotsTableViewCell.h; sourceTree = "<group>"; };
 		EF04B64A1F09DCC800C81C65 /* TANotsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TANotsTableViewCell.m; sourceTree = "<group>"; };
 		EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TANotsTableViewCell.xib; sourceTree = "<group>"; };
+		EF04B64E1F09EC8200C81C65 /* TASearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TASearchViewController.h; sourceTree = "<group>"; };
+		EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TASearchViewController.m; sourceTree = "<group>"; };
 		EF37E5671F034AD6005F8F8B /* TABaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABaseTableView.h; sourceTree = "<group>"; };
 		EF37E5681F034AD6005F8F8B /* TABaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABaseTableView.m; sourceTree = "<group>"; };
 		EF3E0C581F01EDA400729CF9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1041,6 +1044,8 @@
 				B629A8911F0239500013528A /* TaekwondoBaiKeViewController.m */,
 				EF04B6461F09D52F00C81C65 /* TANotsViewController.h */,
 				EF04B6471F09D52F00C81C65 /* TANotsViewController.m */,
+				EF04B64E1F09EC8200C81C65 /* TASearchViewController.h */,
+				EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1726,6 +1731,7 @@
 				B6F9B1A81F03B5D600EBCD68 /* AgreementViewController.m in Sources */,
 				4E000BF51F07112D00DB0035 /* TAGongGaoCollectionCell.m in Sources */,
 				4E000B801F06BA4A00DB0035 /* TAEditMemberInfoViewController.m in Sources */,
+				EF04B6501F09EC8200C81C65 /* TASearchViewController.m in Sources */,
 				4EFE54941F02D206001E7A05 /* TAPersonalHeaderView.m in Sources */,
 				B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */,
 				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
