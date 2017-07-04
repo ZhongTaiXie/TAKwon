@@ -345,7 +345,7 @@ static NSString *identifier = @"CellID";
 {
     TASearchViewController *searchVC = [[TASearchViewController alloc]init];
     
-    [self.navigationController pushViewController:searchVC animated:YES];
+    [self presentViewController:searchVC animated:YES completion:nil];
 }
 #pragma mark - 扫一扫按钮点击事件
 - (void)scanningBtnBtnClick
