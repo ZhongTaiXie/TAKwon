@@ -8,7 +8,8 @@
 
 #import "TAMemberHonorViewController.h"
 #import "TATaekHonorCell.h"
-
+#import "TAUploadMemHonorViewController.h"
+#import "WQAvastBrowser.h"
 
 @interface TAMemberHonorViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -60,10 +61,18 @@
     UIImage *backImage = [UIImage imageNamed:@"back"];
     backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backImage style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    
+    //右侧添加按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"add_white"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]style:UIBarButtonItemStyleDone target:self action:@selector(uploadMemberHonor)];
 }
 
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)uploadMemberHonor{
+    TAUploadMemHonorViewController *uploadVC = [TAUploadMemHonorViewController new];
+    [self.navigationController pushViewController:uploadVC animated:YES];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
@@ -85,8 +94,11 @@
     
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [WQAvastBrowser showImage:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"header_bg"]]];
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     CGFloat height = KTA_Screen_Width * 68 / 100;
     return height;
 }

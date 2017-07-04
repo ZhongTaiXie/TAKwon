@@ -23,7 +23,7 @@
 
 -(NSArray *)titleArray{
     if (!_titleArray) {
-        _titleArray = @[@[@"",@"昵称"],@[@"身份证号码",@"手机号",@"邮箱",@"职业认证"],@[@"会员荣誉"]];
+        _titleArray = @[@[@"",@"昵称"],@[@"身份证号码",@"手机号",@"邮箱",@"职业认证"]]; //,@[@"会员荣誉"]
     }
     return _titleArray;
 }
@@ -71,17 +71,18 @@
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 2;//3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 2;
-    }else if (section == 1){
+    }else{  // if (section == 1)
         return 4;
-    } else{
-        return 1;
     }
+//    } else{
+//        return 1;
+//    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -96,17 +97,19 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
         return cell;
-    }else if(indexPath.section == 2){ //会员荣誉
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; //显示最右边的箭头
-        [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.textLabel.text = @"会员荣誉";
-        cell.textLabel.font = [UIFont systemFontOfSize:15];
-        cell.textLabel.textColor = [WQTools colorWithHexString:@"333333"];
-
-        return cell;
-    }else{
+    }
+//    else if(indexPath.section == 2){ //会员荣誉
+//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; //显示最右边的箭头
+//        [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        cell.textLabel.text = @"会员荣誉";
+//        cell.textLabel.font = [UIFont systemFontOfSize:15];
+//        cell.textLabel.textColor = [WQTools colorWithHexString:@"333333"];
+//
+//        return cell;
+//    }
+    else{
         TAMemberInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"infoCell" forIndexPath:indexPath];
         if (!cell) {
             cell = [[TAMemberInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"infoCell"];
@@ -128,7 +131,7 @@
             TAEditMemberInfoViewController *editVC = [[TAEditMemberInfoViewController alloc] initWithNavTitle:@"昵称" text:@"" index:0];
             [self.navigationController pushViewController:editVC animated:YES];
         }
-    }else if (indexPath.section == 1){
+    }else{  // if (indexPath.section == 1)
         if (indexPath.row == 0) {//修改身份证号码
             TAEditMemberInfoViewController *editVC = [[TAEditMemberInfoViewController alloc] initWithNavTitle:@"身份证号码" text:@"" index:1];
             [self.navigationController pushViewController:editVC animated:YES];
@@ -142,10 +145,11 @@
             TAZhiYeRenZhengViewController *renzhengVC = [TAZhiYeRenZhengViewController new];
             [self.navigationController pushViewController:renzhengVC animated:YES];
         }
-    }else{//会员荣誉
-        TAUploadMemHonorViewController *uploadVC = [TAUploadMemHonorViewController new];
-        [self.navigationController pushViewController:uploadVC animated:YES];
     }
+//    else{//会员荣誉
+//        TAUploadMemHonorViewController *uploadVC = [TAUploadMemHonorViewController new];
+//        [self.navigationController pushViewController:uploadVC animated:YES];
+//    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

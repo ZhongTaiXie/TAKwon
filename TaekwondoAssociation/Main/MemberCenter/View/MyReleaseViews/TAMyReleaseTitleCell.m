@@ -10,22 +10,26 @@
 
 @implementation TAMyReleaseTitleCell
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier title:(NSString *)title image:(NSString *)imageName{
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier title:(NSString *)title{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self setupUIWithTitle:title image:imageName];
+        [self setupUIWithTitle:title];
     }
     return self;
 }
 
--(void)setupUIWithTitle:(NSString *)title image:(NSString *)imageName{
-    UIImageView *imageView = [WQFactoryUI createImageViewWithFrame:CGRectMake(10, 10, 25, 25) imageName:imageName borderWidth:0 borderColor:WHITECOLOR cornerRadius:0];
-    [self addSubview:imageView];
+-(void)setupUIWithTitle:(NSString *)title{
     
-    UILabel *titleLabel = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(40, 0, 100, 45) text:title];
+    self.backgroundColor = [WQTools colorWithHexString:@"f5f5f5"];
+    
+    UIView *view = [WQFactoryUI createViewWithFrame:CGRectMake(0, 12, 5, 21) viewBackgroundColor:MAINCOLOR];
+    
+    [self addSubview:view];
+    
+    UILabel *titleLabel = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:[UIColor clearColor] textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(15, 0, 100, 45) text:title];
     [self addSubview:titleLabel];
     
     UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(KTA_Screen_Width - 35, 10, 25, 25)];
-    [addBtn setImage:[UIImage imageNamed:@"addPic"] forState:UIControlStateNormal];
+    [addBtn setImage:[UIImage imageNamed:@"add_gray"] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addRelease) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:addBtn];
 }

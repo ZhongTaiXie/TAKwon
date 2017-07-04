@@ -72,9 +72,6 @@ static NSString *identifier = @"CellID";
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.tabBarController.tabBar.hidden = NO;
-
-    
-    
 }
 
 -(void)viewWillDisappear:(BOOL)animated

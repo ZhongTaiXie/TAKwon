@@ -8,6 +8,7 @@
 
 #import "TASeetingViewController.h"
 #import "TAReciveMessageCell.h"
+#import "TAFeedbackViewController.h"
 
 @interface TASeetingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -103,7 +104,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.row == 3) {
+        TAFeedbackViewController *feedVC = [TAFeedbackViewController new];
+        [self.navigationController pushViewController:feedVC animated:YES];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

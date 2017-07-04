@@ -22,7 +22,7 @@
 #define Button_Width (self.view.bounds.size.width - 40) / 3      // 宽
 
 
-@interface TAReleaseActivityViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface TAReleaseActivityViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>{
     NSUInteger sourceType;
 }
 @property (nonatomic,strong) UITableView *tableView;
@@ -30,6 +30,12 @@
 @property (nonatomic,strong) UITextField *addressTextField;  //地址
 @property (nonatomic,strong) UITextField *fuzerenTextField;  //负责人
 @property (nonatomic,strong) UITextField *phoneNumTextField;  //电话
+@property (nonatomic,strong) NSString *address;
+@property (nonatomic,strong) NSString *fuzeren;
+@property (nonatomic,strong) NSString *phoneNum;
+
+
+
 @property (nonatomic,strong) UITextView *introduceTextView;//简介
 @property (nonatomic,strong) UIButton *addBtn;
 @property (nonatomic,strong) UIView *picsView;//放置图片的View
@@ -244,6 +250,101 @@
     [self setupPics];
 }
 
+
+#pragma mark - action sheet delegte
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (actionSheet.tag == 255) {
+        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        // 判断是否支持相机
+        if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            switch (buttonIndex) {
+                case 0:
+                    sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                    break;
+                    
+                case 1: //相机
+                    sourceType = UIImagePickerControllerSourceTypeCamera;
+                    break;
+                case 2: //相册
+                    return;
+            }
+        }
+        else {
+            if (buttonIndex == 0) {
+                return;
+            } else {
+                sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            }
+        }
+        
+        // 跳转到相机或相册页面
+        UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.delegate = self;
+        imagePickerController.allowsEditing = YES;
+        imagePickerController.sourceType = sourceType;
+        
+        [self presentViewController:imagePickerController animated:YES completion:NULL];
+        
+    }
+    else{
+        sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        // 跳转到相机或相册页面
+        UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.delegate = self;
+        imagePickerController.allowsEditing = YES;
+        imagePickerController.sourceType = sourceType;
+        
+        [self presentViewController:imagePickerController animated:YES completion:NULL];
+    }
+    
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    [picker dismissViewControllerAnimated:YES completion:^{}];
+    
+    UIImage *imagepai = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    NSLog(@"~~~~~%@~~~~~",imagepai);
+    
+    [self.phonelist addObject:imagepai];
+    [self setupPics];
+    
+    
+}
+
+-(void)callCameraOrPhotoWithType:(UIImagePickerControllerSourceType)sourceType{
+    BOOL isCamera = YES;
+    if (sourceType == UIImagePickerControllerSourceTypeCamera) {//判断是否有相机
+        isCamera = [UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera];
+    }
+    if (isCamera) {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.allowsEditing = NO;//为NO，则不会出现系统的编辑界面
+        imagePicker.sourceType = sourceType;
+        [self presentViewController:imagePicker animated:YES completion:^(){
+            if ([[[UIDevice currentDevice] systemVersion]floatValue]>=7.0) {
+                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+            }
+        }];
+    } else {
+        
+    }
+    
+}
+#pragma UIImagePickerControllerDelegate
+//相册或则相机选择上传的实现
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)aImage editingInfo:(NSDictionary *)editingInfo{
+    
+    [self.phonelist addObject:aImage];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        //         [self uploadPhotos:photos];
+    }];
+    
+    
+}
+
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -299,14 +400,23 @@
             
             return cell;
         }else{
-            TATaekwondoAuthCell *cell = [[TATaekwondoAuthCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"authCell" title:title placeholder:[NSString stringWithFormat:@"请输入%@",title]];
+            TATaekwondoAuthCell *cell = [[TATaekwondoAuthCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"infoCell" title:title placeholder:[NSString stringWithFormat:@"请输入%@",title]];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (indexPath.row == 1) {
+                cell.textField.text = self.address;
                 self.addressTextField = cell.textField;
+                self.addressTextField.tag = 2001;
+                self.addressTextField.delegate = self;
             }else if (indexPath.row == 2){
+                cell.textField.text = self.fuzeren;
                 self.fuzerenTextField = cell.textField;
+                self.fuzerenTextField.tag = 2002;
+                self.fuzerenTextField.delegate = self;
             }else{
+                cell.textField.text = self.phoneNum;
                 self.phoneNumTextField = cell.textField;
+                self.phoneNumTextField.tag = 2003;
+                self.phoneNumTextField.delegate = self;
             }
             
             return cell;
@@ -368,6 +478,19 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self.view endEditing:YES];
+}
+
+
+
+#pragma mark - UITextFileldDelegate
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField.tag == 2001) {  //地址
+        self.address = textField.text;
+    }else if(textField.tag == 2002){
+        self.fuzeren = textField.text;  //负责人
+    }else{
+        self.phoneNum = textField.text;  //联系电话
+    }
 }
 
 @end

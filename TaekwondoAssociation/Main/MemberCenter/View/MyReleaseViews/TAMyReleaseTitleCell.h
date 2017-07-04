@@ -12,7 +12,7 @@
 
 @property (copy) void(^addBtnClick)(NSString *str);
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier title:(NSString *)title image:(NSString *)imageName;
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier title:(NSString *)title;
 
 
 @end
