@@ -70,7 +70,7 @@ static NSString *identifier = @"CellID";
 //    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
 
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.tabBarController.tabBar.hidden = NO;
 
     
@@ -80,8 +80,11 @@ static NSString *identifier = @"CellID";
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+
+    
 }
+
 - (void)searchView
 {
     UIView *topView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, KTA_Screen_Width, 40)];
@@ -344,6 +347,7 @@ static NSString *identifier = @"CellID";
 - (void)searchBtnClick
 {
     TASearchViewController *searchVC = [[TASearchViewController alloc]init];
+    
     [self.navigationController pushViewController:searchVC animated:YES];
 }
 #pragma mark - 扫一扫按钮点击事件
