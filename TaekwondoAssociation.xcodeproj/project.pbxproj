@@ -91,6 +91,8 @@
 		AF22AF7E1F04AA9C003582EF /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AF7D1F04AA9C003582EF /* BaseWebViewController.m */; };
 		AF22AFA41F05ED66003582EF /* BottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA31F05ED66003582EF /* BottomCommentView.m */; };
 		AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA61F064964003582EF /* LCProgressHUD.m */; };
+		AF88721F1F0B892C0071DD01 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF88721D1F0B892C0071DD01 /* RennSDK.bundle */; };
+		AF8872201F0B892C0071DD01 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF88721E1F0B892C0071DD01 /* RennSDK.framework */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -360,6 +362,8 @@
 		AF22AFA31F05ED66003582EF /* BottomCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCommentView.m; sourceTree = "<group>"; };
 		AF22AFA51F064964003582EF /* LCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCProgressHUD.h; sourceTree = "<group>"; };
 		AF22AFA61F064964003582EF /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
+		AF88721D1F0B892C0071DD01 /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
+		AF88721E1F0B892C0071DD01 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
 		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
@@ -574,6 +578,7 @@
 				EFF9DA3E1F06008D0056F9F7 /* libsqlite3.tbd in Frameworks */,
 				EFF9DA3A1F05FF820056F9F7 /* MOBFoundation.framework in Frameworks */,
 				EFF9DA371F05FF820056F9F7 /* libWeChatSDK.a in Frameworks */,
+				AF8872201F0B892C0071DD01 /* RennSDK.framework in Frameworks */,
 				EFF9DA331F05FF820056F9F7 /* TencentOpenAPI.framework in Frameworks */,
 				EFF9DA351F05FF820056F9F7 /* libWeiboSDK.a in Frameworks */,
 				E76B8936978F91C4D71DB2D0 /* libPods-TaekwondoAssociation.a in Frameworks */,
@@ -881,6 +886,15 @@
 				4EFE552A1F048C7E001E7A05 /* TATaekwondoAuthViewController.m */,
 			);
 			path = TaekwondoAuthVC;
+			sourceTree = "<group>";
+		};
+		AF88721C1F0B892C0071DD01 /* RenRenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AF88721D1F0B892C0071DD01 /* RennSDK.bundle */,
+				AF88721E1F0B892C0071DD01 /* RennSDK.framework */,
+			);
+			path = RenRenSDK;
 			sourceTree = "<group>";
 		};
 		B699B8F61F0648BB00D8CB95 /* SDCycleScrollView */ = {
@@ -1552,6 +1566,7 @@
 		EFF9DA121F05FF820056F9F7 /* PlatformSDK */ = {
 			isa = PBXGroup;
 			children = (
+				AF88721C1F0B892C0071DD01 /* RenRenSDK */,
 				EFF9DA131F05FF820056F9F7 /* QQSDK */,
 				EFF9DA161F05FF820056F9F7 /* SinaWeiboSDK */,
 				EFF9DA241F05FF820056F9F7 /* WeChatSDK */,
@@ -1690,7 +1705,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = UA92FC5P8N;
+						DevelopmentTeam = 3ER8GC8SJ8;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -1768,6 +1783,7 @@
 				4E1301C21F0AE5C4000B0ED7 /* TAActivityTimeCell.xib in Resources */,
 				B699B8F21F0624A100D8CB95 /* MingRenTangTableViewCell.xib in Resources */,
 				B6F9B1B81F050B8E00EBCD68 /* HotGalleryTableViewCell.xib in Resources */,
+				AF88721F1F0B892C0071DD01 /* RennSDK.bundle in Resources */,
 				4EFE54B41F033317001E7A05 /* TAPersonalCell.xib in Resources */,
 				4E000BBA1F06BA8E00DB0035 /* photo_original_sel@2x.png in Resources */,
 				4E000BF61F07112D00DB0035 /* TAGongGaoCollectionCell.xib in Resources */,
@@ -2107,13 +2123,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UA92FC5P8N;
+				DEVELOPMENT_TEAM = 3ER8GC8SJ8;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Optional",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/RenRenSDK",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformConnector",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TaekwondoAssociation/Resource/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TaekwondoAssociation/Resource/Plist/Info.plist";
@@ -2150,7 +2169,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.second12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.third;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -2164,13 +2183,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UA92FC5P8N;
+				DEVELOPMENT_TEAM = 3ER8GC8SJ8;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Optional",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/RenRenSDK",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformConnector",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TaekwondoAssociation/Resource/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TaekwondoAssociation/Resource/Plist/Info.plist";
@@ -2207,7 +2229,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.second12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.third;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
