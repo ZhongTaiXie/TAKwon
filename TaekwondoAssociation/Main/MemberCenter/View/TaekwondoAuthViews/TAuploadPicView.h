@@ -13,6 +13,9 @@
 
 @property (copy) void(^addPicBtnClick)(NSString *str);
 
+@property (copy) void(^delPicBtnClick)(NSString *str,NSInteger tag);
+
+
 -(instancetype)initWithFrame:(CGRect)frame title:(NSString *)title imageArray:(NSArray *)imageArray;
 
 @end

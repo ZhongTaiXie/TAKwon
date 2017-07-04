@@ -12,7 +12,9 @@
 
 @property (nonatomic,strong) UITextField *textField;
 
-
+//
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier title:(NSString *)title placeholder:(NSString *)placeholder;
+
+-(instancetype)initWithTitle:(NSString *)title placeholder:(NSString *)placeholder;
 
 @end
