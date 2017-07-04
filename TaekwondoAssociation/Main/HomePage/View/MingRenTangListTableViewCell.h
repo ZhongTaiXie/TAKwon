@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MingRenTangListTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @end

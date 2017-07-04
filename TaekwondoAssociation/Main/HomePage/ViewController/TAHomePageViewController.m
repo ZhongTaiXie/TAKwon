@@ -293,16 +293,16 @@ static NSString *identifier = @"CellID";
         cell.moreImage.image = [UIImage imageNamed:@"home_more"];
         [cell.moreBtn addTarget:self action:@selector(mingRenTangMoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
         if (dataDic[@"Fame"] != nil && [dataDic[@"Fame"] count] != 0) {
-            NSString *imageStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Fame"][0][@"FamePic"]];
+            NSString *imageStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"Fame"][@"FamePic"]];
             [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:imageStr] placeholderImage:[UIImage imageNamed:@""]];
             
-            NSDictionary *dic = dataDic[@"Fame"][0];
+            NSDictionary *dic = dataDic[@"Fame"];
             NSMutableAttributedString *textString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@ | 性别: %@",dic[@"FameName"],dic[@"FameSex"]]];
             [textString addAttribute:NSForegroundColorAttributeName value:RGB(119, 126, 145) range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
             [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
             cell.textLebl.attributedText = textString;
             cell.addressLab.text = [NSString stringWithFormat:@"地区: %@",dic[@"FameAreas"]];
-            cell.rightTextLeble.text = dic[@"FameHonor"][0];
+            cell.rightTextLeble.text = dic[@"FameHonor"];
         }
         return cell;
     }
