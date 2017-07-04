@@ -8,6 +8,6 @@
 
 #import "BaseWebViewController.h"
 
-@interface HotPicturesViewController : BaseWebViewController
+@interface HotPicturesViewController : TABaseViewController
 
 @end

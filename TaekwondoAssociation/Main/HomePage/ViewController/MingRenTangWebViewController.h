@@ -8,6 +8,7 @@
 
 #import "BaseWebViewController.h"
 
-@interface MingRenTangWebViewController : BaseWebViewController
+
+@interface MingRenTangWebViewController : TABaseViewController
 
 @end
