@@ -70,11 +70,8 @@ static NSString *identifier = @"CellID";
 //    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
 
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.tabBarController.tabBar.hidden = NO;
-
-    
-    
 }
 
 -(void)viewWillDisappear:(BOOL)animated

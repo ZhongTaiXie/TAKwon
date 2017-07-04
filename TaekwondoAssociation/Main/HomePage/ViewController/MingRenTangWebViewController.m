@@ -11,27 +11,70 @@
 #import "MingRenTangListTableViewCell.h"
 #import "TARequestManager.h"
 #import "UIImageView+WebCache.h"
+#import "SearchResultViewController.h"
 
-@interface MingRenTangWebViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MingRenTangWebViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 {
     NSMutableDictionary *dataDic;
+    NSMutableArray*                         _searchResultArray;
+    SearchResultViewController*              _resultViewController;
+    UISearchController*                     _searchController;
 }
 @property (nonatomic ,strong)TABaseTableView *tableView;
+//@property (nonatomic,strong)UIButton *searchBtn;
 @end
 
 @implementation MingRenTangWebViewController
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"名人堂";
+        _searchResultArray = [NSMutableArray array];
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
+    [self searchErrand];
+//    [self.view addSubview:self.searchBtn];
+    
     [self getMingRenTangListData];
+    
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    self.tabBarController.tabBar.hidden = NO;
+}
+- (void)searchErrand
+{
+    
+    _resultViewController = [[SearchResultViewController alloc]init];
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:_resultViewController];
+    _searchController.searchBar.backgroundImage = [UIImage imageNamed:@"searchBarBackgroud"];
+    _searchController.searchBar.placeholder = @"搜索姓名";
+//    _searchController.searchBar.barTintColor = [UIColor whiteColor];
+    UITextField *searchField=[_searchController.searchBar valueForKey:@"_searchField"];
+    searchField.backgroundColor = RGB(235, 236, 238);
+    _searchController.searchBar.delegate = self;
+    _resultViewController.tableView.dataSource = self;
+    _resultViewController.tableView.delegate = self;
+    _resultViewController.dataArray = _searchResultArray;
+    _searchController.searchBar.frame = CGRectMake(0, 0, 0, 44);
+    _searchController.active = NO;
+    _searchController.dimsBackgroundDuringPresentation = YES;
+    self.definesPresentationContext = YES;
+    _tableView.tableHeaderView = _searchController.searchBar;
+    _resultViewController.tableView.rowHeight = 44;
 }
 
 - (TABaseTableView *)tableView {
     
     if (_tableView == nil) {
-        _tableView = [[TABaseTableView alloc]initWithFrame:CGRectMake(0, -20, KTA_Screen_Width, KTA_Screen_Height) style:(UITableViewStylePlain)];
+        _tableView = [[TABaseTableView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height) style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = 60;
@@ -45,6 +88,7 @@
 - (void)getMingRenTangListData
 {
     [MBProgressHUD showHUDAddedTo:_tableView animated:YES];
+    
     [TARequestManager TARequestCompletedWithPath:@"/Home/FameList" Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据
         NSLog(@"----------%@",dic);
@@ -119,6 +163,33 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 30;
+}
+#pragma mark - UISearchBar and UISearchDisplayController Delegate Methods
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+//    [_tableView.mj_header endRefreshing];
+//    [_tableview.mj_footer endRefreshing];
+//    [_resultViewController.tableView.mj_footer endRefreshing];
+    _tableView.frame = CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height);
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
+    //    [_resultViewController reloadData];
+    return YES;
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    [_searchResultArray removeAllObjects];
+//    isSearchAleardySpCx = NO;
+    //    [_resultViewController reloadData];
+    _tableView.frame = CGRectMake(0, 48, KTA_Screen_Width, KTA_Screen_Height-48);
+//    [_resultViewController.tableView.mj_footer endRefreshing];
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [_searchResultArray removeAllObjects];
+//    [self syncSearchErrandList:nil];
+//    [self addSearchFooter];
+}
+- (void)searchBtnClick
+{
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
