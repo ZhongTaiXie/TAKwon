@@ -199,7 +199,7 @@
 
 - (void)backtouAction {
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)tureAction {
