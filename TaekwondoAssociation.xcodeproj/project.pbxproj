@@ -151,6 +151,7 @@
 		EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CD51F023BAE00729CF9 /* TARegistViewController.m */; };
 		EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CDB1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m */; };
 		EF3E0CE31F0256F100729CF9 /* ConstColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CE21F0256F100729CF9 /* ConstColor.m */; };
+		EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */; };
 		EFD2327F1F06B558005559D8 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD2327E1F06B558005559D8 /* NSString+Util.m */; };
 		EFD232A51F06B5EC005559D8 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232831F06B5EC005559D8 /* IQNSArray+Sort.m */; };
 		EFD232A61F06B5EC005559D8 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232851F06B5EC005559D8 /* IQUIScrollView+Additions.m */; };
@@ -463,6 +464,8 @@
 		EF3E0CDB1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TAAppDelegate.m"; sourceTree = "<group>"; };
 		EF3E0CE11F0256F100729CF9 /* ConstColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstColor.h; sourceTree = "<group>"; };
 		EF3E0CE21F0256F100729CF9 /* ConstColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstColor.m; sourceTree = "<group>"; };
+		EF5EFA251F0B2A8C00A60F3E /* TAUnbundingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUnbundingViewController.h; sourceTree = "<group>"; };
+		EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUnbundingViewController.m; sourceTree = "<group>"; };
 		EFD2327D1F06B558005559D8 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
 		EFD2327E1F06B558005559D8 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		EFD232821F06B5EC005559D8 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
@@ -1252,6 +1255,8 @@
 				EF3E0CD31F023BAE00729CF9 /* TALoginViewController.m */,
 				EF3E0CD41F023BAE00729CF9 /* TARegistViewController.h */,
 				EF3E0CD51F023BAE00729CF9 /* TARegistViewController.m */,
+				EF5EFA251F0B2A8C00A60F3E /* TAUnbundingViewController.h */,
+				EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */,
 				B6F9B1A61F03B5D600EBCD68 /* AgreementViewController.h */,
 				B6F9B1A71F03B5D600EBCD68 /* AgreementViewController.m */,
 			);
@@ -1839,6 +1844,7 @@
 				B69F07561F020454009AE263 /* LBXScanNetAnimation.m in Sources */,
 				B699B8ED1F0623A200D8CB95 /* NewsListViewController.m in Sources */,
 				4E13019F1F0846BE000B0ED7 /* TATaekIntroduceViewController.m in Sources */,
+				EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */,
 				EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */,
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
 				EF0047201F04970200CD42C6 /* TAHttpClient.m in Sources */,
