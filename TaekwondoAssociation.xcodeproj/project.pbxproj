@@ -94,6 +94,12 @@
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
+		AFE4C12A1F0A2E7F00AA2C0E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */; };
+		B613436A1F0A392E0089FBA4 /* HotPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */; };
+		B613436D1F0A39680089FBA4 /* MingRenTangWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */; };
+		B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613436F1F0A46460089FBA4 /* HomeLoBoWebViewController.m */; };
+		B61343741F0B36490089FBA4 /* MingRenTangListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */; };
+		B61343751F0B36490089FBA4 /* MingRenTangListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -152,6 +158,7 @@
 		EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CD51F023BAE00729CF9 /* TARegistViewController.m */; };
 		EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CDB1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m */; };
 		EF3E0CE31F0256F100729CF9 /* ConstColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CE21F0256F100729CF9 /* ConstColor.m */; };
+		EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */; };
 		EFD2327F1F06B558005559D8 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD2327E1F06B558005559D8 /* NSString+Util.m */; };
 		EFD232A51F06B5EC005559D8 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232831F06B5EC005559D8 /* IQNSArray+Sort.m */; };
 		EFD232A61F06B5EC005559D8 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232851F06B5EC005559D8 /* IQUIScrollView+Additions.m */; };
@@ -168,11 +175,11 @@
 		EFD232B11F06B5EC005559D8 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232A01F06B5EC005559D8 /* IQToolbar.m */; };
 		EFD232B21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232A21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m */; };
 		EFD232B31F06B5EC005559D8 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFD232A41F06B5EC005559D8 /* IQKeyboardManager.bundle */; };
-		EFF9DA2F1F05FF820056F9F7 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0C1F05FF820056F9F7 /* ShareSDK.framework */; };
+		EFF9DA2F1F05FF820056F9F7 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0C1F05FF820056F9F7 /* ShareSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EFF9DA301F05FF820056F9F7 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0F1F05FF820056F9F7 /* ShareSDKExtension.framework */; };
 		EFF9DA311F05FF820056F9F7 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF9DA101F05FF820056F9F7 /* ShareSDKUI.bundle */; };
 		EFF9DA321F05FF820056F9F7 /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA111F05FF820056F9F7 /* ShareSDKUI.framework */; };
-		EFF9DA331F05FF820056F9F7 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA141F05FF820056F9F7 /* TencentOpenAPI.framework */; };
+		EFF9DA331F05FF820056F9F7 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA141F05FF820056F9F7 /* TencentOpenAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EFF9DA341F05FF820056F9F7 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF9DA151F05FF820056F9F7 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		EFF9DA351F05FF820056F9F7 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA171F05FF820056F9F7 /* libWeiboSDK.a */; };
 		EFF9DA361F05FF820056F9F7 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF9DA211F05FF820056F9F7 /* WeiboSDK.bundle */; };
@@ -358,6 +365,17 @@
 		AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicNoticeViewController.m; sourceTree = "<group>"; };
 		AFE4C1211F0A1C6600AA2C0E /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
 		AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
+		AFE4C1251F0A2C1700AA2C0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B61343681F0A392E0089FBA4 /* HotPicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPicturesViewController.h; sourceTree = "<group>"; };
+		B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPicturesViewController.m; sourceTree = "<group>"; };
+		B613436B1F0A39680089FBA4 /* MingRenTangWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingRenTangWebViewController.h; sourceTree = "<group>"; };
+		B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingRenTangWebViewController.m; sourceTree = "<group>"; };
+		B613436E1F0A46460089FBA4 /* HomeLoBoWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLoBoWebViewController.h; sourceTree = "<group>"; };
+		B613436F1F0A46460089FBA4 /* HomeLoBoWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeLoBoWebViewController.m; sourceTree = "<group>"; };
+		B61343711F0B36490089FBA4 /* MingRenTangListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingRenTangListTableViewCell.h; sourceTree = "<group>"; };
+		B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingRenTangListTableViewCell.m; sourceTree = "<group>"; };
+		B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingRenTangListTableViewCell.xib; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -466,6 +484,8 @@
 		EF3E0CDB1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TAAppDelegate.m"; sourceTree = "<group>"; };
 		EF3E0CE11F0256F100729CF9 /* ConstColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstColor.h; sourceTree = "<group>"; };
 		EF3E0CE21F0256F100729CF9 /* ConstColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstColor.m; sourceTree = "<group>"; };
+		EF5EFA251F0B2A8C00A60F3E /* TAUnbundingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUnbundingViewController.h; sourceTree = "<group>"; };
+		EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUnbundingViewController.m; sourceTree = "<group>"; };
 		EFD2327D1F06B558005559D8 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
 		EFD2327E1F06B558005559D8 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		EFD232821F06B5EC005559D8 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
@@ -542,6 +562,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE4C12A1F0A2E7F00AA2C0E /* libstdc++.tbd in Frameworks */,
 				EFF9DA4C1F060F640056F9F7 /* libc++.tbd in Frameworks */,
 				EFF9DA461F060DF40056F9F7 /* libicucore.tbd in Frameworks */,
 				EFF9DA441F060DDC0056F9F7 /* libz.tbd in Frameworks */,
@@ -580,6 +601,8 @@
 		17F3BDA02EBC797D576AA08D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */,
+				AFE4C1251F0A2C1700AA2C0E /* QuartzCore.framework */,
 				EFF9DA4B1F060F640056F9F7 /* libc++.tbd */,
 				EFF9DA451F060DF40056F9F7 /* libicucore.tbd */,
 				EFF9DA431F060DDC0056F9F7 /* libz.tbd */,
@@ -1142,6 +1165,9 @@
 				EF04B6491F09DCC800C81C65 /* TANotsTableViewCell.h */,
 				EF04B64A1F09DCC800C81C65 /* TANotsTableViewCell.m */,
 				EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */,
+				B61343711F0B36490089FBA4 /* MingRenTangListTableViewCell.h */,
+				B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */,
+				B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1151,8 +1177,14 @@
 			children = (
 				EF3E0CB01F01F60A00729CF9 /* TAHomePageViewController.h */,
 				EF3E0CB11F01F60A00729CF9 /* TAHomePageViewController.m */,
+				B613436E1F0A46460089FBA4 /* HomeLoBoWebViewController.h */,
+				B613436F1F0A46460089FBA4 /* HomeLoBoWebViewController.m */,
 				B699B8EB1F0623A200D8CB95 /* NewsListViewController.h */,
 				B699B8EC1F0623A200D8CB95 /* NewsListViewController.m */,
+				B61343681F0A392E0089FBA4 /* HotPicturesViewController.h */,
+				B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */,
+				B613436B1F0A39680089FBA4 /* MingRenTangWebViewController.h */,
+				B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */,
 				B629A8811F02381E0013528A /* PublicWelfareViewController.h */,
 				B629A8821F02381E0013528A /* PublicWelfareViewController.m */,
 				B629A8841F0238480013528A /* RankingViewController.h */,
@@ -1254,6 +1286,8 @@
 				EF3E0CD31F023BAE00729CF9 /* TALoginViewController.m */,
 				EF3E0CD41F023BAE00729CF9 /* TARegistViewController.h */,
 				EF3E0CD51F023BAE00729CF9 /* TARegistViewController.m */,
+				EF5EFA251F0B2A8C00A60F3E /* TAUnbundingViewController.h */,
+				EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */,
 				B6F9B1A61F03B5D600EBCD68 /* AgreementViewController.h */,
 				B6F9B1A71F03B5D600EBCD68 /* AgreementViewController.m */,
 			);
@@ -1651,11 +1685,12 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = GZD44TPUDX;
+						DevelopmentTeam = UA92FC5P8N;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UA92FC5P8N;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B6AA33B91F00E9E400DAA5E7;
 					};
@@ -1698,6 +1733,7 @@
 				4E000C001F07136600DB0035 /* TAOnePicCollcetionCell.xib in Resources */,
 				EFF9DA3B1F05FF820056F9F7 /* ShareSDK.bundle in Resources */,
 				4E000BC21F06BA8E00DB0035 /* VideoSendIcon@2x.png in Resources */,
+				B61343751F0B36490089FBA4 /* MingRenTangListTableViewCell.xib in Resources */,
 				4E000BBC1F06BA8E00DB0035 /* photo_sel_previewVc@2x.png in Resources */,
 				EFF9DA391F05FF820056F9F7 /* README.txt in Resources */,
 				EF3E0CA51F01F44400729CF9 /* LaunchScreen.storyboard in Resources */,
@@ -1844,12 +1880,14 @@
 				B69F07561F020454009AE263 /* LBXScanNetAnimation.m in Sources */,
 				B699B8ED1F0623A200D8CB95 /* NewsListViewController.m in Sources */,
 				4E13019F1F0846BE000B0ED7 /* TATaekIntroduceViewController.m in Sources */,
+				EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */,
 				EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */,
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
 				EF0047201F04970200CD42C6 /* TAHttpClient.m in Sources */,
 				EFD232A61F06B5EC005559D8 /* IQUIScrollView+Additions.m in Sources */,
 				EF04B64C1F09DCC800C81C65 /* TANotsTableViewCell.m in Sources */,
 				4E000BC81F06BA8E00DB0035 /* TZPhotoPreviewCell.m in Sources */,
+				B61343741F0B36490089FBA4 /* MingRenTangListTableViewCell.m in Sources */,
 				B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */,
 				4E000BC31F06BA8E00DB0035 /* TZAssetCell.m in Sources */,
 				EFD232B01F06B5EC005559D8 /* IQTitleBarButtonItem.m in Sources */,
@@ -1874,6 +1912,7 @@
 				4E000BF51F07112D00DB0035 /* TAGongGaoCollectionCell.m in Sources */,
 				4E000B801F06BA4A00DB0035 /* TAEditMemberInfoViewController.m in Sources */,
 				EF04B6501F09EC8200C81C65 /* TASearchViewController.m in Sources */,
+				B613436A1F0A392E0089FBA4 /* HotPicturesViewController.m in Sources */,
 				4EFE54941F02D206001E7A05 /* TAPersonalHeaderView.m in Sources */,
 				4E1301CD1F0B1475000B0ED7 /* TAReleaseLessonCell.m in Sources */,
 				4E1301AE1F0AB558000B0ED7 /* TAMyReleaseViewController.m in Sources */,
@@ -1881,6 +1920,7 @@
 				4E13019B1F084038000B0ED7 /* TATaekAddressCell.m in Sources */,
 				4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */,
 				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
+				B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
 				EF37E5691F034AD6005F8F8B /* TABaseTableView.m in Sources */,
 				4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */,
@@ -1927,6 +1967,7 @@
 				4E1301AA1F08776D000B0ED7 /* TAMemberHonorViewController.m in Sources */,
 				4E1301A61F087576000B0ED7 /* TATaekHonorCell.m in Sources */,
 				EF3E0CB21F01F60A00729CF9 /* TAHomePageViewController.m in Sources */,
+				B613436D1F0A39680089FBA4 /* MingRenTangWebViewController.m in Sources */,
 				AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2060,7 +2101,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = UA92FC5P8N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
@@ -2077,7 +2118,33 @@
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.second12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -2091,7 +2158,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = UA92FC5P8N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
@@ -2108,7 +2175,33 @@
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.second12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -2119,6 +2212,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UA92FC5P8N;
 				INFOPLIST_FILE = TaekwondoAssociationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociationTests;
@@ -2131,6 +2225,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UA92FC5P8N;
 				INFOPLIST_FILE = TaekwondoAssociationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociationTests;

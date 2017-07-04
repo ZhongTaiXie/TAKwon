@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self loadWebUrl:@"http://g3msy5.natappfree.cc/h5/news/newsList.html"];
+    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/news/newsList.html"];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

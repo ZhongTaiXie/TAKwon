@@ -1,31 +1,22 @@
 //
-//  MatchViewController.m
+//  HomeLoBoWebViewController.m
 //  TaekwondoAssociation
 //
-//  Created by 王尉坤 on 2017/7/3.
+//  Created by 李瑞平 on 2017/7/3.
 //  Copyright © 2017年 Miss 李. All rights reserved.
 //
 
-#import "MatchViewController.h"
+#import "HomeLoBoWebViewController.h"
 
-@interface MatchViewController ()
+@interface HomeLoBoWebViewController ()
 
 @end
 
-@implementation MatchViewController
+@implementation HomeLoBoWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.navigationItem.title = @"赛事";
-    
-    [self AddBottomView];
-    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/news/newsDetailPage.html"];
-    
-    _bottomView = [[BottomCommentView alloc] initWithType:BottomCommentViewComment];
-    [self.view addSubview:_bottomView];
-
+    [self loadWebUrl:_urlStr];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseWebViewController.h"
+#import "BottomCommentView.h"
 
 @interface MatchViewController : BaseWebViewController
+
+@property (nonatomic, strong) BottomCommentView* bottomView;
 
 @end

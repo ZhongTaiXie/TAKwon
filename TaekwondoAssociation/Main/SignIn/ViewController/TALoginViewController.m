@@ -13,6 +13,13 @@
 #import <ShareSDK/ShareSDK.h>
 #import "TARequestManager.h"
 #import "LCProgressHUD.h"
+#import "TAUnbundingViewController.h"
+#pragma mark   测试接口
+#import "TASearchViewController.h"
+#import "NewsListViewController.h"
+#import "TANotsViewController.h"
+
+
 
 @interface TALoginViewController ()<UITextFieldDelegate>
 // 登录模式是个人或者道馆,网络请求时候用到的
@@ -361,7 +368,7 @@
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setValue:_accuntTextFiled.text forKey:@"NickName"];
     [params setValue:_passTextFiled.text forKey:@"Pwd"];
-    [TARequestManager TARequestCompletedWithPath:@"/SignIn/SignIn" Parameters:params sucee:^(NSDictionary *dic) {
+    [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:params sucee:^(NSDictionary *dic) {
         
         NSLog(@"%@",dic);
         // 登录成功
@@ -384,7 +391,9 @@
 }
 #pragma mark - 游客登录点击事件
 - (void)touristLoginBtnClick
+
 {
+//    [self.navigationController pushViewController:[TAUnbundingViewController new] animated:YES];
     [[UIApplication sharedAppDelegate] goToHome];
 
 }
@@ -405,13 +414,14 @@
      {
          if (state == SSDKResponseStateSuccess)
          {
-             
+              [self thirdLoginVerifyPhone:user.uid];
+           
              NSLog(@"uid=%@",user.uid);
              NSLog(@"%@",user.credential);
              NSLog(@"token=%@",user.credential.token);
              NSLog(@"nickname=%@",user.nickname);
              
-             [[UIApplication sharedAppDelegate] goToHome];
+//             [[UIApplication sharedAppDelegate] goToHome];
          }
          
          else
@@ -436,7 +446,8 @@
          if (state == SSDKResponseStateSuccess )
              
          {
-             
+              [self thirdLoginVerifyPhone:user.uid];
+            
              NSLog ( @"uid=%@" ,user. uid );
              
              NSLog ( @"%@" ,user. credential );
@@ -445,7 +456,7 @@
              
              NSLog ( @"nickname=%@" ,user. nickname );
              
-             [[UIApplication sharedAppDelegate] goToHome];
+//             [[UIApplication sharedAppDelegate] goToHome];
              
          }
          
@@ -472,6 +483,7 @@
          if (state == SSDKResponseStateSuccess )
              
          {
+             [self thirdLoginVerifyPhone:user.uid];
              
              NSLog ( @"uid=%@" ,user. uid );
              
@@ -480,7 +492,7 @@
              NSLog ( @"token=%@" ,user. credential . token );
              
              NSLog ( @"nickname=%@" ,user. nickname );
-             [[UIApplication sharedAppDelegate] goToHome];
+//             [[UIApplication sharedAppDelegate] goToHome];
              
          }
          
@@ -497,6 +509,35 @@
     
     
 }
+
+#pragma mark 判断第三方登录有没有验证手机号  
+
+- (void)thirdLoginVerifyPhone:(NSString *)uuid {
+    
+    NSDictionary *dic = @{@"uuid":uuid};
+    
+    [TARequestManager TARequestCompletedWithPath:nil Parameters:dic sucee:^(NSDictionary *dic) {
+      
+        //  1.手机号存在 并绑定正确
+        [[UIApplication sharedAppDelegate]goToHome];
+
+       
+        //  2.手机号不存在
+        TAUnbundingViewController *registVC = [[TAUnbundingViewController alloc]init];
+        registVC.title = @"绑定手机号";
+        registVC.uuid = uuid;
+
+        [self.navigationController pushViewController:registVC animated:YES];
+        
+        
+    } fail:^(NSError *error) {
+        
+    }];
+    
+}
+
+
+
 
 // 加载数据
 - (void)loadData {

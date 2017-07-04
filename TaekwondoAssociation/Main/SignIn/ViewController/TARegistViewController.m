@@ -69,7 +69,7 @@
 {
     //手机号或邮箱输入框
     accountNumberTF = [[UITextField alloc]initWithFrame:CGRectMake(20, 154, KTA_Screen_Width-40, 40)];
-    accountNumberTF.placeholder = @"请输入/手机号码/邮箱";
+    accountNumberTF.placeholder = @"请输入手机号码/邮箱";
     accountNumberTF.delegate = self;
     accountNumberTF.tag = 1;
     [accountNumberTF.layer setBorderColor:[ConstColor themeColor].CGColor];
@@ -237,8 +237,8 @@
 #pragma mark - 获取验证码点击事件
 - (void)verificationCodeBtnClick
 {
-    if ([accountNumberTF.text isMoblePhoneNumber]) {
-        // 校验正确
+    if ([accountNumberTF.text isMoblePhoneNumber] || [accountNumberTF.text isEmail]) {
+        // 校验正确  发送验证码
         
     }else {
         
@@ -270,7 +270,7 @@
                 
                 NSDictionary *diy = @{@"NickName":accountNumberTF.text,@"Pwd":passwordTF.text,@"UserType":loginway};
                 
-                [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:diy sucee:^(NSDictionary *dic) {
+                [TARequestManager TARequestCompletedWithPath:URL_REGIST Parameters:diy sucee:^(NSDictionary *dic) {
                     
                     NSDictionary *dataa = [dic objectForKey:@"Data"];
                     

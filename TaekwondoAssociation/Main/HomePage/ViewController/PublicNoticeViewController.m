@@ -19,6 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.title = @"公告";
+    
     [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/training/training_list.html"];
     
 }
