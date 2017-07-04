@@ -17,10 +17,12 @@
 #import "UIImageView+WebCache.h"
 #import "CertificationViewController.h"
 #import "TANotsViewController.h"
-#import "TASearchViewController.h"
+#import "TASearchViewController.h"//搜索页面
 #import "PublicNoticeViewController.h"
 #import "MatchViewController.h"
-#import "HomeLoBoWebViewController.h"
+#import "HomeLoBoWebViewController.h"//轮播图点击页面
+#import "LBXScanViewController.h"//扫一扫
+#import "LBXScanNative.h"
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -47,6 +49,7 @@ static NSString *identifier = @"CellID";
     view.backgroundColor = [UIColor clearColor];
     [_tableView setTableFooterView:view];
     [self.view addSubview:self.tableView];
+    [self searchView];
 }
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -61,7 +64,7 @@ static NSString *identifier = @"CellID";
         // 解析数据
         NSLog(@"----------%@",dic);
         [MBProgressHUD hideHUDForView:_tableView animated:YES];
-        dataDic = [dic[@"Data"] mutableCopy];
+        dataDic = [dic[@"Data"][@"Data"] mutableCopy];
         UIView *bigView = [self topView];
         _tableView.tableHeaderView = bigView;
         [_tableView reloadData];
@@ -75,6 +78,31 @@ static NSString *identifier = @"CellID";
 {
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.hidden = NO;
+}
+- (void)searchView
+{
+    UIView *topView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, KTA_Screen_Width, 40)];
+    [self.view addSubview:topView];
+    //消息按钮
+    UIButton *massageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    massageBtn.frame = CGRectMake(10, 5, 30, 30);
+    [massageBtn setImage:[UIImage imageNamed:@"home_message"] forState:UIControlStateNormal];
+    [massageBtn addTarget:self action:@selector(massageBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [topView addSubview:massageBtn];
+    //搜索框
+    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    searchBtn.backgroundColor = [UIColor redColor];
+    searchBtn.frame = CGRectMake(50, 5, KTA_Screen_Width-100, 30);
+    [searchBtn setImage:[UIImage imageNamed:@"home_bigSearch"] forState:UIControlStateNormal];
+    [searchBtn addTarget:self action:@selector(searchBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    //    searchBtn.backgroundColor = [UIColor whiteColor];
+    [topView addSubview:searchBtn];
+    //扫一扫
+    UIButton *scanningBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    scanningBtn.frame = CGRectMake(KTA_Screen_Width-40, 5, 30, 30);
+    [scanningBtn setImage:[UIImage imageNamed:@"home_saoYiSao"] forState:UIControlStateNormal];
+    [scanningBtn addTarget:self action:@selector(scanningBtnBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [topView addSubview:scanningBtn];
 }
 - (TABaseTableView *)tableView {
     
@@ -165,28 +193,7 @@ static NSString *identifier = @"CellID";
 //    self.tableview.tableHeaderView = cycleScrollView;
     [view addSubview:autoScrollView];
     
-    UIView *topView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, KTA_Screen_Width, 40)];
-    [autoScrollView addSubview:topView];
-    //消息按钮
-    UIButton *massageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    massageBtn.frame = CGRectMake(10, 5, 30, 30);
-    [massageBtn setImage:[UIImage imageNamed:@"home_message"] forState:UIControlStateNormal];
-    [massageBtn addTarget:self action:@selector(massageBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [topView addSubview:massageBtn];
-    //搜索框
-    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    searchBtn.backgroundColor = [UIColor redColor];
-    searchBtn.frame = CGRectMake(50, 5, KTA_Screen_Width-100, 30);
-    [searchBtn setImage:[UIImage imageNamed:@"home_bigSearch"] forState:UIControlStateNormal];
-    [searchBtn addTarget:self action:@selector(searchBtnClick) forControlEvents:UIControlEventTouchUpInside];
-//    searchBtn.backgroundColor = [UIColor whiteColor];
-    [topView addSubview:searchBtn];
-    //扫一扫
-    UIButton *scanningBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    scanningBtn.frame = CGRectMake(KTA_Screen_Width-40, 5, 30, 30);
-    [scanningBtn setImage:[UIImage imageNamed:@"home_saoYiSao"] forState:UIControlStateNormal];
-    [scanningBtn addTarget:self action:@selector(scanningBtnBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [topView addSubview:scanningBtn];
+    
 }
 #pragma mark 图片轮播 delegate
 -(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
@@ -332,8 +339,16 @@ static NSString *identifier = @"CellID";
 #pragma mark - 扫一扫按钮点击事件
 - (void)scanningBtnBtnClick
 {
-    
+    LBXScanViewController *vc = [[LBXScanViewController alloc]init];
+    vc.successBlock = ^(NSString *result){
+//        self.resluu = [[NSString alloc]initWithString:result];
+//        
+//        [self network];
+    };
+    //    vc.hidesBottomBarWhenPushed = YES; //有tabbar时添加
+    [self.navigationController pushViewController:vc animated:YES];
 }
+#pragma mark - 菜单按钮点击事件
 - (void)menuBtnClick:(id)sender
 {
     NSInteger tag = [sender tag];
