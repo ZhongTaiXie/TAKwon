@@ -8,6 +8,8 @@
 
 #import "TATaekHonorViewController.h"
 #import "TATaekHonorCell.h"
+#import "TAUploadTaekHonorViewController.h"
+#import "WQAvastBrowser.h"
 
 @interface TATaekHonorViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -53,16 +55,25 @@
 
 -(void)setupNav{
     self.view.backgroundColor = WHITECOLOR;
-    self.navigationItem.title = @"我的荣誉";
+    self.navigationItem.title = @"道馆荣誉";
     
     //设置导航栏左侧返回按钮
     UIImage *backImage = [UIImage imageNamed:@"back"];
     backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backImage style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    
+    //右侧添加按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"add_white"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]style:UIBarButtonItemStyleDone target:self action:@selector(uploadRongyu)];
 }
 
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+//添加荣誉
+-(void)uploadRongyu{
+    TAUploadTaekHonorViewController *uploadVC = [TAUploadTaekHonorViewController new];
+    [self.navigationController pushViewController:uploadVC animated:YES];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
@@ -82,6 +93,10 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [WQAvastBrowser showImage:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"header_bg"]]];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

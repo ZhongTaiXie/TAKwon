@@ -67,6 +67,11 @@
 		4E1301C21F0AE5C4000B0ED7 /* TAActivityTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1301C01F0AE5C4000B0ED7 /* TAActivityTimeCell.xib */; };
 		4E1301C61F0AFCBA000B0ED7 /* UICustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301C41F0AFCBA000B0ED7 /* UICustomDatePicker.m */; };
 		4E1301C71F0AFCBA000B0ED7 /* UICustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1301C51F0AFCBA000B0ED7 /* UICustomDatePicker.xib */; };
+		4E1301CA1F0B0B68000B0ED7 /* TAReleaseLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301C91F0B0B68000B0ED7 /* TAReleaseLessonViewController.m */; };
+		4E1301CD1F0B1475000B0ED7 /* TAReleaseLessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301CC1F0B1475000B0ED7 /* TAReleaseLessonCell.m */; };
+		4E1301D01F0B239D000B0ED7 /* TAFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301CF1F0B239D000B0ED7 /* TAFeedbackViewController.m */; };
+		4E55C6541F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6531F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m */; };
+		4E55C6571F0C3BA200B22C45 /* WQAvastBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6561F0C3BA200B22C45 /* WQAvastBrowser.m */; };
 		4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */; };
 		4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548C1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m */; };
 		4EFE54911F02D200001E7A05 /* TAPersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE54901F02D200001E7A05 /* TAPersonalModel.m */; };
@@ -154,6 +159,7 @@
 		EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CD51F023BAE00729CF9 /* TARegistViewController.m */; };
 		EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CDB1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m */; };
 		EF3E0CE31F0256F100729CF9 /* ConstColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0CE21F0256F100729CF9 /* ConstColor.m */; };
+		EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */; };
 		EFD2327F1F06B558005559D8 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD2327E1F06B558005559D8 /* NSString+Util.m */; };
 		EFD232A51F06B5EC005559D8 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232831F06B5EC005559D8 /* IQNSArray+Sort.m */; };
 		EFD232A61F06B5EC005559D8 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232851F06B5EC005559D8 /* IQUIScrollView+Additions.m */; };
@@ -308,6 +314,16 @@
 		4E1301C31F0AFCBA000B0ED7 /* UICustomDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomDatePicker.h; sourceTree = "<group>"; };
 		4E1301C41F0AFCBA000B0ED7 /* UICustomDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomDatePicker.m; sourceTree = "<group>"; };
 		4E1301C51F0AFCBA000B0ED7 /* UICustomDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomDatePicker.xib; sourceTree = "<group>"; };
+		4E1301C81F0B0B68000B0ED7 /* TAReleaseLessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAReleaseLessonViewController.h; sourceTree = "<group>"; };
+		4E1301C91F0B0B68000B0ED7 /* TAReleaseLessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAReleaseLessonViewController.m; sourceTree = "<group>"; };
+		4E1301CB1F0B1475000B0ED7 /* TAReleaseLessonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAReleaseLessonCell.h; sourceTree = "<group>"; };
+		4E1301CC1F0B1475000B0ED7 /* TAReleaseLessonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAReleaseLessonCell.m; sourceTree = "<group>"; };
+		4E1301CE1F0B239D000B0ED7 /* TAFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAFeedbackViewController.h; sourceTree = "<group>"; };
+		4E1301CF1F0B239D000B0ED7 /* TAFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAFeedbackViewController.m; sourceTree = "<group>"; };
+		4E55C6521F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUploadTaekHonorViewController.h; sourceTree = "<group>"; };
+		4E55C6531F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUploadTaekHonorViewController.m; sourceTree = "<group>"; };
+		4E55C6551F0C3BA200B22C45 /* WQAvastBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAvastBrowser.h; sourceTree = "<group>"; };
+		4E55C6561F0C3BA200B22C45 /* WQAvastBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAvastBrowser.m; sourceTree = "<group>"; };
 		4EFE54891F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPersonalMemberCenterViewController.h; sourceTree = "<group>"; };
 		4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPersonalMemberCenterViewController.m; sourceTree = "<group>"; };
 		4EFE548B1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaekwondoMemberCenterViewController.h; sourceTree = "<group>"; };
@@ -471,6 +487,8 @@
 		EF3E0CDB1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TAAppDelegate.m"; sourceTree = "<group>"; };
 		EF3E0CE11F0256F100729CF9 /* ConstColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstColor.h; sourceTree = "<group>"; };
 		EF3E0CE21F0256F100729CF9 /* ConstColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstColor.m; sourceTree = "<group>"; };
+		EF5EFA251F0B2A8C00A60F3E /* TAUnbundingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUnbundingViewController.h; sourceTree = "<group>"; };
+		EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUnbundingViewController.m; sourceTree = "<group>"; };
 		EFD2327D1F06B558005559D8 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
 		EFD2327E1F06B558005559D8 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		EFD232821F06B5EC005559D8 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
@@ -683,6 +701,8 @@
 				4E1301AD1F0AB558000B0ED7 /* TAMyReleaseViewController.m */,
 				4E1301B81F0AE2A3000B0ED7 /* TAReleaseActivityViewController.h */,
 				4E1301B91F0AE2A3000B0ED7 /* TAReleaseActivityViewController.m */,
+				4E1301C81F0B0B68000B0ED7 /* TAReleaseLessonViewController.h */,
+				4E1301C91F0B0B68000B0ED7 /* TAReleaseLessonViewController.m */,
 			);
 			path = MyRelease;
 			sourceTree = "<group>";
@@ -695,6 +715,8 @@
 				4E1301BE1F0AE5C4000B0ED7 /* TAActivityTimeCell.h */,
 				4E1301BF1F0AE5C4000B0ED7 /* TAActivityTimeCell.m */,
 				4E1301C01F0AE5C4000B0ED7 /* TAActivityTimeCell.xib */,
+				4E1301CB1F0B1475000B0ED7 /* TAReleaseLessonCell.h */,
+				4E1301CC1F0B1475000B0ED7 /* TAReleaseLessonCell.m */,
 			);
 			path = MyReleaseViews;
 			sourceTree = "<group>";
@@ -704,6 +726,8 @@
 			children = (
 				4EFE54B61F0416A8001E7A05 /* TASeetingViewController.h */,
 				4EFE54B71F0416A8001E7A05 /* TASeetingViewController.m */,
+				4E1301CE1F0B239D000B0ED7 /* TAFeedbackViewController.h */,
+				4E1301CF1F0B239D000B0ED7 /* TAFeedbackViewController.m */,
 			);
 			path = SettingVC;
 			sourceTree = "<group>";
@@ -737,6 +761,8 @@
 			children = (
 				4E1301A01F087489000B0ED7 /* TATaekHonorViewController.h */,
 				4E1301A11F087489000B0ED7 /* TATaekHonorViewController.m */,
+				4E55C6521F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.h */,
+				4E55C6531F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m */,
 			);
 			path = TaekwondoHonorVC;
 			sourceTree = "<group>";
@@ -1263,6 +1289,8 @@
 				EF3E0CD31F023BAE00729CF9 /* TALoginViewController.m */,
 				EF3E0CD41F023BAE00729CF9 /* TARegistViewController.h */,
 				EF3E0CD51F023BAE00729CF9 /* TARegistViewController.m */,
+				EF5EFA251F0B2A8C00A60F3E /* TAUnbundingViewController.h */,
+				EF5EFA261F0B2A8C00A60F3E /* TAUnbundingViewController.m */,
 				B6F9B1A61F03B5D600EBCD68 /* AgreementViewController.h */,
 				B6F9B1A71F03B5D600EBCD68 /* AgreementViewController.m */,
 			);
@@ -1353,6 +1381,8 @@
 				4EFE54AB1F0319D3001E7A05 /* WQTools.m */,
 				4EFE54981F02D451001E7A05 /* WQFactoryUI.h */,
 				4EFE54991F02D451001E7A05 /* WQFactoryUI.m */,
+				4E55C6551F0C3BA200B22C45 /* WQAvastBrowser.h */,
+				4E55C6561F0C3BA200B22C45 /* WQAvastBrowser.m */,
 				AF22AFA51F064964003582EF /* LCProgressHUD.h */,
 				AF22AFA61F064964003582EF /* LCProgressHUD.m */,
 			);
@@ -1842,6 +1872,7 @@
 				4E000BCB1F06BA8E00DB0035 /* UIView+Layout.m in Sources */,
 				B629A88C1F0238AA0013528A /* TeachingViewController.m in Sources */,
 				EF3E0CAB1F01F51A00729CF9 /* TabBarController.m in Sources */,
+				4E1301CA1F0B0B68000B0ED7 /* TAReleaseLessonViewController.m in Sources */,
 				4E000BC51F06BA8E00DB0035 /* TZImageManager.m in Sources */,
 				4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */,
 				B629A8921F0239500013528A /* TaekwondoBaiKeViewController.m in Sources */,
@@ -1854,6 +1885,7 @@
 				B69F07561F020454009AE263 /* LBXScanNetAnimation.m in Sources */,
 				B699B8ED1F0623A200D8CB95 /* NewsListViewController.m in Sources */,
 				4E13019F1F0846BE000B0ED7 /* TATaekIntroduceViewController.m in Sources */,
+				EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */,
 				EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */,
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
 				EF0047201F04970200CD42C6 /* TAHttpClient.m in Sources */,
@@ -1888,6 +1920,7 @@
 				EF04B6501F09EC8200C81C65 /* TASearchViewController.m in Sources */,
 				B613436A1F0A392E0089FBA4 /* HotPicturesViewController.m in Sources */,
 				4EFE54941F02D206001E7A05 /* TAPersonalHeaderView.m in Sources */,
+				4E1301CD1F0B1475000B0ED7 /* TAReleaseLessonCell.m in Sources */,
 				4E1301AE1F0AB558000B0ED7 /* TAMyReleaseViewController.m in Sources */,
 				B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */,
 				4E13019B1F084038000B0ED7 /* TATaekAddressCell.m in Sources */,
@@ -1918,12 +1951,14 @@
 				4E000BEB1F0705FA00DB0035 /* TANoPicCollectionCell.m in Sources */,
 				EFD232A81F06B5EC005559D8 /* IQUIView+Hierarchy.m in Sources */,
 				4E000B831F06BA4A00DB0035 /* TAZhiYeRenZhengViewController.m in Sources */,
+				4E55C6571F0C3BA200B22C45 /* WQAvastBrowser.m in Sources */,
 				EFD232B21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				EFF9DA4A1F060E430056F9F7 /* AppDelegate+TAlogin.m in Sources */,
 				EFD232B11F06B5EC005559D8 /* IQToolbar.m in Sources */,
 				B6F9B1B71F050B8E00EBCD68 /* HotGalleryTableViewCell.m in Sources */,
 				4EFE54B31F033317001E7A05 /* TAPersonalCell.m in Sources */,
 				4E000BE41F06F80500DB0035 /* TAMyCollectionViewController.m in Sources */,
+				4E55C6541F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m in Sources */,
 				4EFE54AC1F0319D3001E7A05 /* WQTools.m in Sources */,
 				4E1301C61F0AFCBA000B0ED7 /* UICustomDatePicker.m in Sources */,
 				4E000B8D1F06BA5F00DB0035 /* TAMemberInfoCell.m in Sources */,
@@ -1933,6 +1968,7 @@
 				4E1301C11F0AE5C4000B0ED7 /* TAActivityTimeCell.m in Sources */,
 				4E000BC91F06BA8E00DB0035 /* TZPhotoPreviewController.m in Sources */,
 				EF0047211F04970200CD42C6 /* TARequestManager.m in Sources */,
+				4E1301D01F0B239D000B0ED7 /* TAFeedbackViewController.m in Sources */,
 				4E1301B71F0AB91C000B0ED7 /* TAMyReleaseTitleCell.m in Sources */,
 				4E1301AA1F08776D000B0ED7 /* TAMemberHonorViewController.m in Sources */,
 				4E1301A61F087576000B0ED7 /* TATaekHonorCell.m in Sources */,

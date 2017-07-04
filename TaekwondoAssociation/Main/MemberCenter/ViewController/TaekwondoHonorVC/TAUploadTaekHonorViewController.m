@@ -1,33 +1,31 @@
 //
-//  TATaekIntroduceViewController.m
+//  TAUploadTaekHonorViewController.m
 //  TaekwondoAssociation
 //
-//  Created by 伟宏 on 2017/7/1.
+//  Created by 伟宏 on 2017/7/4.
 //  Copyright © 2017年 Miss 李. All rights reserved.
 //
 
-#import "TATaekIntroduceViewController.h"
+#import "TAUploadTaekHonorViewController.h"
 #import "TZImagePickerController.h"
 
-
 #define Start_X 10.0f           // 第一个按钮的X坐标
-#define Start_Y 10.0f           // 第一个按钮的Y坐标
+#define Start_Y 50.0f           // 第一个按钮的Y坐标
 #define Width_Space 10.0f        // 2个按钮之间的横间距
 #define Height_Space 10.0f      // 竖间距
 #define Button_Height Button_Width * 68 / 110   // 高
 #define Button_Width (self.view.bounds.size.width - 40) / 3      // 宽
 
-@interface TATaekIntroduceViewController (){
+@interface TAUploadTaekHonorViewController (){
     NSUInteger sourceType;
 }
-
 @property (strong,nonatomic)NSMutableArray *phonelist;      //图片数组
-@property (nonatomic,strong) UIButton *addBtn;
-@property (nonatomic,strong) UIView *picsView;//放置图片的View
+@property (nonatomic,strong) UIButton *addBtn;;
 
 @end
 
-@implementation TATaekIntroduceViewController
+@implementation TAUploadTaekHonorViewController
+
 
 -(NSMutableArray *)phonelist{
     if (!_phonelist) {
@@ -38,59 +36,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNav];
     
-    [self setupContentView];
+    [self setupNav];
+    [self setupViews];
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
-}
-
--(void)setNav{
+-(void)setupNav{
     self.view.backgroundColor = WHITECOLOR;
-    self.navigationItem.title = @"道馆简介";
+    self.navigationItem.title = @"道馆荣誉";
     
     //设置导航栏左侧返回按钮
     UIImage *backImage = [UIImage imageNamed:@"back"];
     backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backImage style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     
-    UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveIntroduce)];
+    
+    UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(ok)];
     self.navigationItem.rightBarButtonItem = okItem;
 }
 
--(void)setupContentView{
-    UILabel *label = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(10, 5, 100, 30) text:@"简介"];
+//布局视图
+-(void)setupViews{
+    UILabel *label = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"666666"] textFrame:CGRectMake(10, 10, 300, 30) text:@"请选择道馆荣誉证书(最多9张)"];
+    label.tag = 3000;
     [self.view addSubview:label];
     
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(label.frame) + 10, KTA_Screen_Width - 30, 200)];
-    textView.layer.borderColor = [WQTools colorWithHexString:@"999999"].CGColor;
-    textView.layer.borderWidth = 0.5;
-    [self.view addSubview:textView];
-    
-    UILabel *picLabel = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(10, CGRectGetMaxY(textView.frame) + 5, 100, 30) text:@"图片(最多9张)"];
-    
-    [self.view addSubview:picLabel];
-    
-    self.picsView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(picLabel.frame), KTA_Screen_Width, 300)];
-    [self.view addSubview:self.picsView];
-    
-    [self setupPics];
-    
-    //button的x根据照片数组的个数定
     UIButton *addPicBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, Start_Y, Button_Width, Button_Height)];
     [addPicBtn setImage:[UIImage imageNamed:@"add-big"] forState:UIControlStateNormal];
     [addPicBtn addTarget:self action:@selector(selectPics) forControlEvents:UIControlEventTouchUpInside];
     addPicBtn.tag = 2000;
     self.addBtn = addPicBtn;
-    [self.picsView addSubview:addPicBtn];
+    //    self.addBtn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:addPicBtn];
+    
 }
 
--(void)setupPics{
-    
-    for (UIView *view in self.picsView.subviews) {
-        if (view.tag == 2000) {
+//选完图片重新布局
+-(void)resetLayout{
+    for (UIView *view in self.view.subviews) {
+        if (view.tag == 2000 || view.tag == 3000) {
             
         }else{
             [view removeFromSuperview];
@@ -115,7 +99,7 @@
         [delBtn addTarget:self action:@selector(delPic:) forControlEvents:UIControlEventTouchUpInside];
         [imgview addSubview:delBtn];
         
-        [self.picsView addSubview:imgview];
+        [self.view addSubview:imgview];
     }
     
     self.addBtn.frame = CGRectMake(10 + (10 + Button_Width) * (self.phonelist.count % 3), Start_Y + Button_Height * (row - 1) + 10 * (row - 1),Button_Width,Button_Height);
@@ -128,14 +112,6 @@
     
 }
 
--(void)back{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)saveIntroduce{
-    
-}
-
 -(void)selectPics{
     if (self.phonelist.count == 9) {
         [self alert:@"提示" msg:@"最多提交9张照片"];    }
@@ -143,12 +119,6 @@
         [self showSheetView];
     }
 }
-//删除某一张图片
--(void)delPic:(UIButton *)sender{
-    [self.phonelist removeObjectAtIndex:sender.tag - 100];
-    [self setupPics];
-}
-
 
 -(void)alert:(NSString *)title msg:(NSString *)msg{
     UIAlertView *alter = [[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -179,7 +149,7 @@
         // 你可以通过block或者代理，来得到用户选择的照片.
         [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets) {
             [self.phonelist addObjectsFromArray:photos];
-            [self setupPics];
+            [self resetLayout];
         }];
         // 在这里设置imagePickerVc的外观
         imagePickerVc.navigationBar.barTintColor = [UIColor blackColor];
@@ -205,7 +175,21 @@
     
 }
 
+#pragma mark - 点击事件
+//返回
+-(void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+//完成
+-(void)ok{
+    
+}
 
+//删除某一张图片
+-(void)delPic:(UIButton *)sender{
+    [self.phonelist removeObjectAtIndex:sender.tag - 100];
+    [self resetLayout];
+}
 
 #pragma mark - action sheet delegte
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -276,7 +260,7 @@
     NSLog(@"~~~~~%@~~~~~",imagepai);
     
     [self.phonelist addObject:imagepai];
-    [self setupPics];
+    [self resetLayout];
     
     
 }
@@ -313,6 +297,7 @@
     
     
 }
+
 
 
 @end

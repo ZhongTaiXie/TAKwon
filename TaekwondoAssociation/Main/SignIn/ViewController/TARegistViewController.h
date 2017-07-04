@@ -9,5 +9,8 @@
 #import "TABaseViewController.h"
 
 @interface TARegistViewController : TABaseViewController
+
 @property (nonatomic,strong)NSString *isRegister;//标示是注册页面还是忘记密码页面  1 代表注册   2 代表忘记密码
+
+
 @end

@@ -27,6 +27,14 @@
     return self;
 }
 
+-(instancetype)initWithTitle:(NSString *)title placeholder:(NSString *)placeholder{
+    if (self = [super init]) {
+        [self setupUIWithTitle:title placeholder:placeholder];
+    }
+    return self;
+}
+
+
 -(void)setupUIWithTitle:(NSString *)title placeholder:(NSString *)placeholder{
     titleLabel = [WQFactoryUI createLabelWithtextFont:13 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(15, 0, 80, 45) text:title];
     [self addSubview:titleLabel];

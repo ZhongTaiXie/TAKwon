@@ -9,6 +9,7 @@
 #import "TAMyReleaseViewController.h"
 #import "TAMyReleaseTitleCell.h"
 #import "TAReleaseActivityViewController.h"
+#import "TAReleaseLessonViewController.h"
 
 @interface TAMyReleaseViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -69,12 +70,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         if (indexPath.row == 0){
-            TAMyReleaseTitleCell *cell = [[TAMyReleaseTitleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"titleCell" title:@"道馆课程" image:@"简历"];
+            TAMyReleaseTitleCell *cell = [[TAMyReleaseTitleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"titleCell" title:@"道馆课程"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
             
             cell.addBtnClick = ^(NSString *str){  //发布道馆课程
-                
+                TAReleaseLessonViewController *lessonVC = [TAReleaseLessonViewController new];
+                [self.navigationController pushViewController:lessonVC animated:YES];
             };
             
             return cell;
@@ -82,11 +84,12 @@
         else{
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
             return cell;
         }
     }else{
         if (indexPath.row == 0){
-            TAMyReleaseTitleCell *cell = [[TAMyReleaseTitleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"titleCell" title:@"道馆活动" image:@"简历"];
+            TAMyReleaseTitleCell *cell = [[TAMyReleaseTitleCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"titleCell" title:@"道馆活动"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
             cell.addBtnClick = ^(NSString *str){  //发布道馆活动
@@ -98,6 +101,7 @@
         else{
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
             return cell;
         }
     }
@@ -109,10 +113,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if(section == 0){
-        return 0.1;
-    }
-    return 10.0;
+    return 0.1;
 }
 
 
