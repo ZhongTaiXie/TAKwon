@@ -47,15 +47,13 @@ static NSString *identifier = @"CellID";
     
     titleArray = [NSArray arrayWithObjects:@"认证",@"中国跆协",@"新闻",@"公告",@"赛事",@"培训",@"公益",@"排名",@"名人堂",@"教学",@"国家队",@"跆拳百科", nil];
 //    self.dataSource = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor clearColor];
-    [_tableView setTableFooterView:view];
+    
     [self.view addSubview:self.tableView];
     [self searchView];
     [MBProgressHUD showHUDAddedTo:_tableView animated:YES];
     [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据
-        NSLog(@"----------%@",dic);
+//        NSLog(@"----------%@",dic);
         [MBProgressHUD hideHUDForView:_tableView animated:YES];
         dataDic = [dic[@"Data"][@"Data"] mutableCopy];
         UIView *bigView = [self topView];
@@ -113,19 +111,23 @@ static NSString *identifier = @"CellID";
         _tableView = [[TABaseTableView alloc]initWithFrame:CGRectMake(0, -20, KTA_Screen_Width, KTA_Screen_Height) style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor clearColor];
+        [_tableView setTableFooterView:view];
+        
         UIView *bigView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 300)];
         _tableView.tableHeaderView = bigView;
 
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
         
-        TAWeakSelf(weakSelf)
+//        TAWeakSelf(weakSelf)
         
         
-        [_tableView refreshHeaderRefresh:^{
-            [weakSelf loadData];
-        } withFooterRefreshingBlock:^{
-            [weakSelf loadData];
-        }];
+//        [_tableView refreshHeaderRefresh:^{
+//            [weakSelf loadData];
+//        } withFooterRefreshingBlock:^{
+//            [weakSelf loadData];
+//        }];
         
     }
     return _tableView;
@@ -345,7 +347,7 @@ static NSString *identifier = @"CellID";
 {
     TASearchViewController *searchVC = [[TASearchViewController alloc]init];
     
-    [self.navigationController pushViewController:searchVC animated:YES];
+    [self presentViewController:searchVC animated:YES completion:nil];
 }
 #pragma mark - 扫一扫按钮点击事件
 - (void)scanningBtnBtnClick
