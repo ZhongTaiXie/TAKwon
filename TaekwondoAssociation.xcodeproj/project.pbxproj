@@ -103,6 +103,8 @@
 		B61343741F0B36490089FBA4 /* MingRenTangListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */; };
 		B61343751F0B36490089FBA4 /* MingRenTangListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */; };
 		B61343781F0B66C10089FBA4 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343771F0B66C10089FBA4 /* SearchResultViewController.m */; };
+		B613437C1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613437A1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m */; };
+		B613437D1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -383,6 +385,9 @@
 		B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingRenTangListTableViewCell.xib; sourceTree = "<group>"; };
 		B61343761F0B66C10089FBA4 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		B61343771F0B66C10089FBA4 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		B61343791F0B8DC80089FBA4 /* MingRenTangDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingRenTangDetailViewController.h; sourceTree = "<group>"; };
+		B613437A1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingRenTangDetailViewController.m; sourceTree = "<group>"; };
+		B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingRenTangDetailViewController.xib; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -1202,6 +1207,9 @@
 				B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */,
 				B613436B1F0A39680089FBA4 /* MingRenTangWebViewController.h */,
 				B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */,
+				B61343791F0B8DC80089FBA4 /* MingRenTangDetailViewController.h */,
+				B613437A1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m */,
+				B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */,
 				B629A8811F02381E0013528A /* PublicWelfareViewController.h */,
 				B629A8821F02381E0013528A /* PublicWelfareViewController.m */,
 				B629A8841F0238480013528A /* RankingViewController.h */,
@@ -1754,6 +1762,7 @@
 				EFF9DA3B1F05FF820056F9F7 /* ShareSDK.bundle in Resources */,
 				4E000BC21F06BA8E00DB0035 /* VideoSendIcon@2x.png in Resources */,
 				B61343751F0B36490089FBA4 /* MingRenTangListTableViewCell.xib in Resources */,
+				B613437D1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib in Resources */,
 				4E000BBC1F06BA8E00DB0035 /* photo_sel_previewVc@2x.png in Resources */,
 				EFF9DA391F05FF820056F9F7 /* README.txt in Resources */,
 				EF3E0CA51F01F44400729CF9 /* LaunchScreen.storyboard in Resources */,
@@ -1888,6 +1897,7 @@
 				4E000BCB1F06BA8E00DB0035 /* UIView+Layout.m in Sources */,
 				B629A88C1F0238AA0013528A /* TeachingViewController.m in Sources */,
 				EF3E0CAB1F01F51A00729CF9 /* TabBarController.m in Sources */,
+				B613437C1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m in Sources */,
 				4E1301CA1F0B0B68000B0ED7 /* TAReleaseLessonViewController.m in Sources */,
 				4E000BC51F06BA8E00DB0035 /* TZImageManager.m in Sources */,
 				4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */,
