@@ -12,6 +12,7 @@
 #import "TARequestManager.h"
 #import "UIImageView+WebCache.h"
 #import "SearchResultViewController.h"
+#import "MingRenTangDetailViewController.h"
 
 @interface MingRenTangWebViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 {
@@ -26,6 +27,7 @@
 @end
 
 @implementation MingRenTangWebViewController
+#pragma mark - lifeCircle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,30 +42,21 @@
     
     [self.view addSubview:self.tableView];
     [self searchErrand];
-//    [self.view addSubview:self.searchBtn];
-    
     [self getMingRenTangListData];
     
 }
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
-    self.tabBarController.tabBar.hidden = NO;
-}
+#pragma mark - 初始化控件
 - (void)searchErrand
 {
-    
     _resultViewController = [[SearchResultViewController alloc]init];
     _searchController = [[UISearchController alloc] initWithSearchResultsController:_resultViewController];
     _searchController.searchBar.backgroundImage = [UIImage imageNamed:@"searchback"];
     _searchController.searchBar.placeholder = @"搜索姓名";
-//    _searchController.searchBar.barTintColor = [UIColor whiteColor];
     UITextField *searchField=[_searchController.searchBar valueForKey:@"_searchField"];
     searchField.backgroundColor = RGB(235, 236, 238);
     _searchController.searchBar.delegate = self;
     _resultViewController.tableView.dataSource = self;
     _resultViewController.tableView.delegate = self;
-//    _resultViewController.tableView.rowHeight = 60;
     _resultViewController.dataArray = _searchResultArray;
     _searchController.searchBar.frame = CGRectMake(0, 0, 0, 44);
     _searchController.active = NO;
@@ -276,6 +269,62 @@
     cell.detailLabel.text = tqxArr[indexPath.row][@"FameContent"];
     cell.detailLabel.textColor = RGB(156, 158, 159);
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MingRenTangDetailViewController *detailVC = [[MingRenTangDetailViewController alloc]init];
+    NSArray *tqxArr;
+    if (tableView == _resultViewController.tableView){
+        if (searchDataDic[@"TQXList"] != nil && [searchDataDic[@"TQXList"] count] != 0) {
+            if (searchDataDic[@"DSJTlist"] != nil && [searchDataDic[@"DSJTlist"] count] != 0) {
+                if (indexPath.section == 0) {
+                    tqxArr = searchDataDic[@"TQXList"];
+                }
+                else
+                {
+                    tqxArr = searchDataDic[@"DSJTlist"];
+                }
+            }
+            else
+            {
+                tqxArr = searchDataDic[@"TQXList"];
+            }
+        }
+        else
+        {
+            if (searchDataDic[@"DSJTlist"] != nil && [searchDataDic[@"DSJTlist"] count] != 0) {
+                tqxArr = searchDataDic[@"DSJTlist"];
+            }
+        }
+    }
+    else
+    {
+        if (dataDic[@"TQXList"] != nil && [dataDic[@"TQXList"] count] != 0) {
+            if (dataDic[@"DSJTlist"] != nil && [dataDic[@"DSJTlist"] count] != 0) {
+                if (indexPath.section == 0) {
+                    tqxArr = dataDic[@"TQXList"];
+                    
+                }
+                else
+                {
+                    tqxArr = dataDic[@"DSJTlist"];
+                }
+            }
+            else
+            {
+                tqxArr = dataDic[@"TQXList"];
+            }
+            
+        }
+        else
+        {
+            if (dataDic[@"DSJTlist"] != nil && [dataDic[@"DSJTlist"] count] != 0) {
+                tqxArr = dataDic[@"DSJTlist"];
+            }
+        }
+    }
+    detailVC.dataDic = tqxArr[indexPath.row];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {

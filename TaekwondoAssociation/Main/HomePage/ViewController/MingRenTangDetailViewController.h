@@ -9,5 +9,6 @@
 #import "TABaseViewController.h"
 
 @interface MingRenTangDetailViewController : TABaseViewController
-
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (nonatomic,strong)NSDictionary *dataDic;
 @end
