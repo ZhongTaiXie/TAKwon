@@ -375,6 +375,10 @@
              // 请求成功
             NSLog(@"%@",dic);
             
+            NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+            NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"请求返回的是：%@", jsonString);
+            
             [[UIApplication sharedAppDelegate]goToHome];
             
         } failure:^(NSError *error) {
@@ -440,7 +444,7 @@
              NSLog(@"token=%@",user.credential.token);
              NSLog(@"nickname=%@",user.nickname);
              
-//             [[UIApplication sharedAppDelegate] goToHome];
+             [[UIApplication sharedAppDelegate] goToHome];
          }
          
          else
@@ -475,7 +479,7 @@
              
              NSLog ( @"nickname=%@" ,user. nickname );
              
-//             [[UIApplication sharedAppDelegate] goToHome];
+             [[UIApplication sharedAppDelegate] goToHome];
              
          }
          
@@ -489,7 +493,7 @@
          
      }];
 }
-#pragma mark - 新浪登录点击事件
+#pragma mark - 新浪登录点击事件*
 - (void)sinaBtnClick
 {
     
@@ -511,7 +515,7 @@
              NSLog ( @"token=%@" ,user. credential . token );
              
              NSLog ( @"nickname=%@" ,user. nickname );
-//             [[UIApplication sharedAppDelegate] goToHome];
+             [[UIApplication sharedAppDelegate] goToHome];
              
          }
          
