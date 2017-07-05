@@ -333,7 +333,7 @@ static NSString *identifier = @"CellID";
 //        [self.dataSource addObject:str];
 //    }
 //    
-//    [self.tableView endReload];
+    [self.tableView endReload];
     
 }
 #pragma mark - 消息按钮点击事件
