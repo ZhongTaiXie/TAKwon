@@ -7,7 +7,7 @@
 //
 
 #import "WXCommonViewClass.h"
-#import "WXCommonSingletonClass.h"
+//#import "WXCommonSingletonClass.h"
 
 @implementation WXCommonViewClass
 
@@ -20,9 +20,9 @@
     [backButton setTitle:@"" forState:UIControlStateNormal];
     backButton.frame = CGRectMake(0, 0, 28, 40);
     backButton.titleLabel.font = [UIFont systemFontOfSize:16];
-     UIColor *color = CustomBlueColor;
+//     UIColor *color = CustomBlueColor;
     backButton.titleLabel.textAlignment = NSTextAlignmentLeft;
-    [backButton setTitleColor:color forState:UIControlStateHighlighted];
+//    [backButton setTitleColor:color forState:UIControlStateHighlighted];
     [backButton setBackgroundImage:[UIImage imageNamed:@"backImage.png"] forState:UIControlStateNormal];
     return backButton;
     
@@ -48,9 +48,9 @@
         rightBtn.frame = CGRectMake(0, 0, 35.0, 44);
     }
     rightBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-    UIColor *color = CustomBlueColor;
+//    UIColor *color = CustomBlueColor;
     
-    [rightBtn setTitleColor:color forState:UIControlStateNormal];
+//    [rightBtn setTitleColor:color forState:UIControlStateNormal];
     if (imageName != nil) {
         [rightBtn setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         [rightBtn setBackgroundImage:[UIImage imageNamed:hightlightedImageName] forState:UIControlStateHighlighted];
@@ -71,7 +71,7 @@
     }
     rightBtn.titleLabel.font = [UIFont systemFontOfSize:16];
     if (titleColor == nil) {
-        titleColor = CustomBlueColor;
+//        titleColor = CustomBlueColor;
     }
     [rightBtn setTitleColor:titleColor forState:UIControlStateNormal];
     if (imageName != nil) {
@@ -87,8 +87,8 @@
 /*获取导航左侧按钮*/
 +(UIButton*)getLeftBtnOfNav:(NSString *)imageName title:(NSString *)titleStr frame:(CGRect)rect{
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIColor *color = CustomBlueColor;
-    [btn setTitleColor:color forState:UIControlStateNormal];
+//    UIColor *color = CustomBlueColor;
+//    [btn setTitleColor:color forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
 
     btn.frame = rect;
@@ -557,14 +557,5 @@
     CGContextRelease(ctx);
     CGImageRelease(cgimg);
     return img;
-}
-//根据orgId获取openId
-+(NSString *)getMyOpenId:(NSString *)OrgId
-{
-    WXCommonSingletonClass *singleton = [WXCommonSingletonClass share];
-    NSPredicate *pre = [NSPredicate predicateWithFormat:@"orgId == %@",OrgId];
-    NSArray *array = [singleton.userDataDic[@"orgInfo"] filteredArrayUsingPredicate:pre];
-    NSString *myOpenId = [[array objectAtIndex:0]objectForKey:@"openId"];
-    return myOpenId;
 }
 @end
