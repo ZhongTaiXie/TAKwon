@@ -5,7 +5,7 @@
 	<key> MOBAppSecret</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>zh_CN</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -55,10 +55,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>rr</string>
+			<string>rm</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>rr577430</string>
+				<string>rm577430</string>
 			</array>
 		</dict>
 	</array>
