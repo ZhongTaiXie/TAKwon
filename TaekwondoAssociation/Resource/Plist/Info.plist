@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
-	<string>中跆协</string>
+	<string>中国跆协</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -29,7 +29,7 @@
 			<string>wb</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wb793146667</string>
+				<string>wb1050731872</string>
 			</array>
 		</dict>
 		<dict>
@@ -49,8 +49,8 @@
 			<string>qq</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>QQ41E46DA8</string>
-				<string>tencent1105489320</string>
+				<string>QQ41EEFB09</string>
+				<string>tencent1106180873</string>
 			</array>
 		</dict>
 		<dict>
