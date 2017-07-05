@@ -25,6 +25,8 @@
 #import "LBXScanNative.h"
 #import "MingRenTangWebViewController.h"//名人堂
 #import "HotPicturesViewController.h"
+#import "PublicWelfareViewController.h"
+#import "MingRenTangDetailViewController.h"
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -304,11 +306,19 @@ static NSString *identifier = @"CellID";
             [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
             cell.textLebl.attributedText = textString;
             cell.addressLab.text = [NSString stringWithFormat:@"地区: %@",dic[@"FameAreas"]];
-            cell.rightTextLeble.text = dic[@"FameHonor"];
+            cell.rightTextLeble.text = dic[@"FameHonor"][0];
         }
         return cell;
     }
     
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1) {
+        MingRenTangDetailViewController *mingRenTangDetailVC = [[MingRenTangDetailViewController alloc]init];
+        mingRenTangDetailVC.dataDic = dataDic[@"Fame"];
+        [self.navigationController pushViewController:mingRenTangDetailVC animated:YES];
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -394,7 +404,8 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 6)//公益
     {
-        
+        PublicWelfareViewController *publicWelfareVC = [[PublicWelfareViewController alloc]init];
+        [self.navigationController pushViewController:publicWelfareVC animated:YES];
     }
     else if(tag == 7)//排名
     {
