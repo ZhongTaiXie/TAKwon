@@ -1,30 +1,30 @@
 //
-//  PublicWelfareViewController.m
+//  TrainningViewController.m
 //  TaekwondoAssociation
 //
-//  Created by 李瑞平 on 2017/6/27.
+//  Created by 李瑞平 on 2017/7/5.
 //  Copyright © 2017年 Miss 李. All rights reserved.
 //
 
-#import "PublicWelfareViewController.h"
+#import "TrainningViewController.h"
 
-@interface PublicWelfareViewController ()
+@interface TrainningViewController ()
 
 @end
 
-@implementation PublicWelfareViewController
+@implementation TrainningViewController
 #pragma mark - lifeClicle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"公益";
+        self.title = @"培训";
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/charity/charity_list.html"];
+    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/training/training_list.html"];
 }
 
 - (void)didReceiveMemoryWarning {

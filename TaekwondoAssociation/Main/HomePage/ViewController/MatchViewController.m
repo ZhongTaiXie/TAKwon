@@ -8,6 +8,7 @@
 
 #import "MatchViewController.h"
 #import "IQKeyboardManager.h"
+#import "MatchApplyTableViewController.h"
 
 @interface MatchViewController ()
 {
@@ -88,6 +89,25 @@
     _bottomView = [[BottomCommentView alloc] initWithType:BottomCommentViewComment];
     [self.view addSubview:_bottomView];
     
+    [self createRightBtn];
+    
+}
+// 用于测试跳转
+- (void)createRightBtn
+{
+    UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:@"saoyisao_white"] forState:UIControlStateNormal];
+    btn.frame = CGRectMake(0, 0, 40, 40);
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem = item;
+    
+}
+
+- (void)btnClick
+{
+    MatchApplyTableViewController* applayVC = [[MatchApplyTableViewController alloc] init];
+    [self.navigationController pushViewController:applayVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

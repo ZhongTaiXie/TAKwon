@@ -93,6 +93,8 @@
 		AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA61F064964003582EF /* LCProgressHUD.m */; };
 		AF88721F1F0B892C0071DD01 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF88721D1F0B892C0071DD01 /* RennSDK.bundle */; };
 		AF8872201F0B892C0071DD01 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF88721E1F0B892C0071DD01 /* RennSDK.framework */; };
+		AF8872361F0CBCC50071DD01 /* MatchApplyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */; };
+		AF88723E1F0CE3380071DD01 /* WeightInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -106,6 +108,7 @@
 		B613437C1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613437A1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m */; };
 		B613437D1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */; };
 		B61343811F0C7CA40089FBA4 /* WXCommonViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */; };
+		B61343841F0CD3010089FBA4 /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343831F0CD3010089FBA4 /* TrainningViewController.m */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -367,6 +370,10 @@
 		AF22AFA61F064964003582EF /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
 		AF88721D1F0B892C0071DD01 /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
 		AF88721E1F0B892C0071DD01 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
+		AF8872341F0CBCC50071DD01 /* MatchApplyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchApplyTableViewController.h; path = ../View/MatchApplyTableViewController.h; sourceTree = "<group>"; };
+		AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchApplyTableViewController.m; path = ../View/MatchApplyTableViewController.m; sourceTree = "<group>"; };
+		AF88723C1F0CE3380071DD01 /* WeightInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInfoCell.h; sourceTree = "<group>"; };
+		AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightInfoCell.m; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
 		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
@@ -391,6 +398,8 @@
 		B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingRenTangDetailViewController.xib; sourceTree = "<group>"; };
 		B613437F1F0C7CA40089FBA4 /* WXCommonViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCommonViewClass.h; sourceTree = "<group>"; };
 		B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCommonViewClass.m; sourceTree = "<group>"; };
+		B61343821F0CD3010089FBA4 /* TrainningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainningViewController.h; sourceTree = "<group>"; };
+		B61343831F0CD3010089FBA4 /* TrainningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainningViewController.m; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -1203,6 +1212,8 @@
 				B61343711F0B36490089FBA4 /* MingRenTangListTableViewCell.h */,
 				B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */,
 				B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */,
+				AF88723C1F0CE3380071DD01 /* WeightInfoCell.h */,
+				AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1245,6 +1256,10 @@
 				AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */,
 				EF04B64E1F09EC8200C81C65 /* TASearchViewController.h */,
 				EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */,
+				AF8872341F0CBCC50071DD01 /* MatchApplyTableViewController.h */,
+				AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */,
+				B61343821F0CD3010089FBA4 /* TrainningViewController.h */,
+				B61343831F0CD3010089FBA4 /* TrainningViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1726,7 +1741,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 47PHKU5ELU;
+						DevelopmentTeam = 3ER8GC8SJ8;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -1965,6 +1980,7 @@
 				B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */,
 				4E13019B1F084038000B0ED7 /* TATaekAddressCell.m in Sources */,
 				4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */,
+				B61343841F0CD3010089FBA4 /* TrainningViewController.m in Sources */,
 				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
 				B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
@@ -1972,6 +1988,7 @@
 				4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */,
 				B699B9091F0648BB00D8CB95 /* TAAbstractDotView.m in Sources */,
 				EF3E0CA11F01F37C00729CF9 /* TaekwondoAssociation.xcdatamodeld in Sources */,
+				AF8872361F0CBCC50071DD01 /* MatchApplyTableViewController.m in Sources */,
 				4E1301A21F087489000B0ED7 /* TATaekHonorViewController.m in Sources */,
 				B69F07531F020454009AE263 /* StyleDIY.m in Sources */,
 				EFD232AD1F06B5EC005559D8 /* IQTextView.m in Sources */,
@@ -1984,6 +2001,7 @@
 				4E1301911F083910000B0ED7 /* TAEditTaekInfoViewController.m in Sources */,
 				4E1301BA1F0AE2A3000B0ED7 /* TAReleaseActivityViewController.m in Sources */,
 				B69F07571F020454009AE263 /* LBXScanVideoZoomView.m in Sources */,
+				AF88723E1F0CE3380071DD01 /* WeightInfoCell.m in Sources */,
 				B69F07551F020454009AE263 /* LBXScanLineAnimation.m in Sources */,
 				4EFE54AF1F032955001E7A05 /* TAMemberInfoView.m in Sources */,
 				EF3E0CA01F01F37C00729CF9 /* main.m in Sources */,
@@ -2147,7 +2165,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 47PHKU5ELU;
+				DEVELOPMENT_TEAM = 3ER8GC8SJ8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2193,7 +2211,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.thirdgt666;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -2207,7 +2225,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 47PHKU5ELU;
+				DEVELOPMENT_TEAM = 3ER8GC8SJ8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2253,7 +2271,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.thirdgt666;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";

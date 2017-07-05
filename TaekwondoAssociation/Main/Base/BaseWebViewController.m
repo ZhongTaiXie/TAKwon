@@ -75,7 +75,7 @@
 
 - (void)AddBottomView
 {
-    self.webView.frame = CGRectMake(0, _headViewHeight, kDeviceWidth, kDeviceHeight - _headViewHeight - 50 -64);
+    self.webView.frame = CGRectMake(0, _headViewHeight, kDeviceWidth, kDeviceHeight - _headViewHeight - 50 - TopNavigationBarHeight);
 }
 
 - (void)setHeadviewFrame
