@@ -402,7 +402,8 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 8)//名人堂
     {
-        
+        MingRenTangWebViewController *mingrentangVC = [[MingRenTangWebViewController alloc]init];
+        [self.navigationController pushViewController:mingrentangVC animated:YES];
     }
     else if(tag == 9)//教学
     {
