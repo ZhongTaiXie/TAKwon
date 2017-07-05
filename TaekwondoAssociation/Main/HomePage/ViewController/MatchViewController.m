@@ -96,7 +96,7 @@
 - (void)createRightBtn
 {
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"saoyisao_white"] forState:UIControlStateNormal];
     btn.frame = CGRectMake(0, 0, 40, 40);
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:btn];
