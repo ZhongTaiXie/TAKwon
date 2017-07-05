@@ -7,12 +7,74 @@
 //
 
 #import "MatchViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface MatchViewController ()
+{
+    CGRect keyBoardFrame;//键盘Frame
+
+}
 
 @end
 
 @implementation MatchViewController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [[IQKeyboardManager sharedManager] setEnable:NO];
+    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:NO];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     
+                                             selector:@selector(keyboardWasShownDocument:)
+     
+                                                 name:UIKeyboardWillShowNotification object:nil];
+    
+    //注册键盘消失的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+     
+                                             selector:@selector(keyboardWillBeHiddenDocument:)
+     
+                                                 name:UIKeyboardWillHideNotification object:nil];
+}
+
+//键盘通知
+-(void)keyboardWasShownDocument:(NSNotification *) notif{
+    keyBoardFrame = [[[notif userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    float num = [[[notif userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+//    if (moreBt.selected) {
+//        [moreBt setSelected:!moreBt.selected];
+//        [deleteView removeFromSuperview];
+//    }
+    if (_bottomView.tfView.isFirstResponder) {
+        [UIView animateWithDuration:num animations:^{
+            self.webView.frame =CGRectMake(0, 0, KTA_Screen_Width,KTA_Screen_Height-keyBoardFrame.size.height-_bottomView.frame.size.height);
+            _bottomView.frame =CGRectMake(0, KTA_Screen_Height-keyBoardFrame.size.height-_bottomView.frame.size.height- TopNavigationBarHeight, _bottomView.frame.size.width,_bottomView.frame.size.height);
+        }];
+    }
+}
+-(void)keyboardWillBeHiddenDocument:(NSNotification *) notif{
+    float num = [[[notif userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+//    if (moreBt.selected) {
+//        [moreBt setSelected:!moreBt.selected];
+//        [deleteView removeFromSuperview];
+//    }
+    //    if (sendView.sendField.isFirstResponder) {
+    [UIView animateWithDuration:num animations:^{
+        self.webView.frame =CGRectMake(0, 0, KTA_Screen_Width,KTA_Screen_Height-TopNavigationBarHeight-50);
+        _bottomView.frame =CGRectMake(0, KTA_Screen_Height-_bottomView.frame.size.height - TopNavigationBarHeight, _bottomView.frame.size.width,_bottomView.frame.size.height);
+//        _bottomView.sendField.placeholder = [NSString stringWithFormat:@"回复文章"];
+    }];
+    //    }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,7 +87,7 @@
     
     _bottomView = [[BottomCommentView alloc] initWithType:BottomCommentViewComment];
     [self.view addSubview:_bottomView];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
