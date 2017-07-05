@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self ininWithTableView];
+    NSLog(@"--------------%@",_dataDic);
 }
 - (void)ininWithTableView
 {
@@ -48,9 +49,19 @@
     jieshaoView.layer.cornerRadius = 6;
     jieshaoView.clipsToBounds = YES;
     [bigView addSubview:jieshaoView];
-//    UILabel *textLabel = [[UILabel alloc]init];
-//    textLabel.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    UILabel *jiabinLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 50, KTA_Screen_Width-40, 30)];
+//    jiabinLabel.backgroundColor = [UIColor greenColor];
+    jiabinLabel.text = @"嘉宾介绍:";
+    [jieshaoView addSubview:jiabinLabel];
+    UILabel *textLabel = [[UILabel alloc]init];
+    textLabel.frame = CGRectMake(20, 80, KTA_Screen_Width-40, 0);
+    textLabel.backgroundColor = [UIColor yellowColor];
+    textLabel.numberOfLines = 0;
+    textLabel.font = [UIFont systemFontOfSize:15];
+    textLabel.textColor = RGB(130, 131, 134);
     
+    textLabel.text = @"  哈哈给我然后该如何该如何广发 我噶然后高我然后嘎哈人跟人hi个然后给一然后给一如果坏发hi啊护肤我日回归欧日UFO啊我IE我五日偶爱福海额护arfhruighjdhkahdfkadjhfksfkhafjhkjdh积分哈空间划分扣积分卡京东方卡积分哈卡积分卡法卡复活卡积分换卡剪短发哈空间话费卡剪短发贺卡剪短发哈空间地方哈空间发挥剪短发哈接电话防静电萨科技倒海翻江安徽省科技的话费卡健身房抠脚大汉交罚款互粉就工行卡就福建卡的很费劲啊肯定会发空间发挥卡机的话费卡交话费积分哈空间和罚款接电话发空间发货款的金凤凰打卡机话费卡交话费肯德基";
+    [jieshaoView addSubview:textLabel];
     //头部view
     UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(20, 10, KTA_Screen_Width-40, 80)];
     headView.backgroundColor = RGB(255, 255, 255);
