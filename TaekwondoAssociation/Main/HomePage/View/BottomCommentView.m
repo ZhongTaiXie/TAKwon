@@ -127,7 +127,9 @@
     _tfView.leftViewMode = UITextFieldViewModeAlways;
     _tfView.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     
+    _tfView.returnKeyType = UIReturnKeySend;
     _tfView.delegate = self;
+    _tfView.enablesReturnKeyAutomatically = YES;
     
     // 虚线
     UIView* lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kDeviceWidth, 0.5)];
@@ -197,7 +199,7 @@
                        }
                    }
          ];
-//        [sheet.directSharePlatforms addObject:@(SSDKPlatformTypeSinaWeibo),@(SSDKPlatformTypeMail),@(SSDKPlatformTypeDouBan),@(SSDKPlatformTypeRenren)];
+
         [sheet.directSharePlatforms addObjectsFromArray:@[@(SSDKPlatformTypeSinaWeibo),@(SSDKPlatformTypeMail),@(SSDKPlatformTypeDouBan),@(SSDKPlatformTypeRenren)]];
 
     }
@@ -230,6 +232,15 @@
     
     return YES;
 }
+
+// 发送评论
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"点击了发送");
+    return YES;
+}
+
+
 
 
 /*
