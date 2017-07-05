@@ -20,6 +20,7 @@
 #import "TANotsViewController.h"
 #import "NSString+Util.h"
 #import "WQNetWorkManager.h"
+#import "HotPicturesViewController.h"
 
 
 @interface TALoginViewController ()<UITextFieldDelegate>
@@ -357,9 +358,9 @@
 #pragma mark  登录按钮
 - (void)LoginbutAction {
     
-    if (self.accuntTextFiled.text.length <1) {
-        return;
-    }
+//    if (self.accuntTextFiled.text.length <1) {
+//        return;
+//    }
     
    // 分两种情况，1.请求客户的服务器   2.请求自己的服务器
     
@@ -371,7 +372,7 @@
         [params setValue:_passTextFiled.text forKey:@"Pwd"];
 
         
-        [WQNetWorkManager sendPostRequestWithUrl:@"http://www.chntkd.org.cn/webInterFace/APP_interface/json/membershipInformation.ashx" parameters:params success:^(NSDictionary *dic) {
+        [WQNetWorkManager sendPostRequestWithUrl:@"http://z6mngh.natappfree.cc/Center/AreaList" parameters:nil success:^(NSDictionary *dic) {
              // 请求成功
             NSLog(@"%@",dic);
             
@@ -416,7 +417,7 @@
 - (void)touristLoginBtnClick
 
 {
-//    [self.navigationController pushViewController:[TAUnbundingViewController new] animated:YES];
+//    [self.navigationController pushViewController:[HotPicturesViewController new] animated:YES];
     [[UIApplication sharedAppDelegate] goToHome];
 
 }

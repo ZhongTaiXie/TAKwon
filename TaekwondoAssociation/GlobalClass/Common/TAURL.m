@@ -21,5 +21,7 @@ NSString * const URL_LONGIN = @"/SignIn/SignIn";
 
 NSString * const URL_REGIST = @"/Register/Register";
 
+NSString * const URL_MROEPIC = @"/Home/LasterPicList";
+
 
 @end

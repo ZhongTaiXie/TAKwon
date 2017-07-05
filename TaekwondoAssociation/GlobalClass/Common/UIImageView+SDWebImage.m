@@ -11,6 +11,7 @@
 @implementation UIImageView (SDWebImage)
 
 - (void)downloadImage:(NSString *)url placeholder:(UIImage *)placeholder {
+    url = [NSString stringWithFormat:@"%@%@",URL_BASE,url];
     
     [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder options:SDWebImageRetryFailed | SDWebImageLowPriority];
 }
