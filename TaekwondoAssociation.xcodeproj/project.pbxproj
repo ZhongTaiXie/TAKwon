@@ -94,6 +94,7 @@
 		AF88721F1F0B892C0071DD01 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF88721D1F0B892C0071DD01 /* RennSDK.bundle */; };
 		AF8872201F0B892C0071DD01 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF88721E1F0B892C0071DD01 /* RennSDK.framework */; };
 		AF8872361F0CBCC50071DD01 /* MatchApplyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */; };
+		AF88723E1F0CE3380071DD01 /* WeightInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -370,6 +371,8 @@
 		AF88721E1F0B892C0071DD01 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
 		AF8872341F0CBCC50071DD01 /* MatchApplyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchApplyTableViewController.h; path = ../View/MatchApplyTableViewController.h; sourceTree = "<group>"; };
 		AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchApplyTableViewController.m; path = ../View/MatchApplyTableViewController.m; sourceTree = "<group>"; };
+		AF88723C1F0CE3380071DD01 /* WeightInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInfoCell.h; sourceTree = "<group>"; };
+		AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightInfoCell.m; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
 		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
@@ -1206,6 +1209,8 @@
 				B61343711F0B36490089FBA4 /* MingRenTangListTableViewCell.h */,
 				B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */,
 				B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */,
+				AF88723C1F0CE3380071DD01 /* WeightInfoCell.h */,
+				AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1990,6 +1995,7 @@
 				4E1301911F083910000B0ED7 /* TAEditTaekInfoViewController.m in Sources */,
 				4E1301BA1F0AE2A3000B0ED7 /* TAReleaseActivityViewController.m in Sources */,
 				B69F07571F020454009AE263 /* LBXScanVideoZoomView.m in Sources */,
+				AF88723E1F0CE3380071DD01 /* WeightInfoCell.m in Sources */,
 				B69F07551F020454009AE263 /* LBXScanLineAnimation.m in Sources */,
 				4EFE54AF1F032955001E7A05 /* TAMemberInfoView.m in Sources */,
 				EF3E0CA01F01F37C00729CF9 /* main.m in Sources */,

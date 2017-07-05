@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TABaseViewController.h"
+#import "WeightInfoCell.h"
 
-@interface MatchApplyTableViewController : UITableViewController
+@interface MatchApplyTableViewController :TABaseViewController
 
 @property (nonatomic, strong) UITableView* tv;
+@property (nonatomic, strong) UILabel* headLabel;
+
+@property (nonatomic, strong) WeightInfoCell* weightInfoCell;
 
 @end
