@@ -59,8 +59,8 @@
          {
              case SSDKPlatformTypeSinaWeibo:
                  //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
-                 [appInfo SSDKSetupSinaWeiboByAppKey:@"793146667"
-                                           appSecret:@"70a8deb391c5d526cf27bcf08dca897e"
+                 [appInfo SSDKSetupSinaWeiboByAppKey:@"1050731872"
+                                           appSecret:@"9d0253d69a51721a654a66e127687bc1"
                                          redirectUri:@"http://www.simuwang.com"
                                             authType:SSDKAuthTypeBoth];
                  break;
@@ -78,7 +78,7 @@
                  //                 [appInfo SSDKSetupQQByAppId:@"1105584601"
                  //                                      appKey:@"WhoZ90pCM1KLsk11"
                  //                                    authType:SSDKAuthTypeBoth];
-                 [appInfo SSDKSetupQQByAppId:@"1105489320" appKey:@"2MDzNGrk701d0bsi" authType:SSDKAuthTypeBoth];
+                 [appInfo SSDKSetupQQByAppId:@"1106180873" appKey:@"20OclPXEp0n7xG9e" authType:SSDKAuthTypeBoth];
                  break;
                  case SSDKPlatformTypeRenren:
                  [appInfo SSDKSetupRenRenByAppId:@"577430" appKey:@"8afd59f9dd7d432e943d70e489133bbb" secretKey:@"c9034e261c6645d1a70cfe67f8750735" authType:SSDKAuthTypeBoth];
