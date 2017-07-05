@@ -93,6 +93,7 @@
 		AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA61F064964003582EF /* LCProgressHUD.m */; };
 		AF88721F1F0B892C0071DD01 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF88721D1F0B892C0071DD01 /* RennSDK.bundle */; };
 		AF8872201F0B892C0071DD01 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF88721E1F0B892C0071DD01 /* RennSDK.framework */; };
+		AF8872361F0CBCC50071DD01 /* MatchApplyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -367,6 +368,8 @@
 		AF22AFA61F064964003582EF /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
 		AF88721D1F0B892C0071DD01 /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
 		AF88721E1F0B892C0071DD01 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
+		AF8872341F0CBCC50071DD01 /* MatchApplyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchApplyTableViewController.h; sourceTree = "<group>"; };
+		AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchApplyTableViewController.m; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
 		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
@@ -1203,6 +1206,8 @@
 				B61343711F0B36490089FBA4 /* MingRenTangListTableViewCell.h */,
 				B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */,
 				B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */,
+				AF8872341F0CBCC50071DD01 /* MatchApplyTableViewController.h */,
+				AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1972,6 +1977,7 @@
 				4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */,
 				B699B9091F0648BB00D8CB95 /* TAAbstractDotView.m in Sources */,
 				EF3E0CA11F01F37C00729CF9 /* TaekwondoAssociation.xcdatamodeld in Sources */,
+				AF8872361F0CBCC50071DD01 /* MatchApplyTableViewController.m in Sources */,
 				4E1301A21F087489000B0ED7 /* TATaekHonorViewController.m in Sources */,
 				B69F07531F020454009AE263 /* StyleDIY.m in Sources */,
 				EFD232AD1F06B5EC005559D8 /* IQTextView.m in Sources */,
