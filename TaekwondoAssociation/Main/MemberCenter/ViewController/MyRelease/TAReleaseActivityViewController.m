@@ -27,9 +27,11 @@
 }
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *titleArray;
+@property (nonatomic,strong) UITextField *activityTitleField; //活动标题
 @property (nonatomic,strong) UITextField *addressTextField;  //地址
 @property (nonatomic,strong) UITextField *fuzerenTextField;  //负责人
 @property (nonatomic,strong) UITextField *phoneNumTextField;  //电话
+@property (nonatomic,strong) NSString *activityTitle;
 @property (nonatomic,strong) NSString *address;
 @property (nonatomic,strong) NSString *fuzeren;
 @property (nonatomic,strong) NSString *phoneNum;
@@ -51,7 +53,7 @@
 
 -(NSArray *)titleArray{
     if (!_titleArray) {
-        _titleArray = @[@[@"活动时间",@"活动地址",@"负责人",@"联系电话"],@[@"活动简介",@""],@[@"图片(最多9张)",@""]];
+        _titleArray = @[@[@"活动标题",@"活动时间",@"活动地址",@"负责人",@"联系电话"],@[@"活动简介",@""],@[@"图片(最多9张)",@""]];
     }
     return _titleArray;
 }
@@ -353,7 +355,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
-        return 4;
+        return 5;
     }else{
         return 2;
     }
@@ -364,7 +366,7 @@
     NSString *title = section[indexPath.row];
     
     if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
+        if (indexPath.row == 1) {
             TAActivityTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"timeCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.startTimeStr = self.startTime;
@@ -402,12 +404,17 @@
         }else{
             TATaekwondoAuthCell *cell = [[TATaekwondoAuthCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"infoCell" title:title placeholder:[NSString stringWithFormat:@"请输入%@",title]];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            if (indexPath.row == 1) {
+            if (indexPath.row == 0) {
+                cell.textField.text = self.activityTitle;
+                self.activityTitleField = cell.textField;
+                self.activityTitleField.tag = 2004;
+                self.activityTitleField.delegate = self;
+            }else if (indexPath.row == 2) {
                 cell.textField.text = self.address;
                 self.addressTextField = cell.textField;
                 self.addressTextField.tag = 2001;
                 self.addressTextField.delegate = self;
-            }else if (indexPath.row == 2){
+            }else if (indexPath.row == 3){
                 cell.textField.text = self.fuzeren;
                 self.fuzerenTextField = cell.textField;
                 self.fuzerenTextField.tag = 2002;
@@ -480,15 +487,15 @@
     [self.view endEditing:YES];
 }
 
-
-
 #pragma mark - UITextFileldDelegate
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     if (textField.tag == 2001) {  //地址
         self.address = textField.text;
     }else if(textField.tag == 2002){
         self.fuzeren = textField.text;  //负责人
-    }else{
+    }else if(textField.tag == 2004){  //活动标题
+        self.activityTitle = textField.text;
+    } else{
         self.phoneNum = textField.text;  //联系电话
     }
 }
