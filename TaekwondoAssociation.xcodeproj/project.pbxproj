@@ -84,7 +84,6 @@
 		4E142ACD1F0EFEEB00582FF5 /* TALessonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E142ACC1F0EFEEB00582FF5 /* TALessonModel.m */; };
 		4E55C6541F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6531F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m */; };
 		4E55C6571F0C3BA200B22C45 /* WQAvastBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6561F0C3BA200B22C45 /* WQAvastBrowser.m */; };
-		4E55C65A1F0C44EF00B22C45 /* TAYinsiShengmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6591F0C44EF00B22C45 /* TAYinsiShengmingViewController.m */; };
 		4E55C65D1F0C451000B22C45 /* TAAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C65C1F0C451000B22C45 /* TAAboutUsViewController.m */; };
 		4E55C6601F0C502E00B22C45 /* TAActivityRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C65F1F0C502E00B22C45 /* TAActivityRecordViewController.m */; };
 		4E55C6641F0C542C00B22C45 /* TAMyReleaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6621F0C542C00B22C45 /* TAMyReleaseCell.m */; };
@@ -143,6 +142,8 @@
 		AF8872B51F0E2E1F0071DD01 /* JKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872A41F0E2E1F0071DD01 /* JKUtil.m */; };
 		AF8872B61F0E2E1F0071DD01 /* PhotoAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872A61F0E2E1F0071DD01 /* PhotoAlbumManager.m */; };
 		AF8872B71F0E2E1F0071DD01 /* UIView+JKPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872A81F0E2E1F0071DD01 /* UIView+JKPicker.m */; };
+		AFDA065D1F0E5C02008C987A /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FF1F0648BB00D8CB95 /* TADotView.m */; };
+		AFDA065E1F0E5C11008C987A /* TAYinsiShengmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6591F0C44EF00B22C45 /* TAYinsiShengmingViewController.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -175,7 +176,6 @@
 		B699B9081F0648BB00D8CB95 /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8F81F0648BB00D8CB95 /* NSData+SDDataCache.m */; };
 		B699B9091F0648BB00D8CB95 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FB1F0648BB00D8CB95 /* TAAbstractDotView.m */; };
 		B699B90A1F0648BB00D8CB95 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FD1F0648BB00D8CB95 /* TAAnimatedDotView.m */; };
-		B699B90B1F0648BB00D8CB95 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FF1F0648BB00D8CB95 /* TADotView.m */; };
 		B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B9011F0648BB00D8CB95 /* TAPageControl.m */; };
 		B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B9031F0648BB00D8CB95 /* SDCollectionViewCell.m */; };
 		B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B9051F0648BB00D8CB95 /* SDCycleScrollView.m */; };
@@ -2245,6 +2245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDA065E1F0E5C11008C987A /* TAYinsiShengmingViewController.m in Sources */,
+				AFDA065D1F0E5C02008C987A /* TADotView.m in Sources */,
 				EFD232AF1F06B5EC005559D8 /* IQPreviousNextView.m in Sources */,
 				AF8872471F0E0D220071DD01 /* TrainingContentCell.m in Sources */,
 				EFD232AB1F06B5EC005559D8 /* IQKeyboardManager.m in Sources */,
@@ -2401,12 +2403,8 @@
 				4E1301C61F0AFCBA000B0ED7 /* UICustomDatePicker.m in Sources */,
 				4E000B8D1F06BA5F00DB0035 /* TAMemberInfoCell.m in Sources */,
 				AF88726C1F0E20310071DD01 /* EditImagesContentView.m in Sources */,
-				B699B90B1F0648BB00D8CB95 /* TADotView.m in Sources */,
-				4E55C65A1F0C44EF00B22C45 /* TAYinsiShengmingViewController.m in Sources */,
 				AF8872B51F0E2E1F0071DD01 /* JKUtil.m in Sources */,
 				4E142AB51F0EE25E00582FF5 /* TALessonTimeCell.m in Sources */,
-				B699B90B1F0648BB00D8CB95 /* TADotView.m in Sources */,
-				4E55C65A1F0C44EF00B22C45 /* TAYinsiShengmingViewController.m in Sources */,
 				B61343A11F0DD4310089FBA4 /* TLCityPickerSearchResultController.m in Sources */,
 				EFD232AC1F06B5EC005559D8 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				B613439D1F0DD4310089FBA4 /* TLCity.m in Sources */,
