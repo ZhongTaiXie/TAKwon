@@ -25,6 +25,11 @@
 #import "LBXScanNative.h"
 #import "MingRenTangWebViewController.h"//名人堂
 #import "HotPicturesViewController.h"
+#import "PublicWelfareViewController.h"
+#import "MingRenTangDetailViewController.h"
+#import "LCProgressHUD.h"
+#import "TrainningViewController.h"//培训
+#import "TrainSignUpViewController.h"//培训报名
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -46,20 +51,18 @@ static NSString *identifier = @"CellID";
     [super viewDidLoad];
     
     titleArray = [NSArray arrayWithObjects:@"认证",@"中国跆协",@"新闻",@"公告",@"赛事",@"培训",@"公益",@"排名",@"名人堂",@"教学",@"国家队",@"跆拳百科", nil];
-//    self.dataSource = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor clearColor];
-    [_tableView setTableFooterView:view];
     [self.view addSubview:self.tableView];
+    
     [self searchView];
     [MBProgressHUD showHUDAddedTo:_tableView animated:YES];
     [TARequestManager TARequestCompletedWithPath:URL_HOME Parameters:nil sucee:^(NSDictionary *dic) {
         // 解析数据
-        NSLog(@"----------%@",dic);
+//        NSLog(@"----------%@",dic);
         [MBProgressHUD hideHUDForView:_tableView animated:YES];
         dataDic = [dic[@"Data"][@"Data"] mutableCopy];
         UIView *bigView = [self topView];
         _tableView.tableHeaderView = bigView;
+        
         [_tableView reloadData];
     } fail:^(NSError *error) {
         [MBProgressHUD hideHUDForView:_tableView animated:YES];
@@ -70,18 +73,18 @@ static NSString *identifier = @"CellID";
 //    NSDictionary *dic = @{@"token":@"DYSkOX@YN10!"};
 
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.tabBarController.tabBar.hidden = NO;
-
-    
-    
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+
+    
 }
+
 - (void)searchView
 {
     UIView *topView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, KTA_Screen_Width, 40)];
@@ -113,19 +116,23 @@ static NSString *identifier = @"CellID";
         _tableView = [[TABaseTableView alloc]initWithFrame:CGRectMake(0, -20, KTA_Screen_Width, KTA_Screen_Height) style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor clearColor];
+        [_tableView setTableFooterView:view];
+        
         UIView *bigView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 300)];
         _tableView.tableHeaderView = bigView;
 
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
         
-        TAWeakSelf(weakSelf)
+//        TAWeakSelf(weakSelf)
         
         
-        [_tableView refreshHeaderRefresh:^{
-            [weakSelf loadData];
-        } withFooterRefreshingBlock:^{
-            [weakSelf loadData];
-        }];
+//        [_tableView refreshHeaderRefresh:^{
+//            [weakSelf loadData];
+//        } withFooterRefreshingBlock:^{
+//            [weakSelf loadData];
+//        }];
         
     }
     return _tableView;
@@ -232,18 +239,15 @@ static NSString *identifier = @"CellID";
         [cell.myImageviewTwo  sd_setImageWithURL:[NSURL URLWithString:imageTwoStr] placeholderImage:[UIImage imageNamed:@""]];
         NSString *imageThreeStr = [NSString stringWithFormat:@"%@%@",URL_BASE,dataDic[@"HotPic"][2][@"pic"]];
         [cell.myImageviewThree  sd_setImageWithURL:[NSURL URLWithString:imageThreeStr] placeholderImage:[UIImage imageNamed:@""]];
-//        cell.myImageviewThree.backgroundColor = [UIColor redColor];
-//        cell.myImageviewTwo.backgroundColor = [UIColor yellowColor];
-//        cell.myImageviewOne.backgroundColor = [UIColor greenColor];
         cell.myImageviewOne.frame = CGRectMake((KTA_Screen_Width-308)/2, 46, 100, 60);
         cell.myImageviewTwo.frame = CGRectMake((KTA_Screen_Width-308)/2+104, 46, 100, 60);
         cell.myImageviewThree.frame = CGRectMake((KTA_Screen_Width-308)/2+208, 46, 100, 60);
         cell.lineLabel.frame = CGRectMake(10, 14, 2, 18);
         cell.lineLabel.backgroundColor = RGB(0, 120, 245);
-        cell.titleLabel.frame = CGRectMake(14, 13, 60, 20);
-        cell.moreLabel.frame = CGRectMake(KTA_Screen_Width-45, 13, 25, 10);
+        cell.titleLabel.frame = CGRectMake(14, 13, 80, 20);
+        cell.moreLabel.frame = CGRectMake(KTA_Screen_Width-45, 13, 30, 10);
         cell.moreLabel.textColor = RGB(135, 135, 135);
-        cell.moreBtn.frame = CGRectMake(KTA_Screen_Width-50, 13, 40, 10);
+        cell.moreBtn.frame = CGRectMake(KTA_Screen_Width-50, 13, 50, 20);
         cell.moreImage.frame = CGRectMake(KTA_Screen_Width-17, 13, 7, 10);
         cell.moreImage.image = [UIImage imageNamed:@"home_more"];
         [cell.moreBtn addTarget:self action:@selector(tuKuMoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -260,7 +264,7 @@ static NSString *identifier = @"CellID";
 //        cell.myImageView.backgroundColor = [UIColor redColor];
         cell.topLineLabel.frame = CGRectMake(10, 14, 2, 18);
         cell.topLineLabel.backgroundColor = RGB(0, 120, 245);
-        cell.titleLabel.frame = CGRectMake(14, 13, 70, 20);
+        cell.titleLabel.frame = CGRectMake(14, 13, 80, 20);
         cell.rightLineLabel.frame = CGRectMake(10, 46, 3, 60);
         cell.rightLineLabel.backgroundColor = RGB(0, 120, 245);
         
@@ -269,11 +273,11 @@ static NSString *identifier = @"CellID";
         cell.biaoqianLabel.backgroundColor = RGB(228, 85, 74);
         cell.biaoqianLabel.layer.cornerRadius = 2;
         cell.biaoqianLabel.clipsToBounds = YES;
-        cell.textLebl.frame = CGRectMake(87, 56, 140, 20);
+        cell.textLebl.frame = CGRectMake(87, 56, KTA_Screen_Width-160, 20);
         cell.textLebl.numberOfLines = 2;
 //        cell.textLebl.backgroundColor = [UIColor redColor];
         
-        cell.addressLab.frame = CGRectMake(87, 76, 140, 20);
+        cell.addressLab.frame = CGRectMake(87, 76, 160, 20);
         cell.addressLab.textColor = RGB(119, 126, 145);
         
         cell.leftLineLabel.frame = CGRectMake(KTA_Screen_Width-80, 51, 1, 50);
@@ -286,9 +290,9 @@ static NSString *identifier = @"CellID";
         cell.rongyuLabel.frame = CGRectMake(cell.leftLineLabel.frame.origin.x + 5, 81, 70, 20);
         cell.rongyuLabel.textColor = RGB(218, 218, 218);
         
-        cell.moreLabel.frame = CGRectMake(KTA_Screen_Width-45, 13, 25, 10);
+        cell.moreLabel.frame = CGRectMake(KTA_Screen_Width-45, 13, 30, 10);
         cell.moreLabel.textColor = RGB(135, 135, 135);
-        cell.moreBtn.frame = CGRectMake(KTA_Screen_Width-50, 13, 40, 10);
+        cell.moreBtn.frame = CGRectMake(KTA_Screen_Width-50, 13, 50, 20);
         cell.moreImage.frame = CGRectMake(KTA_Screen_Width-17, 13, 7, 10);
         cell.moreImage.image = [UIImage imageNamed:@"home_more"];
         [cell.moreBtn addTarget:self action:@selector(mingRenTangMoreBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -302,11 +306,19 @@ static NSString *identifier = @"CellID";
             [textString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12] range:NSMakeRange([dic[@"FameName"] length] + 2, [dic[@"FameName"] length]+4)];
             cell.textLebl.attributedText = textString;
             cell.addressLab.text = [NSString stringWithFormat:@"地区: %@",dic[@"FameAreas"]];
-            cell.rightTextLeble.text = dic[@"FameHonor"];
+            cell.rightTextLeble.text = dic[@"FameHonor"][0];
         }
         return cell;
     }
     
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1) {
+        MingRenTangDetailViewController *mingRenTangDetailVC = [[MingRenTangDetailViewController alloc]init];
+        mingRenTangDetailVC.dataDic = dataDic[@"Fame"];
+        [self.navigationController pushViewController:mingRenTangDetailVC animated:YES];
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -331,7 +343,7 @@ static NSString *identifier = @"CellID";
 //        [self.dataSource addObject:str];
 //    }
 //    
-//    [self.tableView endReload];
+    [self.tableView endReload];
     
 }
 #pragma mark - 消息按钮点击事件
@@ -344,7 +356,8 @@ static NSString *identifier = @"CellID";
 - (void)searchBtnClick
 {
     TASearchViewController *searchVC = [[TASearchViewController alloc]init];
-    [self.navigationController pushViewController:searchVC animated:YES];
+    
+    [self presentViewController:searchVC animated:YES completion:nil];
 }
 #pragma mark - 扫一扫按钮点击事件
 - (void)scanningBtnBtnClick
@@ -368,7 +381,7 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 1)//中国跆协
     {
-        
+        [LCProgressHUD showTextOntarget:self.view string:@"功能升级中,敬请期待!"];
     }
     else if(tag == 2)//新闻
     {
@@ -387,31 +400,36 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 5)//培训
     {
-        
+//        TrainningViewController *trainVC = [[TrainningViewController alloc]init];
+//        [self.navigationController pushViewController:trainVC animated:YES];
+        TrainSignUpViewController *trainVC = [[TrainSignUpViewController alloc]init];
+        [self.navigationController pushViewController:trainVC animated:YES];
     }
     else if(tag == 6)//公益
     {
-        
+        PublicWelfareViewController *publicWelfareVC = [[PublicWelfareViewController alloc]init];
+        [self.navigationController pushViewController:publicWelfareVC animated:YES];
     }
     else if(tag == 7)//排名
     {
-        
+        [LCProgressHUD showTextOntarget:self.view string:@"功能升级中,敬请期待!"];
     }
     else if(tag == 8)//名人堂
     {
-        
+        MingRenTangWebViewController *mingrentangVC = [[MingRenTangWebViewController alloc]init];
+        [self.navigationController pushViewController:mingrentangVC animated:YES];
     }
     else if(tag == 9)//教学
     {
-        
+        [LCProgressHUD showTextOntarget:self.view string:@"功能升级中,敬请期待!"];
     }
     else if(tag == 10)//国家队
     {
-        
+        [LCProgressHUD showTextOntarget:self.view string:@"功能升级中,敬请期待!"];
     }
     else//跆拳百科
     {
-        
+        [LCProgressHUD showTextOntarget:self.view string:@"功能升级中,敬请期待!"];
     }
 }
 #pragma mark - 图库更多点击事件

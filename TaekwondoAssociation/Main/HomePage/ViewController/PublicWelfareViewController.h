@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TABaseViewController.h"
-@interface PublicWelfareViewController : TABaseViewController
+#import "BaseWebViewController.h"
+@interface PublicWelfareViewController : BaseWebViewController
 
 @end

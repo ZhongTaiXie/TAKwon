@@ -24,7 +24,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/charity/charity_list.html"];
 }
 
 - (void)didReceiveMemoryWarning {

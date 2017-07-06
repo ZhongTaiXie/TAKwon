@@ -46,5 +46,9 @@ typedef NS_ENUM(NSInteger,PriceStringStyles)
 + (BOOL) isValidZipcode:(NSString*)value;
 //银行卡号
 - (BOOL)isBankCard;
+// 是否是会员编号
+- (BOOL)ismuber;
+// 是否是道馆
+- (BOOL)isdaoguan;
 
 @end

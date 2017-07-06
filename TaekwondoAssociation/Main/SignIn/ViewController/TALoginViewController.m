@@ -18,7 +18,9 @@
 #import "TASearchViewController.h"
 #import "NewsListViewController.h"
 #import "TANotsViewController.h"
-
+#import "NSString+Util.h"
+#import "WQNetWorkManager.h"
+#import "HotPicturesViewController.h"
 
 
 @interface TALoginViewController ()<UITextFieldDelegate>
@@ -356,15 +358,37 @@
 #pragma mark  登录按钮
 - (void)LoginbutAction {
     
-//    if (self.accuntTextFiled.text.length <1 ) {
+//    if (self.accuntTextFiled.text.length <1) {
 //        return;
-//    }else if(self.passTextFiled.text.length <1) {
-//        return;
-//    }else {
-//        
-//        
-//        [self loadData];
 //    }
+    
+   // 分两种情况，1.请求客户的服务器   2.请求自己的服务器
+    
+    if ([self.accuntTextFiled.text isdaoguan] || [self.accuntTextFiled.text ismuber]) {
+        // 请求客户服务器
+        
+        NSMutableDictionary* params = [NSMutableDictionary dictionary];
+        [params setValue:_accuntTextFiled.text forKey:@"memberNo"];
+        [params setValue:_passTextFiled.text forKey:@"Pwd"];
+
+        
+        [WQNetWorkManager sendPostRequestWithUrl:@"http://z6mngh.natappfree.cc/Center/AreaList" parameters:nil success:^(NSDictionary *dic) {
+             // 请求成功
+            NSLog(@"%@",dic);
+            
+            NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+            NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"请求返回的是：%@", jsonString);
+            
+            [[UIApplication sharedAppDelegate]goToHome];
+            
+        } failure:^(NSError *error) {
+            
+        }];
+        
+    }else {
+ // 请求自己的服务器
+        
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setValue:_accuntTextFiled.text forKey:@"NickName"];
     [params setValue:_passTextFiled.text forKey:@"Pwd"];
@@ -387,13 +411,13 @@
     
     //  进入主程序
 //    [[UIApplication sharedAppDelegate] goToHome];
-    
+    }
 }
 #pragma mark - 游客登录点击事件
 - (void)touristLoginBtnClick
 
 {
-//    [self.navigationController pushViewController:[TAUnbundingViewController new] animated:YES];
+//    [self.navigationController pushViewController:[HotPicturesViewController new] animated:YES];
     [[UIApplication sharedAppDelegate] goToHome];
 
 }
@@ -421,7 +445,7 @@
              NSLog(@"token=%@",user.credential.token);
              NSLog(@"nickname=%@",user.nickname);
              
-//             [[UIApplication sharedAppDelegate] goToHome];
+             [[UIApplication sharedAppDelegate] goToHome];
          }
          
          else
@@ -456,7 +480,7 @@
              
              NSLog ( @"nickname=%@" ,user. nickname );
              
-//             [[UIApplication sharedAppDelegate] goToHome];
+             [[UIApplication sharedAppDelegate] goToHome];
              
          }
          
@@ -470,7 +494,7 @@
          
      }];
 }
-#pragma mark - 新浪登录点击事件
+#pragma mark - 新浪登录点击事件*
 - (void)sinaBtnClick
 {
     
@@ -492,7 +516,7 @@
              NSLog ( @"token=%@" ,user. credential . token );
              
              NSLog ( @"nickname=%@" ,user. nickname );
-//             [[UIApplication sharedAppDelegate] goToHome];
+             [[UIApplication sharedAppDelegate] goToHome];
              
          }
          

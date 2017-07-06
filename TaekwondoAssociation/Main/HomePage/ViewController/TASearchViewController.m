@@ -53,9 +53,15 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
     
     [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self.view endEditing:YES];
 }
 
 - (void)createUI {
@@ -103,8 +109,9 @@
         _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(50,23 , KTA_Screen_Width-100, 40)];
         _searchBar.delegate = self;
         _searchBar.placeholder = @"搜索你想要的";
+        _searchBar.backgroundImage = [UIImage imageNamed:@"searchback"];
 //        _searchBar.showsCancelButton = YES;
-     
+//        _searchBar.backgroundColor = [UIColor redColor];
        _searchBar.barTintColor = [UIColor whiteColor];
         
         UITextField *searchField=[_searchBar valueForKey:@"_searchField"];
@@ -192,7 +199,7 @@
 
 - (void)backtouAction {
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)tureAction {

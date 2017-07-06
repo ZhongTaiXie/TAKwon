@@ -45,6 +45,22 @@
     }
 }
 
+
+// 判断是否是会员
+- (BOOL)ismuber {
+    
+    NSString *muberRegex = @"[TN][0-9]{10,11}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", muberRegex];
+    return [emailTest evaluateWithObject:self];
+}
+// 道馆
+- (BOOL)isdaoguan {
+    
+    NSString *muberRegex = @"CTA([0-9]{2}|[0-9]{5}|[0-9]{9})";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", muberRegex];
+    return [emailTest evaluateWithObject:self];
+}
+
 //是否包含数字和字母
 - (BOOL)isContainShuziAndChar
 {

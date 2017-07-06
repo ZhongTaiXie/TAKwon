@@ -5,7 +5,9 @@
 	<key> MOBAppSecret</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>zh_CN</string>
+	<key>CFBundleDisplayName</key>
+	<string>中国跆协</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,10 +26,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>wb</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wb793146667</string>
+				<string>wb1050731872</string>
 			</array>
 		</dict>
 		<dict>
@@ -47,8 +49,18 @@
 			<string>qq</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>QQ41e46da8</string>
-				<string>tencent1105489320</string>
+				<string>QQ41EEFB09</string>
+				<string>tencent1106180873</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>rm</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rm577430</string>
 			</array>
 		</dict>
 	</array>
@@ -83,6 +95,10 @@
 		<string>mqqwpa</string>
 		<string>mqzone</string>
 		<string>mqqopensdkapiV4</string>
+		<string>renrenapi</string>
+		<string>renrenios</string>
+		<string>renreniphone</string>
+		<string>renren</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

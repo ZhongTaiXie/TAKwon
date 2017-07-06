@@ -96,6 +96,10 @@
 		AF22AF7E1F04AA9C003582EF /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AF7D1F04AA9C003582EF /* BaseWebViewController.m */; };
 		AF22AFA41F05ED66003582EF /* BottomCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA31F05ED66003582EF /* BottomCommentView.m */; };
 		AF22AFA71F064964003582EF /* LCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22AFA61F064964003582EF /* LCProgressHUD.m */; };
+		AF88721F1F0B892C0071DD01 /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF88721D1F0B892C0071DD01 /* RennSDK.bundle */; };
+		AF8872201F0B892C0071DD01 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF88721E1F0B892C0071DD01 /* RennSDK.framework */; };
+		AF8872361F0CBCC50071DD01 /* MatchApplyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */; };
+		AF88723E1F0CE3380071DD01 /* WeightInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -105,6 +109,11 @@
 		B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613436F1F0A46460089FBA4 /* HomeLoBoWebViewController.m */; };
 		B61343741F0B36490089FBA4 /* MingRenTangListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */; };
 		B61343751F0B36490089FBA4 /* MingRenTangListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */; };
+		B61343781F0B66C10089FBA4 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343771F0B66C10089FBA4 /* SearchResultViewController.m */; };
+		B613437C1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613437A1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m */; };
+		B613437D1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */; };
+		B61343811F0C7CA40089FBA4 /* WXCommonViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */; };
+		B61343841F0CD3010089FBA4 /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343831F0CD3010089FBA4 /* TrainningViewController.m */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -373,6 +382,12 @@
 		AF22AFA31F05ED66003582EF /* BottomCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCommentView.m; sourceTree = "<group>"; };
 		AF22AFA51F064964003582EF /* LCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCProgressHUD.h; sourceTree = "<group>"; };
 		AF22AFA61F064964003582EF /* LCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProgressHUD.m; sourceTree = "<group>"; };
+		AF88721D1F0B892C0071DD01 /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
+		AF88721E1F0B892C0071DD01 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
+		AF8872341F0CBCC50071DD01 /* MatchApplyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchApplyTableViewController.h; path = ../View/MatchApplyTableViewController.h; sourceTree = "<group>"; };
+		AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchApplyTableViewController.m; path = ../View/MatchApplyTableViewController.m; sourceTree = "<group>"; };
+		AF88723C1F0CE3380071DD01 /* WeightInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightInfoCell.h; sourceTree = "<group>"; };
+		AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightInfoCell.m; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
 		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
@@ -390,6 +405,15 @@
 		B61343711F0B36490089FBA4 /* MingRenTangListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingRenTangListTableViewCell.h; sourceTree = "<group>"; };
 		B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingRenTangListTableViewCell.m; sourceTree = "<group>"; };
 		B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingRenTangListTableViewCell.xib; sourceTree = "<group>"; };
+		B61343761F0B66C10089FBA4 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		B61343771F0B66C10089FBA4 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		B61343791F0B8DC80089FBA4 /* MingRenTangDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MingRenTangDetailViewController.h; sourceTree = "<group>"; };
+		B613437A1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MingRenTangDetailViewController.m; sourceTree = "<group>"; };
+		B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MingRenTangDetailViewController.xib; sourceTree = "<group>"; };
+		B613437F1F0C7CA40089FBA4 /* WXCommonViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCommonViewClass.h; sourceTree = "<group>"; };
+		B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCommonViewClass.m; sourceTree = "<group>"; };
+		B61343821F0CD3010089FBA4 /* TrainningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainningViewController.h; sourceTree = "<group>"; };
+		B61343831F0CD3010089FBA4 /* TrainningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainningViewController.m; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -585,6 +609,7 @@
 				EFF9DA3E1F06008D0056F9F7 /* libsqlite3.tbd in Frameworks */,
 				EFF9DA3A1F05FF820056F9F7 /* MOBFoundation.framework in Frameworks */,
 				EFF9DA371F05FF820056F9F7 /* libWeChatSDK.a in Frameworks */,
+				AF8872201F0B892C0071DD01 /* RennSDK.framework in Frameworks */,
 				EFF9DA331F05FF820056F9F7 /* TencentOpenAPI.framework in Frameworks */,
 				EFF9DA351F05FF820056F9F7 /* libWeiboSDK.a in Frameworks */,
 				E76B8936978F91C4D71DB2D0 /* libPods-TaekwondoAssociation.a in Frameworks */,
@@ -903,6 +928,22 @@
 			path = TaekwondoAuthVC;
 			sourceTree = "<group>";
 		};
+		AF88721C1F0B892C0071DD01 /* RenRenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AF88721D1F0B892C0071DD01 /* RennSDK.bundle */,
+				AF88721E1F0B892C0071DD01 /* RennSDK.framework */,
+			);
+			path = RenRenSDK;
+			sourceTree = "<group>";
+		};
+		B613437E1F0C7C9C0089FBA4 /* LRPClass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LRPClass;
+			sourceTree = "<group>";
+		};
 		B699B8F61F0648BB00D8CB95 /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,6 +1200,9 @@
 		EF3E0C641F01EDBB00729CF9 /* GlobalClass */ = {
 			isa = PBXGroup;
 			children = (
+				B613437E1F0C7C9C0089FBA4 /* LRPClass */,
+				B613437F1F0C7CA40089FBA4 /* WXCommonViewClass.h */,
+				B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */,
 				EF3E0CD81F023BBC00729CF9 /* Category */,
 				EF3E0CBD1F01F89200729CF9 /* Common */,
 				EF3E0CBE1F01F89200729CF9 /* UserCenter */,
@@ -1191,6 +1235,8 @@
 				B61343711F0B36490089FBA4 /* MingRenTangListTableViewCell.h */,
 				B61343721F0B36490089FBA4 /* MingRenTangListTableViewCell.m */,
 				B61343731F0B36490089FBA4 /* MingRenTangListTableViewCell.xib */,
+				AF88723C1F0CE3380071DD01 /* WeightInfoCell.h */,
+				AF88723D1F0CE3380071DD01 /* WeightInfoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1208,6 +1254,9 @@
 				B61343691F0A392E0089FBA4 /* HotPicturesViewController.m */,
 				B613436B1F0A39680089FBA4 /* MingRenTangWebViewController.h */,
 				B613436C1F0A39680089FBA4 /* MingRenTangWebViewController.m */,
+				B61343791F0B8DC80089FBA4 /* MingRenTangDetailViewController.h */,
+				B613437A1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m */,
+				B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */,
 				B629A8811F02381E0013528A /* PublicWelfareViewController.h */,
 				B629A8821F02381E0013528A /* PublicWelfareViewController.m */,
 				B629A8841F0238480013528A /* RankingViewController.h */,
@@ -1230,6 +1279,10 @@
 				AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */,
 				EF04B64E1F09EC8200C81C65 /* TASearchViewController.h */,
 				EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */,
+				AF8872341F0CBCC50071DD01 /* MatchApplyTableViewController.h */,
+				AF8872351F0CBCC50071DD01 /* MatchApplyTableViewController.m */,
+				B61343821F0CD3010089FBA4 /* TrainningViewController.h */,
+				B61343831F0CD3010089FBA4 /* TrainningViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1412,6 +1465,8 @@
 		EF3E0CBD1F01F89200729CF9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B61343761F0B66C10089FBA4 /* SearchResultViewController.h */,
+				B61343771F0B66C10089FBA4 /* SearchResultViewController.m */,
 				EF0047181F04970200CD42C6 /* TAHttpClient.h */,
 				EF0047191F04970200CD42C6 /* TAHttpClient.m */,
 				EF00471A1F04970200CD42C6 /* TARequestManager.h */,
@@ -1570,6 +1625,7 @@
 		EFF9DA121F05FF820056F9F7 /* PlatformSDK */ = {
 			isa = PBXGroup;
 			children = (
+				AF88721C1F0B892C0071DD01 /* RenRenSDK */,
 				EFF9DA131F05FF820056F9F7 /* QQSDK */,
 				EFF9DA161F05FF820056F9F7 /* SinaWeiboSDK */,
 				EFF9DA241F05FF820056F9F7 /* WeChatSDK */,
@@ -1757,6 +1813,7 @@
 				EFF9DA3B1F05FF820056F9F7 /* ShareSDK.bundle in Resources */,
 				4E000BC21F06BA8E00DB0035 /* VideoSendIcon@2x.png in Resources */,
 				B61343751F0B36490089FBA4 /* MingRenTangListTableViewCell.xib in Resources */,
+				B613437D1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib in Resources */,
 				4E000BBC1F06BA8E00DB0035 /* photo_sel_previewVc@2x.png in Resources */,
 				EFF9DA391F05FF820056F9F7 /* README.txt in Resources */,
 				EF3E0CA51F01F44400729CF9 /* LaunchScreen.storyboard in Resources */,
@@ -1787,6 +1844,7 @@
 				4E1301C21F0AE5C4000B0ED7 /* TAActivityTimeCell.xib in Resources */,
 				B699B8F21F0624A100D8CB95 /* MingRenTangTableViewCell.xib in Resources */,
 				B6F9B1B81F050B8E00EBCD68 /* HotGalleryTableViewCell.xib in Resources */,
+				AF88721F1F0B892C0071DD01 /* RennSDK.bundle in Resources */,
 				4EFE54B41F033317001E7A05 /* TAPersonalCell.xib in Resources */,
 				4E000BBA1F06BA8E00DB0035 /* photo_original_sel@2x.png in Resources */,
 				4E000BF61F07112D00DB0035 /* TAGongGaoCollectionCell.xib in Resources */,
@@ -1891,6 +1949,7 @@
 				4E000BCB1F06BA8E00DB0035 /* UIView+Layout.m in Sources */,
 				B629A88C1F0238AA0013528A /* TeachingViewController.m in Sources */,
 				EF3E0CAB1F01F51A00729CF9 /* TabBarController.m in Sources */,
+				B613437C1F0B8DC80089FBA4 /* MingRenTangDetailViewController.m in Sources */,
 				4E1301CA1F0B0B68000B0ED7 /* TAReleaseLessonViewController.m in Sources */,
 				4E000BC51F06BA8E00DB0035 /* TZImageManager.m in Sources */,
 				4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */,
@@ -1925,8 +1984,10 @@
 				4E000BC41F06BA8E00DB0035 /* TZAssetModel.m in Sources */,
 				4E000BC71F06BA8E00DB0035 /* TZPhotoPickerController.m in Sources */,
 				4EFE552B1F048C7E001E7A05 /* TATaekwondoAuthViewController.m in Sources */,
+				B61343811F0C7CA40089FBA4 /* WXCommonViewClass.m in Sources */,
 				EF3E0CB81F01F64A00729CF9 /* TATaekwondoHallViewController.m in Sources */,
 				EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */,
+				B61343781F0B66C10089FBA4 /* SearchResultViewController.m in Sources */,
 				4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */,
 				EFD232AE1F06B5EC005559D8 /* IQBarButtonItem.m in Sources */,
 				AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */,
@@ -1945,6 +2006,7 @@
 				4E13019B1F084038000B0ED7 /* TATaekAddressCell.m in Sources */,
 				4E55C65D1F0C451000B22C45 /* TAAboutUsViewController.m in Sources */,
 				4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */,
+				B61343841F0CD3010089FBA4 /* TrainningViewController.m in Sources */,
 				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
 				B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
@@ -1952,6 +2014,7 @@
 				4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */,
 				B699B9091F0648BB00D8CB95 /* TAAbstractDotView.m in Sources */,
 				EF3E0CA11F01F37C00729CF9 /* TaekwondoAssociation.xcdatamodeld in Sources */,
+				AF8872361F0CBCC50071DD01 /* MatchApplyTableViewController.m in Sources */,
 				4E1301A21F087489000B0ED7 /* TATaekHonorViewController.m in Sources */,
 				B69F07531F020454009AE263 /* StyleDIY.m in Sources */,
 				EFD232AD1F06B5EC005559D8 /* IQTextView.m in Sources */,
@@ -1965,6 +2028,7 @@
 				4E55C6601F0C502E00B22C45 /* TAActivityRecordViewController.m in Sources */,
 				4E1301BA1F0AE2A3000B0ED7 /* TAReleaseActivityViewController.m in Sources */,
 				B69F07571F020454009AE263 /* LBXScanVideoZoomView.m in Sources */,
+				AF88723E1F0CE3380071DD01 /* WeightInfoCell.m in Sources */,
 				B69F07551F020454009AE263 /* LBXScanLineAnimation.m in Sources */,
 				4EFE54AF1F032955001E7A05 /* TAMemberInfoView.m in Sources */,
 				EF3E0CA01F01F37C00729CF9 /* main.m in Sources */,
@@ -2130,12 +2194,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GZD44TPUDX;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Optional",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/RenRenSDK",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformConnector",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TaekwondoAssociation/Resource/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TaekwondoAssociation/Resource/Plist/Info.plist";
@@ -2187,12 +2254,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GZD44TPUDX;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Optional",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformSDK/RenRenSDK",
+					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK/Support/PlatformConnector",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TaekwondoAssociation/Resource/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TaekwondoAssociation/Resource/Plist/Info.plist";

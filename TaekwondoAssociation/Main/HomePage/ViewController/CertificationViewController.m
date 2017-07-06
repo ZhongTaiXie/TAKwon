@@ -7,6 +7,7 @@
 //
 
 #import "CertificationViewController.h"
+#import "LBXScanViewController.h"
 
 @interface CertificationViewController ()
 
@@ -36,8 +37,18 @@
 
 - (void)saoyisaoBtnClick:(UIButton*)btn
 {
-    
+    LBXScanViewController *vc = [[LBXScanViewController alloc]init];
+    vc.successBlock = ^(NSString *result){
+        //        self.resluu = [[NSString alloc]initWithString:result];
+        //
+        //        [self network];
+    };
+    //    vc.hidesBottomBarWhenPushed = YES; //有tabbar时添加
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
+
+
 
 
 
