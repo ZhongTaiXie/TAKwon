@@ -261,7 +261,7 @@
     
 
     if ([_isRegister isEqualToString:@"1"]) {
-        //注册
+        //1.注册
         
         if (verificationCodeTF.text.length == 4) {
             
@@ -316,7 +316,60 @@
     }
     else
     {
-        //修改密码
+        //2.修改密码
+        
+        if (verificationCodeTF.text.length == 4) {
+            
+            // 确认密码 和  密码一直
+            if ([passwordTF.text isEqualToString:confirmPasswordTF.text]) {
+                
+                NSDictionary *diy = @{@"NickName":accountNumberTF.text,@"Pwd":passwordTF.text,@"UserType":loginway};
+                
+                [TARequestManager TARequestCompletedWithPath:URL_FORGETPASS Parameters:diy sucee:^(NSDictionary *dic) {
+                    
+                    NSDictionary *dataa = [dic objectForKey:@"Data"];
+                    
+                    NSString *strr = [dataa objectForKey:@"Msg"];
+                    
+                    NSLog(@"%@",strr);
+                    MBProgressHUD *progressView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                    progressView.mode = MBProgressHUDModeText;
+                    
+                    progressView.mode = MBProgressHUDModeText;
+                    progressView.label.text  = strr;
+                    //                progressView.minShowTime = 0.5;
+                    
+                    [progressView hideAnimated:YES afterDelay:1];
+                } fail:^(NSError *error) {
+                    
+                }];
+                
+            }else {
+                MBProgressHUD *progressView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                progressView.mode = MBProgressHUDModeText;
+                
+                progressView.mode = MBProgressHUDModeText;
+                progressView.label.text  = @"您两次输入密码不同";
+                [progressView hideAnimated:YES afterDelay:1];
+                
+            }
+            
+        }else {
+            // 验证码 位数不正确
+            
+            MBProgressHUD *progressView = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            progressView.mode = MBProgressHUDModeText;
+            
+            progressView.mode = MBProgressHUDModeText;
+            progressView.label.text  = @"您输入的验证码不正确";
+            [progressView hideAnimated:YES afterDelay:1];
+            
+        }
+
+        
+        
+        
+        
     }
 }
 #pragma mark - 协议勾选

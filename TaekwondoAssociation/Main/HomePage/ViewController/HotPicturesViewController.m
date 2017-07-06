@@ -27,6 +27,8 @@ static NSString * const CellIdentifier  = @"fdfdfd";
 
 @property (nonatomic, assign)int  a;
 
+@property (nonatomic, strong)UIView *baseView;
+
 
 
 @end
@@ -83,7 +85,7 @@ static NSString * const CellIdentifier  = @"fdfdfd";
         [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:CellIdentifier];
         // 如果有class来注册这个头部或尾部视图时一定要用代码的方式去设置下这个头部或尾部的尺寸
         // 加载的时候会根据字符串来判断是头还是尾
-        flowLayout.headerReferenceSize = CGSizeMake(50, 50);
+        flowLayout.headerReferenceSize = CGSizeMake(30, 35);
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
         //        itemm.scrollDirection = UICollectionViewScrollDirectionVertical;
         _collectionView.userInteractionEnabled = YES;
@@ -124,7 +126,7 @@ static NSString * const CellIdentifier  = @"fdfdfd";
             
             NSDictionary *dic = self.dataSource[i];
             NSString *Value = dic.allKeys[0];
-            NSArray *arrCount = [dic valueForKey:@"Value"];
+            NSArray *arrCount = [dic valueForKey:@"Imgs"];
 //            NSLog(@"%@",dic.allKeys);
             return arrCount.count;
 //
@@ -166,7 +168,11 @@ static NSString * const CellIdentifier  = @"fdfdfd";
     
     UIImageView *imageVieww = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, itemWidth, itemWidth+10)];
     NSDictionary *dic = self.dataSource[indexPath.section];
-    NSArray *arrImage =  [dic valueForKey:@"Value"];
+    NSArray *arrImage =  [dic valueForKey:@"Imgs"];
+    imageVieww.userInteractionEnabled = YES;
+  
+   
+    
     imageVieww.backgroundColor = [UIColor redColor];
     if ([arrImage[indexPath.row] isKindOfClass:[NSNull class]]) {
         
@@ -175,7 +181,11 @@ static NSString * const CellIdentifier  = @"fdfdfd";
         [imageVieww downloadImage:arrImage[indexPath.row] placeholder:nil];
         [cell.contentView addSubview:imageVieww];
     }
-    
+    UIButton *butn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, itemWidth, itemWidth+10)];
+    butn.tag = self.a;
+    [butn addTarget:self action:@selector(tapButtion:) forControlEvents:(UIControlEventTouchUpInside)];
+    self.a ++;
+    [cell.contentView addSubview:butn];
     
     return cell;
     
@@ -202,15 +212,8 @@ static NSString * const CellIdentifier  = @"fdfdfd";
       
        
         NSDictionary *dic = self.dataSource[indexPath.section];
-        titleLabel.text =  [dic valueForKey:@"Key"];
+        titleLabel.text =  [dic valueForKey:@"ImgDate"];
 
-       
-//        self.a ++;
-//        if (self.a == self.dataSource.count) {
-//            self.a = 0;
-//        }
-        
-//        NSLog(@"%ld",(long)indexPath.row);
         [headerView addSubview:titleLabel];
         
         
@@ -220,6 +223,40 @@ static NSString * const CellIdentifier  = @"fdfdfd";
         return nil;
     }
 }
+#pragma mark  图片点击  
 
+- (void)tapButtion:(UIButton *)btn {
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+   
+  
+    NSMutableArray *imageUrl = [NSMutableArray array];
+    for (NSDictionary *dic  in self.dataSource) {
+         NSArray *arrImage =  [dic valueForKey:@"Imgs"];
+        for (int i = 0; i < arrImage.count; i ++) {
+            [imageUrl addObject:arrImage[i]];
+        }
+    }
+    
+    
+    UIImageView *superImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height)];
+    [superImage downloadImage:imageUrl[btn.tag] placeholder:nil];
+    self.baseView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height)];
+    self.baseView.backgroundColor = [UIColor blackColor];
+    [self.baseView addSubview:superImage];
+    
+    [self.view addSubview:self.baseView];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(news:)];
+    [self.baseView addGestureRecognizer:tap];
+    
+}
+
+- (void)news:(UITapGestureRecognizer *)gest {
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    [self.baseView removeFromSuperview];
+}
 
 @end
