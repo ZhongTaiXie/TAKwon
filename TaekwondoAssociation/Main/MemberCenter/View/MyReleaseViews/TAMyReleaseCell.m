@@ -8,6 +8,15 @@
 
 #import "TAMyReleaseCell.h"
 
+@interface TAMyReleaseCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+
+@end
+
+
 @implementation TAMyReleaseCell
 
 - (void)awakeFromNib {
@@ -17,8 +26,18 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+-(void)setActivityModel:(TAActivityModel *)activityModel{
+    _activityModel = activityModel;
+    self.titleLabel.text = activityModel.content;
+    self.timeLabel.text = activityModel.CreatedTime;
+}
+
+-(void)setLessonModel:(TALessonModel *)lessonModel{
+    _lessonModel = lessonModel;
+    self.titleLabel.text = lessonModel.content;
+    self.timeLabel.text = lessonModel.CreatedTime;
 }
 
 @end

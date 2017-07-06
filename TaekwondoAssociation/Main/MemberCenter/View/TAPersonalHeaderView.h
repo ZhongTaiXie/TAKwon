@@ -14,6 +14,6 @@
 @property (copy) void(^bgImageViewDidClick)(NSString *str);
 @property (copy) void(^headerImageViewClick)(NSString *str);
 
--(instancetype)initWithFrame:(CGRect)frame;
+-(instancetype)initWithFrame:(CGRect)frame model:(TAPersonalModel *)model;
 
 @end

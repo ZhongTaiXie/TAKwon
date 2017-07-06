@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TAActivityModel.h"
+#import "TALessonModel.h"
 
 @interface TAMyReleaseCell : UITableViewCell
+
+@property (nonatomic,strong) TAActivityModel *activityModel;
+@property (nonatomic,strong) TALessonModel *lessonModel;
 
 @end

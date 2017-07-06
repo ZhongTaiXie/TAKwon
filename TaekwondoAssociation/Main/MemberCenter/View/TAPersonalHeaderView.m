@@ -21,28 +21,34 @@
 
 @implementation TAPersonalHeaderView
 
--(instancetype)initWithFrame:(CGRect)frame{
+-(instancetype)initWithFrame:(CGRect)frame model:(TAPersonalModel *)model{
     if (self = [super initWithFrame:frame]) {
-        [self setupUIWithFrame:frame];
+        [self setupUIWithFrame:frame model:model];
     }
     return self;
 }
 
--(void)setupUIWithFrame:(CGRect)frame{
+-(void)setupUIWithFrame:(CGRect)frame model:(TAPersonalModel *)model{
     //背景图
-    bgImageView = [WQFactoryUI createImageViewWithFrame:CGRectMake(0, -20, KTA_Screen_Width, 200) imageName:@"header_bg" borderWidth:0 borderColor:WHITECOLOR cornerRadius:0];
+//    bgImageView = [WQFactoryUI createImageViewWithFrame:CGRectMake(0, -20, KTA_Screen_Width, 200) imageName:@"header_bg" borderWidth:0 borderColor:WHITECOLOR cornerRadius:0];
+    
+    bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -20, KTA_Screen_Width, 200)];
+    [bgImageView sd_setImageWithURL:[NSURL URLWithString:model.BGPic] placeholderImage:[UIImage imageNamed:@"header_bg"]];
+    
     bgImageView.userInteractionEnabled = YES;
     [bgImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bgImageViewClick)]];
     [self addSubview:bgImageView];
     
     //头像
-    headerImagView = [WQFactoryUI createImageViewWithFrame:CGRectMake((KTA_Screen_Width - 70) / 2, 20, 70, 70) imageName:@"placeHeader" borderWidth:0 borderColor:WHITECOLOR cornerRadius:35];
+//    headerImagView = [WQFactoryUI createImageViewWithFrame:CGRectMake((KTA_Screen_Width - 70) / 2, 20, 70, 70) imageName:@"placeHeader" borderWidth:0 borderColor:WHITECOLOR cornerRadius:35];
+    headerImagView = [[UIImageView alloc] initWithFrame:CGRectMake((KTA_Screen_Width - 70) / 2, 20, 70, 70)];
+    [headerImagView sd_setImageWithURL:[NSURL URLWithString:model.Photo] placeholderImage:[UIImage imageNamed:@"placeHeader"]];
     headerImagView.userInteractionEnabled = YES;
     [headerImagView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headerImagViewClick)]];
     [self addSubview:headerImagView];
     
     //昵称
-    nickNameLabel = [WQFactoryUI createLabelWithtextFont:16 textBackgroundColor:[UIColor clearColor] textAliment:NSTextAlignmentCenter textColor:WHITECOLOR textFrame:CGRectMake(0, CGRectGetMaxY(headerImagView.frame) + 10, KTA_Screen_Width, 30) text:@"昵称"];
+    nickNameLabel = [WQFactoryUI createLabelWithtextFont:16 textBackgroundColor:[UIColor clearColor] textAliment:NSTextAlignmentCenter textColor:WHITECOLOR textFrame:CGRectMake(0, CGRectGetMaxY(headerImagView.frame) + 10, KTA_Screen_Width, 30) text:model.NickName];
     [self addSubview:nickNameLabel];
     
     UIView *bgview = [WQFactoryUI createViewWithFrame:CGRectMake((KTA_Screen_Width - 80) / 2, CGRectGetMaxY(nickNameLabel.frame), 80, 20) viewBackgroundColor:WHITECOLOR];
@@ -50,16 +56,16 @@
     bgview.layer.masksToBounds = YES;
     [self addSubview:bgview];
     
-    int a = 10, b = 10;
-    NSString *imgName = b == 10 ? @"已认证" : @"未认证";
-    NSString *title = b == 10 ? @"已认证" : @"未认证";
+//    int a = 10, b = 10;
+    NSString *imgName = model.IsCertification ? @"已认证" : @"未认证";
+    NSString *title = model.IsCertification ? @"已认证" : @"未认证";
     UIImageView *imageView = [WQFactoryUI createImageViewWithFrame:CGRectMake(10, 2, 16, 16) imageName:imgName borderWidth:0 borderColor:WHITECOLOR cornerRadius:0];
     [bgview addSubview:imageView];
     
     UILabel *titleLabel = [WQFactoryUI createLabelWithtextFont:13 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(30, 0, bgview.frame.size.width - 30, 20) text:title];
     [bgview addSubview:titleLabel];
     
-    if (a == 1) {  //个人
+    if ([model.UserType integerValue] == 1) {  //个人
         //职称label
         UILabel *zhichengLabel = [WQFactoryUI createLabelWithtextFont:13 textBackgroundColor:[UIColor lightGrayColor] textAliment:NSTextAlignmentCenter textColor:WHITECOLOR textFrame:CGRectMake((KTA_Screen_Width - 80) / 2, CGRectGetMaxY(bgview.frame) + 25, 80, 20) text:@"教练员"];
         zhichengLabel.layer.cornerRadius = 10;
