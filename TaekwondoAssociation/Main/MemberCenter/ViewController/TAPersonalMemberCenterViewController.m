@@ -14,6 +14,7 @@
 #import "TAMemberInfoViewController.h"
 #import "TAMyCollectionViewController.h"
 #import "TAMemberHonorViewController.h"
+#import "TAActivityRecordViewController.h"
 
 @interface TAPersonalMemberCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -132,7 +133,8 @@
             TAMemberInfoViewController *infoVC = [TAMemberInfoViewController new];
             [self.navigationController pushViewController:infoVC animated:YES];
         }else{  //活动记录
-            
+            TAActivityRecordViewController *recordVC = [TAActivityRecordViewController new];
+            [self.navigationController pushViewController:recordVC animated:YES];
         }
         
     }else if (indexPath.section == 2){

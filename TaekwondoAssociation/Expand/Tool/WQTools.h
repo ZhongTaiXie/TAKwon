@@ -27,5 +27,7 @@
 //判断一个字符串是否为空
 + (BOOL)isBlankString:(NSString *)string;
 
+//图片转base64
++ (NSString *)imageToBase64:(UIImage *)image;
 
 @end

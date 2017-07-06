@@ -12,7 +12,6 @@
 #import "TATaekwondoHallViewController.h"
 #import "TAPersonalMemberCenterViewController.h"
 #import "TATaekwondoMemberCenterViewController.h"
-#import "TATaekwondoMemberCenterViewController.h"
 
 @interface TabBarController ()
 
@@ -73,7 +72,6 @@
     UINavigationBar *navigationBar = nav.navigationBar;
     [navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [navigationBar setShadowImage:[UIImage new]];
-    
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     

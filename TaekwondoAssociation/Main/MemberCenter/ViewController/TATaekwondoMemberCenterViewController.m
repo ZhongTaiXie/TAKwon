@@ -16,6 +16,8 @@
 #import "TAMyCollectionViewController.h"
 #import "TATaekHonorViewController.h"
 #import "TAMyReleaseViewController.h"
+#import "TAActivityRecordViewController.h"
+
 
 @interface TATaekwondoMemberCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -143,7 +145,8 @@
             [self.navigationController pushViewController:releaseVC animated:YES];
 
         }else{ //活动记录
-            
+            TAActivityRecordViewController *recordVC = [TAActivityRecordViewController new];
+            [self.navigationController pushViewController:recordVC animated:YES];
         }
     }else if (indexPath.section == 3){   //道馆荣誉
         TATaekHonorViewController *honorVC = [TATaekHonorViewController new];
