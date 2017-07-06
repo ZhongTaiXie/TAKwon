@@ -9,7 +9,9 @@
 #ifndef MacrosFrame_h
 #define MacrosFrame_h
 
-
+#define iOS(version) (([[[UIDevice currentDevice] systemVersion] intValue] >= version)?1:0)
+#define kDeviceHeight      [[UIScreen mainScreen] bounds].size.height
+#define kDeviceWidth       [[UIScreen mainScreen] bounds].size.width
 
 // MainScreen Height&Width
 #define KTA_Screen_Height      [[UIScreen mainScreen] bounds].size.height

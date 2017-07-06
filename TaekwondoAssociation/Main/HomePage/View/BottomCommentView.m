@@ -87,8 +87,8 @@
             _shareBtn.frame = CGRectMake(kDeviceWidth - 50, 10, 30, 30);
             _tagsBtn.frame = CGRectMake(kDeviceWidth - 100, 10, 30, 30);
             [_shareBtn setImage:[UIImage imageNamed:@"share"] forState:UIControlStateNormal];
-            [_tagsBtn setImage:[UIImage imageNamed:@"likes-samll"] forState:UIControlStateNormal];
-            [_tagsBtn setImage:[UIImage imageNamed:@"likes-samll-selected"] forState:UIControlStateSelected];
+            [_tagsBtn setImage:[UIImage imageNamed:@"likes-big"] forState:UIControlStateNormal];
+            [_tagsBtn setImage:[UIImage imageNamed:@"likes-big-selected"] forState:UIControlStateSelected];
             
 //            _tagsBtn.backgroundColor = [UIColor redColor];
 //            _shareBtn.backgroundColor = [UIColor redColor];
