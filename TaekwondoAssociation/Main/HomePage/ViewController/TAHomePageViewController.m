@@ -29,7 +29,6 @@
 #import "MingRenTangDetailViewController.h"
 #import "LCProgressHUD.h"
 #import "TrainningViewController.h"//培训
-#import "TrainSignUpViewController.h"//培训报名
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
@@ -400,9 +399,7 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 5)//培训
     {
-//        TrainningViewController *trainVC = [[TrainningViewController alloc]init];
-//        [self.navigationController pushViewController:trainVC animated:YES];
-        TrainSignUpViewController *trainVC = [[TrainSignUpViewController alloc]init];
+        TrainningViewController *trainVC = [[TrainningViewController alloc]init];
         [self.navigationController pushViewController:trainVC animated:YES];
     }
     else if(tag == 6)//公益
