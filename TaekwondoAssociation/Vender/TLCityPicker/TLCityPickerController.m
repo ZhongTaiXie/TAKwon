@@ -10,6 +10,8 @@
 #import "TLCityPickerSearchResultController.h"
 #import "TLCityHeaderView.h"
 #import "TLCityGroupCell.h"
+#import "IQKeyboardManager.h"
+#import "WXCommonViewClass.h"
 
 @interface TLCityPickerController () <TLCityGroupCellDelegate, TLSearchResultControllerDelegate>
 
@@ -30,8 +32,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.navigationItem setTitle:@"城市选择"];
     [self.tableView setTableHeaderView:self.searchController.searchBar];
+//    UIBarButtonItem *cancelBarButton = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonDown:)];
+    
+//    [self.navigationItem setLeftBarButtonItem:cancelBarButton];
+    
+    
+    //关闭按钮
+    UIButton * closeBtn = [WXCommonViewClass getRightBtnOfNav:nil hightlightedImageName:nil title:@"取消"];
+    [closeBtn setTitleColor:RGB(21, 126, 251) forState:UIControlStateNormal];
+    closeBtn.frame = CGRectMake(0, 0, 35, 35);
+    [closeBtn addTarget:self action:@selector(cancelButtonDown:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:closeBtn];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    
+    
     [self.tableView setSectionIndexBackgroundColor:[UIColor clearColor]];
     [self.tableView setSectionIndexColor:[UIColor blackColor]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
@@ -87,7 +104,7 @@
         return nil;
     }
     TLCityHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"TLCityHeaderView"];
-    NSString *title = [_arraySection objectAtIndex:section + 1];
+    NSString *title = [_arraySection objectAtIndex:section - 2];
     [headerView setTitle:title];
     return headerView;
 }
@@ -136,7 +153,7 @@
         [self.tableView scrollRectToVisible:self.searchController.searchBar.frame animated:NO];
         return -1;
     }
-    return index - 2;
+    return index+2;
 }
 
 #pragma mark TLCityGroupCellDelegate
@@ -204,6 +221,9 @@
         [_searchController setSearchResultsUpdater:self.searchResultVC];
         [_searchController.searchBar.layer setBorderWidth:0.5f];
         [_searchController.searchBar.layer setBorderColor:[UIColor colorWithWhite:0.7 alpha:1.0].CGColor];
+        _searchController.searchBar.backgroundImage = [UIImage imageNamed:@"searchback"];
+        UITextField *searchField=[_searchController.searchBar valueForKey:@"_searchField"];
+        searchField.backgroundColor = RGB(235, 236, 238);
     }
     return _searchController;
 }
@@ -323,7 +343,7 @@
 - (NSMutableArray *) arraySection
 {
     if (_arraySection == nil) {
-        _arraySection = [[NSMutableArray alloc] initWithObjects:@"#", @"定位", @"最近", @"最热", nil];
+        _arraySection = [[NSMutableArray alloc] initWithObjects:@"#", nil];
     }
     return _arraySection;
 }

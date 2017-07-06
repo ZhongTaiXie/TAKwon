@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSString *title;
 
 @property (nonatomic, strong) NSArray *cityArray;
-
+- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 + (CGFloat) getCellHeightOfCityArray:(NSArray *)cityArray;
 
 @end

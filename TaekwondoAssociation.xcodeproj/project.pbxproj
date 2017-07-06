@@ -1130,7 +1130,6 @@
 				EF3E0C431F01ED9B00729CF9 /* HomePage */,
 				EF3E0C471F01ED9B00729CF9 /* MemberCenter */,
 				EF3E0C4B1F01ED9B00729CF9 /* SignIn */,
-				EF3E0C4C1F01ED9B00729CF9 /* TaekwondoHall */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1172,7 +1171,8 @@
 				EF3E0C8F1F01F2FF00729CF9 /* View */,
 				EF3E0C901F01F2FF00729CF9 /* ViewControllrer */,
 			);
-			path = TaekwondoHall;
+			name = TaekwondoHall;
+			path = ../Main/TaekwondoHall;
 			sourceTree = "<group>";
 		};
 		EF3E0C561F01EDA400729CF9 /* Resource */ = {
@@ -1238,6 +1238,7 @@
 		EF3E0C641F01EDBB00729CF9 /* GlobalClass */ = {
 			isa = PBXGroup;
 			children = (
+				EF3E0C4C1F01ED9B00729CF9 /* TaekwondoHall */,
 				B613437E1F0C7C9C0089FBA4 /* LRPClass */,
 				B613437F1F0C7CA40089FBA4 /* WXCommonViewClass.h */,
 				B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */,

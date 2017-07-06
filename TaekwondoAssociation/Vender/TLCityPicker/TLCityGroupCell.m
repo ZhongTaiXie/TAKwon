@@ -31,7 +31,8 @@
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1.0]];
+//        [self setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1.0]];
+        self.backgroundColor = [UIColor whiteColor];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         [self addSubview:self.titleLabel];
         [self addSubview:self.noDataLabel];

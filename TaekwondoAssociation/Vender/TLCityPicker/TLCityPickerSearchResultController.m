@@ -74,6 +74,20 @@
     }
     [self.tableView reloadData];
 }
+#pragma mark - UISearchBar and UISearchDisplayController Delegate Methods
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    //    [_tableView.mj_header endRefreshing];
+    //    [_tableview.mj_footer endRefreshing];
+    //    [_resultViewController.tableView.mj_footer endRefreshing];
+    self.tableView.frame = CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height);
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
+    //    [_resultViewController reloadData];
+    return YES;
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    self.tableView.frame = CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height-48);
+}
 
 #pragma mark - Getter
 - (NSMutableArray *) data
