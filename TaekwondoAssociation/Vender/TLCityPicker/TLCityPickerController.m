@@ -31,15 +31,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setTitle:@"城市选择"];
-    UIBarButtonItem *cancelBarButton = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonDown:)];
-    [self.navigationItem setLeftBarButtonItem:cancelBarButton];
-    
     [self.tableView setTableHeaderView:self.searchController.searchBar];
     [self.tableView setSectionIndexBackgroundColor:[UIColor clearColor]];
     [self.tableView setSectionIndexColor:[UIColor blackColor]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     [self.tableView registerClass:[TLCityGroupCell class] forCellReuseIdentifier:@"TLCityGroupCell"];
     [self.tableView registerClass:[TLCityHeaderView class] forHeaderFooterViewReuseIdentifier:@"TLCityHeaderView"];
+    self.tableView.sectionIndexColor = RGB(0, 125, 251);
 }
 
 
@@ -64,7 +62,7 @@
             [cell setCityArray:self.localCityData];
         }
         else if (indexPath.section == 1) {
-            [cell setTitle:@"最近访问城市"];
+            [cell setTitle:@"最近访问"];
             [cell setCityArray:self.commonCityData];
         }
         else {
@@ -138,7 +136,7 @@
         [self.tableView scrollRectToVisible:self.searchController.searchBar.frame animated:NO];
         return -1;
     }
-    return index - 1;
+    return index - 2;
 }
 
 #pragma mark TLCityGroupCellDelegate
@@ -200,7 +198,7 @@
 {
     if (_searchController == nil) {
         _searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchResultVC];
-        [_searchController.searchBar setPlaceholder:@"请输入城市中文名称或拼音"];
+        [_searchController.searchBar setPlaceholder:@"输入城市名或拼音查询"];
         [_searchController.searchBar setBarTintColor:[UIColor colorWithWhite:0.95 alpha:1.0]];
         [_searchController.searchBar sizeToFit];
         [_searchController setSearchResultsUpdater:self.searchResultVC];
@@ -325,7 +323,7 @@
 - (NSMutableArray *) arraySection
 {
     if (_arraySection == nil) {
-        _arraySection = [[NSMutableArray alloc] initWithObjects:UITableViewIndexSearch, @"定位", @"最近", @"最热", nil];
+        _arraySection = [[NSMutableArray alloc] initWithObjects:@"#", @"定位", @"最近", @"最热", nil];
     }
     return _arraySection;
 }
