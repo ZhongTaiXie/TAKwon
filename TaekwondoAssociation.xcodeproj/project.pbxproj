@@ -114,6 +114,12 @@
 		B613437D1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B613437B1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib */; };
 		B61343811F0C7CA40089FBA4 /* WXCommonViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */; };
 		B61343841F0CD3010089FBA4 /* TrainningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343831F0CD3010089FBA4 /* TrainningViewController.m */; };
+		B613439C1F0DD4310089FBA4 /* CityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B61343901F0DD4310089FBA4 /* CityData.plist */; };
+		B613439D1F0DD4310089FBA4 /* TLCity.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343921F0DD4310089FBA4 /* TLCity.m */; };
+		B613439E1F0DD4310089FBA4 /* TLCityGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343941F0DD4310089FBA4 /* TLCityGroupCell.m */; };
+		B613439F1F0DD4310089FBA4 /* TLCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343961F0DD4310089FBA4 /* TLCityHeaderView.m */; };
+		B61343A01F0DD4310089FBA4 /* TLCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343981F0DD4310089FBA4 /* TLCityPickerController.m */; };
+		B61343A11F0DD4310089FBA4 /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613439B1F0DD4310089FBA4 /* TLCityPickerSearchResultController.m */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -414,6 +420,18 @@
 		B61343801F0C7CA40089FBA4 /* WXCommonViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCommonViewClass.m; sourceTree = "<group>"; };
 		B61343821F0CD3010089FBA4 /* TrainningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainningViewController.h; sourceTree = "<group>"; };
 		B61343831F0CD3010089FBA4 /* TrainningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainningViewController.m; sourceTree = "<group>"; };
+		B61343901F0DD4310089FBA4 /* CityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityData.plist; sourceTree = "<group>"; };
+		B61343911F0DD4310089FBA4 /* TLCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCity.h; sourceTree = "<group>"; };
+		B61343921F0DD4310089FBA4 /* TLCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCity.m; sourceTree = "<group>"; };
+		B61343931F0DD4310089FBA4 /* TLCityGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityGroupCell.h; sourceTree = "<group>"; };
+		B61343941F0DD4310089FBA4 /* TLCityGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityGroupCell.m; sourceTree = "<group>"; };
+		B61343951F0DD4310089FBA4 /* TLCityHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityHeaderView.h; sourceTree = "<group>"; };
+		B61343961F0DD4310089FBA4 /* TLCityHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityHeaderView.m; sourceTree = "<group>"; };
+		B61343971F0DD4310089FBA4 /* TLCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerController.h; sourceTree = "<group>"; };
+		B61343981F0DD4310089FBA4 /* TLCityPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerController.m; sourceTree = "<group>"; };
+		B61343991F0DD4310089FBA4 /* TLCityPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerDelegate.h; sourceTree = "<group>"; };
+		B613439A1F0DD4310089FBA4 /* TLCityPickerSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerSearchResultController.h; sourceTree = "<group>"; };
+		B613439B1F0DD4310089FBA4 /* TLCityPickerSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerSearchResultController.m; sourceTree = "<group>"; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -944,6 +962,25 @@
 			path = LRPClass;
 			sourceTree = "<group>";
 		};
+		B613438F1F0DD4310089FBA4 /* TLCityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				B61343901F0DD4310089FBA4 /* CityData.plist */,
+				B61343911F0DD4310089FBA4 /* TLCity.h */,
+				B61343921F0DD4310089FBA4 /* TLCity.m */,
+				B61343931F0DD4310089FBA4 /* TLCityGroupCell.h */,
+				B61343941F0DD4310089FBA4 /* TLCityGroupCell.m */,
+				B61343951F0DD4310089FBA4 /* TLCityHeaderView.h */,
+				B61343961F0DD4310089FBA4 /* TLCityHeaderView.m */,
+				B61343971F0DD4310089FBA4 /* TLCityPickerController.h */,
+				B61343981F0DD4310089FBA4 /* TLCityPickerController.m */,
+				B61343991F0DD4310089FBA4 /* TLCityPickerDelegate.h */,
+				B613439A1F0DD4310089FBA4 /* TLCityPickerSearchResultController.h */,
+				B613439B1F0DD4310089FBA4 /* TLCityPickerSearchResultController.m */,
+			);
+			path = TLCityPicker;
+			sourceTree = "<group>";
+		};
 		B699B8F61F0648BB00D8CB95 /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,6 +1214,7 @@
 		EF3E0C621F01EDAC00729CF9 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				B613438F1F0DD4310089FBA4 /* TLCityPicker */,
 				EFD232801F06B5EC005559D8 /* IQKeyboardManager */,
 				EFD2327C1F06B558005559D8 /* TAHash */,
 				B699B8F61F0648BB00D8CB95 /* SDCycleScrollView */,
@@ -1812,6 +1850,7 @@
 				4E000C001F07136600DB0035 /* TAOnePicCollcetionCell.xib in Resources */,
 				EFF9DA3B1F05FF820056F9F7 /* ShareSDK.bundle in Resources */,
 				4E000BC21F06BA8E00DB0035 /* VideoSendIcon@2x.png in Resources */,
+				B613439C1F0DD4310089FBA4 /* CityData.plist in Resources */,
 				B61343751F0B36490089FBA4 /* MingRenTangListTableViewCell.xib in Resources */,
 				B613437D1F0B8DC80089FBA4 /* MingRenTangDetailViewController.xib in Resources */,
 				4E000BBC1F06BA8E00DB0035 /* photo_sel_previewVc@2x.png in Resources */,
@@ -1945,6 +1984,7 @@
 				4EFE55091F046D19001E7A05 /* TAReciveMessageCell.m in Sources */,
 				4E000B8B1F06BA5F00DB0035 /* TAMemberIconCell.m in Sources */,
 				EF04B6481F09D52F00C81C65 /* TANotsViewController.m in Sources */,
+				B613439E1F0DD4310089FBA4 /* TLCityGroupCell.m in Sources */,
 				EF0047231F04970200CD42C6 /* UIImageView+SDWebImage.m in Sources */,
 				4E000BCB1F06BA8E00DB0035 /* UIView+Layout.m in Sources */,
 				B629A88C1F0238AA0013528A /* TeachingViewController.m in Sources */,
@@ -1971,6 +2011,7 @@
 				EF04B64C1F09DCC800C81C65 /* TANotsTableViewCell.m in Sources */,
 				4E000BC81F06BA8E00DB0035 /* TZPhotoPreviewCell.m in Sources */,
 				B61343741F0B36490089FBA4 /* MingRenTangListTableViewCell.m in Sources */,
+				B61343A01F0DD4310089FBA4 /* TLCityPickerController.m in Sources */,
 				B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */,
 				4E55C6641F0C542C00B22C45 /* TAMyReleaseCell.m in Sources */,
 				4E000BC31F06BA8E00DB0035 /* TZAssetCell.m in Sources */,
@@ -2049,13 +2090,16 @@
 				4E000B8D1F06BA5F00DB0035 /* TAMemberInfoCell.m in Sources */,
 				B699B90B1F0648BB00D8CB95 /* TADotView.m in Sources */,
 				4E55C65A1F0C44EF00B22C45 /* TAYinsiShengmingViewController.m in Sources */,
+				B61343A11F0DD4310089FBA4 /* TLCityPickerSearchResultController.m in Sources */,
 				EFD232AC1F06B5EC005559D8 /* IQKeyboardReturnKeyHandler.m in Sources */,
+				B613439D1F0DD4310089FBA4 /* TLCity.m in Sources */,
 				4EFE54971F02D445001E7A05 /* WQNetWorkManager.m in Sources */,
 				4E1301C11F0AE5C4000B0ED7 /* TAActivityTimeCell.m in Sources */,
 				4E000BC91F06BA8E00DB0035 /* TZPhotoPreviewController.m in Sources */,
 				EF0047211F04970200CD42C6 /* TARequestManager.m in Sources */,
 				4E1301D01F0B239D000B0ED7 /* TAFeedbackViewController.m in Sources */,
 				4E1301B71F0AB91C000B0ED7 /* TAMyReleaseTitleCell.m in Sources */,
+				B613439F1F0DD4310089FBA4 /* TLCityHeaderView.m in Sources */,
 				4E1301AA1F08776D000B0ED7 /* TAMemberHonorViewController.m in Sources */,
 				4E1301A61F087576000B0ED7 /* TATaekHonorCell.m in Sources */,
 				EF3E0CB21F01F60A00729CF9 /* TAHomePageViewController.m in Sources */,

@@ -29,11 +29,12 @@
 #import "MingRenTangDetailViewController.h"
 #import "LCProgressHUD.h"
 #import "TrainningViewController.h"//培训
+#import "TLCityPickerController.h"//地区选择
 //#import "XRCarouselView.h"
 
 static NSString *identifier = @"CellID";
 
-@interface TAHomePageViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
+@interface TAHomePageViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate,TLCityPickerDelegate>
 {
     NSArray *titleArray;//中部功能名称数组
     SDCycleScrollView *autoScrollView;//顶部轮播图
@@ -409,7 +410,18 @@ static NSString *identifier = @"CellID";
     }
     else if(tag == 7)//排名
     {
-        [LCProgressHUD showTextOntarget:self.view string:@"功能升级中,敬请期待!"];
+//        [LCProgressHUD showTextOntarget:self.view string:@"功能升级中,敬请期待!"];
+        
+        TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
+        [cityPickerVC setDelegate:self];
+        
+        cityPickerVC.locationCityID = @"1400010000";
+        //    cityPickerVC.commonCitys = [[NSMutableArray alloc] initWithArray: @[@"1400010000", @"100010000"]];        // 最近访问城市，如果不设置，将自动管理
+        cityPickerVC.hotCitys = @[@"100010000", @"200010000", @"300210000", @"600010000", @"300110000"];
+        [self.navigationController pushViewController:cityPickerVC animated:YES];
+//        [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
+//            
+//        }];
     }
     else if(tag == 8)//名人堂
     {
@@ -440,5 +452,22 @@ static NSString *identifier = @"CellID";
 {
     MingRenTangWebViewController *mingrentangVC = [[MingRenTangWebViewController alloc]init];
     [self.navigationController pushViewController:mingrentangVC animated:YES];
+}
+#pragma mark - TLCityPickerDelegate
+- (void) cityPickerController:(TLCityPickerController *)cityPickerViewController didSelectCity:(TLCity *)city
+{
+//    [self.cityPickerButton setTitle:city.cityName forState:UIControlStateNormal];
+//    [cityPickerViewController dismissViewControllerAnimated:YES completion:^{
+//        
+//    }];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) cityPickerControllerDidCancel:(TLCityPickerController *)cityPickerViewController
+{
+//    [cityPickerViewController dismissViewControllerAnimated:YES completion:^{
+//        
+//    }];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
