@@ -155,6 +155,8 @@
 		EF04B64C1F09DCC800C81C65 /* TANotsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04B64A1F09DCC800C81C65 /* TANotsTableViewCell.m */; };
 		EF04B64D1F09DCC800C81C65 /* TANotsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */; };
 		EF04B6501F09EC8200C81C65 /* TASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */; };
+		EF29D5EB1F0DD8120034E1F8 /* TAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF29D5EA1F0DD8120034E1F8 /* TAUser.m */; };
+		EF29D5EE1F0E2C710034E1F8 /* TALocalUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF29D5ED1F0E2C710034E1F8 /* TALocalUser.m */; };
 		EF37E5691F034AD6005F8F8B /* TABaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF37E5681F034AD6005F8F8B /* TABaseTableView.m */; };
 		EF3E0C5F1F01EDA400729CF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E0C591F01EDA400729CF9 /* AppDelegate.m */; };
 		EF3E0C601F01EDA400729CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3E0C5C1F01EDA400729CF9 /* Assets.xcassets */; };
@@ -493,6 +495,10 @@
 		EF04B64B1F09DCC800C81C65 /* TANotsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TANotsTableViewCell.xib; sourceTree = "<group>"; };
 		EF04B64E1F09EC8200C81C65 /* TASearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TASearchViewController.h; sourceTree = "<group>"; };
 		EF04B64F1F09EC8200C81C65 /* TASearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TASearchViewController.m; sourceTree = "<group>"; };
+		EF29D5E91F0DD8120034E1F8 /* TAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAUser.h; sourceTree = "<group>"; };
+		EF29D5EA1F0DD8120034E1F8 /* TAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUser.m; sourceTree = "<group>"; };
+		EF29D5EC1F0E2C710034E1F8 /* TALocalUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TALocalUser.h; sourceTree = "<group>"; };
+		EF29D5ED1F0E2C710034E1F8 /* TALocalUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TALocalUser.m; sourceTree = "<group>"; };
 		EF37E5671F034AD6005F8F8B /* TABaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABaseTableView.h; sourceTree = "<group>"; };
 		EF37E5681F034AD6005F8F8B /* TABaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABaseTableView.m; sourceTree = "<group>"; };
 		EF3E0C581F01EDA400729CF9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1482,6 +1488,10 @@
 		EF3E0CBE1F01F89200729CF9 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				EF29D5E91F0DD8120034E1F8 /* TAUser.h */,
+				EF29D5EA1F0DD8120034E1F8 /* TAUser.m */,
+				EF29D5EC1F0E2C710034E1F8 /* TALocalUser.h */,
+				EF29D5ED1F0E2C710034E1F8 /* TALocalUser.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -1764,7 +1774,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = GZD44TPUDX;
+						DevelopmentTeam = 47PHKU5ELU;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -1966,6 +1976,7 @@
 				EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */,
 				EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */,
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
+				EF29D5EE1F0E2C710034E1F8 /* TALocalUser.m in Sources */,
 				EF0047201F04970200CD42C6 /* TAHttpClient.m in Sources */,
 				EFD232A61F06B5EC005559D8 /* IQUIScrollView+Additions.m in Sources */,
 				EF04B64C1F09DCC800C81C65 /* TANotsTableViewCell.m in Sources */,
@@ -1985,6 +1996,7 @@
 				4E000BC71F06BA8E00DB0035 /* TZPhotoPickerController.m in Sources */,
 				4EFE552B1F048C7E001E7A05 /* TATaekwondoAuthViewController.m in Sources */,
 				B61343811F0C7CA40089FBA4 /* WXCommonViewClass.m in Sources */,
+				EF29D5EB1F0DD8120034E1F8 /* TAUser.m in Sources */,
 				EF3E0CB81F01F64A00729CF9 /* TATaekwondoHallViewController.m in Sources */,
 				EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */,
 				B61343781F0B66C10089FBA4 /* SearchResultViewController.m in Sources */,
@@ -2193,7 +2205,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = 47PHKU5ELU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2253,7 +2265,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GZD44TPUDX;
+				DEVELOPMENT_TEAM = 47PHKU5ELU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

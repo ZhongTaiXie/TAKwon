@@ -23,5 +23,9 @@ NSString * const URL_REGIST = @"/Register/Register";
 
 NSString * const URL_MROEPIC = @"/Home/LasterPicList";
 
+NSString * const URL_THIRDLGON = @"http://www.chntkd.org.cn/webInterFace/APP_interface/json/membershipInformation.ashx";
+
+NSString * const URL_FORGETPASS = @"/Account/ForgetPwd";
+
 
 @end
