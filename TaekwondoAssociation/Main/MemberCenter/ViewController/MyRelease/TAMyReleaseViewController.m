@@ -10,6 +10,7 @@
 #import "TAMyReleaseTitleCell.h"
 #import "TAReleaseActivityViewController.h"
 #import "TAReleaseLessonViewController.h"
+#import "TAMyReleaseCell.h"
 
 @interface TAMyReleaseViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -40,6 +41,8 @@
     self.tableView.backgroundColor = [WQTools colorWithHexString:@"f1f1f1"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.tableView registerClass:[TAMyReleaseTitleCell class] forCellReuseIdentifier:@"titleCell"];
+//    TAMyReleaseCell
+    [self.tableView registerNib:[UINib nibWithNibName:@"TAMyReleaseCell" bundle:nil] forCellReuseIdentifier:@"releaseCell"];
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     [self.view addSubview:self.tableView];
 }
@@ -82,7 +85,8 @@
             return cell;
         }
         else{
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+            
+            TAMyReleaseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"releaseCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
             return cell;
@@ -99,7 +103,7 @@
             return cell;
         }
         else{
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+            TAMyReleaseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"releaseCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
             return cell;
@@ -124,6 +128,36 @@
     return 40;
 }
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 0){
+        return NO;
+    }
+    return YES;
+}
 
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //创建UIAlertControler对象
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"删除" message:@"确定要删除吗?" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                //删除的操作
+            
+        }];
+        //添加两个action
+        [alertController addAction:cancelAction];
+        [alertController addAction:deleteAction];
+        //显示出来(present)
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
 
 @end

@@ -52,7 +52,7 @@
 }
 
 //验证身份证号
-- (BOOL)isValidateIDNumber:(NSString *)IDNumber{
++ (BOOL)isValidateIDNumber:(NSString *)IDNumber{
     NSMutableArray *IDArray = [NSMutableArray array];
     // 遍历身份证字符串,存入数组中
     for (int i = 0; i < 18; i++) {
@@ -82,7 +82,6 @@
         return NO;
     }
 }
-
 
 //验证邮箱是否合法
 +(BOOL)isValidateEmail:(NSString *)email {
@@ -139,4 +138,12 @@
     }
     return NO;
 }
+
+//图片转base64
++ (NSString *)imageToBase64:(UIImage *)image{
+    NSData *data = UIImagePNGRepresentation(image);
+    NSString *encodedImageStr = [data base64EncodedStringWithOptions:0];
+    return encodedImageStr;
+}
+
 @end

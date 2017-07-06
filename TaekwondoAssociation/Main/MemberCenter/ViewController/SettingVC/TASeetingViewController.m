@@ -9,6 +9,8 @@
 #import "TASeetingViewController.h"
 #import "TAReciveMessageCell.h"
 #import "TAFeedbackViewController.h"
+#import "TAYinsiShengmingViewController.h"
+#import "TAAboutUsViewController.h"
 
 @interface TASeetingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
@@ -104,9 +106,15 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 3) {
+    if(indexPath.row == 2){
+        TAYinsiShengmingViewController *yinsiVC = [TAYinsiShengmingViewController new];
+        [self.navigationController pushViewController:yinsiVC animated:YES];
+    }else if (indexPath.row == 3) {
         TAFeedbackViewController *feedVC = [TAFeedbackViewController new];
         [self.navigationController pushViewController:feedVC animated:YES];
+    }else if (indexPath.row == 4){
+        TAAboutUsViewController *usVC = [TAAboutUsViewController new];
+        [self.navigationController pushViewController:usVC animated:YES];
     }
 }
 

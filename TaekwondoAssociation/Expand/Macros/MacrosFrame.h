@@ -48,7 +48,7 @@
 #define WHITECOLOR RGB(255,255,255)
 
 
-#define HeadUrl @"http://"   //正式
+#define HeadUrl @"http://z6mngh.natappfree.cc/"
 
 //block
 #define TAWeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self;

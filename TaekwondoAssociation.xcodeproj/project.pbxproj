@@ -72,6 +72,11 @@
 		4E1301D01F0B239D000B0ED7 /* TAFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301CF1F0B239D000B0ED7 /* TAFeedbackViewController.m */; };
 		4E55C6541F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6531F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m */; };
 		4E55C6571F0C3BA200B22C45 /* WQAvastBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6561F0C3BA200B22C45 /* WQAvastBrowser.m */; };
+		4E55C65A1F0C44EF00B22C45 /* TAYinsiShengmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6591F0C44EF00B22C45 /* TAYinsiShengmingViewController.m */; };
+		4E55C65D1F0C451000B22C45 /* TAAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C65C1F0C451000B22C45 /* TAAboutUsViewController.m */; };
+		4E55C6601F0C502E00B22C45 /* TAActivityRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C65F1F0C502E00B22C45 /* TAActivityRecordViewController.m */; };
+		4E55C6641F0C542C00B22C45 /* TAMyReleaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6621F0C542C00B22C45 /* TAMyReleaseCell.m */; };
+		4E55C6651F0C542C00B22C45 /* TAMyReleaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E55C6631F0C542C00B22C45 /* TAMyReleaseCell.xib */; };
 		4EFE548D1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */; };
 		4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE548C1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m */; };
 		4EFE54911F02D200001E7A05 /* TAPersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE54901F02D200001E7A05 /* TAPersonalModel.m */; };
@@ -323,6 +328,15 @@
 		4E55C6531F0C1CAE00B22C45 /* TAUploadTaekHonorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAUploadTaekHonorViewController.m; sourceTree = "<group>"; };
 		4E55C6551F0C3BA200B22C45 /* WQAvastBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAvastBrowser.h; sourceTree = "<group>"; };
 		4E55C6561F0C3BA200B22C45 /* WQAvastBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAvastBrowser.m; sourceTree = "<group>"; };
+		4E55C6581F0C44EF00B22C45 /* TAYinsiShengmingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAYinsiShengmingViewController.h; sourceTree = "<group>"; };
+		4E55C6591F0C44EF00B22C45 /* TAYinsiShengmingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAYinsiShengmingViewController.m; sourceTree = "<group>"; };
+		4E55C65B1F0C451000B22C45 /* TAAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAboutUsViewController.h; sourceTree = "<group>"; };
+		4E55C65C1F0C451000B22C45 /* TAAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAboutUsViewController.m; sourceTree = "<group>"; };
+		4E55C65E1F0C502E00B22C45 /* TAActivityRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAActivityRecordViewController.h; sourceTree = "<group>"; };
+		4E55C65F1F0C502E00B22C45 /* TAActivityRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAActivityRecordViewController.m; sourceTree = "<group>"; };
+		4E55C6611F0C542C00B22C45 /* TAMyReleaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAMyReleaseCell.h; sourceTree = "<group>"; };
+		4E55C6621F0C542C00B22C45 /* TAMyReleaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAMyReleaseCell.m; sourceTree = "<group>"; };
+		4E55C6631F0C542C00B22C45 /* TAMyReleaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAMyReleaseCell.xib; sourceTree = "<group>"; };
 		4EFE54891F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPersonalMemberCenterViewController.h; sourceTree = "<group>"; };
 		4EFE548A1F02D1EC001E7A05 /* TAPersonalMemberCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPersonalMemberCenterViewController.m; sourceTree = "<group>"; };
 		4EFE548B1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaekwondoMemberCenterViewController.h; sourceTree = "<group>"; };
@@ -712,6 +726,9 @@
 				4E1301BE1F0AE5C4000B0ED7 /* TAActivityTimeCell.h */,
 				4E1301BF1F0AE5C4000B0ED7 /* TAActivityTimeCell.m */,
 				4E1301C01F0AE5C4000B0ED7 /* TAActivityTimeCell.xib */,
+				4E55C6611F0C542C00B22C45 /* TAMyReleaseCell.h */,
+				4E55C6621F0C542C00B22C45 /* TAMyReleaseCell.m */,
+				4E55C6631F0C542C00B22C45 /* TAMyReleaseCell.xib */,
 				4E1301CB1F0B1475000B0ED7 /* TAReleaseLessonCell.h */,
 				4E1301CC1F0B1475000B0ED7 /* TAReleaseLessonCell.m */,
 			);
@@ -725,6 +742,10 @@
 				4EFE54B71F0416A8001E7A05 /* TASeetingViewController.m */,
 				4E1301CE1F0B239D000B0ED7 /* TAFeedbackViewController.h */,
 				4E1301CF1F0B239D000B0ED7 /* TAFeedbackViewController.m */,
+				4E55C6581F0C44EF00B22C45 /* TAYinsiShengmingViewController.h */,
+				4E55C6591F0C44EF00B22C45 /* TAYinsiShengmingViewController.m */,
+				4E55C65B1F0C451000B22C45 /* TAAboutUsViewController.h */,
+				4E55C65C1F0C451000B22C45 /* TAAboutUsViewController.m */,
 			);
 			path = SettingVC;
 			sourceTree = "<group>";
@@ -782,6 +803,8 @@
 		4EFE551E1F048C20001E7A05 /* ActivityRecordVC */ = {
 			isa = PBXGroup;
 			children = (
+				4E55C65E1F0C502E00B22C45 /* TAActivityRecordViewController.h */,
+				4E55C65F1F0C502E00B22C45 /* TAActivityRecordViewController.m */,
 			);
 			path = ActivityRecordVC;
 			sourceTree = "<group>";
@@ -1685,7 +1708,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = UA92FC5P8N;
+						DevelopmentTeam = GZD44TPUDX;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -1760,6 +1783,7 @@
 				4E000BBF1F06BA8E00DB0035 /* TableViewArrow@2x.png in Resources */,
 				EF04B64D1F09DCC800C81C65 /* TANotsTableViewCell.xib in Resources */,
 				4E000BC11F06BA8E00DB0035 /* TZAssetCell.xib in Resources */,
+				4E55C6651F0C542C00B22C45 /* TAMyReleaseCell.xib in Resources */,
 				4E1301C21F0AE5C4000B0ED7 /* TAActivityTimeCell.xib in Resources */,
 				B699B8F21F0624A100D8CB95 /* MingRenTangTableViewCell.xib in Resources */,
 				B6F9B1B81F050B8E00EBCD68 /* HotGalleryTableViewCell.xib in Resources */,
@@ -1889,6 +1913,7 @@
 				4E000BC81F06BA8E00DB0035 /* TZPhotoPreviewCell.m in Sources */,
 				B61343741F0B36490089FBA4 /* MingRenTangListTableViewCell.m in Sources */,
 				B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */,
+				4E55C6641F0C542C00B22C45 /* TAMyReleaseCell.m in Sources */,
 				4E000BC31F06BA8E00DB0035 /* TZAssetCell.m in Sources */,
 				EFD232B01F06B5EC005559D8 /* IQTitleBarButtonItem.m in Sources */,
 				EF3E0CE31F0256F100729CF9 /* ConstColor.m in Sources */,
@@ -1918,6 +1943,7 @@
 				4E1301AE1F0AB558000B0ED7 /* TAMyReleaseViewController.m in Sources */,
 				B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */,
 				4E13019B1F084038000B0ED7 /* TATaekAddressCell.m in Sources */,
+				4E55C65D1F0C451000B22C45 /* TAAboutUsViewController.m in Sources */,
 				4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */,
 				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
 				B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */,
@@ -1936,6 +1962,7 @@
 				B69F07591F020454009AE263 /* LBXScanViewStyle.m in Sources */,
 				B629A88F1F0238E60013528A /* NationalTeamViewController.m in Sources */,
 				4E1301911F083910000B0ED7 /* TAEditTaekInfoViewController.m in Sources */,
+				4E55C6601F0C502E00B22C45 /* TAActivityRecordViewController.m in Sources */,
 				4E1301BA1F0AE2A3000B0ED7 /* TAReleaseActivityViewController.m in Sources */,
 				B69F07571F020454009AE263 /* LBXScanVideoZoomView.m in Sources */,
 				B69F07551F020454009AE263 /* LBXScanLineAnimation.m in Sources */,
@@ -1957,6 +1984,7 @@
 				4E1301C61F0AFCBA000B0ED7 /* UICustomDatePicker.m in Sources */,
 				4E000B8D1F06BA5F00DB0035 /* TAMemberInfoCell.m in Sources */,
 				B699B90B1F0648BB00D8CB95 /* TADotView.m in Sources */,
+				4E55C65A1F0C44EF00B22C45 /* TAYinsiShengmingViewController.m in Sources */,
 				EFD232AC1F06B5EC005559D8 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				4EFE54971F02D445001E7A05 /* WQNetWorkManager.m in Sources */,
 				4E1301C11F0AE5C4000B0ED7 /* TAActivityTimeCell.m in Sources */,
@@ -2101,7 +2129,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UA92FC5P8N;
+				DEVELOPMENT_TEAM = GZD44TPUDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
@@ -2111,7 +2139,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TaekwondoAssociation/Resource/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TaekwondoAssociation/Resource/Plist/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2144,7 +2172,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.second12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -2158,7 +2186,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UA92FC5P8N;
+				DEVELOPMENT_TEAM = GZD44TPUDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TaekwondoAssociation/Vender/ShareSDK",
@@ -2168,7 +2196,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TaekwondoAssociation/Resource/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TaekwondoAssociation/Resource/Plist/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2201,7 +2229,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.second12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";

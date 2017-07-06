@@ -39,6 +39,18 @@
     
     [self setupNav];
     [self setupTableView];
+    
+    [self test];
+    
+}
+
+-(void)test{
+    
+    [WQNetWorkManager sendPostRequestWithUrl:[NSString stringWithFormat:@"%@Center/AreaList",HeadUrl] parameters:nil success:^(NSDictionary *dic) {
+        NSLog(@"%@",dic);
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 -(void)loadView{
@@ -215,6 +227,9 @@
 #pragma mark - 选择图片
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *newPhoto = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    
+//    NSString *base64Str = [WQTools imageToBase64:[UIImage imageNamed:@"header_bg"]];
+    
     if (self.index == 1) {
         self.touxiangIcon = newPhoto;
     }else{
