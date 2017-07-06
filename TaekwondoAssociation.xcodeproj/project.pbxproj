@@ -2211,7 +2211,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.thirdgt666;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -2271,7 +2271,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.intretion.thirdgt666;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
