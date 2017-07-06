@@ -9,12 +9,14 @@
 #import "TAEditTaekAddressTableViewController.h"
 #import "TAMemberInfoCell.h"
 #import "TATaekAddressCell.h"
+#import "DQAreasView.h"
 
-@interface TAEditTaekAddressTableViewController ()
+
+@interface TAEditTaekAddressTableViewController ()<DQAreasViewDelegate>
 
 @property (nonatomic,strong) NSString *region;//区域
 @property (nonatomic,strong) UITextField *addreddTextfield;//详细地址
-
+@property (nonatomic, strong) DQAreasView *areasView;//省市区选择器
 @end
 
 @implementation TAEditTaekAddressTableViewController
@@ -23,12 +25,10 @@
     [super viewDidLoad];
     
     [self setNav];
+    [self setupTableView];
+//    [self getAddressDataList];
     
-    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];  //没有数据的话没有，有数据就有cell下面的线
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TATaekAddressCell" bundle:nil] forCellReuseIdentifier:@"addressCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TAMemberInfoCell" bundle:nil] forCellReuseIdentifier:@"infoCell"];
+    [self createPickerView];
 }
 
 
@@ -46,11 +46,30 @@
     self.navigationItem.rightBarButtonItem = okItem;
 }
 
+-(void)setupTableView{
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];  //没有数据的话没有，有数据就有cell下面的线
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TATaekAddressCell" bundle:nil] forCellReuseIdentifier:@"addressCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TAMemberInfoCell" bundle:nil] forCellReuseIdentifier:@"infoCell"];
+}
 
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+//省市区选择器出现
+-(void)showProvinceView{
+    [self.areasView startAnimationFunction];
+}
+
+//创建省市区和街道的选择器
+-(void)createPickerView{
+    self.areasView = [DQAreasView new];
+    self.areasView.delegate = self;
+}
+
+#pragma mark - 与服务器交互
+//保存地址
 -(void)saveAddress{
     
 }
@@ -82,4 +101,18 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        [self showProvinceView];
+    }
+}
+
+
+#pragma mrak - 选择省市
+-(void)clickAreasViewEnsureBtnActionAreaStr:(NSString *)str cityCode:(NSString *)codeId{
+    NSLog(@"%@   %@",str ,codeId);
+    self.region = str;
+    NSIndexPath *indexRow = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexRow] withRowAnimation:UITableViewRowAnimationNone];
+}
 @end

@@ -35,6 +35,7 @@
     
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(titleLabel.frame) + 5, 0,KTA_Screen_Width - 125, 45)];
     self.textField.font = [UIFont systemFontOfSize:15];
+    self.textField.textColor = [WQTools colorWithHexString:@"666666"];
     self.textField.placeholder = placeHolder;
     [self addSubview:self.textField];
     

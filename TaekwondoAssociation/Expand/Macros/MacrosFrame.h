@@ -49,6 +49,9 @@
 
 
 #define HeadUrl @"http://z6mngh.natappfree.cc/"
+//#define UserID @10002   //个人
+#define UserID @10003   //道馆
+
 
 //block
 #define TAWeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self;

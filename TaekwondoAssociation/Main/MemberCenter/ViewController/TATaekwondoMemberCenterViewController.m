@@ -17,24 +17,26 @@
 #import "TATaekHonorViewController.h"
 #import "TAMyReleaseViewController.h"
 #import "TAActivityRecordViewController.h"
-
+#import "TAPersonalModel.h"
 
 @interface TATaekwondoMemberCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) TAPersonalHeaderView *headerView;
 @property (nonatomic,strong) NSArray *titleArray;
 @property (nonatomic,strong) TAMemberInfoView *memberInfoView;
+@property (nonatomic,strong) TAPersonalModel *personalModel;
+
 
 @end
 
 @implementation TATaekwondoMemberCenterViewController
-
--(TAPersonalHeaderView *)headerView{
-    if (!_headerView) {
-        _headerView = [[TAPersonalHeaderView alloc] initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 200)];
-    }
-    return _headerView;
-}
+//
+//-(TAPersonalHeaderView *)headerView{
+//    if (!_headerView) {
+//        _headerView = [[TAPersonalHeaderView alloc] initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 200)];
+//    }
+//    return _headerView;
+//}
 
 -(NSArray *)titleArray{
     if (!_titleArray) {
@@ -71,6 +73,9 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.tabBarController.tabBar.hidden = NO;
+    
+    
+    [self getUserInfoFromServer];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -79,6 +84,9 @@
 }
 
 -(void)setupTableView{
+    
+    self.headerView = [[TAPersonalHeaderView alloc] initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 200) model:self.personalModel];
+    
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height + 30) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -87,6 +95,31 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"TAPersonalCell" bundle:nil] forCellReuseIdentifier:@"personCell"];
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     [self.view addSubview:self.tableView];
+}
+
+
+#pragma mark - 网络交互
+-(void)getUserInfoFromServer{
+    
+    NSDictionary *params = @{
+                             @"userID":UserID
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/MemberCenter"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        
+        if (dic[@"Data"][@"Success"]) {
+            self.personalModel = [WQManageData getPersonalModel:dic[@"Data"][@"Data"]];
+            self.headerView = [[TAPersonalHeaderView alloc] initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, 200) model:self.personalModel];
+            [self.tableView reloadData];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource

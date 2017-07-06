@@ -14,17 +14,25 @@
 
 @interface TAMyReleaseViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
-
+@property (nonatomic,strong) NSArray *dataArray; //数据数组，包括课程和活动
 @end
 
 @implementation TAMyReleaseViewController
 
+-(NSArray *)dataArray{
+    if (!_dataArray) {
+//        _dataArray = [NSArray array];
+        _dataArray = @[@[],@[]];
+    }
+    return _dataArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupNav];
     [self setupTableView];
+    [self getDataFromServer];
     
 }
 -(void)loadView{
@@ -60,6 +68,28 @@
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - 与服务器交互
+-(void)getDataFromServer{
+    NSDictionary *params = @{
+                             @"userID":UserID
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/MyPublish"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        
+        if (dic[@"Data"][@"Success"]) {
+            self.dataArray = [WQManageData getMyReleaseData:dic];
+            [self.tableView reloadData];
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+
+}
+
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -67,7 +97,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    NSArray *array = self.dataArray[section];
+    return array.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -85,10 +116,13 @@
             return cell;
         }
         else{
-            
             TAMyReleaseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"releaseCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
+            
+            NSArray *lessonArray = self.dataArray[0];
+            cell.lessonModel = lessonArray[indexPath.row - 1];
+            
             return cell;
         }
     }else{
@@ -106,6 +140,8 @@
             TAMyReleaseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"releaseCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
+            NSArray *activityArray = self.dataArray[1];
+            cell.lessonModel = activityArray[indexPath.row - 1];
             return cell;
         }
     }
