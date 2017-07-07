@@ -77,8 +77,8 @@
             if (!cell) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:strId];
             }
-            cell.textLabel.textColor = [UIColor lightGrayColor];
-            cell.detailTextLabel.textColor = [UIColor grayColor];
+            cell.textLabel.textColor = [UIColor darkGrayColor];
+            cell.detailTextLabel.textColor = [UIColor lightGrayColor];
             cell.textLabel.font = [UIFont systemFontOfSize:14];
             cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
             cell.textLabel.text = @"demo测试1";
@@ -91,10 +91,20 @@
             break;
         case 1:
         {
-            _weightInfoCell = [WeightInfoCell cellWithTableView:_tv];
+            switch (indexPath.row) {
+                case 0:
+                    _weightInfoCell = [WeightInfoCell cellWithTableView:_tv];
+                    return _weightInfoCell;
+                    break;
+                case 1:
+                    _remarkCell = [RemarkCell cellWithTableView:_tv];
+                    return _remarkCell;
+                    break;
+                default:
+                    return nil;
+                    break;
+            }
             
-            
-            return _weightInfoCell;
 
         }
             
@@ -109,7 +119,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        return 225;
+    }else{
+        return 44;
+    }
 }
 
 

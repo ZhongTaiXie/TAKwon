@@ -21,6 +21,9 @@
 #import "NSString+Util.h"
 #import "WQNetWorkManager.h"
 #import "HotPicturesViewController.h"
+#import "TAUser.h"
+#import "TALocalUser.h"
+#import "MJExtension.h"
 
 
 @interface TALoginViewController ()<UITextFieldDelegate>
@@ -358,48 +361,86 @@
 #pragma mark  登录按钮
 - (void)LoginbutAction {
     
-//    if (self.accuntTextFiled.text.length <1) {
-//        return;
-//    }
+   
     
    // 分两种情况，1.请求客户的服务器   2.请求自己的服务器
     
     if ([self.accuntTextFiled.text isdaoguan] || [self.accuntTextFiled.text ismuber]) {
-        // 请求客户服务器
+ 
+        
+        
+        
+        
+        // 1.请求客户服务器
         
         NSMutableDictionary* params = [NSMutableDictionary dictionary];
         [params setValue:_accuntTextFiled.text forKey:@"memberNo"];
         [params setValue:_passTextFiled.text forKey:@"Pwd"];
 
         
-        [WQNetWorkManager sendPostRequestWithUrl:@"http://z6mngh.natappfree.cc/Center/AreaList" parameters:nil success:^(NSDictionary *dic) {
+        [WQNetWorkManager sendPostRequestWithUrl:URL_THIRDLGON parameters:params success:^(NSDictionary *dic) {
              // 请求成功
-            NSLog(@"%@",dic);
+           NSLog(@"%@",dic);
             
-            NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
-            NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"请求返回的是：%@", jsonString);
             
-            [[UIApplication sharedAppDelegate]goToHome];
+            if ([dic[@"sign"] isEqualToString:@"0x10320001"]) {
+                [LCProgressHUD showTextOntarget:self.view string:@"会员账号错误"];
+            }else if ([dic[@"sign"] isEqualToString:@"0x10320000"]){
+                
+                  TAUser *user =[TAUser mj_objectWithKeyValues:dic[@"baseInfor"]];
+                NSLog(@"%@",user.Phone);
+                NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+                NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSLog(@"请求返回的是：%@", jsonString);
+                
+                [[UIApplication sharedAppDelegate]goToHome];
+
+            }else {
+                 [LCProgressHUD showTextOntarget:self.view string:@"登录出错"];
+            }
+            
+           
+            
             
         } failure:^(NSError *error) {
             
         }];
         
+        
+        
     }else {
- // 请求自己的服务器
+        
+        
+        
+        
+        
+ //2. 请求自己的服务器
+      
+        if (self.accuntTextFiled.text.length <1) {
+            [LCProgressHUD showTextOntarget:self.view string:@"请输入正确手机号或邮箱"];
+            return;
+        }
+        
+        if (self.passTextFiled.text.length <1) {
+            [LCProgressHUD showTextOntarget:self.view string:@"请输入密码"];
+            return;
+        }
         
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setValue:_accuntTextFiled.text forKey:@"NickName"];
     [params setValue:_passTextFiled.text forKey:@"Pwd"];
+        
+        
     [TARequestManager TARequestCompletedWithPath:URL_LONGIN Parameters:params sucee:^(NSDictionary *dic) {
         
         NSLog(@"%@",dic);
         // 登录成功
         NSDictionary* dataDic = [dic objectForKey:@"Data"];
         if ([[dataDic objectForKey:@"Success"]boolValue]) {
+            
+            TALocalUser *user =[TALocalUser mj_objectWithKeyValues:dataDic[@"Data"]];
 //            [LCProgressHUD showTextOntarget:self.view string:[dataDic objectForKey:@"Msg"]];
-
+            NSLog(@"%@",user.Phone);
             [[UIApplication sharedAppDelegate] goToHome];
         }else{
             //登录失败
@@ -417,7 +458,7 @@
 - (void)touristLoginBtnClick
 
 {
-//    [self.navigationController pushViewController:[HotPicturesViewController new] animated:YES];
+//    [self.navigationController pushViewController:[TASearchViewController new] animated:YES];
     [[UIApplication sharedAppDelegate] goToHome];
 
 }
@@ -444,6 +485,8 @@
              NSLog(@"%@",user.credential);
              NSLog(@"token=%@",user.credential.token);
              NSLog(@"nickname=%@",user.nickname);
+             NSLog(@"%@",user.rawData[@"city"]);
+             //user.rawData[@"figureurl_1"]   user.rawData[@"gender"]
              
              [[UIApplication sharedAppDelegate] goToHome];
          }

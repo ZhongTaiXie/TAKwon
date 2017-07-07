@@ -24,7 +24,14 @@ FOUNDATION_EXPORT NSString * const URL_LONGIN;
 
 FOUNDATION_EXPORT NSString * const URL_REGIST;
 
-// 更多
+// 热门图片更多
 FOUNDATION_EXPORT NSString * const URL_MROEPIC;
+
+// 客户登录接口
+FOUNDATION_EXPORT NSString * const URL_THIRDLGON;
+
+// 客户登录接口
+FOUNDATION_EXPORT NSString * const URL_FORGETPASS;
+
 
 @end
