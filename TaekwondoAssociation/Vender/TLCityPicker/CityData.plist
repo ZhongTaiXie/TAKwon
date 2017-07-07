@@ -7,7 +7,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>600280000</string>
+				<string>安吉市</string>
 				<key>city_name</key>
 				<string>安吉市</string>
 				<key>initials</key>
@@ -19,7 +19,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000090000</string>
+				<string>安康市</string>
 				<key>city_name</key>
 				<string>安康市</string>
 				<key>initials</key>
@@ -31,7 +31,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500080000</string>
+				<string>安庆市</string>
 				<key>city_name</key>
 				<string>安庆市</string>
 				<key>initials</key>
@@ -43,7 +43,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300030000</string>
+				<string>鞍山市</string>
 				<key>city_name</key>
 				<string>鞍山市</string>
 				<key>initials</key>
@@ -55,7 +55,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000050000</string>
+				<string>安阳市</string>
 				<key>city_name</key>
 				<string>安阳市</string>
 				<key>initials</key>
@@ -74,7 +74,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>2300080000</string>
+				<string>白城市</string>
 				<key>city_name</key>
 				<string>白城市</string>
 				<key>initials</key>
@@ -86,7 +86,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300060000</string>
+				<string>白山市</string>
 				<key>city_name</key>
 				<string>白山市</string>
 				<key>initials</key>
@@ -98,7 +98,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>3000040000</string>
+				<string>白银市</string>
 				<key>city_name</key>
 				<string>白银市</string>
 				<key>initials</key>
@@ -110,7 +110,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800060000</string>
+				<string>保定市</string>
 				<key>city_name</key>
 				<string>保定市</string>
 				<key>initials</key>
@@ -122,7 +122,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000030000</string>
+				<string>宝鸡市</string>
 				<key>city_name</key>
 				<string>宝鸡市</string>
 				<key>initials</key>
@@ -134,7 +134,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2500050000</string>
+				<string>北海市</string>
 				<key>city_name</key>
 				<string>北海市</string>
 				<key>initials</key>
@@ -146,7 +146,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>100010000</string>
+				<string>北京市</string>
 				<key>city_name</key>
 				<string>北京市</string>
 				<key>initials</key>
@@ -158,7 +158,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500030000</string>
+				<string>蚌埠市</string>
 				<key>city_name</key>
 				<string>蚌埠市</string>
 				<key>initials</key>
@@ -170,7 +170,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300050000</string>
+				<string>本溪市</string>
 				<key>city_name</key>
 				<string>本溪市</string>
 				<key>initials</key>
@@ -189,7 +189,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1800090000</string>
+				<string>沧州市</string>
 				<key>city_name</key>
 				<string>沧州市</string>
 				<key>initials</key>
@@ -201,7 +201,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300010000</string>
+				<string>长春市</string>
 				<key>city_name</key>
 				<string>长春市</string>
 				<key>initials</key>
@@ -213,7 +213,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1200070000</string>
+				<string>常德市</string>
 				<key>city_name</key>
 				<string>常德市</string>
 				<key>initials</key>
@@ -225,7 +225,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1200010000</string>
+				<string>长沙市</string>
 				<key>city_name</key>
 				<string>长沙市</string>
 				<key>initials</key>
@@ -237,7 +237,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700150000</string>
+				<string>常熟市</string>
 				<key>city_name</key>
 				<string>常熟市</string>
 				<key>initials</key>
@@ -249,7 +249,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600240000</string>
+				<string>长兴市</string>
 				<key>city_name</key>
 				<string>长兴市</string>
 				<key>initials</key>
@@ -261,7 +261,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100040000</string>
+				<string>长治市</string>
 				<key>city_name</key>
 				<string>长治市</string>
 				<key>initials</key>
@@ -273,7 +273,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700040000</string>
+				<string>常州市</string>
 				<key>city_name</key>
 				<string>常州市</string>
 				<key>initials</key>
@@ -285,7 +285,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500130000</string>
+				<string>巢湖市</string>
 				<key>city_name</key>
 				<string>巢湖市</string>
 				<key>initials</key>
@@ -297,7 +297,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300130000</string>
+				<string>朝阳市</string>
 				<key>city_name</key>
 				<string>朝阳市</string>
 				<key>initials</key>
@@ -309,7 +309,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300190000</string>
+				<string>潮州市</string>
 				<key>city_name</key>
 				<string>潮州市</string>
 				<key>initials</key>
@@ -321,7 +321,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800080000</string>
+				<string>承德市</string>
 				<key>city_name</key>
 				<string>承德市</string>
 				<key>initials</key>
@@ -333,7 +333,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800010000</string>
+				<string>成都市</string>
 				<key>city_name</key>
 				<string>成都市</string>
 				<key>initials</key>
@@ -345,7 +345,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500160000</string>
+				<string>池州市</string>
 				<key>city_name</key>
 				<string>池州市</string>
 				<key>initials</key>
@@ -357,7 +357,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>900010000</string>
+				<string>重庆市</string>
 				<key>city_name</key>
 				<string>重庆市</string>
 				<key>initials</key>
@@ -369,7 +369,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600340000</string>
+				<string>淳安市</string>
 				<key>city_name</key>
 				<string>淳安市</string>
 				<key>initials</key>
@@ -381,7 +381,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500100000</string>
+				<string>滁州市</string>
 				<key>city_name</key>
 				<string>滁州市</string>
 				<key>initials</key>
@@ -393,7 +393,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600120000</string>
+				<string>慈溪市</string>
 				<key>city_name</key>
 				<string>慈溪市</string>
 				<key>initials</key>
@@ -412,7 +412,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>700330000</string>
+				<string>大丰县</string>
 				<key>city_name</key>
 				<string>大丰县</string>
 				<key>initials</key>
@@ -424,7 +424,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2800130000</string>
+				<string>大理白族自治州</string>
 				<key>city_name</key>
 				<string>大理白族自治州</string>
 				<key>initials</key>
@@ -436,7 +436,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300010000</string>
+				<string>大连市</string>
 				<key>city_name</key>
 				<string>大连市</string>
 				<key>initials</key>
@@ -448,7 +448,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300060000</string>
+				<string>丹东市</string>
 				<key>city_name</key>
 				<string>丹东市</string>
 				<key>initials</key>
@@ -460,7 +460,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2600050000</string>
+				<string>儋州市</string>
 				<key>city_name</key>
 				<string>儋州市</string>
 				<key>initials</key>
@@ -472,7 +472,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100060000</string>
+				<string>大庆市</string>
 				<key>city_name</key>
 				<string>大庆市</string>
 				<key>initials</key>
@@ -484,7 +484,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100020000</string>
+				<string>大同市</string>
 				<key>city_name</key>
 				<string>大同市</string>
 				<key>initials</key>
@@ -496,7 +496,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800150000</string>
+				<string>达州市</string>
 				<key>city_name</key>
 				<string>达州市</string>
 				<key>initials</key>
@@ -508,7 +508,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000190000</string>
+				<string>登封市</string>
 				<key>city_name</key>
 				<string>登封市</string>
 				<key>initials</key>
@@ -520,7 +520,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600270000</string>
+				<string>德清市</string>
 				<key>city_name</key>
 				<string>德清市</string>
 				<key>initials</key>
@@ -532,7 +532,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800050000</string>
+				<string>德阳市</string>
 				<key>city_name</key>
 				<string>德阳市</string>
 				<key>initials</key>
@@ -544,7 +544,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400140000</string>
+				<string>德州市</string>
 				<key>city_name</key>
 				<string>德州市</string>
 				<key>initials</key>
@@ -556,7 +556,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300170000</string>
+				<string>东莞市</string>
 				<key>city_name</key>
 				<string>东莞市</string>
 				<key>initials</key>
@@ -568,7 +568,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600310000</string>
+				<string>东阳市</string>
 				<key>city_name</key>
 				<string>东阳市</string>
 				<key>initials</key>
@@ -580,7 +580,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400050000</string>
+				<string>东营市</string>
 				<key>city_name</key>
 				<string>东营市</string>
 				<key>initials</key>
@@ -592,7 +592,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300110000</string>
+				<string>敦化市</string>
 				<key>city_name</key>
 				<string>敦化市</string>
 				<key>initials</key>
@@ -611,7 +611,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>800220000</string>
+				<string>峨眉山市</string>
 				<key>city_name</key>
 				<string>峨眉山市</string>
 				<key>initials</key>
@@ -623,7 +623,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400190000</string>
+				<string>恩施市</string>
 				<key>city_name</key>
 				<string>恩施市</string>
 				<key>initials</key>
@@ -642,7 +642,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>300060000</string>
+				<string>佛山市</string>
 				<key>city_name</key>
 				<string>佛山市</string>
 				<key>initials</key>
@@ -654,7 +654,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900130000</string>
+				<string>福清市</string>
 				<key>city_name</key>
 				<string>福清市</string>
 				<key>initials</key>
@@ -666,7 +666,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300040000</string>
+				<string>抚顺市</string>
 				<key>city_name</key>
 				<string>抚顺市</string>
 				<key>initials</key>
@@ -678,7 +678,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300090000</string>
+				<string>阜新市</string>
 				<key>city_name</key>
 				<string>阜新市</string>
 				<key>initials</key>
@@ -690,7 +690,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500110000</string>
+				<string>阜阳市</string>
 				<key>city_name</key>
 				<string>阜阳市</string>
 				<key>initials</key>
@@ -702,7 +702,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600140000</string>
+				<string>富阳市</string>
 				<key>city_name</key>
 				<string>富阳市</string>
 				<key>initials</key>
@@ -714,7 +714,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900010000</string>
+				<string>福州市</string>
 				<key>city_name</key>
 				<string>福州市</string>
 				<key>initials</key>
@@ -733,7 +733,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>2400070000</string>
+				<string>赣州市</string>
 				<key>city_name</key>
 				<string>赣州市</string>
 				<key>initials</key>
@@ -745,7 +745,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000200000</string>
+				<string>巩义市</string>
 				<key>city_name</key>
 				<string>巩义市</string>
 				<key>initials</key>
@@ -757,7 +757,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800070000</string>
+				<string>广元市</string>
 				<key>city_name</key>
 				<string>广元市</string>
 				<key>initials</key>
@@ -769,7 +769,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300110000</string>
+				<string>广州市</string>
 				<key>city_name</key>
 				<string>广州市</string>
 				<key>initials</key>
@@ -781,7 +781,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2500030000</string>
+				<string>桂林市</string>
 				<key>city_name</key>
 				<string>桂林市</string>
 				<key>initials</key>
@@ -793,7 +793,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2700010000</string>
+				<string>贵阳市</string>
 				<key>city_name</key>
 				<string>贵阳市</string>
 				<key>initials</key>
@@ -812,7 +812,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1100010000</string>
+				<string>哈尔滨市</string>
 				<key>city_name</key>
 				<string>哈尔滨市</string>
 				<key>initials</key>
@@ -824,7 +824,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700310000</string>
+				<string>海安县</string>
 				<key>city_name</key>
 				<string>海安县</string>
 				<key>initials</key>
@@ -836,7 +836,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2600010000</string>
+				<string>海口市</string>
 				<key>city_name</key>
 				<string>海口市</string>
 				<key>initials</key>
@@ -848,7 +848,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700170000</string>
+				<string>海门市</string>
 				<key>city_name</key>
 				<string>海门市</string>
 				<key>initials</key>
@@ -860,7 +860,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600370000</string>
+				<string>海宁市</string>
 				<key>city_name</key>
 				<string>海宁市</string>
 				<key>initials</key>
@@ -872,7 +872,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400260000</string>
+				<string>海阳市</string>
 				<key>city_name</key>
 				<string>海阳市</string>
 				<key>initials</key>
@@ -884,7 +884,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800040000</string>
+				<string>邯郸市</string>
 				<key>city_name</key>
 				<string>邯郸市</string>
 				<key>initials</key>
@@ -896,7 +896,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600010000</string>
+				<string>杭州市</string>
 				<key>city_name</key>
 				<string>杭州市</string>
 				<key>initials</key>
@@ -908,7 +908,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000070000</string>
+				<string>汉中市</string>
 				<key>city_name</key>
 				<string>汉中市</string>
 				<key>initials</key>
@@ -920,7 +920,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000060000</string>
+				<string>鹤壁市</string>
 				<key>city_name</key>
 				<string>鹤壁市</string>
 				<key>initials</key>
@@ -932,7 +932,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500010000</string>
+				<string>合肥市</string>
 				<key>city_name</key>
 				<string>合肥市</string>
 				<key>initials</key>
@@ -944,7 +944,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100040000</string>
+				<string>鹤岗市</string>
 				<key>city_name</key>
 				<string>鹤岗市</string>
 				<key>initials</key>
@@ -956,7 +956,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100110000</string>
+				<string>黑河市</string>
 				<key>city_name</key>
 				<string>黑河市</string>
 				<key>initials</key>
@@ -968,7 +968,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800110000</string>
+				<string>衡水市</string>
 				<key>city_name</key>
 				<string>衡水市</string>
 				<key>initials</key>
@@ -980,7 +980,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1200040000</string>
+				<string>衡阳市</string>
 				<key>city_name</key>
 				<string>衡阳市</string>
 				<key>initials</key>
@@ -992,7 +992,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300140000</string>
+				<string>河源市</string>
 				<key>city_name</key>
 				<string>河源市</string>
 				<key>initials</key>
@@ -1004,7 +1004,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400170000</string>
+				<string>菏泽市</string>
 				<key>city_name</key>
 				<string>菏泽市</string>
 				<key>initials</key>
@@ -1016,7 +1016,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2200010000</string>
+				<string>呼和浩特市</string>
 				<key>city_name</key>
 				<string>呼和浩特市</string>
 				<key>initials</key>
@@ -1028,7 +1028,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300100000</string>
+				<string>桦甸市</string>
 				<key>city_name</key>
 				<string>桦甸市</string>
 				<key>initials</key>
@@ -1040,7 +1040,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700080000</string>
+				<string>淮安市</string>
 				<key>city_name</key>
 				<string>淮安市</string>
 				<key>initials</key>
@@ -1052,7 +1052,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500060000</string>
+				<string>淮北市</string>
 				<key>city_name</key>
 				<string>淮北市</string>
 				<key>initials</key>
@@ -1064,7 +1064,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1200120000</string>
+				<string>怀化市</string>
 				<key>city_name</key>
 				<string>怀化市</string>
 				<key>initials</key>
@@ -1076,7 +1076,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500040000</string>
+				<string>淮南市</string>
 				<key>city_name</key>
 				<string>淮南市</string>
 				<key>initials</key>
@@ -1088,7 +1088,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400160000</string>
+				<string>黄冈市</string>
 				<key>city_name</key>
 				<string>黄冈市</string>
 				<key>initials</key>
@@ -1100,7 +1100,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500090000</string>
+				<string>黄山市</string>
 				<key>city_name</key>
 				<string>黄山市</string>
 				<key>initials</key>
@@ -1112,7 +1112,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400020000</string>
+				<string>黄石市</string>
 				<key>city_name</key>
 				<string>黄石市</string>
 				<key>initials</key>
@@ -1124,7 +1124,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300010000</string>
+				<string>惠州市</string>
 				<key>city_name</key>
 				<string>惠州市</string>
 				<key>initials</key>
@@ -1136,7 +1136,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300140000</string>
+				<string>葫芦岛市</string>
 				<key>city_name</key>
 				<string>葫芦岛市</string>
 				<key>initials</key>
@@ -1148,7 +1148,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600050000</string>
+				<string>湖州市</string>
 				<key>city_name</key>
 				<string>湖州市</string>
 				<key>initials</key>
@@ -1167,7 +1167,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1100080000</string>
+				<string>佳木斯市</string>
 				<key>city_name</key>
 				<string>佳木斯市</string>
 				<key>initials</key>
@@ -1179,7 +1179,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600330000</string>
+				<string>建德市</string>
 				<key>city_name</key>
 				<string>建德市</string>
 				<key>initials</key>
@@ -1191,7 +1191,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300070000</string>
+				<string>江门市</string>
 				<key>city_name</key>
 				<string>江门市</string>
 				<key>initials</key>
@@ -1203,7 +1203,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700160000</string>
+				<string>江阴市</string>
 				<key>city_name</key>
 				<string>江阴市</string>
 				<key>initials</key>
@@ -1215,7 +1215,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000080000</string>
+				<string>焦作市</string>
 				<key>city_name</key>
 				<string>焦作市</string>
 				<key>initials</key>
@@ -1227,7 +1227,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600260000</string>
+				<string>嘉善市</string>
 				<key>city_name</key>
 				<string>嘉善市</string>
 				<key>initials</key>
@@ -1239,7 +1239,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600040000</string>
+				<string>嘉兴市</string>
 				<key>city_name</key>
 				<string>嘉兴市</string>
 				<key>initials</key>
@@ -1251,7 +1251,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500190000</string>
+				<string>界首市</string>
 				<key>city_name</key>
 				<string>界首市</string>
 				<key>initials</key>
@@ -1263,7 +1263,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300200000</string>
+				<string>揭阳市</string>
 				<key>city_name</key>
 				<string>揭阳市</string>
 				<key>initials</key>
@@ -1275,7 +1275,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300020000</string>
+				<string>吉林市</string>
 				<key>city_name</key>
 				<string>吉林市</string>
 				<key>initials</key>
@@ -1287,7 +1287,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400020000</string>
+				<string>济南市</string>
 				<key>city_name</key>
 				<string>济南市</string>
 				<key>initials</key>
@@ -1299,7 +1299,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100050000</string>
+				<string>晋城市</string>
 				<key>city_name</key>
 				<string>晋城市</string>
 				<key>initials</key>
@@ -1311,7 +1311,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2400020000</string>
+				<string>景德镇市</string>
 				<key>city_name</key>
 				<string>景德镇市</string>
 				<key>initials</key>
@@ -1323,7 +1323,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700250000</string>
+				<string>靖江市</string>
 				<key>city_name</key>
 				<string>靖江市</string>
 				<key>initials</key>
@@ -1335,7 +1335,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400150000</string>
+				<string>荆州市</string>
 				<key>city_name</key>
 				<string>荆州市</string>
 				<key>initials</key>
@@ -1347,7 +1347,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600070000</string>
+				<string>金华市</string>
 				<key>city_name</key>
 				<string>金华市</string>
 				<key>initials</key>
@@ -1359,7 +1359,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400080000</string>
+				<string>济宁市</string>
 				<key>city_name</key>
 				<string>济宁市</string>
 				<key>initials</key>
@@ -1371,7 +1371,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900100000</string>
+				<string>晋江市</string>
 				<key>city_name</key>
 				<string>晋江市</string>
 				<key>initials</key>
@@ -1383,7 +1383,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700260000</string>
+				<string>金坛市</string>
 				<key>city_name</key>
 				<string>金坛市</string>
 				<key>initials</key>
@@ -1395,7 +1395,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100070000</string>
+				<string>晋中市</string>
 				<key>city_name</key>
 				<string>晋中市</string>
 				<key>initials</key>
@@ -1407,7 +1407,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300070000</string>
+				<string>锦州市</string>
 				<key>city_name</key>
 				<string>锦州市</string>
 				<key>initials</key>
@@ -1419,7 +1419,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2400040000</string>
+				<string>九江市</string>
 				<key>city_name</key>
 				<string>九江市</string>
 				<key>initials</key>
@@ -1431,7 +1431,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100030000</string>
+				<string>鸡西市</string>
 				<key>city_name</key>
 				<string>鸡西市</string>
 				<key>initials</key>
@@ -1443,7 +1443,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000180000</string>
+				<string>济源市</string>
 				<key>city_name</key>
 				<string>济源市</string>
 				<key>initials</key>
@@ -1462,7 +1462,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>2000020000</string>
+				<string>开封市</string>
 				<key>city_name</key>
 				<string>开封市</string>
 				<key>initials</key>
@@ -1474,7 +1474,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2800010000</string>
+				<string>昆明市</string>
 				<key>city_name</key>
 				<string>昆明市</string>
 				<key>initials</key>
@@ -1486,7 +1486,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700220000</string>
+				<string>昆山市</string>
 				<key>city_name</key>
 				<string>昆山市</string>
 				<key>initials</key>
@@ -1505,7 +1505,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1400120000</string>
+				<string>莱芜市</string>
 				<key>city_name</key>
 				<string>莱芜市</string>
 				<key>initials</key>
@@ -1517,7 +1517,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800100000</string>
+				<string>廊坊市</string>
 				<key>city_name</key>
 				<string>廊坊市</string>
 				<key>initials</key>
@@ -1529,7 +1529,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600300000</string>
+				<string>兰溪市</string>
 				<key>city_name</key>
 				<string>兰溪市</string>
 				<key>initials</key>
@@ -1541,7 +1541,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>3000010000</string>
+				<string>兰州市</string>
 				<key>city_name</key>
 				<string>兰州市</string>
 				<key>initials</key>
@@ -1553,7 +1553,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600180000</string>
+				<string>乐清市</string>
 				<key>city_name</key>
 				<string>乐清市</string>
 				<key>initials</key>
@@ -1565,7 +1565,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800100000</string>
+				<string>乐山市</string>
 				<key>city_name</key>
 				<string>乐山市</string>
 				<key>initials</key>
@@ -1577,7 +1577,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700070000</string>
+				<string>连云港市</string>
 				<key>city_name</key>
 				<string>连云港市</string>
 				<key>initials</key>
@@ -1589,7 +1589,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400150000</string>
+				<string>聊城市</string>
 				<key>city_name</key>
 				<string>聊城市</string>
 				<key>initials</key>
@@ -1601,7 +1601,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300100000</string>
+				<string>辽阳市</string>
 				<key>city_name</key>
 				<string>辽阳市</string>
 				<key>initials</key>
@@ -1613,7 +1613,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300040000</string>
+				<string>辽源市</string>
 				<key>city_name</key>
 				<string>辽源市</string>
 				<key>initials</key>
@@ -1625,7 +1625,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2800060000</string>
+				<string>丽江市</string>
 				<key>city_name</key>
 				<string>丽江市</string>
 				<key>initials</key>
@@ -1637,7 +1637,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600360000</string>
+				<string>临安市</string>
 				<key>city_name</key>
 				<string>临安市</string>
 				<key>initials</key>
@@ -1649,7 +1649,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100100000</string>
+				<string>临汾市</string>
 				<key>city_name</key>
 				<string>临汾市</string>
 				<key>initials</key>
@@ -1661,7 +1661,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600220000</string>
+				<string>临海市</string>
 				<key>city_name</key>
 				<string>临海市</string>
 				<key>initials</key>
@@ -1673,7 +1673,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000120000</string>
+				<string>临潼市</string>
 				<key>city_name</key>
 				<string>临潼市</string>
 				<key>initials</key>
@@ -1685,7 +1685,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400130000</string>
+				<string>临沂市</string>
 				<key>city_name</key>
 				<string>临沂市</string>
 				<key>initials</key>
@@ -1697,7 +1697,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600020000</string>
+				<string>丽水市</string>
 				<key>city_name</key>
 				<string>丽水市</string>
 				<key>initials</key>
@@ -1709,7 +1709,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500140000</string>
+				<string>六安市</string>
 				<key>city_name</key>
 				<string>六安市</string>
 				<key>initials</key>
@@ -1721,7 +1721,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2500020000</string>
+				<string>柳州市</string>
 				<key>city_name</key>
 				<string>柳州市</string>
 				<key>initials</key>
@@ -1733,7 +1733,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700230000</string>
+				<string>溧阳市</string>
 				<key>city_name</key>
 				<string>溧阳市</string>
 				<key>initials</key>
@@ -1745,7 +1745,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400190000</string>
+				<string>龙口市</string>
 				<key>city_name</key>
 				<string>龙口市</string>
 				<key>initials</key>
@@ -1757,7 +1757,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900080000</string>
+				<string>龙岩市</string>
 				<key>city_name</key>
 				<string>龙岩市</string>
 				<key>initials</key>
@@ -1769,7 +1769,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000110000</string>
+				<string>漯河市</string>
 				<key>city_name</key>
 				<string>漯河市</string>
 				<key>initials</key>
@@ -1781,7 +1781,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000030000</string>
+				<string>洛阳市</string>
 				<key>city_name</key>
 				<string>洛阳市</string>
 				<key>initials</key>
@@ -1793,7 +1793,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800040000</string>
+				<string>泸州市</string>
 				<key>city_name</key>
 				<string>泸州市</string>
 				<key>initials</key>
@@ -1805,7 +1805,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100110000</string>
+				<string>吕梁市</string>
 				<key>city_name</key>
 				<string>吕梁市</string>
 				<key>initials</key>
@@ -1824,7 +1824,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1500050000</string>
+				<string>马鞍山市</string>
 				<key>city_name</key>
 				<string>马鞍山市</string>
 				<key>initials</key>
@@ -1836,7 +1836,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300090000</string>
+				<string>茂名市</string>
 				<key>city_name</key>
 				<string>茂名市</string>
 				<key>initials</key>
@@ -1848,7 +1848,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300120000</string>
+				<string>梅州市</string>
 				<key>city_name</key>
 				<string>梅州市</string>
 				<key>initials</key>
@@ -1860,7 +1860,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800060000</string>
+				<string>绵阳市</string>
 				<key>city_name</key>
 				<string>绵阳市</string>
 				<key>initials</key>
@@ -1872,7 +1872,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500210000</string>
+				<string>明光市</string>
 				<key>city_name</key>
 				<string>明光市</string>
 				<key>initials</key>
@@ -1884,7 +1884,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100100000</string>
+				<string>牡丹江市</string>
 				<key>city_name</key>
 				<string>牡丹江市</string>
 				<key>initials</key>
@@ -1903,7 +1903,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>2400010000</string>
+				<string>南昌市</string>
 				<key>city_name</key>
 				<string>南昌市</string>
 				<key>initials</key>
@@ -1915,7 +1915,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800110000</string>
+				<string>南充市</string>
 				<key>city_name</key>
 				<string>南充市</string>
 				<key>initials</key>
@@ -1927,7 +1927,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700010000</string>
+				<string>南京市</string>
 				<key>city_name</key>
 				<string>南京市</string>
 				<key>initials</key>
@@ -1939,7 +1939,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2500010000</string>
+				<string>南宁市</string>
 				<key>city_name</key>
 				<string>南宁市</string>
 				<key>initials</key>
@@ -1951,7 +1951,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900070000</string>
+				<string>南平市</string>
 				<key>city_name</key>
 				<string>南平市</string>
 				<key>initials</key>
@@ -1963,7 +1963,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700060000</string>
+				<string>南通市</string>
 				<key>city_name</key>
 				<string>南通市</string>
 				<key>initials</key>
@@ -1975,7 +1975,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000130000</string>
+				<string>南阳市</string>
 				<key>city_name</key>
 				<string>南阳市</string>
 				<key>initials</key>
@@ -1987,7 +1987,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600110000</string>
+				<string>宁波市</string>
 				<key>city_name</key>
 				<string>宁波市</string>
 				<key>initials</key>
@@ -1999,7 +1999,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900090000</string>
+				<string>宁德市</string>
 				<key>city_name</key>
 				<string>宁德市</string>
 				<key>initials</key>
@@ -2011,7 +2011,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500220000</string>
+				<string>宁国市</string>
 				<key>city_name</key>
 				<string>宁国市</string>
 				<key>initials</key>
@@ -2030,7 +2030,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1300110000</string>
+				<string>盘锦市</string>
 				<key>city_name</key>
 				<string>盘锦市</string>
 				<key>initials</key>
@@ -2042,7 +2042,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400250000</string>
+				<string>蓬莱市</string>
 				<key>city_name</key>
 				<string>蓬莱市</string>
 				<key>initials</key>
@@ -2054,7 +2054,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000040000</string>
+				<string>平顶山市</string>
 				<key>city_name</key>
 				<string>平顶山市</string>
 				<key>initials</key>
@@ -2066,7 +2066,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600380000</string>
+				<string>平湖市</string>
 				<key>city_name</key>
 				<string>平湖市</string>
 				<key>initials</key>
@@ -2078,7 +2078,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2400030000</string>
+				<string>萍乡市</string>
 				<key>city_name</key>
 				<string>萍乡市</string>
 				<key>initials</key>
@@ -2090,7 +2090,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900030000</string>
+				<string>莆田市</string>
 				<key>city_name</key>
 				<string>莆田市</string>
 				<key>initials</key>
@@ -2102,7 +2102,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000090000</string>
+				<string>濮阳市</string>
 				<key>city_name</key>
 				<string>濮阳市</string>
 				<key>initials</key>
@@ -2121,7 +2121,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>700320000</string>
+				<string>启东县</string>
 				<key>city_name</key>
 				<string>启东县</string>
 				<key>initials</key>
@@ -2133,7 +2133,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400010000</string>
+				<string>青岛市</string>
 				<key>city_name</key>
 				<string>青岛市</string>
 				<key>initials</key>
@@ -2145,7 +2145,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300160000</string>
+				<string>清远市</string>
 				<key>city_name</key>
 				<string>清远市</string>
 				<key>initials</key>
@@ -2157,7 +2157,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400220000</string>
+				<string>青州市</string>
 				<key>city_name</key>
 				<string>青州市</string>
 				<key>initials</key>
@@ -2169,7 +2169,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800030000</string>
+				<string>秦皇岛市</string>
 				<key>city_name</key>
 				<string>秦皇岛市</string>
 				<key>initials</key>
@@ -2181,7 +2181,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2600040000</string>
+				<string>琼海市</string>
 				<key>city_name</key>
 				<string>琼海市</string>
 				<key>initials</key>
@@ -2193,7 +2193,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100020000</string>
+				<string>齐齐哈尔市</string>
 				<key>city_name</key>
 				<string>齐齐哈尔市</string>
 				<key>initials</key>
@@ -2205,7 +2205,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100090000</string>
+				<string>忻州市</string>
 				<key>city_name</key>
 				<string>忻州市</string>
 				<key>initials</key>
@@ -2217,7 +2217,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900050000</string>
+				<string>泉州市</string>
 				<key>city_name</key>
 				<string>泉州市</string>
 				<key>initials</key>
@@ -2229,7 +2229,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2800020000</string>
+				<string>曲靖市</string>
 				<key>city_name</key>
 				<string>曲靖市</string>
 				<key>initials</key>
@@ -2241,7 +2241,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600080000</string>
+				<string>衢州市</string>
 				<key>city_name</key>
 				<string>衢州市</string>
 				<key>initials</key>
@@ -2260,7 +2260,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1400110000</string>
+				<string>日照市</string>
 				<key>city_name</key>
 				<string>日照市</string>
 				<key>initials</key>
@@ -2272,7 +2272,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700300000</string>
+				<string>如皋县</string>
 				<key>city_name</key>
 				<string>如皋县</string>
 				<key>initials</key>
@@ -2284,7 +2284,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600170000</string>
+				<string>瑞安市</string>
 				<key>city_name</key>
 				<string>瑞安市</string>
 				<key>initials</key>
@@ -2303,7 +2303,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>2000120000</string>
+				<string>三门峡市</string>
 				<key>city_name</key>
 				<string>三门峡市</string>
 				<key>initials</key>
@@ -2315,7 +2315,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900040000</string>
+				<string>三明市</string>
 				<key>city_name</key>
 				<string>三明市</string>
 				<key>initials</key>
@@ -2327,7 +2327,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2600020000</string>
+				<string>三亚市</string>
 				<key>city_name</key>
 				<string>三亚市</string>
 				<key>initials</key>
@@ -2339,7 +2339,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>200010000</string>
+				<string>上海市</string>
 				<key>city_name</key>
 				<string>上海市</string>
 				<key>initials</key>
@@ -2351,7 +2351,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000100000</string>
+				<string>商洛市</string>
 				<key>city_name</key>
 				<string>商洛市</string>
 				<key>initials</key>
@@ -2363,7 +2363,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000140000</string>
+				<string>商丘市</string>
 				<key>city_name</key>
 				<string>商丘市</string>
 				<key>initials</key>
@@ -2375,7 +2375,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2400110000</string>
+				<string>上饶市</string>
 				<key>city_name</key>
 				<string>上饶市</string>
 				<key>initials</key>
@@ -2387,7 +2387,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600200000</string>
+				<string>上虞市</string>
 				<key>city_name</key>
 				<string>上虞市</string>
 				<key>initials</key>
@@ -2399,7 +2399,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300050000</string>
+				<string>汕头市</string>
 				<key>city_name</key>
 				<string>汕头市</string>
 				<key>initials</key>
@@ -2411,7 +2411,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300130000</string>
+				<string>汕尾市</string>
 				<key>city_name</key>
 				<string>汕尾市</string>
 				<key>initials</key>
@@ -2423,7 +2423,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300020000</string>
+				<string>韶关市</string>
 				<key>city_name</key>
 				<string>韶关市</string>
 				<key>initials</key>
@@ -2435,7 +2435,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600060000</string>
+				<string>绍兴市</string>
 				<key>city_name</key>
 				<string>绍兴市</string>
 				<key>initials</key>
@@ -2447,7 +2447,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300020000</string>
+				<string>沈阳市</string>
 				<key>city_name</key>
 				<string>沈阳市</string>
 				<key>initials</key>
@@ -2459,7 +2459,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300210000</string>
+				<string>深圳市</string>
 				<key>city_name</key>
 				<string>深圳市</string>
 				<key>initials</key>
@@ -2471,7 +2471,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800010000</string>
+				<string>石家庄市</string>
 				<key>city_name</key>
 				<string>石家庄市</string>
 				<key>initials</key>
@@ -2483,7 +2483,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900110000</string>
+				<string>石狮市</string>
 				<key>city_name</key>
 				<string>石狮市</string>
 				<key>initials</key>
@@ -2495,7 +2495,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400030000</string>
+				<string>十堰市</string>
 				<key>city_name</key>
 				<string>十堰市</string>
 				<key>initials</key>
@@ -2507,7 +2507,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400230000</string>
+				<string>寿光市</string>
 				<key>city_name</key>
 				<string>寿光市</string>
 				<key>initials</key>
@@ -2519,7 +2519,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100050000</string>
+				<string>双鸭山市</string>
 				<key>city_name</key>
 				<string>双鸭山市</string>
 				<key>initials</key>
@@ -2531,7 +2531,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300220000</string>
+				<string>顺德区</string>
 				<key>city_name</key>
 				<string>顺德区</string>
 				<key>initials</key>
@@ -2543,7 +2543,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100060000</string>
+				<string>朔州市</string>
 				<key>city_name</key>
 				<string>朔州市</string>
 				<key>initials</key>
@@ -2555,7 +2555,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300030000</string>
+				<string>四平市</string>
 				<key>city_name</key>
 				<string>四平市</string>
 				<key>initials</key>
@@ -2567,7 +2567,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300070000</string>
+				<string>松原市</string>
 				<key>city_name</key>
 				<string>松原市</string>
 				<key>initials</key>
@@ -2579,7 +2579,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100120000</string>
+				<string>绥化市</string>
 				<key>city_name</key>
 				<string>绥化市</string>
 				<key>initials</key>
@@ -2591,7 +2591,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700130000</string>
+				<string>宿迁市</string>
 				<key>city_name</key>
 				<string>宿迁市</string>
 				<key>initials</key>
@@ -2603,7 +2603,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700110000</string>
+				<string>苏州市</string>
 				<key>city_name</key>
 				<string>苏州市</string>
 				<key>initials</key>
@@ -2622,7 +2622,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1400090000</string>
+				<string>泰安市</string>
 				<key>city_name</key>
 				<string>泰安市</string>
 				<key>initials</key>
@@ -2634,7 +2634,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700290000</string>
+				<string>太仓市</string>
 				<key>city_name</key>
 				<string>太仓市</string>
 				<key>initials</key>
@@ -2646,7 +2646,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100010000</string>
+				<string>太原市</string>
 				<key>city_name</key>
 				<string>太原市</string>
 				<key>initials</key>
@@ -2658,7 +2658,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600100000</string>
+				<string>台州市</string>
 				<key>city_name</key>
 				<string>台州市</string>
 				<key>initials</key>
@@ -2670,7 +2670,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700120000</string>
+				<string>泰州市</string>
 				<key>city_name</key>
 				<string>泰州市</string>
 				<key>initials</key>
@@ -2682,7 +2682,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800020000</string>
+				<string>唐山市</string>
 				<key>city_name</key>
 				<string>唐山市</string>
 				<key>initials</key>
@@ -2694,7 +2694,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500200000</string>
+				<string>天长市</string>
 				<key>city_name</key>
 				<string>天长市</string>
 				<key>initials</key>
@@ -2706,7 +2706,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>500010000</string>
+				<string>天津市</string>
 				<key>city_name</key>
 				<string>天津市</string>
 				<key>initials</key>
@@ -2718,7 +2718,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>3000050000</string>
+				<string>天水市</string>
 				<key>city_name</key>
 				<string>天水市</string>
 				<key>initials</key>
@@ -2730,7 +2730,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300120000</string>
+				<string>铁岭市</string>
 				<key>city_name</key>
 				<string>铁岭市</string>
 				<key>initials</key>
@@ -2742,7 +2742,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500180000</string>
+				<string>桐城市</string>
 				<key>city_name</key>
 				<string>桐城市</string>
 				<key>initials</key>
@@ -2754,7 +2754,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300050000</string>
+				<string>通化市</string>
 				<key>city_name</key>
 				<string>通化市</string>
 				<key>initials</key>
@@ -2766,7 +2766,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500070000</string>
+				<string>铜陵市</string>
 				<key>city_name</key>
 				<string>铜陵市</string>
 				<key>initials</key>
@@ -2778,7 +2778,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600320000</string>
+				<string>桐庐县</string>
 				<key>city_name</key>
 				<string>桐庐县</string>
 				<key>initials</key>
@@ -2790,7 +2790,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600250000</string>
+				<string>桐乡市</string>
 				<key>city_name</key>
 				<string>桐乡市</string>
 				<key>initials</key>
@@ -2809,7 +2809,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1400070000</string>
+				<string>潍坊市</string>
 				<key>city_name</key>
 				<string>潍坊市</string>
 				<key>initials</key>
@@ -2821,7 +2821,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400100000</string>
+				<string>威海市</string>
 				<key>city_name</key>
 				<string>威海市</string>
 				<key>initials</key>
@@ -2833,7 +2833,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000050000</string>
+				<string>渭南市</string>
 				<key>city_name</key>
 				<string>渭南市</string>
 				<key>initials</key>
@@ -2845,7 +2845,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600230000</string>
+				<string>温岭市</string>
 				<key>city_name</key>
 				<string>温岭市</string>
 				<key>initials</key>
@@ -2857,7 +2857,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600030000</string>
+				<string>温州市</string>
 				<key>city_name</key>
 				<string>温州市</string>
 				<key>initials</key>
@@ -2869,7 +2869,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400010000</string>
+				<string>武汉市</string>
 				<key>city_name</key>
 				<string>武汉市</string>
 				<key>initials</key>
@@ -2881,7 +2881,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500020000</string>
+				<string>芜湖市</string>
 				<key>city_name</key>
 				<string>芜湖市</string>
 				<key>initials</key>
@@ -2893,7 +2893,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>3300010000</string>
+				<string>乌鲁木齐市</string>
 				<key>city_name</key>
 				<string>乌鲁木齐市</string>
 				<key>initials</key>
@@ -2905,7 +2905,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700210000</string>
+				<string>无锡市</string>
 				<key>city_name</key>
 				<string>无锡市</string>
 				<key>initials</key>
@@ -2917,7 +2917,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1900120000</string>
+				<string>武夷山</string>
 				<key>city_name</key>
 				<string>武夷山</string>
 				<key>initials</key>
@@ -2936,7 +2936,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1900020000</string>
+				<string>厦门市</string>
 				<key>city_name</key>
 				<string>厦门市</string>
 				<key>initials</key>
@@ -2948,7 +2948,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000010000</string>
+				<string>西安市</string>
 				<key>city_name</key>
 				<string>西安市</string>
 				<key>initials</key>
@@ -2960,7 +2960,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1200030000</string>
+				<string>湘潭市</string>
 				<key>city_name</key>
 				<string>湘潭市</string>
 				<key>initials</key>
@@ -2972,7 +2972,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400130000</string>
+				<string>襄阳市</string>
 				<key>city_name</key>
 				<string>襄阳市</string>
 				<key>initials</key>
@@ -2984,7 +2984,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400140000</string>
+				<string>咸宁市</string>
 				<key>city_name</key>
 				<string>咸宁市</string>
 				<key>initials</key>
@@ -2996,7 +2996,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000040000</string>
+				<string>咸阳市</string>
 				<key>city_name</key>
 				<string>咸阳市</string>
 				<key>initials</key>
@@ -3008,7 +3008,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400080000</string>
+				<string>孝感市</string>
 				<key>city_name</key>
 				<string>孝感市</string>
 				<key>initials</key>
@@ -3020,7 +3020,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600390000</string>
+				<string>萧山市</string>
 				<key>city_name</key>
 				<string>萧山市</string>
 				<key>initials</key>
@@ -3032,7 +3032,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1800050000</string>
+				<string>邢台市</string>
 				<key>city_name</key>
 				<string>邢台市</string>
 				<key>initials</key>
@@ -3044,7 +3044,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000230000</string>
+				<string>荥阳市</string>
 				<key>city_name</key>
 				<string>荥阳市</string>
 				<key>initials</key>
@@ -3056,7 +3056,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000220000</string>
+				<string>新密市</string>
 				<key>city_name</key>
 				<string>新密市</string>
 				<key>initials</key>
@@ -3068,7 +3068,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000070000</string>
+				<string>新乡市</string>
 				<key>city_name</key>
 				<string>新乡市</string>
 				<key>initials</key>
@@ -3080,7 +3080,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000150000</string>
+				<string>信阳市</string>
 				<key>city_name</key>
 				<string>信阳市</string>
 				<key>initials</key>
@@ -3092,7 +3092,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000210000</string>
+				<string>新郑市</string>
 				<key>city_name</key>
 				<string>新郑市</string>
 				<key>initials</key>
@@ -3104,7 +3104,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2800120000</string>
+				<string>西双版纳傣族自治州</string>
 				<key>city_name</key>
 				<string>西双版纳傣族自治州</string>
 				<key>initials</key>
@@ -3116,7 +3116,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1500170000</string>
+				<string>宣城市</string>
 				<key>city_name</key>
 				<string>宣城市</string>
 				<key>initials</key>
@@ -3128,7 +3128,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2000100000</string>
+				<string>许昌市</string>
 				<key>city_name</key>
 				<string>许昌市</string>
 				<key>initials</key>
@@ -3140,7 +3140,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700030000</string>
+				<string>徐州市</string>
 				<key>city_name</key>
 				<string>徐州市</string>
 				<key>initials</key>
@@ -3159,7 +3159,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>1000060000</string>
+				<string>延安市</string>
 				<key>city_name</key>
 				<string>延安市</string>
 				<key>initials</key>
@@ -3171,7 +3171,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300090000</string>
+				<string>延边朝鲜族自治州</string>
 				<key>city_name</key>
 				<string>延边朝鲜族自治州</string>
 				<key>initials</key>
@@ -3183,7 +3183,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700090000</string>
+				<string>盐城市</string>
 				<key>city_name</key>
 				<string>盐城市</string>
 				<key>initials</key>
@@ -3195,7 +3195,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300150000</string>
+				<string>阳江市</string>
 				<key>city_name</key>
 				<string>阳江市</string>
 				<key>initials</key>
@@ -3207,7 +3207,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100030000</string>
+				<string>阳泉市</string>
 				<key>city_name</key>
 				<string>阳泉市</string>
 				<key>initials</key>
@@ -3219,7 +3219,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2500160000</string>
+				<string>阳朔市</string>
 				<key>city_name</key>
 				<string>阳朔市</string>
 				<key>initials</key>
@@ -3231,7 +3231,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700100000</string>
+				<string>扬州市</string>
 				<key>city_name</key>
 				<string>扬州市</string>
 				<key>initials</key>
@@ -3243,7 +3243,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2300020001</string>
+				<string>延吉市</string>
 				<key>city_name</key>
 				<string>延吉市</string>
 				<key>initials</key>
@@ -3255,7 +3255,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000110000</string>
+				<string>阎良市</string>
 				<key>city_name</key>
 				<string>阎良市</string>
 				<key>initials</key>
@@ -3267,7 +3267,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400060000</string>
+				<string>烟台市</string>
 				<key>city_name</key>
 				<string>烟台市</string>
 				<key>initials</key>
@@ -3279,7 +3279,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1400200000</string>
+				<string>兖州市</string>
 				<key>city_name</key>
 				<string>兖州市</string>
 				<key>initials</key>
@@ -3291,7 +3291,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>800130000</string>
+				<string>宜宾市</string>
 				<key>city_name</key>
 				<string>宜宾市</string>
 				<key>initials</key>
@@ -3303,7 +3303,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>400040000</string>
+				<string>宜昌市</string>
 				<key>city_name</key>
 				<string>宜昌市</string>
 				<key>initials</key>
@@ -3315,7 +3315,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1100070000</string>
+				<string>伊春市</string>
 				<key>city_name</key>
 				<string>伊春市</string>
 				<key>initials</key>
@@ -3327,7 +3327,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>3200010000</string>
+				<string>银川市</string>
 				<key>city_name</key>
 				<string>银川市</string>
 				<key>initials</key>
@@ -3339,7 +3339,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1300080000</string>
+				<string>营口市</string>
 				<key>city_name</key>
 				<string>营口市</string>
 				<key>initials</key>
@@ -3351,7 +3351,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600130000</string>
+				<string>义乌市</string>
 				<key>city_name</key>
 				<string>义乌市</string>
 				<key>initials</key>
@@ -3363,7 +3363,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700270000</string>
+				<string>宜兴市</string>
 				<key>city_name</key>
 				<string>宜兴市</string>
 				<key>initials</key>
@@ -3375,7 +3375,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>700240000</string>
+				<string>仪征市</string>
 				<key>city_name</key>
 				<string>仪征市</string>
 				<key>initials</key>
@@ -3387,7 +3387,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600290000</string>
+				<string>永康市</string>
 				<key>city_name</key>
 				<string>永康市</string>
 				<key>initials</key>
@@ -3399,7 +3399,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1200060000</string>
+				<string>岳阳市</string>
 				<key>city_name</key>
 				<string>岳阳市</string>
 				<key>initials</key>
@@ -3411,7 +3411,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600350000</string>
+				<string>余杭市</string>
 				<key>city_name</key>
 				<string>余杭市</string>
 				<key>initials</key>
@@ -3423,7 +3423,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>1000080000</string>
+				<string>榆林市</string>
 				<key>city_name</key>
 				<string>榆林市</string>
 				<key>initials</key>
@@ -3435,7 +3435,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2500090000</string>
+				<string>玉林市</string>
 				<key>city_name</key>
 				<string>玉林市</string>
 				<key>initials</key>
@@ -3447,7 +3447,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2100080000</string>
+				<string>运城市</string>
 				<key>city_name</key>
 				<string>运城市</string>
 				<key>initials</key>
@@ -3459,7 +3459,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>300030000</string>
+				<string>云浮市</string>
 				<key>city_name</key>
 				<string>云浮市</string>
 				<key>initials</key>
@@ -3471,7 +3471,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>2800030000</string>
+				<string>玉溪市</string>
 				<key>city_name</key>
 				<string>玉溪市</string>
 				<key>initials</key>
@@ -3483,7 +3483,7 @@
 			</dict>
 			<dict>
 				<key>city_key</key>
-				<string>600190000</string>
+				<string>余姚市</string>
 				<key>city_name</key>
 				<string>余姚市</string>
 				<key>initials</key>
@@ -3504,7 +3504,7 @@
 		<array>
 			<dict>
 				<key>city_key</key>
-				<string>700280000</string>
+				<string>张家港市</string>
 				<key>city_name</key>
 				<string>张家港市</string>
 				<key>initials</key>
