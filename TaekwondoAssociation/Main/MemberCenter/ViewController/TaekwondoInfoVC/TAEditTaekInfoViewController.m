@@ -69,7 +69,7 @@
 
 -(void)ok{
     if(self.index == 1){  //道馆名称
-        if ([WQTools isBlankString:self.textField.text]) {
+        if (![WQTools isBlankString:self.textField.text]) {
             //是正确道馆名称
             [self saveName];
         }else{
@@ -79,20 +79,25 @@
     }else if (self.index == 2){   //手机号
         if ([WQTools isValidateMobile:self.textField.text]) {
             //是正确的手机号格式
-            NSLog(@"是正确的手机号格式");
+            [self savePhoneNum];
         }else{
-            NSLog(@"bu是正确的手机号格式");
+            [MBProgressHUD showError:@"请输入正确的手机号"];
         }
     }else if(self.index == 3){  //邮箱
         if ([WQTools isValidateEmail:self.textField.text]) {
             //是正确的邮箱格式
-            NSLog(@"是正确的邮箱格式");
+            [self saveEmail];
         }else{
-            NSLog(@"bu是正确的邮箱格式");
+            [MBProgressHUD showError:@"请输入正确的邮箱"];
         }
+    }else if (self.index == 4){   //营业时间
+        [self saveBusinessHours];
+    }else{   //道馆电话
+        [self savePhone];
     }
 }
 
+#pragma mark - 与服务器交互
 //保存道馆名称
 -(void)saveName{
     
@@ -119,7 +124,102 @@
 
 }
 
+//保存手机号
+-(void)savePhoneNum{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"正在保存...";
+    NSDictionary *params = @{
+                             @"userID":UserID,
+                             @"TelPhone":self.textField.text
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        [hud hideAnimated:YES];
+        if (dic[@"Data"][@"Success"]) {
+            [MBProgressHUD showSuccess:@"保存成功"];
+            [self cancel];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+}
 
+//保存邮箱
+-(void)saveEmail{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"正在保存...";
+    NSDictionary *params = @{
+                             @"userID":UserID,
+                             @"Email":self.textField.text
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        [hud hideAnimated:YES];
+        if (dic[@"Data"][@"Success"]) {
+            [MBProgressHUD showSuccess:@"保存成功"];
+            [self cancel];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+}
+
+//保存营业时间
+-(void)saveBusinessHours{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"正在保存...";
+    NSDictionary *params = @{
+                             @"userID":UserID,
+                             @"BusinessHours":self.textField.text
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        [hud hideAnimated:YES];
+        if (dic[@"Data"][@"Success"]) {
+            [MBProgressHUD showSuccess:@"保存成功"];
+            [self cancel];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+}
+
+//保存道馆电话
+-(void)savePhone{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"正在保存...";
+    NSDictionary *params = @{
+                             @"userID":UserID,
+                             @"Phone":self.textField.text
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        [hud hideAnimated:YES];
+        if (dic[@"Data"][@"Success"]) {
+            [MBProgressHUD showSuccess:@"保存成功"];
+            [self cancel];
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+}
+
+#pragma mark - UITextFieldDelegate
 //如果输入超过规定的字数11，就不再让输入
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     if (self.index == 2) {//输入手机号

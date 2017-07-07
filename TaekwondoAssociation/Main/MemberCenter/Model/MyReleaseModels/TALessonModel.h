@@ -11,8 +11,12 @@
 @interface TALessonModel : NSObject
 
 @property (nonatomic,strong) NSNumber *Id;
-@property (nonatomic,strong) NSString *content;
+@property (nonatomic,strong) NSString *title;
+@property (nonatomic,strong) NSString *Price;
 @property (nonatomic,strong) NSString *CreatedTime;
+@property (nonatomic,strong) NSString *StarTime;
+@property (nonatomic,strong) NSString *EndTime;
+
 
 +(instancetype)initTALessonModelWithDic:(NSDictionary *)dic;
 

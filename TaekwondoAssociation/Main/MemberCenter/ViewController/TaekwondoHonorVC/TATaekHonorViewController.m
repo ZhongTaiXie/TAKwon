@@ -76,6 +76,12 @@
     [self.navigationController pushViewController:uploadVC animated:YES];
 }
 
+#pragma mark - 与服务器交互
+//获取道馆荣誉
+-(void)getTaekHonorData{
+    
+}
+
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

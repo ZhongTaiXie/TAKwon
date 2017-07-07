@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TATaekInfoModel.h"
+
 
 @interface TATaekIntroduceViewController : UIViewController
+
+@property (nonatomic,strong) TATaekInfoModel *model;
 
 @end

@@ -50,6 +50,7 @@
 		4E000BF61F07112D00DB0035 /* TAGongGaoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BF41F07112D00DB0035 /* TAGongGaoCollectionCell.xib */; };
 		4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BFD1F07136600DB0035 /* TAOnePicCollcetionCell.m */; };
 		4E000C001F07136600DB0035 /* TAOnePicCollcetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BFE1F07136600DB0035 /* TAOnePicCollcetionCell.xib */; };
+		4E113E431F101337005794F2 /* SYDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E113E421F101337005794F2 /* SYDatePicker.m */; };
 		4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E13018D1F0830F1000B0ED7 /* TATaekwondoInfoViewController.m */; };
 		4E1301911F083910000B0ED7 /* TAEditTaekInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301901F083910000B0ED7 /* TAEditTaekInfoViewController.m */; };
 		4E1301971F083E34000B0ED7 /* TAEditTaekAddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301961F083E34000B0ED7 /* TAEditTaekAddressTableViewController.m */; };
@@ -144,6 +145,7 @@
 		AF8872B71F0E2E1F0071DD01 /* UIView+JKPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872A81F0E2E1F0071DD01 /* UIView+JKPicker.m */; };
 		AFDA065D1F0E5C02008C987A /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FF1F0648BB00D8CB95 /* TADotView.m */; };
 		AFDA065E1F0E5C11008C987A /* TAYinsiShengmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6591F0C44EF00B22C45 /* TAYinsiShengmingViewController.m */; };
+		AFDA06611F0F353A008C987A /* ApplyTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA06601F0F353A008C987A /* ApplyTextFieldCell.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -360,6 +362,8 @@
 		4E000BFC1F07136600DB0035 /* TAOnePicCollcetionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAOnePicCollcetionCell.h; sourceTree = "<group>"; };
 		4E000BFD1F07136600DB0035 /* TAOnePicCollcetionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAOnePicCollcetionCell.m; sourceTree = "<group>"; };
 		4E000BFE1F07136600DB0035 /* TAOnePicCollcetionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAOnePicCollcetionCell.xib; sourceTree = "<group>"; };
+		4E113E411F101337005794F2 /* SYDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDatePicker.h; sourceTree = "<group>"; };
+		4E113E421F101337005794F2 /* SYDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDatePicker.m; sourceTree = "<group>"; };
 		4E13018C1F0830F1000B0ED7 /* TATaekwondoInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaekwondoInfoViewController.h; sourceTree = "<group>"; };
 		4E13018D1F0830F1000B0ED7 /* TATaekwondoInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaekwondoInfoViewController.m; sourceTree = "<group>"; };
 		4E13018F1F083910000B0ED7 /* TAEditTaekInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAEditTaekInfoViewController.h; sourceTree = "<group>"; };
@@ -535,6 +539,8 @@
 		AF8872A61F0E2E1F0071DD01 /* PhotoAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumManager.m; sourceTree = "<group>"; };
 		AF8872A71F0E2E1F0071DD01 /* UIView+JKPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKPicker.h"; sourceTree = "<group>"; };
 		AF8872A81F0E2E1F0071DD01 /* UIView+JKPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKPicker.m"; sourceTree = "<group>"; };
+		AFDA065F1F0F353A008C987A /* ApplyTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyTextFieldCell.h; sourceTree = "<group>"; };
+		AFDA06601F0F353A008C987A /* ApplyTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyTextFieldCell.m; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
 		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
@@ -1574,6 +1580,8 @@
 				AF8872461F0E0D220071DD01 /* TrainingContentCell.m */,
 				AF8872481F0E1F930071DD01 /* PhotosTableViewCell.h */,
 				AF8872491F0E1F930071DD01 /* PhotosTableViewCell.m */,
+				AFDA065F1F0F353A008C987A /* ApplyTextFieldCell.h */,
+				AFDA06601F0F353A008C987A /* ApplyTextFieldCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1805,6 +1813,8 @@
 				AF22AFA61F064964003582EF /* LCProgressHUD.m */,
 				AF8872761F0E22240071DD01 /* MBProgressHUD+MJ.h */,
 				AF8872771F0E22240071DD01 /* MBProgressHUD+MJ.m */,
+				4E113E411F101337005794F2 /* SYDatePicker.h */,
+				4E113E421F101337005794F2 /* SYDatePicker.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2397,6 +2407,7 @@
 				AF8872B61F0E2E1F0071DD01 /* PhotoAlbumManager.m in Sources */,
 				4E13019F1F0846BE000B0ED7 /* TATaekIntroduceViewController.m in Sources */,
 				EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */,
+				4E113E431F101337005794F2 /* SYDatePicker.m in Sources */,
 				EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */,
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
 				EF29D5EE1F0E2C710034E1F8 /* TALocalUser.m in Sources */,
@@ -2435,6 +2446,7 @@
 				EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */,
 				B61343781F0B66C10089FBA4 /* SearchResultViewController.m in Sources */,
 				4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */,
+				AFDA06611F0F353A008C987A /* ApplyTextFieldCell.m in Sources */,
 				EFD232AE1F06B5EC005559D8 /* IQBarButtonItem.m in Sources */,
 				AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */,
 				B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */,

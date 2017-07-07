@@ -39,7 +39,15 @@
         self.backView.backgroundColor = [UIColor whiteColor];
         self.backView.frame = CGRectMake(0, KTA_Screen_Height, KTA_Screen_Width, 260);
         [self addSubview:self.backView];
-        [self getDataFromServer];//获取地区字典数据
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSDictionary *dic = [userDefaults objectForKey:@"cityListJson"];
+        if (dic) {
+            [self getProviencesArrayByDic:dic];
+        }else{
+            [self getDataFromServer];//获取地区字典数据
+        }
+        
         self.hidden = YES;
     }
     return self;
@@ -51,6 +59,10 @@
     [WQNetWorkManager sendPostRequestWithUrl:url parameters:nil success:^(NSDictionary *dic) {
         
         if (dic[@"Data"][@"Success"]) {
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            [userDefaults setObject:dic forKey:@"cityListJson"];
+            [userDefaults synchronize];
+            
             [self getProviencesArrayByDic:dic[@"Data"][@"Data"]];
         }else{
             [MBProgressHUD showError:dic[@"error"][@"info"]];
@@ -281,7 +293,7 @@
     
     [self CloseAnimationFunction];
     if ([self.delegate respondsToSelector:@selector(clickAreasViewEnsureBtnActionAreaStr:cityCode:)]) {
-        [self.delegate clickAreasViewEnsureBtnActionAreaStr:[NSString stringWithFormat:@"%@ %@ %@",provincemodel.Name,cityModel.Name,areaModel.Name] cityCode:[NSString stringWithFormat:@"%@",areaModel.Id]];
+        [self.delegate clickAreasViewEnsureBtnActionAreaStr:[NSString stringWithFormat:@"%@%@%@",provincemodel.Name,cityModel.Name,areaModel.Name] cityCode:[NSString stringWithFormat:@"%@",areaModel.Id]];
     }
 }
 - (void)startAnimationFunction{

@@ -8,6 +8,14 @@
 
 #import "TAMemberIconCell.h"
 
+@interface TAMemberIconCell()
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+
+
+@end
+
+
 @implementation TAMemberIconCell
 
 - (void)awakeFromNib {
@@ -19,6 +27,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(void)setIconImage:(UIImage *)iconImage{
+    _iconImage = iconImage;
+    self.iconImageView.image = iconImage;
 }
 
 @end

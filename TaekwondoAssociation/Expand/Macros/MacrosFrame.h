@@ -50,7 +50,7 @@
 #define WHITECOLOR RGB(255,255,255)
 
 
-#define HeadUrl @"http://z6mngh.natappfree.cc/"
+#define HeadUrl @"http://d2p7pk.natappfree.cc/"
 //#define UserID @10002   //个人
 #define UserID @10003   //道馆
 

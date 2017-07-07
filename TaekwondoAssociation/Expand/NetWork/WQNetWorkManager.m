@@ -37,7 +37,7 @@
     [manager POST:urlStr parameters:data progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //        NSLog(@"=========%ld",error.code);
+                NSLog(@"=========%ld",error.code);
         failure(error);
     }];
 }
