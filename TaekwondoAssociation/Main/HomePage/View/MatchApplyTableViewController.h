@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TABaseViewController.h"
 #import "WeightInfoCell.h"
+#import "RemarkCell.h"
 
 @interface MatchApplyTableViewController :TABaseViewController
 
@@ -16,5 +17,6 @@
 @property (nonatomic, strong) UILabel* headLabel;
 
 @property (nonatomic, strong) WeightInfoCell* weightInfoCell;
+@property (nonatomic, strong) RemarkCell* remarkCell;
 
 @end

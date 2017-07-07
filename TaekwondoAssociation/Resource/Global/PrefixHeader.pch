@@ -14,6 +14,9 @@
 #import "MacrosFrame.h"
 #import "WQTools.h"
 #import "TAURL.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#import "UIView+CDViewAdditions.h"
 #import "MBProgressHUD+KR.h"
 #import "WQManageData.h"
 #import <UIImageView+WebCache.h>

@@ -56,8 +56,22 @@
     [self.tableView registerClass:[TLCityHeaderView class] forHeaderFooterViewReuseIdentifier:@"TLCityHeaderView"];
     self.tableView.sectionIndexColor = RGB(0, 125, 251);
 }
-
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];//设置状态栏字体为黑色
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];//设置状态栏字体为白色
+}
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    
+//    return UIStatusBarStyleLightContent;
+//    
+//}
 #pragma mark UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.data.count + 3;

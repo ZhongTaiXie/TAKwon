@@ -51,7 +51,7 @@
     // 右边label
     _rightLb = [[UILabel alloc] initWithFrame:CGRectMake(KTA_Screen_Width - 70, 0, 60, 44)];
     _rightLb.font = [UIFont systemFontOfSize:14];
-    _rightLb.textColor = [UIColor grayColor];
+    _rightLb.textColor = [UIColor darkGrayColor];
     NSString* str = @"＊(必填)";
     NSMutableAttributedString* attStr = [[NSMutableAttributedString alloc] initWithString:str];
     [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:[str rangeOfString:@"＊"]];
