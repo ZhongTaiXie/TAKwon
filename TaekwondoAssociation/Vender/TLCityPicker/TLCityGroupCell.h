@@ -15,8 +15,10 @@
 @property (nonatomic, assign) id<TLCityGroupCellDelegate>delegate;
 
 @property (nonatomic, strong) NSString *title;
+//@property (nonatomic, strong) NSString *locationTitle;
 
 @property (nonatomic, strong) NSArray *cityArray;
+@property (nonatomic, strong) NSArray *locationArray;
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 + (CGFloat) getCellHeightOfCityArray:(NSArray *)cityArray;
 
