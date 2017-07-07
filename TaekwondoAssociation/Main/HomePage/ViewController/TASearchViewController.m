@@ -80,7 +80,8 @@
 - (UIButton *)backBut {
     
     if (_backBut == nil) {
-        _backBut = [[UIButton alloc]initWithFrame:CGRectMake(18, 31, 20, 20)];
+        _backBut = [[UIButton alloc]initWithFrame:CGRectMake(18, 28, 26, 26)];
+        
         [_backBut setBackgroundImage:[UIImage imageNamed:@"backitem"] forState:(UIControlStateNormal)];
         [_backBut addTarget:self action:@selector(backtouAction) forControlEvents:(UIControlEventTouchUpInside)];
     }
