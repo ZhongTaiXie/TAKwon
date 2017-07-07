@@ -262,14 +262,14 @@
             photoView.width = (kDeviceWidth-40)/2;
             photoView.height = (kDeviceWidth-40)/2;
             photoView.x = (i % maxCols) * (photoView.width + picline);
-            photoView.y = (i / maxCols) * (photoView.height + picline);
+            photoView.y = (i / maxCols) * (photoView.height + picline) + 34;
         }else if (count == 4&&pic != 0){
             EditImageView *photoView = self.subviews[i];
             photoView.width = (kDeviceWidth-40)/3;
             photoView.height = (kDeviceWidth-40)/3;
             
             photoView.x = (i % maxCols) * (photoView.width + picline);
-            photoView.y = (i / maxCols) * (photoView.height + picline);
+            photoView.y = (i / maxCols) * (photoView.height + picline) + 34;
         }else{
         
         EditImageView *photoView = self.subviews[i];
@@ -277,7 +277,7 @@
         photoView.height = (kDeviceWidth-40-pic)/3;
         
         photoView.x = (i % maxCols) * (photoView.width + picline);
-        photoView.y = (i / maxCols) * (photoView.height + picline);
+        photoView.y = (i / maxCols) * (photoView.height + picline) + 34;
         }
         
     }

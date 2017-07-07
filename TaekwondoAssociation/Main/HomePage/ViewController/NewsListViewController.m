@@ -8,8 +8,8 @@
 
 #import "NewsListViewController.h"
 
-@interface NewsListViewController ()
 
+@interface NewsListViewController ()
 @end
 
 @implementation NewsListViewController
@@ -24,14 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    CLLocationManager *locManager = [[CLLocationManager alloc] init];
+//    locManager.delegate = self;
+//    [locManager startUpdatingLocation];
+    [self loadWebUrl:@"http://59u3uk.natappfree.cc/h5/news/newsList.html"];
     
-    [self loadWebUrl:@"http://p5xxdn.natappfree.cc/h5/news/newsList.html"];
 }
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
-    self.tabBarController.tabBar.hidden = NO;
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:NO animated:NO];
+//    self.tabBarController.tabBar.hidden = NO;
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

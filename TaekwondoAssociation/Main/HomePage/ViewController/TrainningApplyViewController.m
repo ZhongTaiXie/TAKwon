@@ -21,6 +21,7 @@
 @property (nonatomic, strong) PhotosTableViewCell* photosTableViewCell;
 @property (nonatomic, strong) PhotosTableViewCell* photosMediaPackCell;
 @property (nonatomic, strong) NSMutableArray* imageArray;
+@property (nonatomic, strong) NSMutableArray* keyDataArray;
 @end
 
 @implementation TrainningApplyViewController
@@ -48,6 +49,9 @@
     
     // 设置头部label
     [self createHeadLabel];
+    
+    _keyDataArray = [NSMutableArray array];
+    [_keyDataArray addObjectsFromArray:@[@[@"个人会员编号:",@"验证码:",@"中文姓名:",@"性别:",@"出生日期:",@"身份证编号:"],@[@"国籍:＊",@"所属省市:＊",@"所在单位/道馆:＊",@"培训内容:＊",@"联系电话:＊",@"联系地址:＊",@"上传身份证正反面",@"备注:"]]];
     
     _imageArray = [NSMutableArray array];
     [_imageArray addObject:[UIImage imageNamed:@"upload"]];
@@ -102,7 +106,7 @@
             cell.detailTextLabel.textColor = [UIColor lightGrayColor];
             cell.textLabel.font = [UIFont systemFontOfSize:14];
             cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-            cell.textLabel.text = @"demo测试1";
+            cell.textLabel.text = _keyDataArray[indexPath.section][indexPath.row];
             cell.detailTextLabel.text = @"demo测试2";
             
             return cell;
@@ -145,7 +149,7 @@
                     cell.textLabel.font = [UIFont systemFontOfSize:14];
                     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
                     
-                    NSString* ColorStr = @"demo测试3:＊";
+                    NSString* ColorStr = _keyDataArray[indexPath.section][indexPath.row];
                     NSMutableAttributedString* attStr = [[NSMutableAttributedString alloc] initWithString:ColorStr];
                     [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:[ColorStr rangeOfString:@"＊"]];
                     cell.textLabel.attributedText = attStr;
@@ -174,7 +178,7 @@
         return 225;
     }
     else if (indexPath.section == 1 && indexPath.row == 6){
-        return 150;
+        return 200;
     }
     else{
         return 44;

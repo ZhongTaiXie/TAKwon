@@ -12,9 +12,12 @@
 #import "TLCityGroupCell.h"
 #import "IQKeyboardManager.h"
 #import "WXCommonViewClass.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface TLCityPickerController () <TLCityGroupCellDelegate, TLSearchResultControllerDelegate>
-
+@interface TLCityPickerController () <TLCityGroupCellDelegate, TLSearchResultControllerDelegate,CLLocationManagerDelegate>
+{
+    CLLocationManager *_locationManager;
+}
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) TLCityPickerSearchResultController *searchResultVC;
 
@@ -32,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self startLocation];
     [self.navigationItem setTitle:@"城市选择"];
     [self.tableView setTableHeaderView:self.searchController.searchBar];
 //    UIBarButtonItem *cancelBarButton = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonDown:)];
@@ -67,6 +70,131 @@
     [super viewWillDisappear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];//设置状态栏字体为白色
 }
+#pragma mark - public
+
+- (void)startLocation
+{
+    if([CLLocationManager locationServicesEnabled]){
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _locationManager.distanceFilter = 5;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;//kCLLocationAccuracyBest;
+        if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+            [_locationManager requestWhenInUseAuthorization];
+        }
+        [_locationManager startUpdatingLocation];
+    }
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+
+{
+    
+    CLLocation *newLocation = locations[0];
+    
+    CLLocationCoordinate2D oldCoordinate = newLocation.coordinate;
+    
+    NSLog(@"旧的经度：%f,旧的纬度：%f",oldCoordinate.longitude,oldCoordinate.latitude);
+    
+    
+    
+    [manager stopUpdatingLocation];
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+    
+    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray<CLPlacemark *> *_Nullable placemarks, NSError * _Nullable error) {
+        
+        
+        
+        for (CLPlacemark *place in placemarks) {
+            
+            NSLog(@"name,%@",place.name);                      // 位置名
+            
+            NSLog(@"thoroughfare,%@",place.thoroughfare);      // 街道
+            
+            NSLog(@"subThoroughfare,%@",place.subThoroughfare);// 子街道
+//            _localCityData = [[NSMutableArray alloc]initWithObjects:place.locality, nil];
+//            [self.tableView reloadData];
+            
+            
+            
+            
+            _localCityData = [[NSMutableArray alloc] init];
+            self.locationCityID = place.locality;
+            if (self.locationCityID != nil) {
+                TLCity *city = nil;
+                for (TLCity *item in self.cityData) {
+                    if ([item.cityID isEqualToString:self.locationCityID]) {
+                        city = item;
+                        break;
+                    }
+                }
+                if (city == nil) {
+                    NSLog(@"Not Found City: %@", self.locationCityID);
+                }
+                else {
+                    [_localCityData addObject:city];
+                }
+            }
+            
+            [self.tableView reloadData];
+            NSLog(@"locality,%@",place.locality);
+            // 市
+            
+            NSLog(@"subLocality,%@",place.subLocality);        // 区
+            
+            NSLog(@"country,%@",place.country);                // 国家
+            //            if (_gpsCityName) {
+            //                <#statements#>
+            //            }
+            //            if ([JudgeIDAndBankCard isEmptyOrNull:_gpsCityName]) {
+            //                _gpsCityName=@"定位失败";
+            //            }
+            //            WRITE_DATA(place.locality,@"CITY_JC_NAME");
+            //            [self.mytableviewreloadData];
+            
+        }
+        
+    }];
+}
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+            if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+            {
+                [_locationManager requestWhenInUseAuthorization];
+            }
+            break;
+        case kCLAuthorizationStatusDenied:
+        {
+            
+        }
+        default:
+            break;
+    }
+}
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{ //此方法为定位失败的时候调用。并且由于会在失败以后重新定位，所以必须在末尾停止更新
+    
+    if(error.code == kCLErrorLocationUnknown)
+    {
+        NSLog(@"Currently unable to retrieve location.");
+    }
+    else if(error.code == kCLErrorNetwork)
+    {
+        NSLog(@"Network used to retrieve location is unavailable.");
+    }
+    else if(error.code == kCLErrorDenied)
+    {
+        NSLog(@"Permission to retrieve location is denied.");
+        [manager stopUpdatingLocation];
+    }
+    
+    
+}
+
 //- (UIStatusBarStyle)preferredStatusBarStyle {
 //    
 //    return UIStatusBarStyleLightContent;
@@ -90,7 +218,8 @@
         TLCityGroupCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TLCityGroupCell"];
         if (indexPath.section == 0) {
             [cell setTitle:@"定位城市"];
-            [cell setCityArray:self.localCityData];
+//            [cell setCityArray:_localCityData];
+            [cell setLocationArray:_localCityData];
         }
         else if (indexPath.section == 1) {
             [cell setTitle:@"最近访问"];
@@ -285,28 +414,28 @@
     return _cityData;
 }
 
-- (NSMutableArray *) localCityData
-{
-    if (_localCityData == nil) {
-        _localCityData = [[NSMutableArray alloc] init];
-        if (self.locationCityID != nil) {
-            TLCity *city = nil;
-            for (TLCity *item in self.cityData) {
-                if ([item.cityID isEqualToString:self.locationCityID]) {
-                    city = item;
-                    break;
-                }
-            }
-            if (city == nil) {
-                NSLog(@"Not Found City: %@", self.locationCityID);
-            }
-            else {
-                [_localCityData addObject:city];
-            }
-        }
-    }
-    return _localCityData;
-}
+//- (NSMutableArray *) localCityData
+//{
+//    if (_localCityData == nil) {
+//        _localCityData = [[NSMutableArray alloc] init];
+//        if (self.locationCityID != nil) {
+//            TLCity *city = nil;
+//            for (TLCity *item in self.cityData) {
+//                if ([item.cityID isEqualToString:self.locationCityID]) {
+//                    city = item;
+//                    break;
+//                }
+//            }
+//            if (city == nil) {
+//                NSLog(@"Not Found City: %@", self.locationCityID);
+//            }
+//            else {
+//                [_localCityData addObject:city];
+//            }
+//        }
+//    }
+//    return _localCityData;
+//}
 
 - (NSMutableArray *) hotCityData
 {

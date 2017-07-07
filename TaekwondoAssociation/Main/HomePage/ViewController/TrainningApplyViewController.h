@@ -10,6 +10,7 @@
 #import "TABaseViewController.h"
 #import "RemarkCell.h"
 #import "TrainingContentCell.h"
+#import "ApplyTextFieldCell.h"
 
 @interface TrainningApplyViewController : TABaseViewController
 
@@ -17,5 +18,6 @@
 @property (nonatomic, strong) UITableView* tv;
 @property (nonatomic, strong) UILabel* headLabel;
 @property (nonatomic, strong) TrainingContentCell* trainingContentCell;
+@property (nonatomic, strong) ApplyTextFieldCell* applyTFCell;
 
 @end

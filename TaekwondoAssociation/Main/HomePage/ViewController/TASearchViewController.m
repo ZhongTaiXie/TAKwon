@@ -8,6 +8,9 @@
 
 #import "TASearchViewController.h"
 #import "ConstColor.h"
+#import "TARequestManager.h"
+#import "LCProgressHUD.h"
+#import "TABaseTableView.h"
 
 @interface TASearchViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -17,7 +20,7 @@
 
 @property (nonatomic,strong)UIButton *searchBut;
 
-@property (nonatomic,strong)UITableView *searchTableView;
+@property (nonatomic,strong)TABaseTableView *searchTableView;
 
 @property (nonatomic,strong)UIView *headView;
 // 历史记录
@@ -34,8 +37,21 @@
    
 //    self.title = @"搜索";
     
+   NSArray *array =  [[NSUserDefaults standardUserDefaults] objectForKey:@"history"];
     
-    self.historyArr = [NSMutableArray arrayWithObjects:@"2016年大赛",@"道馆信息",@"个人认证流程", nil];
+    if (array.count !=0 ) {
+        
+        self.historyArr = [NSMutableArray arrayWithArray:array];
+        
+    }else {
+        
+        self.historyArr = [NSMutableArray arrayWithObjects:@"2016年大赛",@"道馆信息",@"个人认证流程", nil];
+        
+    }
+    
+    
+    
+    
     self.newsArr = [NSMutableArray arrayWithObjects:@"北京",@"奥运会",@"冬季会",@"体操",@"健美", nil];
     
     [self  createUI];
@@ -70,6 +86,7 @@
        [self.view addSubview:self.searchBar];
        [self.view addSubview:self.backBut];
        [self.view addSubview:self.searchBut];
+    
        [self.view addSubview:self.searchTableView];
     
 
@@ -98,7 +115,7 @@
         [_searchBut setTitle:@"搜索" forState:(UIControlStateNormal)];
         [_searchBut setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
         _searchBut.titleLabel.font = [UIFont systemFontOfSize:15.0];
-        [_searchBut addTarget:self action:@selector(tureAction) forControlEvents:(UIControlEventTouchUpInside)];
+        [_searchBut addTarget:self action:@selector(SearchAction) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _searchBut;
 }
@@ -122,21 +139,28 @@
     return _searchBar;
 }
 
-- (UITableView *)searchTableView {
+- (TABaseTableView *)searchTableView {
     
     if (_searchTableView == nil) {
-        _searchTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, KTA_Screen_Width, KTA_Screen_Height-64) style:(UITableViewStylePlain)];
+        _searchTableView = [[TABaseTableView alloc]initWithFrame:CGRectMake(0, 64, KTA_Screen_Width, KTA_Screen_Height-64) style:(UITableViewStylePlain)];
         _searchTableView.delegate = self;
         _searchTableView.dataSource = self;
         _searchTableView.tableHeaderView = self.headView;
         [_searchTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellID"];
+        
+        TAWeakSelf(weakSelf)
+        [_searchTableView refreshHeaderRefresh:^{
+            [weakSelf loadData];
+        } withFooterRefreshingBlock:^{
+            [weakSelf loadData];
+        }];
     }
     return _searchTableView;
 }
 
 - (UIView *)headView {
     
-    if (_headView == nil) {
+    
         
         _headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height-64)];
 //        _headView.backgroundColor = [UIColor redColor];
@@ -150,22 +174,34 @@
         historyLabel.text = @"历史记录";
         [_headView addSubview:historyLabel];
         
-        UIButton *delegateBut = [[UIButton alloc]initWithFrame:CGRectMake(KTA_Screen_Width-60, 10, 40, 40)];
-        delegateBut.tag = 200;
-        [delegateBut addTarget:self action:@selector(delegateHistory) forControlEvents:(UIControlEventTouchUpInside)];
-        [_headView addSubview:delegateBut];
+        UIButton *deleHistory = [[UIButton alloc]initWithFrame:CGRectMake(KTA_Screen_Width-50, 10, 30, 30)];
+        [deleHistory setImage:[UIImage imageNamed:@"delegate"] forState:(UIControlStateNormal)];
+        
+        [deleHistory addTarget:self action:@selector(deHistory) forControlEvents:(UIControlEventTouchUpInside)];
+        
+        [_headView addSubview:deleHistory];
+        
         
         UIView *line1 = [[UIView alloc]initWithFrame:CGRectMake(0, 50, KTA_Screen_Width, 1)];
         line1.backgroundColor = [ConstColor dividerColor];
         [_headView addSubview:line1];
         
         int j =  0;
+        
         for (int i = 0 ; i < self.historyArr.count; i ++) {
             
             UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(20, 55+30*j, 200, 30)];
             label.text = self.historyArr[i];
             label.font = [UIFont systemFontOfSize:13.0];
             label.textColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.4 alpha:1.0];
+            
+            UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(KTA_Screen_Width-50, 55+30*j, 30, 30)];
+            [btn setImage:[UIImage imageNamed:@"close"] forState:(UIControlStateNormal)];
+            btn.tag = 300+j;
+            [btn addTarget:self action:@selector(deleIndexHis:) forControlEvents:(UIControlEventTouchUpInside)];
+            
+            [_headView addSubview:btn];
+            
             UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 55+30*(j+1),KTA_Screen_Width, 1)];
             lineView.backgroundColor = [ConstColor dividerColor];
             [_headView addSubview:label];
@@ -193,10 +229,37 @@
             [button addTarget:self action:@selector(newsAction:) forControlEvents:(UIControlEventTouchUpInside)];
             [_headView addSubview:button];
         }
-    }
+ 
     return _headView;
 }
 
+// 删除全部历史记录
+- (void)deHistory {
+    
+    [_headView removeFromSuperview];
+    
+    [self.historyArr removeAllObjects];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:self.historyArr forKey:@"history"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+
+    
+    self.searchTableView.tableHeaderView = self.headView;
+}
+// 删除某个历史记录
+- (void)deleIndexHis:(UIButton *)btn {
+    
+    [self.historyArr removeObjectAtIndex:(btn.tag-300)];
+   
+    [[NSUserDefaults standardUserDefaults] setObject:self.historyArr forKey:@"history"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+
+    
+    [_headView removeFromSuperview];
+
+   self.searchTableView.tableHeaderView = self.headView;
+    
+}
 
 - (void)backtouAction {
     
@@ -226,27 +289,61 @@
 #pragma mark  网路请求
 - (void)loadData {
     
+    [self.newsArr removeAllObjects];
     
+    [TARequestManager TARequestCompletedWithPath:URL_SEARCHHOTS Parameters:nil sucee:^(NSDictionary *dic) {
+        NSDictionary *diy = dic[@"Data"][@"data"];
+        
+        
+    } fail:^(NSError *error) {
+        
+    }];
+    
+    [self.searchTableView endReload];
 }
 
-#pragma mark 删除历史记录 　
-
-- (void)delegateHistory {
-    
-    
-}
 
 #pragma mark 热门搜索标签  
 
 - (void)newsAction:(UIButton *)but {
     
+    //  也进行网络请求
+    NSDictionary *dic = @{@"":but.titleLabel.text};
     
+    [TARequestManager TARequestCompletedWithPath:nil Parameters:dic sucee:^(NSDictionary *dic) {
+        // h5
+        
+    } fail:^(NSError *error) {
+        
+    }];
     
     
 }
 
-
-
+#pragma mark   搜索
+- (void)SearchAction {
+    
+    if (self.searchBar.text.length== 0 ) {
+        
+        [LCProgressHUD showTextOntarget:self.view string:@"请输入搜索内容"];
+    
+        return;
+    }
+  
+    [self.historyArr addObject:self.searchBar.text];
+    [[NSUserDefaults standardUserDefaults] setObject:self.historyArr forKey:@"history"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    NSDictionary *dic = @{@"":self.searchBar.text};
+    
+    [TARequestManager TARequestCompletedWithPath:nil Parameters:dic sucee:^(NSDictionary *dic) {
+        // 加载h5界面
+        
+    } fail:^(NSError *error) {
+        
+    }];
+    
+}
 
 
 

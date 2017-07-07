@@ -102,7 +102,14 @@
     _title = title;
     [_titleLabel setText:title];
 }
-
+//- (void)setLocationTitle:(NSString *)locationTitle
+//{
+//    _title = locationTitle;
+//    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+//    imageView.backgroundColor = [UIColor redColor];
+//    [_titleLabel addSubview:imageView];
+//    [_titleLabel setText:locationTitle];
+//}
 - (void) setCityArray:(NSArray *)cityArray
 {
     _cityArray = cityArray;
@@ -134,7 +141,42 @@
         [self.arrayCityButtons removeLastObject];
     }
 }
-
+- (void)setLocationArray:(NSArray *)locationArray
+{
+    _locationArray = locationArray;
+    [self.noDataLabel setHidden:(locationArray != nil && locationArray.count > 0)];
+    
+    for (int i = 0; i < locationArray.count; i ++) {
+        TLCity *city = [locationArray objectAtIndex:i];
+        UIButton *button = nil;
+        if (i < self.arrayCityButtons.count) {
+            button = [self.arrayCityButtons objectAtIndex:i];
+        }
+        else {
+            button = [[UIButton alloc] init];
+            [button setBackgroundColor:[UIColor whiteColor]];
+            [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [button.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
+            [button.layer setMasksToBounds:YES];
+            [button.layer setCornerRadius:2.0f];
+            [button.layer setBorderColor:[UIColor colorWithWhite:0.8 alpha:1.0].CGColor];
+            [button.layer setBorderWidth:1.0f];
+            [button addTarget:self action:@selector(cityButtonDown:) forControlEvents:UIControlEventTouchUpInside];
+            [self.arrayCityButtons addObject:button];
+            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+            imageView.backgroundColor = [UIColor yellowColor];
+            [button addSubview:imageView];
+            
+            
+            [self addSubview:button];
+        }
+        [button setTitle:city.cityName forState:UIControlStateNormal];
+        button.tag = i;
+    }
+    while (locationArray.count < self.arrayCityButtons.count) {
+        [self.arrayCityButtons removeLastObject];
+    }
+}
 #pragma mark - Event Response
 - (void) cityButtonDown:(UIButton *)sender
 {
