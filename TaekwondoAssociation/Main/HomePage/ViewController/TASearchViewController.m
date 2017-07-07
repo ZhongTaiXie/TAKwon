@@ -37,6 +37,8 @@
    
 //    self.title = @"搜索";
     
+    [self loadData];
+    
    NSArray *array =  [[NSUserDefaults standardUserDefaults] objectForKey:@"history"];
     
     if (array.count !=0 ) {
@@ -52,7 +54,7 @@
     
     
     
-    self.newsArr = [NSMutableArray arrayWithObjects:@"北京",@"奥运会",@"冬季会",@"体操",@"健美", nil];
+//    self.newsArr = [NSMutableArray arrayWithObjects:@"北京",@"奥运会",@"冬季会",@"体操",@"健美", nil];
     
     [self  createUI];
 
@@ -87,7 +89,7 @@
        [self.view addSubview:self.backBut];
        [self.view addSubview:self.searchBut];
     
-       [self.view addSubview:self.searchTableView];
+//       [self.view addSubview:self.searchTableView];
     
 
   
@@ -233,6 +235,12 @@
     return _headView;
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    [self SearchAction];
+
+}
+
 // 删除全部历史记录
 - (void)deHistory {
     
@@ -290,20 +298,25 @@
 - (void)loadData {
     
     [self.newsArr removeAllObjects];
+    [_headView removeFromSuperview];
+
     
     [TARequestManager TARequestCompletedWithPath:URL_SEARCHHOTS Parameters:nil sucee:^(NSDictionary *dic) {
-        NSDictionary *diy = dic[@"Data"][@"data"];
+        NSArray *hotArr = dic[@"Data"][@"data"];
         
-        
+        self.newsArr = [NSMutableArray arrayWithArray:hotArr];
+//        NSLog(@"%@",diy);
+        [self.view addSubview:self.searchTableView];
+        self.searchTableView.tableHeaderView = self.headView;
     } fail:^(NSError *error) {
         
     }];
     
-    [self.searchTableView endReload];
+    [self.searchTableView endRefreshing];
+    
 }
 
-
-#pragma mark 热门搜索标签  
+#pragma mark 热门搜索标签
 
 - (void)newsAction:(UIButton *)but {
     
