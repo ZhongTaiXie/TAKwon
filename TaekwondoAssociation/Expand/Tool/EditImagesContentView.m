@@ -29,6 +29,12 @@
         [self addSubview:editPhotoImagesView];
         self.editPhotoImagesView = editPhotoImagesView;
 
+        // 添加一个label
+        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 200, 44)];
+        label.text = @"上传身份证正反面";
+        label.textColor = [UIColor darkGrayColor];
+        label.font = [UIFont systemFontOfSize:14];
+        [self addSubview:label];
         
     }
     

@@ -144,6 +144,7 @@
 		AF8872B71F0E2E1F0071DD01 /* UIView+JKPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8872A81F0E2E1F0071DD01 /* UIView+JKPicker.m */; };
 		AFDA065D1F0E5C02008C987A /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = B699B8FF1F0648BB00D8CB95 /* TADotView.m */; };
 		AFDA065E1F0E5C11008C987A /* TAYinsiShengmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E55C6591F0C44EF00B22C45 /* TAYinsiShengmingViewController.m */; };
+		AFDA06611F0F353A008C987A /* ApplyTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDA06601F0F353A008C987A /* ApplyTextFieldCell.m */; };
 		AFE4C11C1F09DDB300AA2C0E /* CertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */; };
 		AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C11F1F0A12CA00AA2C0E /* PublicNoticeViewController.m */; };
 		AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4C1221F0A1C6600AA2C0E /* MatchViewController.m */; };
@@ -523,6 +524,8 @@
 		AF8872A61F0E2E1F0071DD01 /* PhotoAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumManager.m; sourceTree = "<group>"; };
 		AF8872A71F0E2E1F0071DD01 /* UIView+JKPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKPicker.h"; sourceTree = "<group>"; };
 		AF8872A81F0E2E1F0071DD01 /* UIView+JKPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKPicker.m"; sourceTree = "<group>"; };
+		AFDA065F1F0F353A008C987A /* ApplyTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyTextFieldCell.h; sourceTree = "<group>"; };
+		AFDA06601F0F353A008C987A /* ApplyTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyTextFieldCell.m; sourceTree = "<group>"; };
 		AFE4C1191F09DDB300AA2C0E /* CertificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationViewController.h; sourceTree = "<group>"; };
 		AFE4C11A1F09DDB300AA2C0E /* CertificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationViewController.m; sourceTree = "<group>"; };
 		AFE4C11E1F0A12CA00AA2C0E /* PublicNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNoticeViewController.h; sourceTree = "<group>"; };
@@ -1536,6 +1539,8 @@
 				AF8872461F0E0D220071DD01 /* TrainingContentCell.m */,
 				AF8872481F0E1F930071DD01 /* PhotosTableViewCell.h */,
 				AF8872491F0E1F930071DD01 /* PhotosTableViewCell.m */,
+				AFDA065F1F0F353A008C987A /* ApplyTextFieldCell.h */,
+				AFDA06601F0F353A008C987A /* ApplyTextFieldCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2331,6 +2336,7 @@
 				EF3E0CD71F023BAE00729CF9 /* TARegistViewController.m in Sources */,
 				B61343781F0B66C10089FBA4 /* SearchResultViewController.m in Sources */,
 				4EFE548E1F02D1EC001E7A05 /* TATaekwondoMemberCenterViewController.m in Sources */,
+				AFDA06611F0F353A008C987A /* ApplyTextFieldCell.m in Sources */,
 				EFD232AE1F06B5EC005559D8 /* IQBarButtonItem.m in Sources */,
 				AFE4C1231F0A1C6600AA2C0E /* MatchViewController.m in Sources */,
 				B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */,
