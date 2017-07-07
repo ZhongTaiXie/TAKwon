@@ -114,7 +114,30 @@
             NSLog(@"thoroughfare,%@",place.thoroughfare);      // 街道
             
             NSLog(@"subThoroughfare,%@",place.subThoroughfare);// 子街道
-            _localCityData = [[NSMutableArray alloc]initWithObjects:place.locality, nil];
+//            _localCityData = [[NSMutableArray alloc]initWithObjects:place.locality, nil];
+//            [self.tableView reloadData];
+            
+            
+            
+            
+            _localCityData = [[NSMutableArray alloc] init];
+            self.locationCityID = place.locality;
+            if (self.locationCityID != nil) {
+                TLCity *city = nil;
+                for (TLCity *item in self.cityData) {
+                    if ([item.cityID isEqualToString:self.locationCityID]) {
+                        city = item;
+                        break;
+                    }
+                }
+                if (city == nil) {
+                    NSLog(@"Not Found City: %@", self.locationCityID);
+                }
+                else {
+                    [_localCityData addObject:city];
+                }
+            }
+            
             [self.tableView reloadData];
             NSLog(@"locality,%@",place.locality);
             // 市
@@ -195,7 +218,8 @@
         TLCityGroupCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TLCityGroupCell"];
         if (indexPath.section == 0) {
             [cell setTitle:@"定位城市"];
-            [cell setCityArray:_localCityData];
+//            [cell setCityArray:_localCityData];
+            [cell setLocationArray:_localCityData];
         }
         else if (indexPath.section == 1) {
             [cell setTitle:@"最近访问"];
