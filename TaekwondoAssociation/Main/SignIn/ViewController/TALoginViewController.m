@@ -22,6 +22,7 @@
 #import "WQNetWorkManager.h"
 #import "HotPicturesViewController.h"
 #import "TAUser.h"
+#import "TALocalUser.h"
 #import "MJExtension.h"
 
 
@@ -437,7 +438,7 @@
         NSDictionary* dataDic = [dic objectForKey:@"Data"];
         if ([[dataDic objectForKey:@"Success"]boolValue]) {
             
-            TAUser *user =[TAUser mj_objectWithKeyValues:dataDic[@"Data"]];
+            TALocalUser *user =[TALocalUser mj_objectWithKeyValues:dataDic[@"Data"]];
 //            [LCProgressHUD showTextOntarget:self.view string:[dataDic objectForKey:@"Msg"]];
             NSLog(@"%@",user.Phone);
             [[UIApplication sharedAppDelegate] goToHome];
@@ -457,7 +458,7 @@
 - (void)touristLoginBtnClick
 
 {
-//    [self.navigationController pushViewController:[HotPicturesViewController new] animated:YES];
+//    [self.navigationController pushViewController:[TASearchViewController new] animated:YES];
     [[UIApplication sharedAppDelegate] goToHome];
 
 }
