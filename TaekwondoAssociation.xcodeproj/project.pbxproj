@@ -240,6 +240,17 @@
 		EFD232B11F06B5EC005559D8 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232A01F06B5EC005559D8 /* IQToolbar.m */; };
 		EFD232B21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD232A21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m */; };
 		EFD232B31F06B5EC005559D8 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFD232A41F06B5EC005559D8 /* IQKeyboardManager.bundle */; };
+		EFE1F7671F0F2F3F00951472 /* UIImage+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F74E1F0F2F3F00951472 /* UIImage+XLExtension.m */; };
+		EFE1F7681F0F2F3F00951472 /* UIView+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7501F0F2F3F00951472 /* UIView+XLExtension.m */; };
+		EFE1F7691F0F2F3F00951472 /* FSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7541F0F2F3F00951472 /* FSActionSheet.m */; };
+		EFE1F76A1F0F2F3F00951472 /* FSActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7561F0F2F3F00951472 /* FSActionSheetCell.m */; };
+		EFE1F76B1F0F2F3F00951472 /* FSActionSheetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7581F0F2F3F00951472 /* FSActionSheetConfig.m */; };
+		EFE1F76C1F0F2F3F00951472 /* FSActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F75A1F0F2F3F00951472 /* FSActionSheetItem.m */; };
+		EFE1F76D1F0F2F3F00951472 /* FSActionSheet_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1F75C1F0F2F3F00951472 /* FSActionSheet_cancel@2x.png */; };
+		EFE1F76E1F0F2F3F00951472 /* FSActionSheet_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE1F75D1F0F2F3F00951472 /* FSActionSheet_cancel@3x.png */; };
+		EFE1F76F1F0F2F3F00951472 /* XLPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7601F0F2F3F00951472 /* XLPhotoBrowser.m */; };
+		EFE1F7701F0F2F3F00951472 /* XLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7641F0F2F3F00951472 /* XLProgressView.m */; };
+		EFE1F7711F0F2F3F00951472 /* XLZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7661F0F2F3F00951472 /* XLZoomingScrollView.m */; };
 		EFF9DA2F1F05FF820056F9F7 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0C1F05FF820056F9F7 /* ShareSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EFF9DA301F05FF820056F9F7 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF9DA0F1F05FF820056F9F7 /* ShareSDKExtension.framework */; };
 		EFF9DA311F05FF820056F9F7 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF9DA101F05FF820056F9F7 /* ShareSDKUI.bundle */; };
@@ -708,6 +719,28 @@
 		EFD232A11F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
 		EFD232A21F06B5EC005559D8 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		EFD232A41F06B5EC005559D8 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		EFE1F74D1F0F2F3F00951472 /* UIImage+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XLExtension.h"; sourceTree = "<group>"; };
+		EFE1F74E1F0F2F3F00951472 /* UIImage+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XLExtension.m"; sourceTree = "<group>"; };
+		EFE1F74F1F0F2F3F00951472 /* UIView+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XLExtension.h"; sourceTree = "<group>"; };
+		EFE1F7501F0F2F3F00951472 /* UIView+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XLExtension.m"; sourceTree = "<group>"; };
+		EFE1F7531F0F2F3F00951472 /* FSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheet.h; sourceTree = "<group>"; };
+		EFE1F7541F0F2F3F00951472 /* FSActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheet.m; sourceTree = "<group>"; };
+		EFE1F7551F0F2F3F00951472 /* FSActionSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetCell.h; sourceTree = "<group>"; };
+		EFE1F7561F0F2F3F00951472 /* FSActionSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetCell.m; sourceTree = "<group>"; };
+		EFE1F7571F0F2F3F00951472 /* FSActionSheetConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetConfig.h; sourceTree = "<group>"; };
+		EFE1F7581F0F2F3F00951472 /* FSActionSheetConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetConfig.m; sourceTree = "<group>"; };
+		EFE1F7591F0F2F3F00951472 /* FSActionSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetItem.h; sourceTree = "<group>"; };
+		EFE1F75A1F0F2F3F00951472 /* FSActionSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetItem.m; sourceTree = "<group>"; };
+		EFE1F75C1F0F2F3F00951472 /* FSActionSheet_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FSActionSheet_cancel@2x.png"; sourceTree = "<group>"; };
+		EFE1F75D1F0F2F3F00951472 /* FSActionSheet_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FSActionSheet_cancel@3x.png"; sourceTree = "<group>"; };
+		EFE1F75F1F0F2F3F00951472 /* XLPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPhotoBrowser.h; sourceTree = "<group>"; };
+		EFE1F7601F0F2F3F00951472 /* XLPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPhotoBrowser.m; sourceTree = "<group>"; };
+		EFE1F7611F0F2F3F00951472 /* XLPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		EFE1F7621F0F2F3F00951472 /* XLPhotoBrowserTypeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPhotoBrowserTypeDefine.h; sourceTree = "<group>"; };
+		EFE1F7631F0F2F3F00951472 /* XLProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLProgressView.h; sourceTree = "<group>"; };
+		EFE1F7641F0F2F3F00951472 /* XLProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLProgressView.m; sourceTree = "<group>"; };
+		EFE1F7651F0F2F3F00951472 /* XLZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLZoomingScrollView.h; sourceTree = "<group>"; };
+		EFE1F7661F0F2F3F00951472 /* XLZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLZoomingScrollView.m; sourceTree = "<group>"; };
 		EFF9DA0C1F05FF820056F9F7 /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		EFF9DA0F1F05FF820056F9F7 /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
 		EFF9DA101F05FF820056F9F7 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
@@ -1467,6 +1500,7 @@
 		EF3E0C621F01EDAC00729CF9 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				EFE1F74C1F0F2F3F00951472 /* XLPhotoBrowser+CoderXL */,
 				AF8872881F0E2E1E0071DD01 /* ImagePicker */,
 				B613438F1F0DD4310089FBA4 /* TLCityPicker */,
 				EFD232801F06B5EC005559D8 /* IQKeyboardManager */,
@@ -1908,6 +1942,67 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		EFE1F74C1F0F2F3F00951472 /* XLPhotoBrowser+CoderXL */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1F74D1F0F2F3F00951472 /* UIImage+XLExtension.h */,
+				EFE1F74E1F0F2F3F00951472 /* UIImage+XLExtension.m */,
+				EFE1F74F1F0F2F3F00951472 /* UIView+XLExtension.h */,
+				EFE1F7501F0F2F3F00951472 /* UIView+XLExtension.m */,
+				EFE1F7511F0F2F3F00951472 /* Vender */,
+				EFE1F75F1F0F2F3F00951472 /* XLPhotoBrowser.h */,
+				EFE1F7601F0F2F3F00951472 /* XLPhotoBrowser.m */,
+				EFE1F7611F0F2F3F00951472 /* XLPhotoBrowserConfig.h */,
+				EFE1F7621F0F2F3F00951472 /* XLPhotoBrowserTypeDefine.h */,
+				EFE1F7631F0F2F3F00951472 /* XLProgressView.h */,
+				EFE1F7641F0F2F3F00951472 /* XLProgressView.m */,
+				EFE1F7651F0F2F3F00951472 /* XLZoomingScrollView.h */,
+				EFE1F7661F0F2F3F00951472 /* XLZoomingScrollView.m */,
+			);
+			path = "XLPhotoBrowser+CoderXL";
+			sourceTree = "<group>";
+		};
+		EFE1F7511F0F2F3F00951472 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1F7521F0F2F3F00951472 /* FSActionSheet */,
+				EFE1F75E1F0F2F3F00951472 /* PageControl */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		EFE1F7521F0F2F3F00951472 /* FSActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1F7531F0F2F3F00951472 /* FSActionSheet.h */,
+				EFE1F7541F0F2F3F00951472 /* FSActionSheet.m */,
+				EFE1F7551F0F2F3F00951472 /* FSActionSheetCell.h */,
+				EFE1F7561F0F2F3F00951472 /* FSActionSheetCell.m */,
+				EFE1F7571F0F2F3F00951472 /* FSActionSheetConfig.h */,
+				EFE1F7581F0F2F3F00951472 /* FSActionSheetConfig.m */,
+				EFE1F7591F0F2F3F00951472 /* FSActionSheetItem.h */,
+				EFE1F75A1F0F2F3F00951472 /* FSActionSheetItem.m */,
+				EFE1F75B1F0F2F3F00951472 /* FSActionSheetResources */,
+			);
+			path = FSActionSheet;
+			sourceTree = "<group>";
+		};
+		EFE1F75B1F0F2F3F00951472 /* FSActionSheetResources */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1F75C1F0F2F3F00951472 /* FSActionSheet_cancel@2x.png */,
+				EFE1F75D1F0F2F3F00951472 /* FSActionSheet_cancel@3x.png */,
+			);
+			path = FSActionSheetResources;
+			sourceTree = "<group>";
+		};
+		EFE1F75E1F0F2F3F00951472 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		EFF9DA0B1F05FF820056F9F7 /* ShareSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -2137,6 +2232,7 @@
 				EF3E0CA51F01F44400729CF9 /* LaunchScreen.storyboard in Resources */,
 				B69F07541F020454009AE263 /* CodeScan.bundle in Resources */,
 				4E000BB91F06BA8E00DB0035 /* photo_original_def@2x.png in Resources */,
+				EFE1F76D1F0F2F3F00951472 /* FSActionSheet_cancel@2x.png in Resources */,
 				EF3E0C611F01EDA400729CF9 /* Info.plist in Resources */,
 				4E000BEC1F0705FA00DB0035 /* TANoPicCollectionCell.xib in Resources */,
 				EF3E0CA31F01F40B00729CF9 /* Main.storyboard in Resources */,
@@ -2154,6 +2250,7 @@
 				EFF9DA311F05FF820056F9F7 /* ShareSDKUI.bundle in Resources */,
 				4E000BB71F06BA8E00DB0035 /* photo_def_previewVc@2x.png in Resources */,
 				4E000BB81F06BA8E00DB0035 /* photo_number_icon@2x.png in Resources */,
+				EFE1F76E1F0F2F3F00951472 /* FSActionSheet_cancel@3x.png in Resources */,
 				4E1301A71F087576000B0ED7 /* TATaekHonorCell.xib in Resources */,
 				4E000BBF1F06BA8E00DB0035 /* TableViewArrow@2x.png in Resources */,
 				EF04B64D1F09DCC800C81C65 /* TANotsTableViewCell.xib in Resources */,
@@ -2245,6 +2342,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE1F7701F0F2F3F00951472 /* XLProgressView.m in Sources */,
+				EFE1F7711F0F2F3F00951472 /* XLZoomingScrollView.m in Sources */,
 				AFDA065E1F0E5C11008C987A /* TAYinsiShengmingViewController.m in Sources */,
 				AFDA065D1F0E5C02008C987A /* TADotView.m in Sources */,
 				EFD232AF1F06B5EC005559D8 /* IQPreviousNextView.m in Sources */,
@@ -2305,6 +2404,7 @@
 				B61343A01F0DD4310089FBA4 /* TLCityPickerController.m in Sources */,
 				B699B90E1F0648BB00D8CB95 /* SDCycleScrollView.m in Sources */,
 				4E55C6641F0C542C00B22C45 /* TAMyReleaseCell.m in Sources */,
+				EFE1F7681F0F2F3F00951472 /* UIView+XLExtension.m in Sources */,
 				4E000BC31F06BA8E00DB0035 /* TZAssetCell.m in Sources */,
 				EFD232B01F06B5EC005559D8 /* IQTitleBarButtonItem.m in Sources */,
 				AF8872721F0E21330071DD01 /* MediaPack.m in Sources */,
@@ -2351,9 +2451,12 @@
 				B699B90D1F0648BB00D8CB95 /* SDCollectionViewCell.m in Sources */,
 				4E13019B1F084038000B0ED7 /* TATaekAddressCell.m in Sources */,
 				4E55C65D1F0C451000B22C45 /* TAAboutUsViewController.m in Sources */,
+				EFE1F76C1F0F2F3F00951472 /* FSActionSheetItem.m in Sources */,
 				4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */,
 				B61343841F0CD3010089FBA4 /* TrainningViewController.m in Sources */,
 				B699B90C1F0648BB00D8CB95 /* TAPageControl.m in Sources */,
+				EFE1F76B1F0F2F3F00951472 /* FSActionSheetConfig.m in Sources */,
+				EFE1F76A1F0F2F3F00951472 /* FSActionSheetCell.m in Sources */,
 				AF8872AD1F0E2E1F0071DD01 /* JKAssetsGroupCell.m in Sources */,
 				B61343701F0A46460089FBA4 /* HomeLoBoWebViewController.m in Sources */,
 				4E000B821F06BA4A00DB0035 /* TAUploadMemHonorViewController.m in Sources */,
@@ -2370,6 +2473,7 @@
 				AF8872B41F0E2E1F0071DD01 /* JKPromptView.m in Sources */,
 				EFD232AD1F06B5EC005559D8 /* IQTextView.m in Sources */,
 				EF0047221F04970200CD42C6 /* TAURL.m in Sources */,
+				EFE1F7671F0F2F3F00951472 /* UIImage+XLExtension.m in Sources */,
 				B699B90A1F0648BB00D8CB95 /* TAAnimatedDotView.m in Sources */,
 				AFE4C1201F0A12CA00AA2C0E /* PublicNoticeViewController.m in Sources */,
 				AF8872871F0E2D590071DD01 /* UIActionSheet+Blocks.m in Sources */,
@@ -2413,6 +2517,8 @@
 				4E000BC91F06BA8E00DB0035 /* TZPhotoPreviewController.m in Sources */,
 				AF8872751F0E21CD0071DD01 /* PrescriptionImageEditView.m in Sources */,
 				EF0047211F04970200CD42C6 /* TARequestManager.m in Sources */,
+				EFE1F76F1F0F2F3F00951472 /* XLPhotoBrowser.m in Sources */,
+				EFE1F7691F0F2F3F00951472 /* FSActionSheet.m in Sources */,
 				4E1301D01F0B239D000B0ED7 /* TAFeedbackViewController.m in Sources */,
 				4E1301B71F0AB91C000B0ED7 /* TAMyReleaseTitleCell.m in Sources */,
 				AF8872AC1F0E2E1F0071DD01 /* JKAssetsCollectionFooterView.m in Sources */,
