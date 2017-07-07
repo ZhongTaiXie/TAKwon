@@ -10,7 +10,7 @@
 
 @interface TALessonTimeCell()
 
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
 
@@ -30,8 +30,7 @@
 
 -(void)setTimeStr:(NSString *)timeStr{
     _timeStr = timeStr;
-    self.timeLabel.textColor = timeStr.length == 0 ? [WQTools colorWithHexString:@"cbcbcd"] : [WQTools colorWithHexString:@"666666"];
-    self.timeLabel.text = timeStr.length == 0 ? @"请选择时间" : timeStr;
 }
+
 
 @end

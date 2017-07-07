@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TALessonModel.h"
 
 @interface TAReleaseLessonViewController : UIViewController
+
+@property (nonatomic,strong) TALessonModel *model;
 
 @end

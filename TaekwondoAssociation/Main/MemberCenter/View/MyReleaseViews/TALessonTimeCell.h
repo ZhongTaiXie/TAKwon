@@ -12,4 +12,10 @@
 
 @property (nonatomic,strong) NSString *timeStr;
 
+@property (weak, nonatomic) IBOutlet UIButton *dateBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *startBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *endBtn;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface TAMemberIconCell : UITableViewCell
 
+@property (nonatomic,strong) UIImage *iconImage;
+
 @end

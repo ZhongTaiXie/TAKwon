@@ -24,6 +24,7 @@
 @property (strong,nonatomic)NSMutableArray *phonelist;      //图片数组
 @property (nonatomic,strong) UIButton *addBtn;
 @property (nonatomic,strong) UIView *picsView;//放置图片的View
+@property (nonatomic,strong) UITextView *textView;
 
 @end
 
@@ -64,12 +65,13 @@
     UILabel *label = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(10, 5, 100, 30) text:@"简介"];
     [self.view addSubview:label];
     
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(label.frame) + 10, KTA_Screen_Width - 30, 200)];
-    textView.layer.borderColor = [WQTools colorWithHexString:@"999999"].CGColor;
-    textView.layer.borderWidth = 0.5;
-    [self.view addSubview:textView];
+    self.textView = [[UITextView alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(label.frame) + 10, KTA_Screen_Width - 30, 200)];
+    self.textView.layer.borderColor = [WQTools colorWithHexString:@"999999"].CGColor;
+    self.textView.layer.borderWidth = 0.5;
+    self.textView.text = self.model.content;
+    [self.view addSubview:self.textView];
     
-    UILabel *picLabel = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(10, CGRectGetMaxY(textView.frame) + 5, 100, 30) text:@"图片(最多9张)"];
+    UILabel *picLabel = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(10, CGRectGetMaxY(self.textView.frame) + 5, 100, 30) text:@"图片(最多9张)"];
     
     [self.view addSubview:picLabel];
     
@@ -133,7 +135,31 @@
 }
 
 -(void)saveIntroduce{
+    if (self.textView.text.length == 0) {
+        [MBProgressHUD showError:@"请输入道馆简介"];
+        return;
+    }
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"正在保存...";
+    NSDictionary *params = @{
+                             @"userID":UserID,
+                             @"Content":self.textView.text
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        [hud hideAnimated:YES];
+        if (dic[@"Data"][@"Success"]) {
+            [MBProgressHUD showSuccess:@"保存成功"];
+            [self back];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
 }
 
 -(void)selectPics{

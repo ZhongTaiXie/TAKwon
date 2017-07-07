@@ -42,8 +42,11 @@
     [self setupNav];
     [self setupTableView];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self getTeakInfoFromServer];
-    
 }
 
 -(void)loadView{
@@ -141,6 +144,32 @@
     }];
 }
 
+//保存图片
+-(void)savePicToServer{
+    if (self.index == 1) { //保存头像
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.label.text = @"正在保存...";
+        NSDictionary *params = @{
+                                 @"userID":UserID,
+                                 @"Photo":@1
+                                 };
+        
+        NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+        [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+            [hud hideAnimated:YES];
+            if (dic[@"Data"][@"Success"]) {
+                [MBProgressHUD showSuccess:@"保存成功"];
+                
+            }else{
+                [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+            }
+        } failure:^(NSError *error) {
+            [MBProgressHUD showError:@"网络错误"];
+        }];
+    }else{  //保存店面
+        
+    }
+}
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
@@ -168,6 +197,10 @@
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setSeparatorInset:UIEdgeInsetsMake(0, -20, 0, 0)];
+        if (self.touxiangIcon) {
+            cell.iconImage = self.touxiangIcon;
+        }
+        
         return cell;
     }if (indexPath.section == 1 && indexPath.row == 0){
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
@@ -220,30 +253,34 @@
             self.index = 1;
             [self showPickerView];
         }else if (indexPath.row == 1){  //修改道馆名称
-            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"道馆名称" text:@"" index:1];
+            
+            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"道馆名称" text:self.taekInfoModel.Name index:1];
             [self.navigationController pushViewController:editVC animated:YES];
         }else if (indexPath.row == 2){  //修改手机号
-            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"手机号" text:@"" index:2];
+            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"手机号" text:self.taekInfoModel.TelPhone index:2];
             [self.navigationController pushViewController:editVC animated:YES];
         }else{  //修改邮箱
-            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"邮箱" text:@"" index:3];
+            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"邮箱" text:self.taekInfoModel.Email index:3];
             [self.navigationController pushViewController:editVC animated:YES];
         }
     }else if (indexPath.section == 1){
         if (indexPath.row == 0) {
             
         }else if (indexPath.row == 1){ //修改营业时间
-            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"营业时间" text:@"" index:4];
+            
+            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"营业时间" text:self.taekInfoModel.BusinessHours index:4];
             [self.navigationController pushViewController:editVC animated:YES];
         }else if (indexPath.row == 2){  //修改道馆电话
-            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"道馆电话" text:@"" index:5];
+            TAEditTaekInfoViewController *editVC = [[TAEditTaekInfoViewController alloc] initWithNavTitle:@"道馆电话" text:self.taekInfoModel.Phone index:5];
             [self.navigationController pushViewController:editVC animated:YES];
         }else{  //道馆地址
             TAEditTaekAddressTableViewController *addressVC = [TAEditTaekAddressTableViewController new];
+            addressVC.model = self.taekInfoModel;
             [self.navigationController pushViewController:addressVC animated:YES];
         }
     }else{   //道馆简介
         TATaekIntroduceViewController *introduceVC = [TATaekIntroduceViewController new];
+        introduceVC.model = self.taekInfoModel;
         [self.navigationController pushViewController:introduceVC animated:YES];
     }
 }
@@ -277,8 +314,7 @@
     [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    
-//    [self saveHeadIcon];
+    [self savePicToServer];
 }
 
 @end

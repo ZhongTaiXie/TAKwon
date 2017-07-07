@@ -32,9 +32,15 @@
     
     [self setupNav];
     [self setupTableView];
-    [self getDataFromServer];
+    
     
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self getDataFromServer];
+}
+
 -(void)loadView{
     [super loadView];
     
@@ -49,7 +55,6 @@
     self.tableView.backgroundColor = [WQTools colorWithHexString:@"f1f1f1"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.tableView registerClass:[TAMyReleaseTitleCell class] forCellReuseIdentifier:@"titleCell"];
-//    TAMyReleaseCell
     [self.tableView registerNib:[UINib nibWithNibName:@"TAMyReleaseCell" bundle:nil] forCellReuseIdentifier:@"releaseCell"];
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     [self.view addSubview:self.tableView];
@@ -70,6 +75,7 @@
 }
 
 #pragma mark - 与服务器交互
+//获取课程和活动的数据
 -(void)getDataFromServer{
     NSDictionary *params = @{
                              @"userID":UserID
@@ -88,6 +94,25 @@
         [MBProgressHUD showError:@"网络错误"];
     }];
 
+}
+
+//删除某个课程
+-(void)deleteLesson:(TALessonModel *)model{
+    NSDictionary *params = @{
+                             @"CourseId":model.Id
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/CourseDel"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        
+        if (dic[@"Data"][@"Success"]) {
+            [self getDataFromServer];
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
@@ -149,13 +174,18 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if(indexPath.section == 0 && indexPath.row != 0){
+        NSArray *lessonArray = self.dataArray[0];
+        TALessonModel *lessonModel = lessonArray[indexPath.row - 1];
+        TAReleaseLessonViewController *lessonVC = [[TAReleaseLessonViewController alloc] init];
+        lessonVC.model = lessonModel;
+        [self.navigationController pushViewController:lessonVC animated:YES];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.1;
 }
-
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
@@ -174,6 +204,7 @@
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     return @"删除";
 }
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //创建UIAlertControler对象
@@ -182,7 +213,12 @@
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
         UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
                 //删除的操作
-            
+            if(indexPath.section == 0){  //删除课程
+                NSArray *lessonArray = self.dataArray[0];
+                TALessonModel *lessonModel = lessonArray[indexPath.row - 1];
+                [self deleteLesson:lessonModel];
+            }
+           
         }];
         //添加两个action
         [alertController addAction:cancelAction];

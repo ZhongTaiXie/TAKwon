@@ -30,7 +30,7 @@
 }
 
 -(void)setupUIWithTitle:(NSString *)title placeHolder:(NSString *)placeHolder{
-    UILabel *titleLabel = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(10, 0, 100, 45)  text:title];
+    UILabel *titleLabel = [WQFactoryUI createLabelWithtextFont:15 textBackgroundColor:WHITECOLOR textAliment:NSTextAlignmentLeft textColor:[WQTools colorWithHexString:@"333333"] textFrame:CGRectMake(10, 0, 70, 45)  text:title];
     [self addSubview:titleLabel];
     
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(titleLabel.frame) + 5, 0,KTA_Screen_Width - 125, 45)];

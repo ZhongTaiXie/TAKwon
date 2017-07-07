@@ -17,6 +17,7 @@
 @property (nonatomic,strong) NSString *region;//区域
 @property (nonatomic,strong) UITextField *addreddTextfield;//详细地址
 @property (nonatomic, strong) DQAreasView *areasView;//省市区选择器
+@property (nonatomic,strong) NSString *address;
 @end
 
 @implementation TAEditTaekAddressTableViewController
@@ -26,8 +27,7 @@
     
     [self setNav];
     [self setupTableView];
-//    [self getAddressDataList];
-    
+    [self setupData];
     [self createPickerView];
 }
 
@@ -68,10 +68,36 @@
     self.areasView.delegate = self;
 }
 
+-(void)setupData{
+    NSArray *array = [self.model.Address componentsSeparatedByString:@" "];
+    
+    self.region = array[0];//截取范围类的字符串
+    self.address = array[1];
+}
+
 #pragma mark - 与服务器交互
 //保存地址
 -(void)saveAddress{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"正在保存...";
+    NSDictionary *params = @{
+                             @"userID":UserID,
+                             @"Address":[[self.region stringByAppendingString:@" "] stringByAppendingString:self.addreddTextfield.text]
+                             };
     
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        [hud hideAnimated:YES];
+        if (dic[@"Data"][@"Success"]) {
+            [MBProgressHUD showSuccess:@"保存成功"];
+            [self back];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
 }
 
 #pragma mark - Table view data source
@@ -96,6 +122,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.addressTextField.text = @"";
         self.addreddTextfield = cell.addressTextField;
+        self.addreddTextfield.text = self.address;
         return cell;
 
     }

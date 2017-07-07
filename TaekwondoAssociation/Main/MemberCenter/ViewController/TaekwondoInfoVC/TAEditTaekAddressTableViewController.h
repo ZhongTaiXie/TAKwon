@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TATaekInfoModel.h"
 
 @interface TAEditTaekAddressTableViewController : UITableViewController
+
+@property (nonatomic,strong) TATaekInfoModel *model;
 
 @end

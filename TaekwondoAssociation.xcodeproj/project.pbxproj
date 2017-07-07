@@ -50,6 +50,7 @@
 		4E000BF61F07112D00DB0035 /* TAGongGaoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BF41F07112D00DB0035 /* TAGongGaoCollectionCell.xib */; };
 		4E000BFF1F07136600DB0035 /* TAOnePicCollcetionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E000BFD1F07136600DB0035 /* TAOnePicCollcetionCell.m */; };
 		4E000C001F07136600DB0035 /* TAOnePicCollcetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E000BFE1F07136600DB0035 /* TAOnePicCollcetionCell.xib */; };
+		4E113E431F101337005794F2 /* SYDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E113E421F101337005794F2 /* SYDatePicker.m */; };
 		4E13018E1F0830F2000B0ED7 /* TATaekwondoInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E13018D1F0830F1000B0ED7 /* TATaekwondoInfoViewController.m */; };
 		4E1301911F083910000B0ED7 /* TAEditTaekInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301901F083910000B0ED7 /* TAEditTaekInfoViewController.m */; };
 		4E1301971F083E34000B0ED7 /* TAEditTaekAddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1301961F083E34000B0ED7 /* TAEditTaekAddressTableViewController.m */; };
@@ -348,6 +349,8 @@
 		4E000BFC1F07136600DB0035 /* TAOnePicCollcetionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAOnePicCollcetionCell.h; sourceTree = "<group>"; };
 		4E000BFD1F07136600DB0035 /* TAOnePicCollcetionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAOnePicCollcetionCell.m; sourceTree = "<group>"; };
 		4E000BFE1F07136600DB0035 /* TAOnePicCollcetionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAOnePicCollcetionCell.xib; sourceTree = "<group>"; };
+		4E113E411F101337005794F2 /* SYDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYDatePicker.h; sourceTree = "<group>"; };
+		4E113E421F101337005794F2 /* SYDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYDatePicker.m; sourceTree = "<group>"; };
 		4E13018C1F0830F1000B0ED7 /* TATaekwondoInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaekwondoInfoViewController.h; sourceTree = "<group>"; };
 		4E13018D1F0830F1000B0ED7 /* TATaekwondoInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaekwondoInfoViewController.m; sourceTree = "<group>"; };
 		4E13018F1F083910000B0ED7 /* TAEditTaekInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAEditTaekInfoViewController.h; sourceTree = "<group>"; };
@@ -1767,6 +1770,8 @@
 				AF22AFA61F064964003582EF /* LCProgressHUD.m */,
 				AF8872761F0E22240071DD01 /* MBProgressHUD+MJ.h */,
 				AF8872771F0E22240071DD01 /* MBProgressHUD+MJ.m */,
+				4E113E411F101337005794F2 /* SYDatePicker.h */,
+				4E113E421F101337005794F2 /* SYDatePicker.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2294,6 +2299,7 @@
 				AF8872B61F0E2E1F0071DD01 /* PhotoAlbumManager.m in Sources */,
 				4E13019F1F0846BE000B0ED7 /* TATaekIntroduceViewController.m in Sources */,
 				EF5EFA271F0B2A8C00A60F3E /* TAUnbundingViewController.m in Sources */,
+				4E113E431F101337005794F2 /* SYDatePicker.m in Sources */,
 				EF3E0CDC1F023BBC00729CF9 /* UIApplication+TAAppDelegate.m in Sources */,
 				EF3E0CD61F023BAE00729CF9 /* TALoginViewController.m in Sources */,
 				EF29D5EE1F0E2C710034E1F8 /* TALocalUser.m in Sources */,
