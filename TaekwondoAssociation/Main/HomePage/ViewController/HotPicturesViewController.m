@@ -11,6 +11,9 @@
 #import "ConstColor.h"
 #import "UIImageView+SDWebImage.h"
 
+#import "XLPhotoBrowser.h"
+
+
 static NSString * const reuseIdentifier = @"cellID";
 
 static NSString * const CellIdentifier  = @"fdfdfd";
@@ -227,36 +230,37 @@ static NSString * const CellIdentifier  = @"fdfdfd";
 
 - (void)tapButtion:(UIButton *)btn {
     
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
    
   
     NSMutableArray *imageUrl = [NSMutableArray array];
     for (NSDictionary *dic  in self.dataSource) {
          NSArray *arrImage =  [dic valueForKey:@"Imgs"];
         for (int i = 0; i < arrImage.count; i ++) {
-            [imageUrl addObject:arrImage[i]];
-        }
+            NSString *tr = [NSString stringWithFormat:@"%@%@",URL_BASE,arrImage[i]];
+            [imageUrl addObject:tr];        }
     }
     
+    [XLPhotoBrowser showPhotoBrowserWithImages:imageUrl currentImageIndex:btn.tag];
     
-    UIImageView *superImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height)];
-    [superImage downloadImage:imageUrl[btn.tag] placeholder:nil];
-    self.baseView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height)];
-    self.baseView.backgroundColor = [UIColor blackColor];
-    [self.baseView addSubview:superImage];
-    
-    [self.view addSubview:self.baseView];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(news:)];
-    [self.baseView addGestureRecognizer:tap];
-    
-}
-
-- (void)news:(UITapGestureRecognizer *)gest {
-    
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
-    [self.baseView removeFromSuperview];
+//    UIImageView *superImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height)];
+//    [superImage downloadImage:imageUrl[btn.tag] placeholder:nil];
+//    self.baseView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KTA_Screen_Width, KTA_Screen_Height)];
+//    self.baseView.backgroundColor = [UIColor blackColor];
+//    [self.baseView addSubview:superImage];
+//    
+//    [self.view addSubview:self.baseView];
+//    
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(news:)];
+//    [self.baseView addGestureRecognizer:tap];
+//    
+//}
+//
+//- (void)news:(UITapGestureRecognizer *)gest {
+//    
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    
+//    [self.baseView removeFromSuperview];
 }
 
 @end

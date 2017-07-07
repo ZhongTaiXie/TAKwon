@@ -33,5 +33,8 @@ FOUNDATION_EXPORT NSString * const URL_THIRDLGON;
 // 客户登录接口
 FOUNDATION_EXPORT NSString * const URL_FORGETPASS;
 
+// 搜索界面 热门搜索关键字
+FOUNDATION_EXPORT NSString * const URL_SEARCHHOTS;
+
 
 @end
