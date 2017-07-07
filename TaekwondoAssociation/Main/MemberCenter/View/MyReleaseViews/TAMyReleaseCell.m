@@ -30,13 +30,13 @@
 
 -(void)setActivityModel:(TAActivityModel *)activityModel{
     _activityModel = activityModel;
-    self.titleLabel.text = activityModel.content;
+    self.titleLabel.text = activityModel.title;
     self.timeLabel.text = activityModel.CreatedTime;
 }
 
 -(void)setLessonModel:(TALessonModel *)lessonModel{
     _lessonModel = lessonModel;
-    self.titleLabel.text = lessonModel.content;
+    self.titleLabel.text = lessonModel.title;
     self.timeLabel.text = lessonModel.CreatedTime;
 }
 

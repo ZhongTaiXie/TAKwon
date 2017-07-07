@@ -69,7 +69,9 @@
 
 -(void)ok{
     if(self.index == 1){  //道馆名称
-        if ([WQTools isBlankString:self.textField.text]) {
+        NSLog(@"%@",self.textField.text);
+        BOOL b = [WQTools isBlankString:self.textField.text];
+        if (![WQTools isBlankString:self.textField.text]) {
             //是正确道馆名称
             [self saveName];
         }else{
