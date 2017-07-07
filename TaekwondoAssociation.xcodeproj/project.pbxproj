@@ -164,6 +164,7 @@
 		B613439F1F0DD4310089FBA4 /* TLCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343961F0DD4310089FBA4 /* TLCityHeaderView.m */; };
 		B61343A01F0DD4310089FBA4 /* TLCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61343981F0DD4310089FBA4 /* TLCityPickerController.m */; };
 		B61343A11F0DD4310089FBA4 /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = B613439B1F0DD4310089FBA4 /* TLCityPickerSearchResultController.m */; };
+		B61343A31F0F1C0C0089FBA4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61343A21F0F1C0C0089FBA4 /* CoreLocation.framework */; };
 		B629A8831F02381E0013528A /* PublicWelfareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8821F02381E0013528A /* PublicWelfareViewController.m */; };
 		B629A8861F0238480013528A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8851F0238480013528A /* RankingViewController.m */; };
 		B629A8891F0238740013528A /* HallOfFameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B629A8881F0238740013528A /* HallOfFameViewController.m */; };
@@ -561,6 +562,7 @@
 		B61343991F0DD4310089FBA4 /* TLCityPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerDelegate.h; sourceTree = "<group>"; };
 		B613439A1F0DD4310089FBA4 /* TLCityPickerSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerSearchResultController.h; sourceTree = "<group>"; };
 		B613439B1F0DD4310089FBA4 /* TLCityPickerSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerSearchResultController.m; sourceTree = "<group>"; };
+		B61343A21F0F1C0C0089FBA4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B629A8811F02381E0013528A /* PublicWelfareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicWelfareViewController.h; sourceTree = "<group>"; };
 		B629A8821F02381E0013528A /* PublicWelfareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWelfareViewController.m; sourceTree = "<group>"; };
 		B629A8841F0238480013528A /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -751,6 +753,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61343A31F0F1C0C0089FBA4 /* CoreLocation.framework in Frameworks */,
 				AFE4C12A1F0A2E7F00AA2C0E /* libstdc++.tbd in Frameworks */,
 				EFF9DA4C1F060F640056F9F7 /* libc++.tbd in Frameworks */,
 				EFF9DA461F060DF40056F9F7 /* libicucore.tbd in Frameworks */,
@@ -791,6 +794,7 @@
 		17F3BDA02EBC797D576AA08D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B61343A21F0F1C0C0089FBA4 /* CoreLocation.framework */,
 				AFE4C1271F0A2CE000AA2C0E /* libstdc++.tbd */,
 				AFE4C1251F0A2C1700AA2C0E /* QuartzCore.framework */,
 				EFF9DA4B1F060F640056F9F7 /* libc++.tbd */,
@@ -2079,7 +2083,7 @@
 				TargetAttributes = {
 					B6AA33B91F00E9E400DAA5E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3ER8GC8SJ8;
+						DevelopmentTeam = UA92FC5P8N;
 						ProvisioningStyle = Automatic;
 					};
 					B6AA33D51F00E9E400DAA5E7 = {
@@ -2572,7 +2576,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3ER8GC8SJ8;
+				DEVELOPMENT_TEAM = UA92FC5P8N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2618,7 +2622,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
@@ -2632,7 +2636,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3ER8GC8SJ8;
+				DEVELOPMENT_TEAM = UA92FC5P8N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2678,7 +2682,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekwondo.TaekwondoAssociation1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
