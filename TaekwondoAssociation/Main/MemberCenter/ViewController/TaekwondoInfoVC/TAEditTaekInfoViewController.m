@@ -68,13 +68,13 @@
 }
 
 -(void)ok{
-    
     if(self.index == 1){  //道馆名称
         if ([WQTools isBlankString:self.textField.text]) {
             //是正确道馆名称
-            NSLog(@"是正确的道馆名称");
+            [self saveName];
         }else{
-            NSLog(@"bu是正确的道馆名称");
+            [MBProgressHUD showError:@"请输入道馆名称"];
+            return;
         }
     }else if (self.index == 2){   //手机号
         if ([WQTools isValidateMobile:self.textField.text]) {
@@ -92,6 +92,33 @@
         }
     }
 }
+
+//保存道馆名称
+-(void)saveName{
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"正在保存...";
+    NSDictionary *params = @{
+                             @"userID":UserID,
+                             @"Name":self.textField.text
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/SaveDaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        [hud hideAnimated:YES];
+        if (dic[@"Data"][@"Success"]) {
+            [MBProgressHUD showSuccess:@"保存成功"];
+            [self cancel];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+
+}
+
 
 //如果输入超过规定的字数11，就不再让输入
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{

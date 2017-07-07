@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TaekwondoAssociation/Main/MemberCenter/ViewController/TaekwondoInfoVC/TATaekwondoInfoViewController.m"
-            timestampString = "520992500.27831"
+            timestampString = "521060201.524683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "7">
          </BreakpointContent>
@@ -35,13 +35,93 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TaekwondoAssociation/Main/MemberCenter/ViewController/TaekwondoInfoVC/TATaekwondoInfoViewController.m"
-            timestampString = "520992488.058745"
+            filePath = "TaekwondoAssociation/Main/MemberCenter/ViewController/MyRelease/TAMyReleaseViewController.m"
+            timestampString = "521079379.590035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-test"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-getDataFromServer"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaekwondoAssociation/Main/MemberCenter/ViewController/TaekwondoInfoVC/TAEditTaekInfoViewController.m"
+            timestampString = "521081494.971911"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-saveName"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TAEditTaekInfoViewController saveName]"
+                  moduleName = "TaekwondoAssociation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weihong/Desktop/%E4%B8%AD%E8%B7%86%E5%8D%8F/%E4%BB%A3%E7%A0%81/TaekwondoAssociation/Main/MemberCenter/ViewController/TaekwondoInfoVC/TAEditTaekInfoViewController.m"
+                  timestampString = "521081507.854005"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "571">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[TAEditTaekInfoViewController saveName]_block_invoke"
+                  moduleName = "TaekwondoAssociation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weihong/Desktop/%E4%B8%AD%E8%B7%86%E5%8D%8F/%E4%BB%A3%E7%A0%81/TaekwondoAssociation/Main/MemberCenter/ViewController/TaekwondoInfoVC/TAEditTaekInfoViewController.m"
+                  timestampString = "521081507.860787"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaekwondoAssociation/Main/MemberCenter/ViewController/TaekwondoInfoVC/TAEditTaekInfoViewController.m"
+            timestampString = "521081495.909294"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-saveName"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaekwondoAssociation/Main/MemberCenter/ViewController/TaekwondoInfoVC/TAEditTaekInfoViewController.m"
+            timestampString = "521081550.944435"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-ok"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

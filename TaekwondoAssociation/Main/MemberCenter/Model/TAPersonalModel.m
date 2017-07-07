@@ -7,7 +7,15 @@
 //
 
 #import "TAPersonalModel.h"
+#import <MJExtension.h>
 
 @implementation TAPersonalModel
+
++(instancetype)initTAPersonalModelWithDic:(NSDictionary *)dic{
+    TAPersonalModel *model = [TAPersonalModel new];
+    [model mj_setKeyValues:dic];
+    
+    return model;
+}
 
 @end

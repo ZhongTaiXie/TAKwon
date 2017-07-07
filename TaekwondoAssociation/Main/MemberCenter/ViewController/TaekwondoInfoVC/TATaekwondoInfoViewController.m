@@ -12,7 +12,7 @@
 #import "TAEditTaekInfoViewController.h"
 #import "TAEditTaekAddressTableViewController.h"
 #import "TATaekIntroduceViewController.h"
-
+#import "TATaekInfoModel.h"
 
 @interface TATaekwondoInfoViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (nonatomic,strong) UITableView *tableView;
@@ -21,6 +21,8 @@
 @property (nonatomic,strong) UIImage *mendianImage;//门店的图片，从本地选的
 @property (nonatomic,strong) UIImage *touxiangIcon;//头像照片
 @property (nonatomic,assign) NSInteger index;//标志点的是选择头像还是门店
+
+@property (nonatomic,strong) TATaekInfoModel *taekInfoModel;//model
 
 @end
 
@@ -40,17 +42,8 @@
     [self setupNav];
     [self setupTableView];
     
-    [self test];
+    [self getTeakInfoFromServer];
     
-}
-
--(void)test{
-    
-    [WQNetWorkManager sendPostRequestWithUrl:[NSString stringWithFormat:@"%@Center/AreaList",HeadUrl] parameters:nil success:^(NSDictionary *dic) {
-        NSLog(@"%@",dic);
-    } failure:^(NSError *error) {
-        
-    }];
 }
 
 -(void)loadView{
@@ -127,6 +120,28 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+#pragma mark - 与服务器交互
+-(void)getTeakInfoFromServer{
+    NSDictionary *params = @{
+                             @"userID":UserID
+                             };
+    
+    NSString *url = [HeadUrl stringByAppendingString:@"Center/DaoGuanInfo"];
+    [WQNetWorkManager sendPostRequestWithUrl:url parameters:params success:^(NSDictionary *dic) {
+        
+        if (dic[@"Data"][@"Success"]) {
+            self.taekInfoModel = [WQManageData getTaekInfoModel:dic[@"Data"][@"Data"]];
+            [self.tableView reloadData];
+            
+        }else{
+            [MBProgressHUD showError:dic[@"Data"][@"Msg"]];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:@"网络错误"];
+    }];
+}
+
+
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -171,6 +186,29 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.title = title;
         
+        NSString *subtitle;
+        if (indexPath.section == 0) {
+            if (indexPath.row == 1) {
+                subtitle = self.taekInfoModel.Name;
+            }else if (indexPath.row == 2){
+                subtitle = self.taekInfoModel.TelPhone;
+            }else{
+                subtitle = self.taekInfoModel.Email;
+            }
+        }else if (indexPath.section == 1){
+            if (indexPath.row == 1) {
+                subtitle = self.taekInfoModel.BusinessHours;
+            }else if (indexPath.row == 2){
+                subtitle = self.taekInfoModel.Phone;
+            }else{
+                subtitle = self.taekInfoModel.Address;
+            }
+        }else{
+            
+            subtitle = self.taekInfoModel.content;
+            
+        }
+        cell.subTitle = subtitle;
         return cell;
     }
 }
